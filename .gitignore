@@ -1,0 +1,14 @@
+com.mguidi.soa/bin
+com.mguidi.soa/model
+com.mguidi.soa/src-gen
+com.mguidi.soa/xtend-gen
+com.mguidi.soa.tests/bin
+com.mguidi.soa.tests/src-gen
+com.mguidi.soa.ui/bin
+com.mguidi.soa.ui/src-gen
+com.mguidi.soa.ui/xtend-gen
+com.mguidi.soa.commons-service/.settings
+.classpath
+.project
+com.mguidi.soa.testunit.java/.settings
+com.mguidi.soa.testunit.java/src-gen

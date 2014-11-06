@@ -1,0 +1,42 @@
+@applicationId: com.mguidi.soa.test
+@moduleName: json
+@version: 1.0.0
+
+@model {
+	
+	@entity PrimitiveFeatures {
+		_string: String
+		_boolean: Boolean
+		_byte: Byte
+		_short: Short
+		_integer: Integer
+		_long: Long
+		_float: Float
+		_double: Double
+		_date: Date
+		_datetime: Datetime
+		_timestamp: Timestamp
+		_decimal: Decimal
+	}
+	
+	
+	@entity ReferenceFeatures {
+		features: PrimitiveFeatures
+	}
+	
+	@entity ListFeatures {
+		_string: List<String>
+		_boolean: List<Boolean>
+		_byte: List<Byte>
+		_short: List<Short>
+		_integer: List<Integer>
+		_long: List<Long>
+		_float: List<Float>
+		_double: List<Double>
+		_date: List<Date>
+		_datetime: List<Datetime>
+		_timestamp: List<Timestamp>
+		_decimal: List<Decimal>
+	}
+
+}
