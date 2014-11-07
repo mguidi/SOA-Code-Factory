@@ -45,7 +45,7 @@ class Utils {
 	
 	/******************************** Service  ********************************/
 	def className(Service service) {
-		service.moduleName.toFirstUpper+"Service"
+		service.name.toFirstUpper
 	}
 	
 	def moduleName(Service service) {
