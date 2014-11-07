@@ -28,7 +28,7 @@ class Utils {
 	
 	/******************************** Entities  ********************************/
 	def className(Entities entity) {
-		entity.moduleName + entity.name.toFirstUpper
+		entity.moduleName.toFirstUpper + entity.name.toFirstUpper
 	}
 	
 	def applicationId(Entities entity) {
@@ -45,7 +45,7 @@ class Utils {
 	
 	/******************************** Service  ********************************/
 	def className(Service service) {
-		service.moduleName + service.name.toFirstUpper
+		service.moduleName.toFirstUpper + service.name.toFirstUpper
 	}
 	
 	def moduleName(Service service) {
@@ -55,31 +55,9 @@ class Utils {
 	def version(Service service) {
 		(service.eContainer.eContainer as Architecture).version
 	}
-//	
-//	def packageNameServlet(Service service) {
-//		(service.eContainer.eContainer as Architecture).name + "." +
-//		(service.eContainer as Module).name + ".servlet"
-//	}
-//
-//	def classNameServlet(Service service) {
-//		service.moduleName.toFirstUpper+"Servlet"
-//	}
-//	
-//	def qualifiedClassNameServlet(Service service) {
-//		service.packageNameServlet + "." + service.classNameServlet
-//	}
-//	
-//	def packageNameClient(Service service) {
-//		(service.eContainer.eContainer as Architecture).name + "." +
-//		(service.eContainer as Module).name + ".client"
-//	}
-//
+	
 //	def classNameClient(Service service) {
 //		service.moduleName.toFirstUpper+"Client"
-//	}
-//	
-//	def qualifiedClassNameClient(Service service) {
-//		service.packageNameClient + "." + service.classNameClient
 //	}
 	
 	/******************************** Operation  ********************************/
@@ -96,11 +74,11 @@ class Utils {
 	}
 	
 	def classNameOutput(Operation operation) {
-		operation.moduleName + operation.name.toFirstUpper + "Output"
+		operation.moduleName.toFirstUpper + operation.name.toFirstUpper + "Output"
 	}
 	
 	def classNameInput(Operation operation) {
-		operation.moduleName + operation.name.toFirstUpper + "Input"
+		operation.moduleName.toFirstUpper + operation.name.toFirstUpper + "Input"
 	}
 	
 	def moduleName(Operation operation) {
