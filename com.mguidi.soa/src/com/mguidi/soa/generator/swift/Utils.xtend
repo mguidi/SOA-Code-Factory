@@ -74,11 +74,11 @@ class Utils {
 	}
 	
 	def classNameOutput(Operation operation) {
-		operation.moduleName.toFirstUpper + operation.name.toFirstUpper + "Output"
+		operation.moduleName.toFirstUpper + (operation.eContainer as Service).name.toFirstUpper + operation.name.toFirstUpper + "Output"
 	}
 	
 	def classNameInput(Operation operation) {
-		operation.moduleName.toFirstUpper + operation.name.toFirstUpper + "Input"
+		operation.moduleName.toFirstUpper + (operation.eContainer as Service).name.toFirstUpper + operation.name.toFirstUpper + "Input"
 	}
 	
 	def moduleName(Operation operation) {
