@@ -28,7 +28,7 @@ class Utils {
 	
 	/******************************** Entities  ********************************/
 	def className(Entities entity) {
-		entity.name
+		entity.moduleName + entity.name.toFirstUpper
 	}
 	
 	def applicationId(Entities entity) {
@@ -45,7 +45,7 @@ class Utils {
 	
 	/******************************** Service  ********************************/
 	def className(Service service) {
-		service.name.toFirstUpper
+		service.moduleName + service.name.toFirstUpper
 	}
 	
 	def moduleName(Service service) {
@@ -94,48 +94,15 @@ class Utils {
 		}
 		return text
 	}
-//	
-//	def inputValue(Operation operation) {
-//		var text = ""
-//		var i=0
-//		for (Feature f: operation.featuresInput) {
-//			if (i>0) {
-//				text += ", "
-//			}
-//			text += "input." + f.name
-//			i++ 
-//		}
-//		return text
-//	}
-//	
-//	def throwsException(Operation operation) {
-//		var text = ""
-//		for (com.mguidi.soa.soa.Exception e: operation.exceptionts) {
-//			text += ", " + e.qualifiedClassName
-//		}
-//		return text
-//	}
-//	
+	
 	def classNameOutput(Operation operation) {
-		operation.name.toFirstUpper + "Output"
+		operation.moduleName + operation.name.toFirstUpper + "Output"
 	}
-//	
-//	def qualifiedClassNameOutput(Operation operation) {
-//		operation.packageNameOutput + "." + operation.classNameOutput
-//	}
-//	
-//	def packageNameInput(Operation operation) {
-//		(operation.eContainer as Service).packageName + ".input"
-//	}
-//
+	
 	def classNameInput(Operation operation) {
-		operation.name.toFirstUpper + "Input"
+		operation.moduleName + operation.name.toFirstUpper + "Input"
 	}
-//	
-//	def qualifiedClassNameInput(Operation operation) {
-//		operation.packageNameInput + "." + operation.classNameInput
-//	}
-//	
+	
 	def moduleName(Operation operation) {
 		(operation.eContainer as Service).moduleName
 	}
@@ -189,27 +156,6 @@ class Utils {
 	}
 
 	/******************************** FeatureType  ********************************/
-//	def String applicationId(FeatureType featureType) {
-//		switch (featureType) {
-//			EntitiesFeature: (featureType as EntitiesFeature).type.applicationId
-//			GenericListFeature: (featureType as GenericListFeature).baseType.applicationId
-//		}
-//	}
-//	
-//	def String moduleName(FeatureType featureType) {
-//		switch (featureType) {
-//			EntitiesFeature: (featureType as EntitiesFeature).type.moduleName
-//			GenericListFeature: (featureType as GenericListFeature).baseType.moduleName
-//		}
-//	}
-//	
-//	def String version(FeatureType featureType) {
-//		switch (featureType) {
-//			EntitiesFeature: (featureType as EntitiesFeature).type.version
-//			GenericListFeature: (featureType as GenericListFeature).baseType.version
-//		}
-//	}
-		
 	def String declaration(FeatureType featureType) {
 		switch (featureType) {
 			EntitiesFeature: (featureType as EntitiesFeature).type.className
@@ -252,48 +198,5 @@ class Utils {
 			}
 		}
 	}
-//	
-//	def String createAtDepth(GenericListFeature generic, int i) {
-//		if (i==0) {
-//			"new java.util.LinkedList<"+generic.type.declaration+">()" 
-//		} else {
-//			createAtDepth((generic.type as GenericListFeature), i-1)
-//		}
-//	}
-//	
-//	
-//	def dependencies(Architecture architecture, Iterable<Feature> features) {
-//		var dependencies = new HashSet<Dependency>()
-//		for (Feature f: features) {
-//			if (f.type.applicationId != null && f.type.moduleName !=null && (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName))) {
-//				var dependency = new Dependency()
-//				dependency.applicationId = f.type.applicationId
-//				dependency.moduleName = f.type.moduleName
-//				dependency.version = f.type.version 
-//				
-//				dependencies.add(dependency)
-//			}
-//		}
-//		return dependencies
-//	}
-//	
-//	static class Dependency {
-//		public String applicationId
-//		public String moduleName
-//		public String version
-//		
-//		override equals(Object obj) {
-//			var tmp = (obj as Dependency)
-//			return 
-//				tmp.applicationId.equals(applicationId) &&
-//				tmp.moduleName.equals(moduleName) &&
-//				tmp.version.equals(version)
-// 		}
-// 		
-//			override hashCode() {
-//				(applicationId + moduleName + version).hashCode 
-//			}
-//			
-//	}
 	
 }
