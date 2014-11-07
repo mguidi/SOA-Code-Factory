@@ -84,10 +84,10 @@ class ServletJsonGenerator {
 					«IF operation.featuresOutput.size > 0»
 					«operation.qualifiedClassNameOutput» output;
 					«IF operation.exceptionts.size == 0»
-					output = «operation.signature»(«operation.inputValue»);
+					output = «operation.signature»(input);
 					«ELSE»
 					try {
-						output = «operation.signature»(«operation.inputValue»);
+						output = «operation.signature»(input);
 						
 					}
 					«FOR exceptiont: operation.exceptionts» 
@@ -106,10 +106,10 @@ class ServletJsonGenerator {
 					}
 					«ELSE»
 					«IF operation.exceptionts.size == 0»
-					«operation.signature»(«operation.inputValue»);
+					«operation.signature»(input);
 					«ELSE»
 					try {
-						«operation.signature»(«operation.inputValue»);
+						«operation.signature»(input);
 						
 					}
 					«FOR exceptiont: operation.exceptionts» 

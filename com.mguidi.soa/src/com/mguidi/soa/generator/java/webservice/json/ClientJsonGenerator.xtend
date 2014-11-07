@@ -42,7 +42,7 @@ class ClientJsonGenerator {
 			
 			«FOR Operation operation: service.operations»
 				@Override
-				public «IF operation.featuresOutput.size>0»«operation.qualifiedClassNameOutput»«ELSE»void«ENDIF» «operation.signature»(«operation.input») throws IOException«operation.throwsException» {
+				public «IF operation.featuresOutput.size>0»«operation.qualifiedClassNameOutput»«ELSE»void«ENDIF» «operation.signature»(«IF operation.featuresInput.size>0»«operation.classNameInput» input«ENDIF») throws IOException«operation.throwsException» {
 					URL url = new URL(mServiceAddress+"/«operation.name»");
 
 					HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -58,10 +58,6 @@ class ClientJsonGenerator {
 						// write parameters
 						JsonWriter writer = new JsonWriter(new OutputStreamWriter(conn.getOutputStream(), ENCODING));
 						try {
-							«operation.qualifiedClassNameInput» input = new «operation.qualifiedClassNameInput»();
-							«FOR feature: operation.featuresInput»
-							input.«feature.name» = «feature.name»;
-							«ENDFOR» 
 							«operation.qualifiedClassNameInputHelper».writeJson(input, writer);
 						
 						} finally {

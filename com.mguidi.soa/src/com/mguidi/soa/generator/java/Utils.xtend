@@ -112,32 +112,6 @@ class Utils {
 		operation.name.toFirstLower
 	}
 	
-	def input(Operation operation) {
-		var text = ""
-		var i=0
-		for (Feature f: operation.featuresInput) {
-			if (i>0) {
-				text += ", "
-			}
-			text += f.type.declaration + " " + f.name
-			i++ 
-		}
-		return text
-	}
-	
-	def inputValue(Operation operation) {
-		var text = ""
-		var i=0
-		for (Feature f: operation.featuresInput) {
-			if (i>0) {
-				text += ", "
-			}
-			text += "input." + f.name
-			i++ 
-		}
-		return text
-	}
-	
 	def throwsException(Operation operation) {
 		var text = ""
 		for (com.mguidi.soa.soa.Exception e: operation.exceptionts) {
