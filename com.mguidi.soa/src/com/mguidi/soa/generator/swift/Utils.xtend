@@ -56,9 +56,9 @@ class Utils {
 		(service.eContainer.eContainer as Architecture).version
 	}
 	
-//	def classNameClient(Service service) {
-//		service.moduleName.toFirstUpper+"Client"
-//	}
+	def classNameClient(Service service) {
+		service.moduleName.toFirstUpper + service.name.toFirstUpper + "Client"
+	}
 	
 	/******************************** Operation  ********************************/
 	def signature(Operation operation) {
