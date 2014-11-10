@@ -105,6 +105,8 @@ class EntityJsonHelperGenerator {
 							«(feature.type as GenericListFeature).declarationAtDepth(i)» list«index» = «(feature.type as GenericListFeature).createAtDepth(i)»;
 							«IF i>0»
 							list«index+1».add(list«index»);
+							«ELSE»
+							obj.«feature.name» = list«index»;
 							«ENDIF»
 							reader.beginArray();
 							while (reader.hasNext()) {
