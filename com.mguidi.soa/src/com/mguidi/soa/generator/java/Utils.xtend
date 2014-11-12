@@ -121,11 +121,11 @@ class Utils {
 	}
 	
 	def packageNameOutput(Operation operation) {
-		(operation.eContainer as Service).packageName + ".output"
+		(operation.eContainer as Service).qualifiedClassName.toLowerCase + ".output"
 	}
 
 	def classNameOutput(Operation operation) {
-		(operation.eContainer as Service).name.toFirstUpper + operation.name.toFirstUpper + "Output"
+		operation.name.toFirstUpper + "Output"
 	}
 	
 	def qualifiedClassNameOutput(Operation operation) {
@@ -133,11 +133,11 @@ class Utils {
 	}
 	
 	def packageNameInput(Operation operation) {
-		(operation.eContainer as Service).packageName + ".input"
+		(operation.eContainer as Service).qualifiedClassName.toLowerCase + ".input"
 	}
 
 	def classNameInput(Operation operation) {
-		(operation.eContainer as Service).name.toFirstUpper + operation.name.toFirstUpper + "Input"
+		operation.name.toFirstUpper + "Input"
 	}
 	
 	def qualifiedClassNameInput(Operation operation) {
@@ -154,11 +154,11 @@ class Utils {
 
 	/******************************** Exception  ********************************/	
 	def packageName(com.mguidi.soa.soa.Exception exception) {
-		(exception.eContainer as Service).packageName + ".exception"
+		(exception.eContainer as Service).qualifiedClassName.toLowerCase + ".exception"
 	}
 
 	def className(com.mguidi.soa.soa.Exception exception) {
-		(exception.eContainer as Service).name.toFirstUpper + exception.name.toFirstUpper
+		exception.name.toFirstUpper
 	}
 	
 	def qualifiedClassName(com.mguidi.soa.soa.Exception exception) {
@@ -303,6 +303,15 @@ class Utils {
 		var dependencies = new HashSet<Dependency>()
 		for (Feature f: features) {
 			if (f.type instanceof EntitiesFeature && (f.type as EntitiesFeature).type instanceof Entity) {
+				if (f.type.applicationId != null && f.type.moduleName !=null && (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName))) {
+					var dependency = new Dependency()
+					dependency.applicationId = f.type.applicationId
+					dependency.moduleName = f.type.moduleName
+					dependency.version = f.type.version 
+					
+					dependencies.add(dependency)
+				}
+			} else if (f.type instanceof GenericListFeature && (f.type as GenericListFeature).baseType instanceof EntitiesFeature && ((f.type as GenericListFeature).baseType as EntitiesFeature).type instanceof Entity) {
 				if (f.type.applicationId != null && f.type.moduleName !=null && (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName))) {
 					var dependency = new Dependency()
 					dependency.applicationId = f.type.applicationId
