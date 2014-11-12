@@ -35,7 +35,7 @@
 
 		<dependency>
 			<groupId>com.mguidi.soa.test</groupId>
-			<artifactId>json-commons</artifactId>
+			<artifactId>json-model-json</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 
