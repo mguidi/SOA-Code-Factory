@@ -32,7 +32,7 @@ class ClientJsonGenerator {
 		*/
 		public class «service.classNameClient» implements «service.qualifiedClassName» {
 			
-			public static final String NAME = "/«service.moduleName»/«service.version»";
+			public static final String NAME = "/«service.moduleName»/«service.version»/«service.serviceName»";
 
 			private static final String ENCODING = "UTF-8";
 			

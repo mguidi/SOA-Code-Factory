@@ -107,6 +107,10 @@ class Utils {
 		service.packageNameClient + "." + service.classNameClient
 	}
 	
+	def serviceName(Service service) {
+		service.name
+	}
+	
 	/******************************** Operation  ********************************/
 	def signature(Operation operation) {
 		operation.name.toFirstLower

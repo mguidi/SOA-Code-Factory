@@ -35,7 +35,7 @@ class ServletJsonGenerator {
 		public abstract class «service.classNameServlet»  extends HttpServlet implements «service.qualifiedClassName» {
 			
 			private static final long serialVersionUID = 1L;
-			public static final String NAME = "/«service.moduleName»/«service.version»/*";
+			public static final String NAME = "/«service.moduleName»/«service.version»/«service.serviceName»/*";
 
 			private static final String ENCODING = "UTF-8";
 			private static final String CONTENT_TYPE = "application/json";
