@@ -7,7 +7,7 @@ import com.google.gson.stream.JsonWriter;
 
 public class ServiceExceptionHelper {
 	
-	public static final String CODE = "code";
+	public static final String EXCEPTION = "exception";
 	public static final String MSG = "msg";
 
 	public static ServiceException fromJson(JsonReader reader)
@@ -18,8 +18,8 @@ public class ServiceExceptionHelper {
 		String key;
 		while (reader.hasNext()) {
 			key = reader.nextName();
-			if (key.equals(CODE)) {
-				exception.code = reader.nextInt();
+			if (key.equals(EXCEPTION)) {
+				exception.exception = reader.nextString();
 			} else if (key.equals(MSG)) {
 				exception.msg = reader.nextString();
 			} else {
@@ -37,8 +37,8 @@ public class ServiceExceptionHelper {
 
 		writer.beginObject();
 
-		writer.name(CODE);
-		writer.value(obj.getCode());
+		writer.name(EXCEPTION);
+		writer.value(obj.getException());
 
 		writer.name(MSG);
 		writer.value(obj.getMsg());
@@ -48,12 +48,12 @@ public class ServiceExceptionHelper {
 	
 	static class ServiceExceptionImpl implements ServiceException {
 		
-		public int code;
+		public String exception;
 		public String msg;
 
 		@Override
-		public int getCode() {
-			return code;
+		public String getException() {
+			return exception;
 		}
 
 		@Override

@@ -209,6 +209,14 @@ class Utils {
 	def String key(Feature feature) {
 		feature.name.toUpperCase
 	}
+	
+	def String keyValue(Feature feature) {
+		feature.name
+	}
+	
+	def String featureName(Feature feature) {
+		"_"+feature.name
+	}
 
 	/******************************** FeatureType  ********************************/
 	def String applicationId(FeatureType featureType) {

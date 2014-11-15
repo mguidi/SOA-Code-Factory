@@ -65,14 +65,13 @@ PrimitiveFeature:
 ;
 
 GenericListFeature:
-	'List' '<' type=FeatureType '>'
+	'@List' '<' type=FeatureType '>'
 ;
 
-
 enum PrimitiveType:
-	String='String' | Short='Short' | Integer='Integer' | Long='Long' | Float='Float' |
-	Double='Double' | Boolean='Boolean' | Byte='Byte' | Date='Date' |Datetime='Datetime' | Timestamp='Timestamp' |
-	Decimal='Decimal';
+	String='@String' | Short='@Short' | Integer='@Integer' | Long='@Long' | Float='@Float' |
+	Double='@Double' | Boolean='@Boolean' | Byte='@Byte' | Date='@Date' |Datetime='@Datetime' | 
+	Timestamp='@Timestamp' | Decimal='@Decimal';
 	
 
 /************************ Service definition *************************/
@@ -82,7 +81,6 @@ Service:
 
 Exception:
 	'@exception' name=ID '{'
-		'@code' ':' code=INT
 		'@msg' ':' msg=STRING
 	'}'
 ;

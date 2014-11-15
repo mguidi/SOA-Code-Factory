@@ -4,7 +4,7 @@ public interface ServiceException {
 	
 	public static final int STATUS_CODE = 209;
 	
-	public int getCode();
+	public String getException();
 
 	public String getMsg();
 	

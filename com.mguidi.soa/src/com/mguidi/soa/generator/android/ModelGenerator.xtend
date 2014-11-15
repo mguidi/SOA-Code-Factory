@@ -23,7 +23,7 @@ class ModelGenerator extends com.mguidi.soa.generator.java.ModelGenerator {
 		public class «entity.className» implements Parcelable {
 			
 			«FOR feature: entity.features»
-				public static final String «feature.key» = "«feature.name»";
+				public static final String «feature.key» = "«feature.keyValue»";
 			«ENDFOR»
 			
 			«FOR feature: entity.features»
@@ -38,7 +38,7 @@ class ModelGenerator extends com.mguidi.soa.generator.java.ModelGenerator {
 				«ENDFOR»
 				*/
 				«ENDIF»
-				public «feature.type.declaration» «feature.name»;
+				public «feature.type.declaration» «feature.featureName»;
 			«ENDFOR»
 			
 			public «entity.className»() {
@@ -60,23 +60,23 @@ class ModelGenerator extends com.mguidi.soa.generator.java.ModelGenerator {
 				«IF feature.type instanceof GenericListFeature»
 				«FOR i: 0 ..<(feature.type as GenericListFeature).depthToBaseType»
 				«var index = (feature.type as GenericListFeature).depthToBaseType - i - 1»
-				int «feature.name»Count«index» = in.readInt();
-				if («feature.name»Count«index» >= 0) {
-					«(feature.type as GenericListFeature).declarationAtDepth(i)» «feature.name»«index» = «(feature.type as GenericListFeature).createAtDepth(i)»;
+				int «feature.featureName»Count«index» = in.readInt();
+				if («feature.featureName»Count«index» >= 0) {
+					«(feature.type as GenericListFeature).declarationAtDepth(i)» «feature.featureName»«index» = «(feature.type as GenericListFeature).createAtDepth(i)»;
 					«IF i==0»
-					«feature.name» = «feature.name»«index»;
+					«feature.featureName» = «feature.featureName»«index»;
 					«ELSE»
-					«feature.name»«index+1».add(«feature.name»«index»);
+					«feature.featureName»«index+1».add(«feature.featureName»«index»);
 					«ENDIF»
-					for (int i«index»=0; i«index» < «feature.name»Count«index»; i«index»++) {
+					for (int i«index»=0; i«index» < «feature.featureName»Count«index»; i«index»++) {
 				«ENDFOR»
-						«feature.name»0.add((«(feature.type as GenericListFeature).baseType.declaration») in.readValue(«(feature.type as GenericListFeature).baseType.declaration».class.getClassLoader()));
+						«feature.featureName»0.add((«(feature.type as GenericListFeature).baseType.declaration») in.readValue(«(feature.type as GenericListFeature).baseType.declaration».class.getClassLoader()));
 				«FOR i: 0 ..<(feature.type as GenericListFeature).depthToBaseType»
 					}
 				}
 				«ENDFOR»
 				«ELSE»
-				«feature.name» = («feature.type.declaration») in.readValue(«feature.type.declaration».class.getClassLoader());
+				«feature.featureName» = («feature.type.declaration») in.readValue(«feature.type.declaration».class.getClassLoader());
 				«ENDIF»
 				«ENDFOR»
 			}
@@ -89,16 +89,16 @@ class ModelGenerator extends com.mguidi.soa.generator.java.ModelGenerator {
 				«FOR i: 0 ..<(feature.type as GenericListFeature).depthToBaseType»
 				«var index = (feature.type as GenericListFeature).depthToBaseType - i - 1»
 				«IF i==0»
-				«(feature.type as GenericListFeature).declarationAtDepth(i)» «feature.name»«index» = «feature.name»;
+				«(feature.type as GenericListFeature).declarationAtDepth(i)» «feature.featureName»«index» = «feature.featureName»;
 				«ELSE»
-				«(feature.type as GenericListFeature).declarationAtDepth(i)» «feature.name»«index» = «feature.name»«index+1».get(i«index+1»);
+				«(feature.type as GenericListFeature).declarationAtDepth(i)» «feature.featureName»«index» = «feature.featureName»«index+1».get(i«index+1»);
 				«ENDIF»
-				if («feature.name»«index» != null) {
-					int «feature.name»Count«index» = «feature.name»«index».size();
-					dest.writeInt(«feature.name»Count«index»);
-					for (int i«index»=0; i«index» < «feature.name»Count«index»; i«index»++) {
+				if («feature.featureName»«index» != null) {
+					int «feature.featureName»Count«index» = «feature.featureName»«index».size();
+					dest.writeInt(«feature.featureName»Count«index»);
+					for (int i«index»=0; i«index» < «feature.featureName»Count«index»; i«index»++) {
 				«ENDFOR»	
-						dest.writeValue(«feature.name»0.get(i0));
+						dest.writeValue(«feature.featureName»0.get(i0));
 				«FOR i: 0 ..<(feature.type as GenericListFeature).depthToBaseType»
 					}
 				} else {
@@ -106,7 +106,7 @@ class ModelGenerator extends com.mguidi.soa.generator.java.ModelGenerator {
 				}
 				«ENDFOR»	
 				«ELSE»
-				dest.writeValue(«feature.name»);
+				dest.writeValue(«feature.featureName»);
 				«ENDIF»
 				«ENDFOR»
 			}

@@ -34,7 +34,7 @@ class ModelGenerator {
 		public class «entity.className» {
 			
 			«FOR feature: entity.features»
-				public static final String «feature.key» = "«feature.name»";
+				public static final String «feature.key» = "«feature.keyValue»";
 			«ENDFOR»
 			
 			«FOR feature: entity.features»
@@ -49,7 +49,7 @@ class ModelGenerator {
 				«ENDFOR»
 				*/
 				«ENDIF»
-				public «feature.type.declaration» «feature.name»;
+				public «feature.type.declaration» «feature.featureName»;
 			«ENDFOR»
 			
 		}

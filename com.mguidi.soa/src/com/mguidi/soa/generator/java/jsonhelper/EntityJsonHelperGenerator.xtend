@@ -67,37 +67,37 @@ class EntityJsonHelperGenerator {
 					} else {
 						«IF feature.type instanceof EntitiesFeature»
 						«IF (feature.type as EntitiesFeature).type instanceof Entity»
-						obj.«feature.name» = «(feature.type as EntitiesFeature).type.qualifiedClassNameHelper».fromJson(reader);
+						obj.«feature.featureName» = «(feature.type as EntitiesFeature).type.qualifiedClassNameHelper».fromJson(reader);
 						«ELSEIF (feature.type as EntitiesFeature).type instanceof com.mguidi.soa.soa.Enum»
 						try {
-							obj.«feature.name» = «((feature.type as EntitiesFeature).type as com.mguidi.soa.soa.Enum).nextValue»;
+							obj.«feature.featureName» = «((feature.type as EntitiesFeature).type as com.mguidi.soa.soa.Enum).nextValue»;
 						} catch (java.lang.IllegalArgumentException e) {
-							obj.«feature.name» = «(feature.type as EntitiesFeature).type.qualifiedClassName»._UNDEFINED_;
+							obj.«feature.featureName» = «(feature.type as EntitiesFeature).type.qualifiedClassName»._UNDEFINED_;
 						}
 						«ENDIF»
 						«ELSEIF feature.type instanceof PrimitiveFeature»
 							«IF (feature.type as PrimitiveFeature).type == PrimitiveType::DECIMAL»
 							try {
-								obj.«feature.name» = «(feature.type as PrimitiveFeature).type.nextValue»;
+								obj.«feature.featureName» = «(feature.type as PrimitiveFeature).type.nextValue»;
 							} catch (java.lang.NumberFormatException e) {
 							}
 							«ELSEIF (feature.type as PrimitiveFeature).type == PrimitiveType::DATE»
 							try {
-								obj.«feature.name» = «(feature.type as PrimitiveFeature).type.nextValue»;
+								obj.«feature.featureName» = «(feature.type as PrimitiveFeature).type.nextValue»;
 							} catch (java.text.ParseException e) {
 							}
 							«ELSEIF (feature.type as PrimitiveFeature).type == PrimitiveType::DATETIME»
 							try {
-								obj.«feature.name» = «(feature.type as PrimitiveFeature).type.nextValue»;
+								obj.«feature.featureName» = «(feature.type as PrimitiveFeature).type.nextValue»;
 							} catch (java.text.ParseException e) {
 							}
 							«ELSEIF (feature.type as PrimitiveFeature).type == PrimitiveType::TIMESTAMP»
 							try {
-								obj.«feature.name» = «(feature.type as PrimitiveFeature).type.nextValue»;
+								obj.«feature.featureName» = «(feature.type as PrimitiveFeature).type.nextValue»;
 							} catch (java.text.ParseException e) {
 							}
 							«ELSE»
-							obj.«feature.name» = «(feature.type as PrimitiveFeature).type.nextValue»;
+							obj.«feature.featureName» = «(feature.type as PrimitiveFeature).type.nextValue»;
 							«ENDIF»
 						«ELSEIF feature.type instanceof GenericListFeature»
 						«FOR i: 0 ..<(feature.type as GenericListFeature).depthToBaseType»
@@ -106,7 +106,7 @@ class EntityJsonHelperGenerator {
 							«IF i>0»
 							list«index+1».add(list«index»);
 							«ELSE»
-							obj.«feature.name» = list«index»;
+							obj.«feature.featureName» = list«index»;
 							«ENDIF»
 							reader.beginArray();
 							while (reader.hasNext()) {
@@ -165,22 +165,22 @@ class EntityJsonHelperGenerator {
 	
 	def writeFeatures(String className, List<Feature> features) '''
 		«FOR feature: features»
-			if (obj.«feature.name» != null) {
+			if (obj.«feature.featureName» != null) {
 				writer.name(«className».«feature.key»);
 				«IF feature.type instanceof EntitiesFeature»
 				«IF (feature.type as EntitiesFeature).type instanceof Entity»
-				«(feature.type as EntitiesFeature).type.qualifiedClassNameHelper».writeJson(obj.«feature.name», writer);
+				«(feature.type as EntitiesFeature).type.qualifiedClassNameHelper».writeJson(obj.«feature.featureName», writer);
 				«ELSEIF (feature.type as EntitiesFeature).type instanceof com.mguidi.soa.soa.Enum»
-				«((feature.type as EntitiesFeature).type as com.mguidi.soa.soa.Enum).writeValue("obj."+feature.name)»
+				«((feature.type as EntitiesFeature).type as com.mguidi.soa.soa.Enum).writeValue("obj."+feature.featureName)»
 				«ENDIF»
 				«ELSEIF feature.type instanceof PrimitiveFeature»
-				«(feature.type as PrimitiveFeature).type.writeValue("obj."+feature.name)»;
+				«(feature.type as PrimitiveFeature).type.writeValue("obj."+feature.featureName)»;
 				«ELSEIF feature.type instanceof GenericListFeature»
 					«FOR i: 0 ..<(feature.type as GenericListFeature).depthToBaseType»
 					«var index = (feature.type as GenericListFeature).depthToBaseType - i - 1»
 						writer.beginArray();
 						«IF i==0»
-						for («(feature.type as GenericListFeature).declarationAtDepth(i+1)» list«index» : obj.«feature.name») {
+						for («(feature.type as GenericListFeature).declarationAtDepth(i+1)» list«index» : obj.«feature.featureName») {
 						«ELSE»
 						for («(feature.type as GenericListFeature).declarationAtDepth(i+1)» list«index» : list«index+1») {
 						«ENDIF»

@@ -4,10 +4,12 @@ import com.google.inject.Inject
 import com.mguidi.soa.soa.Service
 import com.mguidi.soa.soa.Operation
 import com.mguidi.soa.generator.java.jsonhelper.JsonUtils
+import org.eclipse.emf.mwe2.language.scoping.QualifiedNameProvider
 
 class ClientJsonGenerator {
 	
 	@Inject extension JsonUtils utils
+	@Inject extension QualifiedNameProvider provider
 	
 	def generateClient(Service service) '''
 		package «service.packageNameClient»;
@@ -91,9 +93,9 @@ class ClientJsonGenerator {
 									ServiceException exception = ServiceExceptionHelper.fromJson(reader);
 									«FOR exception: operation.exceptionts»
 									«IF exception == operation.exceptionts.get(0)»
-									if (exception.getCode() == «exception.code») {
+									if (exception.getException().equals(«exception.fullyQualifiedName»)) {
 									«ELSE»
-									else if (exception.getCode() == «exception.code») {
+									else if (exception.getCode().equals(«exception.fullyQualifiedName»)) {
 									«ENDIF»
 										throw new «exception.qualifiedClassName»();
 									}

@@ -18,7 +18,7 @@ class OperationOutputGenerator {
 		public class «operation.classNameOutput» {
 			
 			«FOR feature: operation.featuresOutput»
-				public static final String «feature.key» = "«feature.name»";
+				public static final String «feature.key» = "«feature.keyValue»";
 			«ENDFOR»
 			
 			«FOR feature: operation.featuresOutput»
@@ -33,7 +33,7 @@ class OperationOutputGenerator {
 				«ENDFOR»
 				*/
 				«ENDIF»
-				public «feature.type.declaration» «feature.name»;
+				public «feature.type.declaration» «feature.featureName»;
 			«ENDFOR»
 			
 		}
