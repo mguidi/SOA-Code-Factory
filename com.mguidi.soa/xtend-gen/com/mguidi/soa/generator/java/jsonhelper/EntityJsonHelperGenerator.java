@@ -197,14 +197,14 @@ public class EntityJsonHelperGenerator {
                 _builder.append("\t");
                 _builder.append("\t\t");
                 _builder.append("obj.");
-                String _featureName = this.utils.featureName(feature);
-                _builder.append(_featureName, "\t\t\t");
-                _builder.append(" = ");
+                String _featureSetterName = this.utils.featureSetterName(feature);
+                _builder.append(_featureSetterName, "\t\t\t");
+                _builder.append("(");
                 FeatureType _type_3 = feature.getType();
                 Entities _type_4 = ((EntitiesFeature) _type_3).getType();
                 String _qualifiedClassNameHelper = this.utils.qualifiedClassNameHelper(_type_4);
                 _builder.append(_qualifiedClassNameHelper, "\t\t\t");
-                _builder.append(".fromJson(reader);");
+                _builder.append(".fromJson(reader));");
                 _builder.newLineIfNotEmpty();
               } else {
                 FeatureType _type_5 = feature.getType();
@@ -218,14 +218,14 @@ public class EntityJsonHelperGenerator {
                   _builder.append("\t\t");
                   _builder.append("\t");
                   _builder.append("obj.");
-                  String _featureName_1 = this.utils.featureName(feature);
-                  _builder.append(_featureName_1, "\t\t\t\t");
-                  _builder.append(" = ");
+                  String _featureSetterName_1 = this.utils.featureSetterName(feature);
+                  _builder.append(_featureSetterName_1, "\t\t\t\t");
+                  _builder.append("(");
                   FeatureType _type_7 = feature.getType();
                   Entities _type_8 = ((EntitiesFeature) _type_7).getType();
                   String _nextValue = this.nextValue(((com.mguidi.soa.soa.Enum) _type_8));
                   _builder.append(_nextValue, "\t\t\t\t");
-                  _builder.append(";");
+                  _builder.append(");");
                   _builder.newLineIfNotEmpty();
                   _builder.append("\t");
                   _builder.append("\t\t");
@@ -235,14 +235,14 @@ public class EntityJsonHelperGenerator {
                   _builder.append("\t\t");
                   _builder.append("\t");
                   _builder.append("obj.");
-                  String _featureName_2 = this.utils.featureName(feature);
-                  _builder.append(_featureName_2, "\t\t\t\t");
-                  _builder.append(" = ");
+                  String _featureSetterName_2 = this.utils.featureSetterName(feature);
+                  _builder.append(_featureSetterName_2, "\t\t\t\t");
+                  _builder.append("(");
                   FeatureType _type_9 = feature.getType();
                   Entities _type_10 = ((EntitiesFeature) _type_9).getType();
                   String _qualifiedClassName = this.utils.qualifiedClassName(_type_10);
                   _builder.append(_qualifiedClassName, "\t\t\t\t");
-                  _builder.append("._UNDEFINED_;");
+                  _builder.append("._UNDEFINED_);");
                   _builder.newLineIfNotEmpty();
                   _builder.append("\t");
                   _builder.append("\t\t");
@@ -267,14 +267,14 @@ public class EntityJsonHelperGenerator {
                   _builder.append("\t\t");
                   _builder.append("\t");
                   _builder.append("obj.");
-                  String _featureName_3 = this.utils.featureName(feature);
-                  _builder.append(_featureName_3, "\t\t\t\t");
-                  _builder.append(" = ");
+                  String _featureSetterName_3 = this.utils.featureSetterName(feature);
+                  _builder.append(_featureSetterName_3, "\t\t\t\t");
+                  _builder.append("(");
                   FeatureType _type_14 = feature.getType();
                   PrimitiveType _type_15 = ((PrimitiveFeature) _type_14).getType();
                   String _nextValue_1 = this.nextValue(_type_15);
                   _builder.append(_nextValue_1, "\t\t\t\t");
-                  _builder.append(";");
+                  _builder.append(");");
                   _builder.newLineIfNotEmpty();
                   _builder.append("\t");
                   _builder.append("\t\t");
@@ -297,14 +297,14 @@ public class EntityJsonHelperGenerator {
                     _builder.append("\t\t");
                     _builder.append("\t");
                     _builder.append("obj.");
-                    String _featureName_4 = this.utils.featureName(feature);
-                    _builder.append(_featureName_4, "\t\t\t\t");
-                    _builder.append(" = ");
+                    String _featureSetterName_4 = this.utils.featureSetterName(feature);
+                    _builder.append(_featureSetterName_4, "\t\t\t\t");
+                    _builder.append("(");
                     FeatureType _type_18 = feature.getType();
                     PrimitiveType _type_19 = ((PrimitiveFeature) _type_18).getType();
                     String _nextValue_2 = this.nextValue(_type_19);
                     _builder.append(_nextValue_2, "\t\t\t\t");
-                    _builder.append(";");
+                    _builder.append(");");
                     _builder.newLineIfNotEmpty();
                     _builder.append("\t");
                     _builder.append("\t\t");
@@ -327,14 +327,14 @@ public class EntityJsonHelperGenerator {
                       _builder.append("\t\t");
                       _builder.append("\t");
                       _builder.append("obj.");
-                      String _featureName_5 = this.utils.featureName(feature);
-                      _builder.append(_featureName_5, "\t\t\t\t");
-                      _builder.append(" = ");
+                      String _featureSetterName_5 = this.utils.featureSetterName(feature);
+                      _builder.append(_featureSetterName_5, "\t\t\t\t");
+                      _builder.append("(");
                       FeatureType _type_22 = feature.getType();
                       PrimitiveType _type_23 = ((PrimitiveFeature) _type_22).getType();
                       String _nextValue_3 = this.nextValue(_type_23);
                       _builder.append(_nextValue_3, "\t\t\t\t");
-                      _builder.append(";");
+                      _builder.append(");");
                       _builder.newLineIfNotEmpty();
                       _builder.append("\t");
                       _builder.append("\t\t");
@@ -357,14 +357,14 @@ public class EntityJsonHelperGenerator {
                         _builder.append("\t\t");
                         _builder.append("\t");
                         _builder.append("obj.");
-                        String _featureName_6 = this.utils.featureName(feature);
-                        _builder.append(_featureName_6, "\t\t\t\t");
-                        _builder.append(" = ");
+                        String _featureSetterName_6 = this.utils.featureSetterName(feature);
+                        _builder.append(_featureSetterName_6, "\t\t\t\t");
+                        _builder.append("(");
                         FeatureType _type_26 = feature.getType();
                         PrimitiveType _type_27 = ((PrimitiveFeature) _type_26).getType();
                         String _nextValue_4 = this.nextValue(_type_27);
                         _builder.append(_nextValue_4, "\t\t\t\t");
-                        _builder.append(";");
+                        _builder.append(");");
                         _builder.newLineIfNotEmpty();
                         _builder.append("\t");
                         _builder.append("\t\t");
@@ -378,14 +378,14 @@ public class EntityJsonHelperGenerator {
                         _builder.append("\t");
                         _builder.append("\t\t");
                         _builder.append("obj.");
-                        String _featureName_7 = this.utils.featureName(feature);
-                        _builder.append(_featureName_7, "\t\t\t");
-                        _builder.append(" = ");
+                        String _featureSetterName_7 = this.utils.featureSetterName(feature);
+                        _builder.append(_featureSetterName_7, "\t\t\t");
+                        _builder.append("(");
                         FeatureType _type_28 = feature.getType();
                         PrimitiveType _type_29 = ((PrimitiveFeature) _type_28).getType();
                         String _nextValue_5 = this.nextValue(_type_29);
                         _builder.append(_nextValue_5, "\t\t\t");
-                        _builder.append(";");
+                        _builder.append(");");
                         _builder.newLineIfNotEmpty();
                       }
                     }
@@ -437,11 +437,11 @@ public class EntityJsonHelperGenerator {
                         _builder.append("\t\t");
                         _builder.append("\t");
                         _builder.append("obj.");
-                        String _featureName_8 = this.utils.featureName(feature);
-                        _builder.append(_featureName_8, "\t\t\t\t");
-                        _builder.append(" = list");
+                        String _featureSetterName_8 = this.utils.featureSetterName(feature);
+                        _builder.append(_featureSetterName_8, "\t\t\t\t");
+                        _builder.append("(list");
                         _builder.append(index, "\t\t\t\t");
-                        _builder.append(";");
+                        _builder.append(");");
                         _builder.newLineIfNotEmpty();
                       }
                     }
@@ -711,9 +711,9 @@ public class EntityJsonHelperGenerator {
     {
       for(final Feature feature : features) {
         _builder.append("if (obj.");
-        String _featureName = this.utils.featureName(feature);
-        _builder.append(_featureName, "");
-        _builder.append(" != null) {");
+        String _featureGetterName = this.utils.featureGetterName(feature);
+        _builder.append(_featureGetterName, "");
+        _builder.append("() != null) {");
         _builder.newLineIfNotEmpty();
         _builder.append("\t");
         _builder.append("writer.name(");
@@ -736,9 +736,9 @@ public class EntityJsonHelperGenerator {
                 String _qualifiedClassNameHelper = this.utils.qualifiedClassNameHelper(_type_4);
                 _builder.append(_qualifiedClassNameHelper, "\t");
                 _builder.append(".writeJson(obj.");
-                String _featureName_1 = this.utils.featureName(feature);
-                _builder.append(_featureName_1, "\t");
-                _builder.append(", writer);");
+                String _featureGetterName_1 = this.utils.featureGetterName(feature);
+                _builder.append(_featureGetterName_1, "\t");
+                _builder.append("(), writer);");
                 _builder.newLineIfNotEmpty();
               } else {
                 FeatureType _type_5 = feature.getType();
@@ -747,9 +747,10 @@ public class EntityJsonHelperGenerator {
                   _builder.append("\t");
                   FeatureType _type_7 = feature.getType();
                   Entities _type_8 = ((EntitiesFeature) _type_7).getType();
-                  String _featureName_2 = this.utils.featureName(feature);
-                  String _plus = ("obj." + _featureName_2);
-                  String _writeValue = this.writeValue(((com.mguidi.soa.soa.Enum) _type_8), _plus);
+                  String _featureGetterName_2 = this.utils.featureGetterName(feature);
+                  String _plus = ("obj." + _featureGetterName_2);
+                  String _plus_1 = (_plus + "()");
+                  String _writeValue = this.writeValue(((com.mguidi.soa.soa.Enum) _type_8), _plus_1);
                   _builder.append(_writeValue, "\t");
                   _builder.newLineIfNotEmpty();
                 }
@@ -761,9 +762,10 @@ public class EntityJsonHelperGenerator {
               _builder.append("\t");
               FeatureType _type_10 = feature.getType();
               PrimitiveType _type_11 = ((PrimitiveFeature) _type_10).getType();
-              String _featureName_3 = this.utils.featureName(feature);
-              String _plus_1 = ("obj." + _featureName_3);
-              String _writeValue_1 = this.writeValue(_type_11, _plus_1);
+              String _featureGetterName_3 = this.utils.featureGetterName(feature);
+              String _plus_2 = ("obj." + _featureGetterName_3);
+              String _plus_3 = (_plus_2 + "()");
+              String _writeValue_1 = this.writeValue(_type_11, _plus_3);
               _builder.append(_writeValue_1, "\t");
               _builder.append(";");
               _builder.newLineIfNotEmpty();
@@ -796,9 +798,9 @@ public class EntityJsonHelperGenerator {
                         _builder.append(" list");
                         _builder.append(index, "\t\t");
                         _builder.append(" : obj.");
-                        String _featureName_4 = this.utils.featureName(feature);
-                        _builder.append(_featureName_4, "\t\t");
-                        _builder.append(") {");
+                        String _featureGetterName_4 = this.utils.featureGetterName(feature);
+                        _builder.append(_featureGetterName_4, "\t\t");
+                        _builder.append("()) {");
                         _builder.newLineIfNotEmpty();
                       } else {
                         _builder.append("\t");

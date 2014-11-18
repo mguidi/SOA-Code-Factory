@@ -409,7 +409,20 @@ public class Utils {
   
   public String featureName(final Feature feature) {
     String _name = feature.getName();
-    return ("_" + _name);
+    String _firstUpper = StringExtensions.toFirstUpper(_name);
+    return ("m" + _firstUpper);
+  }
+  
+  public String featureSetterName(final Feature feature) {
+    String _name = feature.getName();
+    String _firstUpper = StringExtensions.toFirstUpper(_name);
+    return ("set" + _firstUpper);
+  }
+  
+  public String featureGetterName(final Feature feature) {
+    String _name = feature.getName();
+    String _firstUpper = StringExtensions.toFirstUpper(_name);
+    return ("get" + _firstUpper);
   }
   
   /**

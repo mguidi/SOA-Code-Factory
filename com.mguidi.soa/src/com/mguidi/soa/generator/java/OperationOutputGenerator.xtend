@@ -22,18 +22,19 @@ class OperationOutputGenerator {
 			«ENDFOR»
 			
 			«FOR feature: operation.featuresOutput»
-				«IF feature.featureComment.size == 1»
+				protected «feature.type.declaration» «feature.featureName»;
+			«ENDFOR»
+			
+			«FOR feature: operation.featuresOutput»
+				public «feature.type.declaration» «feature.featureGetterName»() {
+					return «feature.featureName»;
+				}
 				
-				// «feature.featureComment.get(0).clean»
-				«ELSEIF feature.featureComment.size > 1»
+				public «operation.classNameOutput» «feature.featureSetterName»(«feature.type.declaration» value) {
+					«feature.featureName» = value;
+					return this;
+				}
 				
-				/*
-				«FOR comment: feature.featureComment»
-				* «comment.clean»
-				«ENDFOR»
-				*/
-				«ENDIF»
-				public «feature.type.declaration» «feature.featureName»;
 			«ENDFOR»
 			
 		}

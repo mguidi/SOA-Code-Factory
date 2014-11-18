@@ -38,18 +38,30 @@ class ModelGenerator {
 			«ENDFOR»
 			
 			«FOR feature: entity.features»
-				«IF feature.featureComment.size == 1»
+«««				«IF feature.featureComment.size == 1»
+«««				
+«««				// «feature.featureComment.get(0).clean»
+«««				«ELSEIF feature.featureComment.size > 1»
+«««				
+«««				/*
+«««				«FOR comment: feature.featureComment»
+«««				* «comment.clean»
+«««				«ENDFOR»
+«««				*/
+«««				«ENDIF»
+				protected «feature.type.declaration» «feature.featureName»;
+			«ENDFOR»
+			
+			«FOR feature: entity.features»
+				public «feature.type.declaration» «feature.featureGetterName»() {
+					return «feature.featureName»;
+				}
 				
-				// «feature.featureComment.get(0).clean»
-				«ELSEIF feature.featureComment.size > 1»
+				public «entity.className» «feature.featureSetterName»(«feature.type.declaration» value) {
+					«feature.featureName» = value;
+					return this;
+				}
 				
-				/*
-				«FOR comment: feature.featureComment»
-				* «comment.clean»
-				«ENDFOR»
-				*/
-				«ENDIF»
-				public «feature.type.declaration» «feature.featureName»;
 			«ENDFOR»
 			
 		}

@@ -11,8 +11,6 @@ import com.mguidi.soa.generator.java.Beautifier
 import com.mguidi.soa.generator.android.ModelGenerator
 import com.mguidi.soa.generator.java.ServiceGenerator
 import com.mguidi.soa.generator.java.ExceptionGenerator
-import com.mguidi.soa.generator.java.OperationOutputGenerator
-import com.mguidi.soa.generator.java.OperationInputGenerator
 import com.mguidi.soa.soa.Architecture
 import com.mguidi.soa.generator.android.GradleBuildGenerator
 import com.mguidi.soa.generator.android.ManifestGenerator

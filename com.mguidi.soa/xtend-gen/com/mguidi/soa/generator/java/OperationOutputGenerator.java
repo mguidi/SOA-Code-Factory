@@ -2,7 +2,6 @@ package com.mguidi.soa.generator.java;
 
 import com.google.inject.Inject;
 import com.mguidi.soa.generator.java.Utils;
-import com.mguidi.soa.soa.Comment;
 import com.mguidi.soa.soa.Feature;
 import com.mguidi.soa.soa.FeatureType;
 import com.mguidi.soa.soa.Operation;
@@ -62,48 +61,8 @@ public class OperationOutputGenerator {
     {
       EList<Feature> _featuresOutput_1 = operation.getFeaturesOutput();
       for(final Feature feature_1 : _featuresOutput_1) {
-        {
-          EList<Comment> _featureComment = feature_1.getFeatureComment();
-          int _size = _featureComment.size();
-          boolean _equals = (_size == 1);
-          if (_equals) {
-            _builder.append("\t");
-            _builder.newLine();
-            _builder.append("\t");
-            _builder.append("// ");
-            EList<Comment> _featureComment_1 = feature_1.getFeatureComment();
-            Comment _get = _featureComment_1.get(0);
-            String _clean = this.utils.clean(_get);
-            _builder.append(_clean, "\t");
-            _builder.newLineIfNotEmpty();
-          } else {
-            EList<Comment> _featureComment_2 = feature_1.getFeatureComment();
-            int _size_1 = _featureComment_2.size();
-            boolean _greaterThan = (_size_1 > 1);
-            if (_greaterThan) {
-              _builder.append("\t");
-              _builder.newLine();
-              _builder.append("\t");
-              _builder.append("/*");
-              _builder.newLine();
-              {
-                EList<Comment> _featureComment_3 = feature_1.getFeatureComment();
-                for(final Comment comment : _featureComment_3) {
-                  _builder.append("\t");
-                  _builder.append("* ");
-                  String _clean_1 = this.utils.clean(comment);
-                  _builder.append(_clean_1, "\t");
-                  _builder.newLineIfNotEmpty();
-                }
-              }
-              _builder.append("\t");
-              _builder.append("*/");
-              _builder.newLine();
-            }
-          }
-        }
         _builder.append("\t");
-        _builder.append("public ");
+        _builder.append("protected ");
         FeatureType _type = feature_1.getType();
         String _declaration = this.utils.declaration(_type);
         _builder.append(_declaration, "\t");
@@ -112,6 +71,63 @@ public class OperationOutputGenerator {
         _builder.append(_featureName, "\t");
         _builder.append(";");
         _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.append("\t");
+    _builder.newLine();
+    {
+      EList<Feature> _featuresOutput_2 = operation.getFeaturesOutput();
+      for(final Feature feature_2 : _featuresOutput_2) {
+        _builder.append("\t");
+        _builder.append("public ");
+        FeatureType _type_1 = feature_2.getType();
+        String _declaration_1 = this.utils.declaration(_type_1);
+        _builder.append(_declaration_1, "\t");
+        _builder.append(" ");
+        String _featureGetterName = this.utils.featureGetterName(feature_2);
+        _builder.append(_featureGetterName, "\t");
+        _builder.append("() {");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("\t");
+        _builder.append("return ");
+        String _featureName_1 = this.utils.featureName(feature_2);
+        _builder.append(_featureName_1, "\t\t");
+        _builder.append(";");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("}");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("public ");
+        String _classNameOutput_2 = this.utils.classNameOutput(operation);
+        _builder.append(_classNameOutput_2, "\t");
+        _builder.append(" ");
+        String _featureSetterName = this.utils.featureSetterName(feature_2);
+        _builder.append(_featureSetterName, "\t");
+        _builder.append("(");
+        FeatureType _type_2 = feature_2.getType();
+        String _declaration_2 = this.utils.declaration(_type_2);
+        _builder.append(_declaration_2, "\t");
+        _builder.append(" value) {");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("\t");
+        String _featureName_2 = this.utils.featureName(feature_2);
+        _builder.append(_featureName_2, "\t\t");
+        _builder.append(" = value;");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("\t");
+        _builder.append("return this;");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("}");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.newLine();
       }
     }
     _builder.append("\t");

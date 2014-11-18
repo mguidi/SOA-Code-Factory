@@ -219,7 +219,15 @@ class Utils {
 	}
 	
 	def String featureName(Feature feature) {
-		"_"+feature.name
+		"m"+feature.name.toFirstUpper
+	}
+	
+	def String featureSetterName(Feature feature) {
+		"set"+feature.name.toFirstUpper
+	}
+	
+	def String featureGetterName(Feature feature) {
+		"get"+feature.name.toFirstUpper
 	}
 
 	/******************************** FeatureType  ********************************/
