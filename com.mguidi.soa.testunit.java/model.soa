@@ -19,7 +19,6 @@
 		decimal: @Decimal
 	}
 	
-	
 	@entity ReferenceFeatures {
 		features: PrimitiveFeatures
 	}

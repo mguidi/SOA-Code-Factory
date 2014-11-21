@@ -113,27 +113,27 @@ public class JavaGenerator implements IGenerator {
       }
     }
     for (final Entity e_1 : entities) {
+      String _version = this.utils.version(e_1);
+      String _plus = ("java/" + _version);
+      String _plus_1 = (_plus + "/model/");
       String _moduleName = this.utils.moduleName(e_1);
-      String _plus = ("java/model/" + _moduleName);
-      String _plus_1 = (_plus + "/src/main/java/");
+      String _plus_2 = (_plus_1 + _moduleName);
+      String _plus_3 = (_plus_2 + "/src/main/java/");
       String _qualifiedClassName = this.utils.qualifiedClassName(e_1);
       String _replace = _qualifiedClassName.replace(".", "/");
-      String _plus_2 = (_plus_1 + _replace);
-      String _plus_3 = (_plus_2 + ".java");
+      String _plus_4 = (_plus_3 + _replace);
+      String _plus_5 = (_plus_4 + ".java");
       CharSequence _generateEntity = this.modelGenerator.generateEntity(e_1);
       CharSequence _format = this.beautifier.format(_generateEntity);
-      fsa.generateFile(_plus_3, _format);
+      fsa.generateFile(_plus_5, _format);
     }
     for (final com.mguidi.soa.soa.Enum e_2 : enumerations) {
-      String _version = this.utils.version(e_2);
-      String _plus_4 = ("java/" + _version);
-      String _plus_5 = (_plus_4 + "/model/");
-      String _moduleName_1 = this.utils.moduleName(e_2);
-      String _plus_6 = (_plus_5 + _moduleName_1);
-      String _plus_7 = (_plus_6 + "/java/");
       String _version_1 = this.utils.version(e_2);
-      String _plus_8 = (_plus_7 + _version_1);
-      String _plus_9 = (_plus_8 + "/ain/java/");
+      String _plus_6 = ("java/" + _version_1);
+      String _plus_7 = (_plus_6 + "/model/");
+      String _moduleName_1 = this.utils.moduleName(e_2);
+      String _plus_8 = (_plus_7 + _moduleName_1);
+      String _plus_9 = (_plus_8 + "/src/main/java/");
       String _qualifiedClassName_1 = this.utils.qualifiedClassName(e_2);
       String _replace_1 = _qualifiedClassName_1.replace(".", "/");
       String _plus_10 = (_plus_9 + _replace_1);

@@ -45,11 +45,11 @@ class JavaGenerator implements IGenerator {
 		}
 		
 		for (e: entities) {
-			fsa.generateFile("java/model/"+e.moduleName+"/src/main/java/" + e.qualifiedClassName.replace(".", "/") + ".java", beautifier.format(modelGenerator.generateEntity(e)))
+			fsa.generateFile("java/"+e.version+"/model/"+e.moduleName+"/src/main/java/" + e.qualifiedClassName.replace(".", "/") + ".java", beautifier.format(modelGenerator.generateEntity(e)))
 		}
 		
 		for (e: enumerations) {
-			fsa.generateFile("java/"+e.version+"/model/"+e.moduleName+"/java/"+e.version+"/ain/java/" + e.qualifiedClassName.replace(".", "/") + ".java", beautifier.format(modelGenerator.generateEnum(e)))
+			fsa.generateFile("java/"+e.version+"/model/"+e.moduleName+"/src/main/java/" + e.qualifiedClassName.replace(".", "/") + ".java", beautifier.format(modelGenerator.generateEnum(e)))
 		}
 		
 		for (e: services) {
