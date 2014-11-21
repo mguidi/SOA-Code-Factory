@@ -28,11 +28,11 @@ public class SwiftJsonHelperGenerator implements IGenerator {
     Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
     Iterable<Entity> _filter = Iterables.<Entity>filter(_iterable, Entity.class);
     for (final Entity e : _filter) {
-      String _moduleName = this.utils.moduleName(e);
-      String _plus = ("swift/commons/" + _moduleName);
-      String _plus_1 = (_plus + "/");
       String _version = this.utils.version(e);
-      String _plus_2 = (_plus_1 + _version);
+      String _plus = ("swift/" + _version);
+      String _plus_1 = (_plus + "/commons/");
+      String _moduleName = this.utils.moduleName(e);
+      String _plus_2 = (_plus_1 + _moduleName);
       String _plus_3 = (_plus_2 + "/src/model/helper/json/");
       String _classNameHelper = this.utils.classNameHelper(e);
       String _plus_4 = (_plus_3 + _classNameHelper);

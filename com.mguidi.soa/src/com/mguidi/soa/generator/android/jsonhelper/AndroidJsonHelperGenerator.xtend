@@ -24,14 +24,14 @@ class AndroidJsonHelperGenerator implements IGenerator {
 		for (e: resource.allContents.toIterable.filter(typeof(Architecture))) {
 			if (entities.size > 0) {
 				// gradle build generation
-				fsa.generateFile("android/model-json/"+e.moduleName+"/"+e.version+"/build.gradle", gradleBuildGenerator.generateBuildModelJson(e, resource))
+				fsa.generateFile("android/"+e.version+"/model-json/"+e.moduleName+"/build.gradle", gradleBuildGenerator.generateBuildModelJson(e, resource))
 				// android manifest
-				fsa.generateFile("android/model-json/"+e.moduleName+"/"+e.version+"/src/main/AndroidManifest.xml", manifestGenerator.generateManifestModelJson(e))
+				fsa.generateFile("android/"+e.version+"/model-json/"+e.moduleName+"/src/main/AndroidManifest.xml", manifestGenerator.generateManifestModelJson(e))
 			}
 		}
 		
 		for (e: entities) {
-			fsa.generateFile("android/model-json/"+e.moduleName+"/"+e.version+"/src/main/java/" + e.qualifiedClassNameHelper.replace(".", "/") + ".java", beautifier.format(entityJsonHelperGenerator.generateJsonHelper(e)))
+			fsa.generateFile("android/"+e.version+"/model-json/"+e.moduleName+"/src/main/java/" + e.qualifiedClassNameHelper.replace(".", "/") + ".java", beautifier.format(entityJsonHelperGenerator.generateJsonHelper(e)))
 		}
 	}
 }

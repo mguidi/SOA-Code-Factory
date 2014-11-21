@@ -15,7 +15,7 @@ class SwiftJsonHelperGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
 		for (e: resource.allContents.toIterable.filter(typeof(Entity))) {
-			fsa.generateFile("swift/commons/"+e.moduleName+"/"+e.version+"/src/model/helper/json/" + e.classNameHelper + ".swift", entityJsonHelperGenerator.generateJsonHelper(e))
+			fsa.generateFile("swift/"+e.version+"/commons/"+e.moduleName+"/src/model/helper/json/" + e.classNameHelper + ".swift", entityJsonHelperGenerator.generateJsonHelper(e))
 		}
 	}
 }

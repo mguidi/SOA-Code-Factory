@@ -78,6 +78,38 @@ public class ServiceGenerator {
         _builder.append(_throwsException, "\t");
         _builder.append(";");
         _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("public ");
+        {
+          EList<Feature> _featuresOutput_1 = operation.getFeaturesOutput();
+          int _size_2 = _featuresOutput_1.size();
+          boolean _greaterThan_2 = (_size_2 > 0);
+          if (_greaterThan_2) {
+            String _qualifiedClassNameOutput_1 = this.utils.qualifiedClassNameOutput(operation);
+            _builder.append(_qualifiedClassNameOutput_1, "\t");
+          } else {
+            _builder.append("void");
+          }
+        }
+        _builder.append(" ");
+        String _signature_1 = this.utils.signature(operation);
+        _builder.append(_signature_1, "\t");
+        _builder.append("(");
+        {
+          EList<Feature> _featuresInput_1 = operation.getFeaturesInput();
+          int _size_3 = _featuresInput_1.size();
+          boolean _greaterThan_3 = (_size_3 > 0);
+          if (_greaterThan_3) {
+            String _classNameInput_1 = this.utils.classNameInput(operation);
+            _builder.append(_classNameInput_1, "\t");
+            _builder.append(" input, ");
+          }
+        }
+        _builder.append("int maxRetries) throws IOException");
+        String _throwsException_1 = this.utils.throwsException(operation);
+        _builder.append(_throwsException_1, "\t");
+        _builder.append(";");
+        _builder.newLineIfNotEmpty();
       }
     }
     _builder.append("}");

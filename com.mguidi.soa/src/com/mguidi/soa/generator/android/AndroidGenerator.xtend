@@ -36,42 +36,42 @@ class AndroidGenerator implements IGenerator {
 		for (e: resource.allContents.toIterable.filter(typeof(Architecture))) {
 			if (enumerations.size > 0 || entities.size > 0) {
 				// gradle build generation
-				fsa.generateFile("android/model/"+e.moduleName+"/"+e.version+"/build.gradle", gradleBuildGenerator.generateBuildModel(e, resource))
+				fsa.generateFile("android/"+e.version+"/model/"+e.moduleName+"/build.gradle", gradleBuildGenerator.generateBuildModel(e, resource))
 				// android manifest
-				fsa.generateFile("android/model/"+e.moduleName+"/"+e.version+"/src/main/AndroidManifest.xml", manifestGenerator.generateManifestModel(e))
+				fsa.generateFile("android/"+e.version+"/model/"+e.moduleName+"/src/main/AndroidManifest.xml", manifestGenerator.generateManifestModel(e))
 			}
 			
 			if (services.size > 0) {
 				// gradle build generation
-				fsa.generateFile("android/service/"+e.moduleName+"/"+e.version+"/build.gradle", gradleBuildGenerator.generateBuildService(e, resource))
+				fsa.generateFile("android/"+e.version+"/service/"+e.moduleName+"/build.gradle", gradleBuildGenerator.generateBuildService(e, resource))
 				// android manifest
-				fsa.generateFile("android/service/"+e.moduleName+"/"+e.version+"/src/main/AndroidManifest.xml", manifestGenerator.generateManifestService(e))
+				fsa.generateFile("android/"+e.version+"/service/"+e.moduleName+"/src/main/AndroidManifest.xml", manifestGenerator.generateManifestService(e))
 			}
 		}
 		
 		for (e: entities) {
-			fsa.generateFile("android/model/"+e.moduleName+"/"+e.version+"/src/main/java/" + e.qualifiedClassName.replace(".", "/") + ".java", beautifier.format(modelGenerator.generateEntity(e)))
+			fsa.generateFile("android/"+e.version+"/model/"+e.moduleName+"/src/main/java/" + e.qualifiedClassName.replace(".", "/") + ".java", beautifier.format(modelGenerator.generateEntity(e)))
 		}
 		
 		for (e: enumerations) {
-			fsa.generateFile("android/model/"+e.moduleName+"/"+e.version+"/src/main/java/" + e.qualifiedClassName.replace(".", "/") + ".java", beautifier.format(modelGenerator.generateEnum(e)))
+			fsa.generateFile("android/"+e.version+"/model/"+e.moduleName+"/src/main/java/" + e.qualifiedClassName.replace(".", "/") + ".java", beautifier.format(modelGenerator.generateEnum(e)))
 		}
 		
 		for (e: services) {
-			fsa.generateFile("android/service/"+e.moduleName+"/"+e.version+"/src/main/java/" + e.qualifiedClassName.replace(".", "/") + ".java", beautifier.format(serviceGenerator.generateService(e)))
+			fsa.generateFile("android/"+e.version+"/service/"+e.moduleName+"/src/main/java/" + e.qualifiedClassName.replace(".", "/") + ".java", beautifier.format(serviceGenerator.generateService(e)))
 		}
 		
 		for (e: resource.allContents.toIterable.filter(typeof(Operation))) {
 			if (e.featuresOutput.size > 0) {
-				fsa.generateFile("android/service/"+e.moduleName+"/"+e.version+"/src/main/java/" + e.qualifiedClassNameOutput.replace(".", "/") + ".java", beautifier.format(operationOutputGenerator.generateOperationOutput(e)))
+				fsa.generateFile("android/"+e.version+"/service/"+e.moduleName+"/src/main/java/" + e.qualifiedClassNameOutput.replace(".", "/") + ".java", beautifier.format(operationOutputGenerator.generateOperationOutput(e)))
 			}
 			if (e.featuresInput.size > 0) {
-				fsa.generateFile("android/service/"+e.moduleName+"/"+e.version+"/src/main/java/" + e.qualifiedClassNameInput.replace(".", "/") + ".java", beautifier.format(operationInputGenerator.generateOperationInput(e)))
+				fsa.generateFile("android/"+e.version+"/service/"+e.moduleName+"/src/main/java/" + e.qualifiedClassNameInput.replace(".", "/") + ".java", beautifier.format(operationInputGenerator.generateOperationInput(e)))
 			}
 		}
 		
 		for (e: resource.allContents.toIterable.filter(typeof(com.mguidi.soa.soa.Exception))) {
-			fsa.generateFile("android/service/"+e.moduleName+"/"+e.version+"/src/main/java/" + e.qualifiedClassName.replace(".", "/") + ".java", beautifier.format(exceptionGenerator.generateException(e)))
+			fsa.generateFile("android/"+e.version+"/service/"+e.moduleName+"/src/main/java/" + e.qualifiedClassName.replace(".", "/") + ".java", beautifier.format(exceptionGenerator.generateException(e)))
 		}
 		
 	}

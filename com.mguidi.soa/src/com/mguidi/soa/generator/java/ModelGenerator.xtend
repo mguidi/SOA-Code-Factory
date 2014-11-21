@@ -15,11 +15,46 @@ class ModelGenerator {
 		* «entity.className»
 		*
 		*/
-		public enum «entity.className» {
+		public class «entity.className» {
 			«FOR feature: entity.features»
-			«feature»,
+			public static «entity.className» _«feature» = new «entity.className»("«feature»");
 			«ENDFOR»
-			_UNDEFINED_
+			public static «entity.className» _UNDEFINED_ = new «entity.className»("_UNDEFINED_");
+			
+			private final String mValue;
+
+			private «entity.className»(String value) {
+				mValue = value;
+			}
+			
+			@Override
+			public int hashCode() {
+				return mValue.hashCode();
+			}
+			
+			@Override
+			public boolean equals(Object o) {
+				if (o instanceof  «entity.className») {
+					return mValue.equals(((«entity.className») o).mValue);
+					
+				} else {
+					return false;
+				}
+			}
+			
+			public static «entity.className» valueOf(String value) {
+				«FOR feature: entity.features»
+				«IF feature == entity.features.get(0)»
+				if (value.equals("«feature»")) {
+				«ELSE»
+				} else if (value.equals("«feature»")) {
+				«ENDIF»
+					return _«feature»;
+				«ENDFOR»
+				} else {
+					return _UNDEFINED_;
+				}
+			}
 		}
 	'''
 	

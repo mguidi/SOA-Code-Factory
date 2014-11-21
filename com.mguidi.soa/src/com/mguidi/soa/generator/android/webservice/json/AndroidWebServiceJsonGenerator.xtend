@@ -9,7 +9,6 @@ import com.google.inject.Inject
 import com.mguidi.soa.generator.java.Beautifier
 import com.mguidi.soa.generator.java.webservice.json.OperationOutputJsonHelperGenerator
 import com.mguidi.soa.generator.java.webservice.json.OperationInputJsonHelperGenerator
-import com.mguidi.soa.generator.java.webservice.json.ClientJsonGenerator
 import com.mguidi.soa.generator.java.jsonhelper.JsonUtils
 import com.mguidi.soa.soa.Architecture
 
@@ -20,7 +19,7 @@ class AndroidWebServiceJsonGenerator implements IGenerator {
 	@Inject extension OperationOutputJsonHelperGenerator operationOutputJsonHelperGenerator
 	@Inject extension OperationInputJsonHelperGenerator operationInputJsonHelperGenerator
 	@Inject extension Beautifier beautifier
-	@Inject GradleBuildGenerator gradleBuildGenerator
+	@Inject extension GradleBuildGenerator gradleBuildGenerator
 	@Inject extension ManifestGenerator manifestGenerator
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
@@ -30,22 +29,22 @@ class AndroidWebServiceJsonGenerator implements IGenerator {
 		for (e: resource.allContents.toIterable.filter(typeof(Architecture))) {
 			if (services.size > 0 || operations.size > 0) {
 				// gradle build generation
-				fsa.generateFile("android/service-json/"+e.moduleName+"/"+e.version+"/build.gradle", gradleBuildGenerator.generateBuildServiceJson(e, resource))
+				fsa.generateFile("android/"+e.version+"/service-json/"+e.moduleName+"/build.gradle", gradleBuildGenerator.generateBuildServiceJson(e, resource))
 				// android manifest
-				fsa.generateFile("android/service-json/"+e.moduleName+"/"+e.version+"/src/main/AndroidManifest.xml", manifestGenerator.generateManifestServiceJson(e))
+				fsa.generateFile("android/"+e.version+"/service-json/"+e.moduleName+"/src/main/AndroidManifest.xml", manifestGenerator.generateManifestServiceJson(e))
 			}
 		}
 		
 		for (e: services) {
-			fsa.generateFile("android/service-json/"+e.moduleName+"/"+e.version+"/src/main/java/" + e.qualifiedClassNameClient.replace(".", "/") + ".java", beautifier.format(clientJsonGenerator.generateClient(e)))
+			fsa.generateFile("android/"+e.version+"/service-json/"+e.moduleName+"/src/main/java/" + e.qualifiedClassNameClient.replace(".", "/") + ".java", beautifier.format(clientJsonGenerator.generateClient(e)))
 		}
 		
 		for (e: operations) {
 			if (e.featuresOutput.size > 0) {
-				fsa.generateFile("android/service-json/"+e.moduleName+"/"+e.version+"/src/main/java/" + e.qualifiedClassNameOutputHelper.replace(".", "/") + ".java", beautifier.format(operationOutputJsonHelperGenerator.generateJsonHelper(e)))
+				fsa.generateFile("android/"+e.version+"/service-json/"+e.moduleName+"/src/main/java/" + e.qualifiedClassNameOutputHelper.replace(".", "/") + ".java", beautifier.format(operationOutputJsonHelperGenerator.generateJsonHelper(e)))
 			}
 			if (e.featuresInput.size > 0) {
-				fsa.generateFile("android/service-json/"+e.moduleName+"/"+e.version+"/src/main/java/" + e.qualifiedClassNameInputHelper.replace(".", "/") + ".java", beautifier.format(operationInputJsonHelperGenerator.generateJsonHelper(e)))
+				fsa.generateFile("android/"+e.version+"/service-json/"+e.moduleName+"/src/main/java/" + e.qualifiedClassNameInputHelper.replace(".", "/") + ".java", beautifier.format(operationInputJsonHelperGenerator.generateJsonHelper(e)))
 			}
 		}
 		

@@ -14,3 +14,5 @@ com.mguidi.soa.testunit.java/.settings
 com.mguidi.soa.testunit.java/src-gen
 com.mguidi.soa.testunit.java/target
 com.mguidi.soa.commons-service/target
+SOA_Android_Utils_Project/.idea
+SOA_Android_Utils_Project.iml

@@ -89,11 +89,11 @@ public class JavaGenerator implements IGenerator {
           _or = _greaterThan_1;
         }
         if (_or) {
-          String _moduleName = this.utils.moduleName(e);
-          String _plus = ("java/model/" + _moduleName);
-          String _plus_1 = (_plus + "/");
           String _version = this.utils.version(e);
-          String _plus_2 = (_plus_1 + _version);
+          String _plus = ("java/" + _version);
+          String _plus_1 = (_plus + "/model/");
+          String _moduleName = this.utils.moduleName(e);
+          String _plus_2 = (_plus_1 + _moduleName);
           String _plus_3 = (_plus_2 + "/build.gradle");
           CharSequence _generateBuildModel = this.gradleBuildGenerator.generateBuildModel(e, resource);
           fsa.generateFile(_plus_3, _generateBuildModel);
@@ -101,11 +101,11 @@ public class JavaGenerator implements IGenerator {
         int _size_2 = services.size();
         boolean _greaterThan_2 = (_size_2 > 0);
         if (_greaterThan_2) {
-          String _moduleName_1 = this.utils.moduleName(e);
-          String _plus_4 = ("java/service/" + _moduleName_1);
-          String _plus_5 = (_plus_4 + "/");
           String _version_1 = this.utils.version(e);
-          String _plus_6 = (_plus_5 + _version_1);
+          String _plus_4 = ("java/" + _version_1);
+          String _plus_5 = (_plus_4 + "/service/");
+          String _moduleName_1 = this.utils.moduleName(e);
+          String _plus_6 = (_plus_5 + _moduleName_1);
           String _plus_7 = (_plus_6 + "/build.gradle");
           CharSequence _generateBuildService = this.gradleBuildGenerator.generateBuildService(e, resource);
           fsa.generateFile(_plus_7, _generateBuildService);
@@ -115,25 +115,25 @@ public class JavaGenerator implements IGenerator {
     for (final Entity e_1 : entities) {
       String _moduleName = this.utils.moduleName(e_1);
       String _plus = ("java/model/" + _moduleName);
-      String _plus_1 = (_plus + "/");
-      String _version = this.utils.version(e_1);
-      String _plus_2 = (_plus_1 + _version);
-      String _plus_3 = (_plus_2 + "/src/main/java/");
+      String _plus_1 = (_plus + "/src/main/java/");
       String _qualifiedClassName = this.utils.qualifiedClassName(e_1);
       String _replace = _qualifiedClassName.replace(".", "/");
-      String _plus_4 = (_plus_3 + _replace);
-      String _plus_5 = (_plus_4 + ".java");
+      String _plus_2 = (_plus_1 + _replace);
+      String _plus_3 = (_plus_2 + ".java");
       CharSequence _generateEntity = this.modelGenerator.generateEntity(e_1);
       CharSequence _format = this.beautifier.format(_generateEntity);
-      fsa.generateFile(_plus_5, _format);
+      fsa.generateFile(_plus_3, _format);
     }
     for (final com.mguidi.soa.soa.Enum e_2 : enumerations) {
+      String _version = this.utils.version(e_2);
+      String _plus_4 = ("java/" + _version);
+      String _plus_5 = (_plus_4 + "/model/");
       String _moduleName_1 = this.utils.moduleName(e_2);
-      String _plus_6 = ("java/model/" + _moduleName_1);
-      String _plus_7 = (_plus_6 + "/");
+      String _plus_6 = (_plus_5 + _moduleName_1);
+      String _plus_7 = (_plus_6 + "/java/");
       String _version_1 = this.utils.version(e_2);
       String _plus_8 = (_plus_7 + _version_1);
-      String _plus_9 = (_plus_8 + "/src/main/java/");
+      String _plus_9 = (_plus_8 + "/ain/java/");
       String _qualifiedClassName_1 = this.utils.qualifiedClassName(e_2);
       String _replace_1 = _qualifiedClassName_1.replace(".", "/");
       String _plus_10 = (_plus_9 + _replace_1);
@@ -143,11 +143,11 @@ public class JavaGenerator implements IGenerator {
       fsa.generateFile(_plus_11, _format_1);
     }
     for (final Service e_3 : services) {
-      String _moduleName_2 = this.utils.moduleName(e_3);
-      String _plus_12 = ("java/service/" + _moduleName_2);
-      String _plus_13 = (_plus_12 + "/");
       String _version_2 = this.utils.version(e_3);
-      String _plus_14 = (_plus_13 + _version_2);
+      String _plus_12 = ("java/" + _version_2);
+      String _plus_13 = (_plus_12 + "/service/");
+      String _moduleName_2 = this.utils.moduleName(e_3);
+      String _plus_14 = (_plus_13 + _moduleName_2);
       String _plus_15 = (_plus_14 + "/src/main/java/");
       String _qualifiedClassName_2 = this.utils.qualifiedClassName(e_3);
       String _replace_2 = _qualifiedClassName_2.replace(".", "/");
@@ -166,11 +166,11 @@ public class JavaGenerator implements IGenerator {
         int _size = _featuresOutput.size();
         boolean _greaterThan = (_size > 0);
         if (_greaterThan) {
-          String _moduleName_3 = this.utils.moduleName(e_4);
-          String _plus_18 = ("java/service/" + _moduleName_3);
-          String _plus_19 = (_plus_18 + "/");
           String _version_3 = this.utils.version(e_4);
-          String _plus_20 = (_plus_19 + _version_3);
+          String _plus_18 = ("java/" + _version_3);
+          String _plus_19 = (_plus_18 + "/service/");
+          String _moduleName_3 = this.utils.moduleName(e_4);
+          String _plus_20 = (_plus_19 + _moduleName_3);
           String _plus_21 = (_plus_20 + "/src/main/java/");
           String _qualifiedClassNameOutput = this.utils.qualifiedClassNameOutput(e_4);
           String _replace_3 = _qualifiedClassNameOutput.replace(".", "/");
@@ -184,11 +184,11 @@ public class JavaGenerator implements IGenerator {
         int _size_1 = _featuresInput.size();
         boolean _greaterThan_1 = (_size_1 > 0);
         if (_greaterThan_1) {
-          String _moduleName_4 = this.utils.moduleName(e_4);
-          String _plus_24 = ("java/service/" + _moduleName_4);
-          String _plus_25 = (_plus_24 + "/");
           String _version_4 = this.utils.version(e_4);
-          String _plus_26 = (_plus_25 + _version_4);
+          String _plus_24 = ("java/" + _version_4);
+          String _plus_25 = (_plus_24 + "/service/");
+          String _moduleName_4 = this.utils.moduleName(e_4);
+          String _plus_26 = (_plus_25 + _moduleName_4);
           String _plus_27 = (_plus_26 + "/src/main/java/");
           String _qualifiedClassNameInput = this.utils.qualifiedClassNameInput(e_4);
           String _replace_4 = _qualifiedClassNameInput.replace(".", "/");
@@ -204,11 +204,11 @@ public class JavaGenerator implements IGenerator {
     Iterable<EObject> _iterable_5 = IteratorExtensions.<EObject>toIterable(_allContents_5);
     Iterable<com.mguidi.soa.soa.Exception> _filter_5 = Iterables.<com.mguidi.soa.soa.Exception>filter(_iterable_5, com.mguidi.soa.soa.Exception.class);
     for (final com.mguidi.soa.soa.Exception e_5 : _filter_5) {
-      String _moduleName_3 = this.utils.moduleName(e_5);
-      String _plus_18 = ("java/service/" + _moduleName_3);
-      String _plus_19 = (_plus_18 + "/");
       String _version_3 = this.utils.version(e_5);
-      String _plus_20 = (_plus_19 + _version_3);
+      String _plus_18 = ("java/" + _version_3);
+      String _plus_19 = (_plus_18 + "/service/");
+      String _moduleName_3 = this.utils.moduleName(e_5);
+      String _plus_20 = (_plus_19 + _moduleName_3);
       String _plus_21 = (_plus_20 + "/src/main/java/");
       String _qualifiedClassName_3 = this.utils.qualifiedClassName(e_5);
       String _replace_3 = _qualifiedClassName_3.replace(".", "/");

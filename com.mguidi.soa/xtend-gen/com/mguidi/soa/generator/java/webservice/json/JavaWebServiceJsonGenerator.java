@@ -78,19 +78,19 @@ public class JavaWebServiceJsonGenerator implements IGenerator {
         _or = _greaterThan_1;
       }
       if (_or) {
-        String _moduleName = this.utils.moduleName(e);
-        String _plus = ("java/service-json/" + _moduleName);
-        String _plus_1 = (_plus + "/");
         String _version = this.utils.version(e);
-        String _plus_2 = (_plus_1 + _version);
+        String _plus = ("java/" + _version);
+        String _plus_1 = (_plus + "/service-json/");
+        String _moduleName = this.utils.moduleName(e);
+        String _plus_2 = (_plus_1 + _moduleName);
         String _plus_3 = (_plus_2 + "/build.gradle");
         CharSequence _generateBuildServiceJson = this.gradleBuildGenerator.generateBuildServiceJson(e, resource);
         fsa.generateFile(_plus_3, _generateBuildServiceJson);
-        String _moduleName_1 = this.utils.moduleName(e);
-        String _plus_4 = ("java/servlet-json/" + _moduleName_1);
-        String _plus_5 = (_plus_4 + "/");
         String _version_1 = this.utils.version(e);
-        String _plus_6 = (_plus_5 + _version_1);
+        String _plus_4 = ("java/" + _version_1);
+        String _plus_5 = (_plus_4 + "/servlet-json/");
+        String _moduleName_1 = this.utils.moduleName(e);
+        String _plus_6 = (_plus_5 + _moduleName_1);
         String _plus_7 = (_plus_6 + "/build.gradle");
         CharSequence _generateBuildServletJson = this.gradleBuildGenerator.generateBuildServletJson(e, resource);
         fsa.generateFile(_plus_7, _generateBuildServletJson);
@@ -98,11 +98,11 @@ public class JavaWebServiceJsonGenerator implements IGenerator {
     }
     for (final Service e_1 : services) {
       {
-        String _moduleName_2 = this.utils.moduleName(e_1);
-        String _plus_8 = ("java/servlet-json/" + _moduleName_2);
-        String _plus_9 = (_plus_8 + "/");
         String _version_2 = this.utils.version(e_1);
-        String _plus_10 = (_plus_9 + _version_2);
+        String _plus_8 = ("java/" + _version_2);
+        String _plus_9 = (_plus_8 + "/servlet-json/");
+        String _moduleName_2 = this.utils.moduleName(e_1);
+        String _plus_10 = (_plus_9 + _moduleName_2);
         String _plus_11 = (_plus_10 + "/src/main/java/");
         String _qualifiedClassNameServlet = this.utils.qualifiedClassNameServlet(e_1);
         String _replace = _qualifiedClassNameServlet.replace(".", "/");
@@ -111,11 +111,11 @@ public class JavaWebServiceJsonGenerator implements IGenerator {
         CharSequence _generateServlet = this.servletJsonGenerator.generateServlet(e_1);
         CharSequence _format = this.beautifier.format(_generateServlet);
         fsa.generateFile(_plus_13, _format);
-        String _moduleName_3 = this.utils.moduleName(e_1);
-        String _plus_14 = ("java/service-json/" + _moduleName_3);
-        String _plus_15 = (_plus_14 + "/");
         String _version_3 = this.utils.version(e_1);
-        String _plus_16 = (_plus_15 + _version_3);
+        String _plus_14 = ("java/" + _version_3);
+        String _plus_15 = (_plus_14 + "/service-json/");
+        String _moduleName_3 = this.utils.moduleName(e_1);
+        String _plus_16 = (_plus_15 + _moduleName_3);
         String _plus_17 = (_plus_16 + "/src/main/java/");
         String _qualifiedClassNameClient = this.utils.qualifiedClassNameClient(e_1);
         String _replace_1 = _qualifiedClassNameClient.replace(".", "/");
@@ -132,11 +132,11 @@ public class JavaWebServiceJsonGenerator implements IGenerator {
         int _size_2 = _featuresOutput.size();
         boolean _greaterThan_2 = (_size_2 > 0);
         if (_greaterThan_2) {
-          String _moduleName_2 = this.utils.moduleName(e_2);
-          String _plus_8 = ("java/service-json/" + _moduleName_2);
-          String _plus_9 = (_plus_8 + "/");
           String _version_2 = this.utils.version(e_2);
-          String _plus_10 = (_plus_9 + _version_2);
+          String _plus_8 = ("java/" + _version_2);
+          String _plus_9 = (_plus_8 + "/service-json/");
+          String _moduleName_2 = this.utils.moduleName(e_2);
+          String _plus_10 = (_plus_9 + _moduleName_2);
           String _plus_11 = (_plus_10 + "/src/main/java/");
           String _qualifiedClassNameOutputHelper = this.utils.qualifiedClassNameOutputHelper(e_2);
           String _replace = _qualifiedClassNameOutputHelper.replace(".", "/");
@@ -150,11 +150,11 @@ public class JavaWebServiceJsonGenerator implements IGenerator {
         int _size_3 = _featuresInput.size();
         boolean _greaterThan_3 = (_size_3 > 0);
         if (_greaterThan_3) {
-          String _moduleName_3 = this.utils.moduleName(e_2);
-          String _plus_14 = ("java/service-json/" + _moduleName_3);
-          String _plus_15 = (_plus_14 + "/");
           String _version_3 = this.utils.version(e_2);
-          String _plus_16 = (_plus_15 + _version_3);
+          String _plus_14 = ("java/" + _version_3);
+          String _plus_15 = (_plus_14 + "/service-json/");
+          String _moduleName_3 = this.utils.moduleName(e_2);
+          String _plus_16 = (_plus_15 + _moduleName_3);
           String _plus_17 = (_plus_16 + "/src/main/java/");
           String _qualifiedClassNameInputHelper = this.utils.qualifiedClassNameInputHelper(e_2);
           String _replace_1 = _qualifiedClassNameInputHelper.replace(".", "/");

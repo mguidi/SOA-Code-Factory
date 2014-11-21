@@ -27,22 +27,22 @@ class JavaWebServiceJsonGenerator implements IGenerator {
 		for (e: resource.allContents.toIterable.filter(typeof(Architecture))) {
 			if (services.size > 0 || operations.size > 0) {
 				// gradle build generation
-				fsa.generateFile("java/service-json/"+e.moduleName+"/"+e.version+"/build.gradle", gradleBuildGenerator.generateBuildServiceJson(e, resource))
-				fsa.generateFile("java/servlet-json/"+e.moduleName+"/"+e.version+"/build.gradle", gradleBuildGenerator.generateBuildServletJson(e, resource))
+				fsa.generateFile("java/"+e.version+"/service-json/"+e.moduleName+"/build.gradle", gradleBuildGenerator.generateBuildServiceJson(e, resource))
+				fsa.generateFile("java/"+e.version+"/servlet-json/"+e.moduleName+"/build.gradle", gradleBuildGenerator.generateBuildServletJson(e, resource))
 			}
 		}
 		
 		for (e: services) {
-			fsa.generateFile("java/servlet-json/"+e.moduleName+"/"+e.version+"/src/main/java/" + e.qualifiedClassNameServlet.replace(".", "/") + ".java", beautifier.format(servletJsonGenerator.generateServlet(e)))
-			fsa.generateFile("java/service-json/"+e.moduleName+"/"+e.version+"/src/main/java/" + e.qualifiedClassNameClient.replace(".", "/") + ".java", beautifier.format(clientJsonGenerator.generateClient(e)))
+			fsa.generateFile("java/"+e.version+"/servlet-json/"+e.moduleName+"/src/main/java/" + e.qualifiedClassNameServlet.replace(".", "/") + ".java", beautifier.format(servletJsonGenerator.generateServlet(e)))
+			fsa.generateFile("java/"+e.version+"/service-json/"+e.moduleName+"/src/main/java/" + e.qualifiedClassNameClient.replace(".", "/") + ".java", beautifier.format(clientJsonGenerator.generateClient(e)))
 		}
 		
 		for (e: operations) {
 			if (e.featuresOutput.size > 0) {
-				fsa.generateFile("java/service-json/"+e.moduleName+"/"+e.version+"/src/main/java/" + e.qualifiedClassNameOutputHelper.replace(".", "/") + ".java", beautifier.format(operationOutputJsonHelperGenerator.generateJsonHelper(e)))
+				fsa.generateFile("java/"+e.version+"/service-json/"+e.moduleName+"/src/main/java/" + e.qualifiedClassNameOutputHelper.replace(".", "/") + ".java", beautifier.format(operationOutputJsonHelperGenerator.generateJsonHelper(e)))
 			}
 			if (e.featuresInput.size > 0) {
-				fsa.generateFile("java/service-json/"+e.moduleName+"/"+e.version+"/src/main/java/" + e.qualifiedClassNameInputHelper.replace(".", "/") + ".java", beautifier.format(operationInputJsonHelperGenerator.generateJsonHelper(e)))
+				fsa.generateFile("java/"+e.version+"/service-json/"+e.moduleName+"/src/main/java/" + e.qualifiedClassNameInputHelper.replace(".", "/") + ".java", beautifier.format(operationInputJsonHelperGenerator.generateJsonHelper(e)))
 			}
 		}
 		

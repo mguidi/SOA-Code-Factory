@@ -23,12 +23,12 @@ class JavaJsonHelperGenerator implements IGenerator {
 		for (e: resource.allContents.toIterable.filter(typeof(Architecture))) {
 			if (entities.size > 0) {
 				// gradle build generation
-				fsa.generateFile("java/model-json/"+e.moduleName+"/"+e.version+"/build.gradle", gradleBuildGenerator.generateBuildModelJson(e, resource))
+				fsa.generateFile("java/"+e.version+"/model-json/"+e.moduleName+"/build.gradle", gradleBuildGenerator.generateBuildModelJson(e, resource))
 			}
 		}
 		
 		for (e: entities) {
-			fsa.generateFile("java/model-json/"+e.moduleName+"/"+e.version+"/src/main/java/" + e.qualifiedClassNameHelper.replace(".", "/") + ".java", beautifier.format(entityJsonHelperGenerator.generateJsonHelper(e)))
+			fsa.generateFile("java/"+e.version+"/model-json/"+e.moduleName+"/src/main/java/" + e.qualifiedClassNameHelper.replace(".", "/") + ".java", beautifier.format(entityJsonHelperGenerator.generateJsonHelper(e)))
 		}
 	}
 }

@@ -19,23 +19,23 @@ class SwiftGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
 		for (e: resource.allContents.toIterable.filter(typeof(Entity))) {
-			fsa.generateFile("swift/commons/"+e.moduleName+"/"+e.version+"/src/model/" + e.className + ".swift", modelGenerator.generateEntity(e))
+			fsa.generateFile("swift/"+e.version+"/commons/"+e.moduleName+"/src/model/" + e.className + ".swift", modelGenerator.generateEntity(e))
 		}
 		
 		for (e: resource.allContents.toIterable.filter(typeof(com.mguidi.soa.soa.Enum))) {
-			fsa.generateFile("swift/commons/"+e.moduleName+"/"+e.version+"/src/model/" + e.className + ".swift", modelGenerator.generateEnum(e))
+			fsa.generateFile("swift/"+e.version+"/commons/"+e.moduleName+"/src/model/" + e.className + ".swift", modelGenerator.generateEnum(e))
 		}
 		
 		for (e: resource.allContents.toIterable.filter(typeof(Service))) {
-			fsa.generateFile("swift/commons/"+e.moduleName+"/"+e.version+"/src/service/" + e.className + ".swift", serviceGenerator.generateService(e))
+			fsa.generateFile("swift/"+e.version+"/commons/"+e.moduleName+"/src/service/" + e.className + ".swift", serviceGenerator.generateService(e))
 		}
 		
 		for (e: resource.allContents.toIterable.filter(typeof(Operation))) {
 			if (e.featuresOutput.size > 0) {
-				fsa.generateFile("swift/commons/"+e.moduleName+"/"+e.version+"/src/service/operation/" + e.classNameOutput + ".swift", operationOutputGenerator.generateOperationOutput(e))
+				fsa.generateFile("swift/"+e.version+"/commons/"+e.moduleName+"/src/service/operation/" + e.classNameOutput + ".swift", operationOutputGenerator.generateOperationOutput(e))
 			}
 			if (e.featuresInput.size > 0) {
-				fsa.generateFile("swift/commons/"+e.moduleName+"/"+e.version+"/src/service/operation/" + e.classNameInput + ".swift", operationInputGenerator.generateOperationInput(e))
+				fsa.generateFile("swift/"+e.version+"/commons/"+e.moduleName+"/src/service/operation/" + e.classNameInput + ".swift", operationInputGenerator.generateOperationInput(e))
 			}
 		}
 		

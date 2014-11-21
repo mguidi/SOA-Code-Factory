@@ -1,5 +1,6 @@
 package com.mguidi.soa.generator.java;
 
+import com.google.common.base.Objects;
 import com.google.inject.Inject;
 import com.mguidi.soa.generator.java.Utils;
 import com.mguidi.soa.soa.Entity;
@@ -35,7 +36,7 @@ public class ModelGenerator {
     _builder.newLine();
     _builder.append("*/");
     _builder.newLine();
-    _builder.append("public enum ");
+    _builder.append("public class ");
     String _className_1 = this.utils.className(entity);
     _builder.append(_className_1, "");
     _builder.append(" {");
@@ -44,13 +45,143 @@ public class ModelGenerator {
       EList<String> _features = entity.getFeatures();
       for(final String feature : _features) {
         _builder.append("\t");
+        _builder.append("public static ");
+        String _className_2 = this.utils.className(entity);
+        _builder.append(_className_2, "\t");
+        _builder.append(" _");
         _builder.append(feature, "\t");
-        _builder.append(",");
+        _builder.append(" = new ");
+        String _className_3 = this.utils.className(entity);
+        _builder.append(_className_3, "\t");
+        _builder.append("(\"");
+        _builder.append(feature, "\t");
+        _builder.append("\");");
         _builder.newLineIfNotEmpty();
       }
     }
     _builder.append("\t");
-    _builder.append("_UNDEFINED_");
+    _builder.append("public static ");
+    String _className_4 = this.utils.className(entity);
+    _builder.append(_className_4, "\t");
+    _builder.append(" _UNDEFINED_ = new ");
+    String _className_5 = this.utils.className(entity);
+    _builder.append(_className_5, "\t");
+    _builder.append("(\"_UNDEFINED_\");");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("private final String mValue;");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("private ");
+    String _className_6 = this.utils.className(entity);
+    _builder.append(_className_6, "\t");
+    _builder.append("(String value) {");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t\t");
+    _builder.append("mValue = value;");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("@Override");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("public int hashCode() {");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("return mValue.hashCode();");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("@Override");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("public boolean equals(Object o) {");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("if (o instanceof  ");
+    String _className_7 = this.utils.className(entity);
+    _builder.append(_className_7, "\t\t");
+    _builder.append(") {");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t\t\t");
+    _builder.append("return mValue.equals(((");
+    String _className_8 = this.utils.className(entity);
+    _builder.append(_className_8, "\t\t\t");
+    _builder.append(") o).mValue);");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t\t\t");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("} else {");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("return false;");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("public static ");
+    String _className_9 = this.utils.className(entity);
+    _builder.append(_className_9, "\t");
+    _builder.append(" valueOf(String value) {");
+    _builder.newLineIfNotEmpty();
+    {
+      EList<String> _features_1 = entity.getFeatures();
+      for(final String feature_1 : _features_1) {
+        {
+          EList<String> _features_2 = entity.getFeatures();
+          String _get = _features_2.get(0);
+          boolean _equals = Objects.equal(feature_1, _get);
+          if (_equals) {
+            _builder.append("\t\t");
+            _builder.append("if (value.equals(\"");
+            _builder.append(feature_1, "\t\t");
+            _builder.append("\")) {");
+            _builder.newLineIfNotEmpty();
+          } else {
+            _builder.append("\t\t");
+            _builder.append("} else if (value.equals(\"");
+            _builder.append(feature_1, "\t\t");
+            _builder.append("\")) {");
+            _builder.newLineIfNotEmpty();
+          }
+        }
+        _builder.append("\t\t");
+        _builder.append("\t");
+        _builder.append("return _");
+        _builder.append(feature_1, "\t\t\t");
+        _builder.append(";");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.append("\t\t");
+    _builder.append("} else {");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("return _UNDEFINED_;");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("}");
     _builder.newLine();
     _builder.append("}");
     _builder.newLine();

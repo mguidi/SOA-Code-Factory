@@ -2,11 +2,11 @@ package com.mguidi.soa.generator.android.webservice.json;
 
 import com.google.common.collect.Iterables;
 import com.google.inject.Inject;
+import com.mguidi.soa.generator.android.webservice.json.ClientJsonGenerator;
 import com.mguidi.soa.generator.android.webservice.json.GradleBuildGenerator;
 import com.mguidi.soa.generator.android.webservice.json.ManifestGenerator;
 import com.mguidi.soa.generator.java.Beautifier;
 import com.mguidi.soa.generator.java.jsonhelper.JsonUtils;
-import com.mguidi.soa.generator.java.webservice.json.ClientJsonGenerator;
 import com.mguidi.soa.generator.java.webservice.json.OperationInputJsonHelperGenerator;
 import com.mguidi.soa.generator.java.webservice.json.OperationOutputJsonHelperGenerator;
 import com.mguidi.soa.soa.Architecture;
@@ -47,6 +47,7 @@ public class AndroidWebServiceJsonGenerator implements IGenerator {
   private Beautifier beautifier;
   
   @Inject
+  @Extension
   private GradleBuildGenerator gradleBuildGenerator;
   
   @Inject
@@ -77,30 +78,30 @@ public class AndroidWebServiceJsonGenerator implements IGenerator {
         _or = _greaterThan_1;
       }
       if (_or) {
-        String _moduleName = this.utils.moduleName(e);
-        String _plus = ("android/service-json/" + _moduleName);
-        String _plus_1 = (_plus + "/");
         String _version = this.utils.version(e);
-        String _plus_2 = (_plus_1 + _version);
+        String _plus = ("android/" + _version);
+        String _plus_1 = (_plus + "/service-json/");
+        String _moduleName = this.utils.moduleName(e);
+        String _plus_2 = (_plus_1 + _moduleName);
         String _plus_3 = (_plus_2 + "/build.gradle");
         CharSequence _generateBuildServiceJson = this.gradleBuildGenerator.generateBuildServiceJson(e, resource);
         fsa.generateFile(_plus_3, _generateBuildServiceJson);
-        String _moduleName_1 = this.utils.moduleName(e);
-        String _plus_4 = ("android/service-json/" + _moduleName_1);
-        String _plus_5 = (_plus_4 + "/");
         String _version_1 = this.utils.version(e);
-        String _plus_6 = (_plus_5 + _version_1);
+        String _plus_4 = ("android/" + _version_1);
+        String _plus_5 = (_plus_4 + "/service-json/");
+        String _moduleName_1 = this.utils.moduleName(e);
+        String _plus_6 = (_plus_5 + _moduleName_1);
         String _plus_7 = (_plus_6 + "/src/main/AndroidManifest.xml");
         CharSequence _generateManifestServiceJson = this.manifestGenerator.generateManifestServiceJson(e);
         fsa.generateFile(_plus_7, _generateManifestServiceJson);
       }
     }
     for (final Service e_1 : services) {
-      String _moduleName_2 = this.utils.moduleName(e_1);
-      String _plus_8 = ("android/service-json/" + _moduleName_2);
-      String _plus_9 = (_plus_8 + "/");
       String _version_2 = this.utils.version(e_1);
-      String _plus_10 = (_plus_9 + _version_2);
+      String _plus_8 = ("android/" + _version_2);
+      String _plus_9 = (_plus_8 + "/service-json/");
+      String _moduleName_2 = this.utils.moduleName(e_1);
+      String _plus_10 = (_plus_9 + _moduleName_2);
       String _plus_11 = (_plus_10 + "/src/main/java/");
       String _qualifiedClassNameClient = this.utils.qualifiedClassNameClient(e_1);
       String _replace = _qualifiedClassNameClient.replace(".", "/");
@@ -116,11 +117,11 @@ public class AndroidWebServiceJsonGenerator implements IGenerator {
         int _size_2 = _featuresOutput.size();
         boolean _greaterThan_2 = (_size_2 > 0);
         if (_greaterThan_2) {
-          String _moduleName_3 = this.utils.moduleName(e_2);
-          String _plus_14 = ("android/service-json/" + _moduleName_3);
-          String _plus_15 = (_plus_14 + "/");
           String _version_3 = this.utils.version(e_2);
-          String _plus_16 = (_plus_15 + _version_3);
+          String _plus_14 = ("android/" + _version_3);
+          String _plus_15 = (_plus_14 + "/service-json/");
+          String _moduleName_3 = this.utils.moduleName(e_2);
+          String _plus_16 = (_plus_15 + _moduleName_3);
           String _plus_17 = (_plus_16 + "/src/main/java/");
           String _qualifiedClassNameOutputHelper = this.utils.qualifiedClassNameOutputHelper(e_2);
           String _replace_1 = _qualifiedClassNameOutputHelper.replace(".", "/");
@@ -134,11 +135,11 @@ public class AndroidWebServiceJsonGenerator implements IGenerator {
         int _size_3 = _featuresInput.size();
         boolean _greaterThan_3 = (_size_3 > 0);
         if (_greaterThan_3) {
-          String _moduleName_4 = this.utils.moduleName(e_2);
-          String _plus_20 = ("android/service-json/" + _moduleName_4);
-          String _plus_21 = (_plus_20 + "/");
           String _version_4 = this.utils.version(e_2);
-          String _plus_22 = (_plus_21 + _version_4);
+          String _plus_20 = ("android/" + _version_4);
+          String _plus_21 = (_plus_20 + "/service-json/");
+          String _moduleName_4 = this.utils.moduleName(e_2);
+          String _plus_22 = (_plus_21 + _moduleName_4);
           String _plus_23 = (_plus_22 + "/src/main/java/");
           String _qualifiedClassNameInputHelper = this.utils.qualifiedClassNameInputHelper(e_2);
           String _replace_2 = _qualifiedClassNameInputHelper.replace(".", "/");

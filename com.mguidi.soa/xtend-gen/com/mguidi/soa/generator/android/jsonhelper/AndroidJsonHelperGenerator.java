@@ -53,30 +53,30 @@ public class AndroidJsonHelperGenerator implements IGenerator {
       int _size = entities.size();
       boolean _greaterThan = (_size > 0);
       if (_greaterThan) {
-        String _moduleName = this.utils.moduleName(e);
-        String _plus = ("android/model-json/" + _moduleName);
-        String _plus_1 = (_plus + "/");
         String _version = this.utils.version(e);
-        String _plus_2 = (_plus_1 + _version);
+        String _plus = ("android/" + _version);
+        String _plus_1 = (_plus + "/model-json/");
+        String _moduleName = this.utils.moduleName(e);
+        String _plus_2 = (_plus_1 + _moduleName);
         String _plus_3 = (_plus_2 + "/build.gradle");
         CharSequence _generateBuildModelJson = this.gradleBuildGenerator.generateBuildModelJson(e, resource);
         fsa.generateFile(_plus_3, _generateBuildModelJson);
-        String _moduleName_1 = this.utils.moduleName(e);
-        String _plus_4 = ("android/model-json/" + _moduleName_1);
-        String _plus_5 = (_plus_4 + "/");
         String _version_1 = this.utils.version(e);
-        String _plus_6 = (_plus_5 + _version_1);
+        String _plus_4 = ("android/" + _version_1);
+        String _plus_5 = (_plus_4 + "/model-json/");
+        String _moduleName_1 = this.utils.moduleName(e);
+        String _plus_6 = (_plus_5 + _moduleName_1);
         String _plus_7 = (_plus_6 + "/src/main/AndroidManifest.xml");
         CharSequence _generateManifestModelJson = this.manifestGenerator.generateManifestModelJson(e);
         fsa.generateFile(_plus_7, _generateManifestModelJson);
       }
     }
     for (final Entity e_1 : entities) {
-      String _moduleName_2 = this.utils.moduleName(e_1);
-      String _plus_8 = ("android/model-json/" + _moduleName_2);
-      String _plus_9 = (_plus_8 + "/");
       String _version_2 = this.utils.version(e_1);
-      String _plus_10 = (_plus_9 + _version_2);
+      String _plus_8 = ("android/" + _version_2);
+      String _plus_9 = (_plus_8 + "/model-json/");
+      String _moduleName_2 = this.utils.moduleName(e_1);
+      String _plus_10 = (_plus_9 + _moduleName_2);
       String _plus_11 = (_plus_10 + "/src/main/java/");
       String _qualifiedClassNameHelper = this.utils.qualifiedClassNameHelper(e_1);
       String _replace = _qualifiedClassNameHelper.replace(".", "/");
