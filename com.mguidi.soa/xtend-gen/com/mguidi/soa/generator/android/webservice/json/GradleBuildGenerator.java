@@ -94,6 +94,9 @@ public class GradleBuildGenerator {
     _builder.append("compile \'com.google.code.gson:gson:2.3\'");
     _builder.newLine();
     _builder.append("    ");
+    _builder.append("compile \'com.mguidi.soa:utils-webservice-json:1.0.0\'");
+    _builder.newLine();
+    _builder.append("    ");
     _builder.append("compile \'");
     String _applicationId = this.utils.applicationId(architecture);
     String _plus = (_applicationId + ":");

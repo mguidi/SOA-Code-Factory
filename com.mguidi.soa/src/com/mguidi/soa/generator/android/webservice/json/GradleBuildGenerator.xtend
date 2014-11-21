@@ -43,6 +43,7 @@ class GradleBuildGenerator {
 		
 		dependencies {
 		    compile 'com.google.code.gson:gson:2.3'
+		    compile 'com.mguidi.soa:utils-webservice-json:1.0.0'
 		    compile '«architecture.applicationId+":"+architecture.moduleName+"-service:android_"+architecture.version»'
 		    compile '«architecture.applicationId+":"+architecture.moduleName+"-model-json:android_"+architecture.version»'
 		    «FOR dependency: dependencies(architecture, resource.allContents.toIterable.filter(typeof(Feature)))»
