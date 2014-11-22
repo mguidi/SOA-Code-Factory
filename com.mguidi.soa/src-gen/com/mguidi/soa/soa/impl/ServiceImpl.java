@@ -30,7 +30,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link com.mguidi.soa.soa.impl.ServiceImpl#getName <em>Name</em>}</li>
- *   <li>{@link com.mguidi.soa.soa.impl.ServiceImpl#getExceptions <em>Exceptions</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.impl.ServiceImpl#getOperations <em>Operations</em>}</li>
  * </ul>
  * </p>
@@ -58,16 +57,6 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getExceptions() <em>Exceptions</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getExceptions()
-   * @generated
-   * @ordered
-   */
-  protected EList<com.mguidi.soa.soa.Exception> exceptions;
 
   /**
    * The cached value of the '{@link #getOperations() <em>Operations</em>}' containment reference list.
@@ -128,20 +117,6 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<com.mguidi.soa.soa.Exception> getExceptions()
-  {
-    if (exceptions == null)
-    {
-      exceptions = new EObjectContainmentEList<com.mguidi.soa.soa.Exception>(com.mguidi.soa.soa.Exception.class, this, SoaPackage.SERVICE__EXCEPTIONS);
-    }
-    return exceptions;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<Operation> getOperations()
   {
     if (operations == null)
@@ -161,8 +136,6 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
   {
     switch (featureID)
     {
-      case SoaPackage.SERVICE__EXCEPTIONS:
-        return ((InternalEList<?>)getExceptions()).basicRemove(otherEnd, msgs);
       case SoaPackage.SERVICE__OPERATIONS:
         return ((InternalEList<?>)getOperations()).basicRemove(otherEnd, msgs);
     }
@@ -181,8 +154,6 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
     {
       case SoaPackage.SERVICE__NAME:
         return getName();
-      case SoaPackage.SERVICE__EXCEPTIONS:
-        return getExceptions();
       case SoaPackage.SERVICE__OPERATIONS:
         return getOperations();
     }
@@ -202,10 +173,6 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
     {
       case SoaPackage.SERVICE__NAME:
         setName((String)newValue);
-        return;
-      case SoaPackage.SERVICE__EXCEPTIONS:
-        getExceptions().clear();
-        getExceptions().addAll((Collection<? extends com.mguidi.soa.soa.Exception>)newValue);
         return;
       case SoaPackage.SERVICE__OPERATIONS:
         getOperations().clear();
@@ -228,9 +195,6 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
       case SoaPackage.SERVICE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case SoaPackage.SERVICE__EXCEPTIONS:
-        getExceptions().clear();
-        return;
       case SoaPackage.SERVICE__OPERATIONS:
         getOperations().clear();
         return;
@@ -250,8 +214,6 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
     {
       case SoaPackage.SERVICE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case SoaPackage.SERVICE__EXCEPTIONS:
-        return exceptions != null && !exceptions.isEmpty();
       case SoaPackage.SERVICE__OPERATIONS:
         return operations != null && !operations.isEmpty();
     }

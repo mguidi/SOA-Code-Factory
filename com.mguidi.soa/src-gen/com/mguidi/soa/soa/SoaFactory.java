@@ -140,13 +140,13 @@ public interface SoaFactory extends EFactory
   GenericListFeature createGenericListFeature();
 
   /**
-   * Returns a new object of class '<em>Service</em>'.
+   * Returns a new object of class '<em>Exceptions</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Service</em>'.
+   * @return a new object of class '<em>Exceptions</em>'.
    * @generated
    */
-  Service createService();
+  Exceptions createExceptions();
 
   /**
    * Returns a new object of class '<em>Exception</em>'.
@@ -156,6 +156,15 @@ public interface SoaFactory extends EFactory
    * @generated
    */
   Exception createException();
+
+  /**
+   * Returns a new object of class '<em>Service</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Service</em>'.
+   * @generated
+   */
+  Service createService();
 
   /**
    * Returns a new object of class '<em>Operation</em>'.

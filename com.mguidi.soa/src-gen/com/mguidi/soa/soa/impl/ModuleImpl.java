@@ -2,6 +2,7 @@
  */
 package com.mguidi.soa.soa.impl;
 
+import com.mguidi.soa.soa.Exceptions;
 import com.mguidi.soa.soa.Import;
 import com.mguidi.soa.soa.Model;
 import com.mguidi.soa.soa.Module;
@@ -35,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.mguidi.soa.soa.impl.ModuleImpl#getVersion <em>Version</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.impl.ModuleImpl#getImports <em>Imports</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.impl.ModuleImpl#getModel <em>Model</em>}</li>
+ *   <li>{@link com.mguidi.soa.soa.impl.ModuleImpl#getExceptions <em>Exceptions</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.impl.ModuleImpl#getServices <em>Services</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.impl.ModuleImpl#getEvent <em>Event</em>}</li>
  * </ul>
@@ -103,6 +105,16 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module
    * @ordered
    */
   protected Model model;
+
+  /**
+   * The cached value of the '{@link #getExceptions() <em>Exceptions</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExceptions()
+   * @generated
+   * @ordered
+   */
+  protected Exceptions exceptions;
 
   /**
    * The cached value of the '{@link #getServices() <em>Services</em>}' containment reference list.
@@ -268,6 +280,54 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module
    * <!-- end-user-doc -->
    * @generated
    */
+  public Exceptions getExceptions()
+  {
+    return exceptions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetExceptions(Exceptions newExceptions, NotificationChain msgs)
+  {
+    Exceptions oldExceptions = exceptions;
+    exceptions = newExceptions;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SoaPackage.MODULE__EXCEPTIONS, oldExceptions, newExceptions);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setExceptions(Exceptions newExceptions)
+  {
+    if (newExceptions != exceptions)
+    {
+      NotificationChain msgs = null;
+      if (exceptions != null)
+        msgs = ((InternalEObject)exceptions).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SoaPackage.MODULE__EXCEPTIONS, null, msgs);
+      if (newExceptions != null)
+        msgs = ((InternalEObject)newExceptions).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SoaPackage.MODULE__EXCEPTIONS, null, msgs);
+      msgs = basicSetExceptions(newExceptions, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SoaPackage.MODULE__EXCEPTIONS, newExceptions, newExceptions));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<Service> getServices()
   {
     if (services == null)
@@ -314,6 +374,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module
         return ((InternalEList<?>)getImports()).basicRemove(otherEnd, msgs);
       case SoaPackage.MODULE__MODEL:
         return basicSetModel(null, msgs);
+      case SoaPackage.MODULE__EXCEPTIONS:
+        return basicSetExceptions(null, msgs);
       case SoaPackage.MODULE__SERVICES:
         return ((InternalEList<?>)getServices()).basicRemove(otherEnd, msgs);
     }
@@ -338,6 +400,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module
         return getImports();
       case SoaPackage.MODULE__MODEL:
         return getModel();
+      case SoaPackage.MODULE__EXCEPTIONS:
+        return getExceptions();
       case SoaPackage.MODULE__SERVICES:
         return getServices();
       case SoaPackage.MODULE__EVENT:
@@ -369,6 +433,9 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module
         return;
       case SoaPackage.MODULE__MODEL:
         setModel((Model)newValue);
+        return;
+      case SoaPackage.MODULE__EXCEPTIONS:
+        setExceptions((Exceptions)newValue);
         return;
       case SoaPackage.MODULE__SERVICES:
         getServices().clear();
@@ -403,6 +470,9 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module
       case SoaPackage.MODULE__MODEL:
         setModel((Model)null);
         return;
+      case SoaPackage.MODULE__EXCEPTIONS:
+        setExceptions((Exceptions)null);
+        return;
       case SoaPackage.MODULE__SERVICES:
         getServices().clear();
         return;
@@ -431,6 +501,8 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module
         return imports != null && !imports.isEmpty();
       case SoaPackage.MODULE__MODEL:
         return model != null;
+      case SoaPackage.MODULE__EXCEPTIONS:
+        return exceptions != null;
       case SoaPackage.MODULE__SERVICES:
         return services != null && !services.isEmpty();
       case SoaPackage.MODULE__EVENT:

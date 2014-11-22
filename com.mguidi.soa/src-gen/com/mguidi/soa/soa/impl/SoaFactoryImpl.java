@@ -7,6 +7,7 @@ import com.mguidi.soa.soa.Comment;
 import com.mguidi.soa.soa.Entities;
 import com.mguidi.soa.soa.EntitiesFeature;
 import com.mguidi.soa.soa.Entity;
+import com.mguidi.soa.soa.Exceptions;
 import com.mguidi.soa.soa.Feature;
 import com.mguidi.soa.soa.FeatureType;
 import com.mguidi.soa.soa.GenericListFeature;
@@ -94,8 +95,9 @@ public class SoaFactoryImpl extends EFactoryImpl implements SoaFactory
       case SoaPackage.ENTITIES_FEATURE: return createEntitiesFeature();
       case SoaPackage.PRIMITIVE_FEATURE: return createPrimitiveFeature();
       case SoaPackage.GENERIC_LIST_FEATURE: return createGenericListFeature();
-      case SoaPackage.SERVICE: return createService();
+      case SoaPackage.EXCEPTIONS: return createExceptions();
       case SoaPackage.EXCEPTION: return createException();
+      case SoaPackage.SERVICE: return createService();
       case SoaPackage.OPERATION: return createOperation();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -284,10 +286,10 @@ public class SoaFactoryImpl extends EFactoryImpl implements SoaFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Service createService()
+  public Exceptions createExceptions()
   {
-    ServiceImpl service = new ServiceImpl();
-    return service;
+    ExceptionsImpl exceptions = new ExceptionsImpl();
+    return exceptions;
   }
 
   /**
@@ -299,6 +301,17 @@ public class SoaFactoryImpl extends EFactoryImpl implements SoaFactory
   {
     ExceptionImpl exception = new ExceptionImpl();
     return exception;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Service createService()
+  {
+    ServiceImpl service = new ServiceImpl();
+    return service;
   }
 
   /**

@@ -7,6 +7,7 @@ import com.mguidi.soa.soa.Comment;
 import com.mguidi.soa.soa.Entities;
 import com.mguidi.soa.soa.EntitiesFeature;
 import com.mguidi.soa.soa.Entity;
+import com.mguidi.soa.soa.Exceptions;
 import com.mguidi.soa.soa.Feature;
 import com.mguidi.soa.soa.FeatureType;
 import com.mguidi.soa.soa.GenericListFeature;
@@ -182,10 +183,10 @@ public class SoaSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case SoaPackage.SERVICE:
+      case SoaPackage.EXCEPTIONS:
       {
-        Service service = (Service)theEObject;
-        T result = caseService(service);
+        Exceptions exceptions = (Exceptions)theEObject;
+        T result = caseExceptions(exceptions);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -193,6 +194,13 @@ public class SoaSwitch<T> extends Switch<T>
       {
         com.mguidi.soa.soa.Exception exception = (com.mguidi.soa.soa.Exception)theEObject;
         T result = caseException(exception);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SoaPackage.SERVICE:
+      {
+        Service service = (Service)theEObject;
+        T result = caseService(service);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -416,17 +424,17 @@ public class SoaSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Service</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Exceptions</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Service</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Exceptions</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseService(Service object)
+  public T caseExceptions(Exceptions object)
   {
     return null;
   }
@@ -443,6 +451,22 @@ public class SoaSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseException(com.mguidi.soa.soa.Exception object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Service</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Service</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseService(Service object)
   {
     return null;
   }

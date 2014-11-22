@@ -69,17 +69,20 @@ public class SOAGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cImportsImportParserRuleCall_6_0 = (RuleCall)cImportsAssignment_6.eContents().get(0);
 		private final Assignment cModelAssignment_7 = (Assignment)cGroup.eContents().get(7);
 		private final RuleCall cModelModelParserRuleCall_7_0 = (RuleCall)cModelAssignment_7.eContents().get(0);
-		private final Assignment cServicesAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cServicesServiceParserRuleCall_8_0 = (RuleCall)cServicesAssignment_8.eContents().get(0);
-		private final Assignment cEventAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cEventEventParserRuleCall_9_0 = (RuleCall)cEventAssignment_9.eContents().get(0);
+		private final Assignment cExceptionsAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cExceptionsExceptionsParserRuleCall_8_0 = (RuleCall)cExceptionsAssignment_8.eContents().get(0);
+		private final Assignment cServicesAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cServicesServiceParserRuleCall_9_0 = (RuleCall)cServicesAssignment_9.eContents().get(0);
+		private final Assignment cEventAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cEventEventParserRuleCall_10_0 = (RuleCall)cEventAssignment_10.eContents().get(0);
 		
 		//Module:
-		//	"@moduleName" ":" name=ID "@version" ":" version=Version imports+=Import* model=Model? services+=Service*
-		//	event=Event?;
+		//	"@moduleName" ":" name=ID "@version" ":" version=Version imports+=Import* model=Model? exceptions=Exceptions?
+		//	services+=Service* event=Event?;
 		public ParserRule getRule() { return rule; }
 
-		//"@moduleName" ":" name=ID "@version" ":" version=Version imports+=Import* model=Model? services+=Service* event=Event?
+		//"@moduleName" ":" name=ID "@version" ":" version=Version imports+=Import* model=Model? exceptions=Exceptions?
+		//services+=Service* event=Event?
 		public Group getGroup() { return cGroup; }
 
 		//"@moduleName"
@@ -118,17 +121,23 @@ public class SOAGrammarAccess extends AbstractGrammarElementFinder {
 		//Model
 		public RuleCall getModelModelParserRuleCall_7_0() { return cModelModelParserRuleCall_7_0; }
 
+		//exceptions=Exceptions?
+		public Assignment getExceptionsAssignment_8() { return cExceptionsAssignment_8; }
+
+		//Exceptions
+		public RuleCall getExceptionsExceptionsParserRuleCall_8_0() { return cExceptionsExceptionsParserRuleCall_8_0; }
+
 		//services+=Service*
-		public Assignment getServicesAssignment_8() { return cServicesAssignment_8; }
+		public Assignment getServicesAssignment_9() { return cServicesAssignment_9; }
 
 		//Service
-		public RuleCall getServicesServiceParserRuleCall_8_0() { return cServicesServiceParserRuleCall_8_0; }
+		public RuleCall getServicesServiceParserRuleCall_9_0() { return cServicesServiceParserRuleCall_9_0; }
 
 		//event=Event?
-		public Assignment getEventAssignment_9() { return cEventAssignment_9; }
+		public Assignment getEventAssignment_10() { return cEventAssignment_10; }
 
 		//Event
-		public RuleCall getEventEventParserRuleCall_9_0() { return cEventEventParserRuleCall_9_0; }
+		public RuleCall getEventEventParserRuleCall_10_0() { return cEventEventParserRuleCall_10_0; }
 	}
 
 	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
@@ -511,52 +520,36 @@ public class SOAGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
 	}
 
-	public class ServiceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Service");
+	public class ExceptionsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Exceptions");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cServiceKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cExceptionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cExceptionsExceptionParserRuleCall_3_0 = (RuleCall)cExceptionsAssignment_3.eContents().get(0);
-		private final Assignment cOperationsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cOperationsOperationParserRuleCall_4_0 = (RuleCall)cOperationsAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cExceptionsKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cExceptionsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cExceptionsExceptionParserRuleCall_2_0 = (RuleCall)cExceptionsAssignment_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		/// ************************ Service definition ************************* / Service:
-		//	"@service" name=ID "{" exceptions+=Exception* operations+=Operation* "}";
+		/// ************************ Service definition ************************* / Exceptions:
+		//	"@exceptions" "{" exceptions+=Exception+ "}";
 		public ParserRule getRule() { return rule; }
 
-		//"@service" name=ID "{" exceptions+=Exception* operations+=Operation* "}"
+		//"@exceptions" "{" exceptions+=Exception+ "}"
 		public Group getGroup() { return cGroup; }
 
-		//"@service"
-		public Keyword getServiceKeyword_0() { return cServiceKeyword_0; }
-
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		//"@exceptions"
+		public Keyword getExceptionsKeyword_0() { return cExceptionsKeyword_0; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
-		//exceptions+=Exception*
-		public Assignment getExceptionsAssignment_3() { return cExceptionsAssignment_3; }
+		//exceptions+=Exception+
+		public Assignment getExceptionsAssignment_2() { return cExceptionsAssignment_2; }
 
 		//Exception
-		public RuleCall getExceptionsExceptionParserRuleCall_3_0() { return cExceptionsExceptionParserRuleCall_3_0; }
-
-		//operations+=Operation*
-		public Assignment getOperationsAssignment_4() { return cOperationsAssignment_4; }
-
-		//Operation
-		public RuleCall getOperationsOperationParserRuleCall_4_0() { return cOperationsOperationParserRuleCall_4_0; }
+		public RuleCall getExceptionsExceptionParserRuleCall_2_0() { return cExceptionsExceptionParserRuleCall_2_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 
 	public class ExceptionElements extends AbstractParserRuleElementFinder {
@@ -607,6 +600,46 @@ public class SOAGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
+	public class ServiceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Service");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cServiceKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cOperationsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cOperationsOperationParserRuleCall_3_0 = (RuleCall)cOperationsAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		/// ************************ Service definition ************************* / Service:
+		//	"@service" name=ID "{" operations+=Operation+ "}";
+		public ParserRule getRule() { return rule; }
+
+		//"@service" name=ID "{" operations+=Operation+ "}"
+		public Group getGroup() { return cGroup; }
+
+		//"@service"
+		public Keyword getServiceKeyword_0() { return cServiceKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//operations+=Operation+
+		public Assignment getOperationsAssignment_3() { return cOperationsAssignment_3; }
+
+		//Operation
+		public RuleCall getOperationsOperationParserRuleCall_3_0() { return cOperationsOperationParserRuleCall_3_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+	}
+
 	public class OperationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Operation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -643,11 +676,11 @@ public class SOAGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Operation:
 		//	"@operation" name=ID "{" ("@input" ":" "{" featuresInput+=Feature+ "}")? ("@output" ":" "{" featuresOutput+=Feature+
-		//	"}")? ("@exception" ":" exceptionts+=[Exception|QualifiedName]+ ("," exceptionts+=[Exception|QualifiedName]+)?)? "}";
+		//	"}")? ("@exception" ":" exceptionts+=[Exception|QualifiedName] ("," exceptionts+=[Exception|QualifiedName])*)? "}";
 		public ParserRule getRule() { return rule; }
 
 		//"@operation" name=ID "{" ("@input" ":" "{" featuresInput+=Feature+ "}")? ("@output" ":" "{" featuresOutput+=Feature+
-		//"}")? ("@exception" ":" exceptionts+=[Exception|QualifiedName]+ ("," exceptionts+=[Exception|QualifiedName]+)?)? "}"
+		//"}")? ("@exception" ":" exceptionts+=[Exception|QualifiedName] ("," exceptionts+=[Exception|QualifiedName])*)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"@operation"
@@ -704,7 +737,7 @@ public class SOAGrammarAccess extends AbstractGrammarElementFinder {
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_4_4() { return cRightCurlyBracketKeyword_4_4; }
 
-		//("@exception" ":" exceptionts+=[Exception|QualifiedName]+ ("," exceptionts+=[Exception|QualifiedName]+)?)?
+		//("@exception" ":" exceptionts+=[Exception|QualifiedName] ("," exceptionts+=[Exception|QualifiedName])*)?
 		public Group getGroup_5() { return cGroup_5; }
 
 		//"@exception"
@@ -713,7 +746,7 @@ public class SOAGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_5_1() { return cColonKeyword_5_1; }
 
-		//exceptionts+=[Exception|QualifiedName]+
+		//exceptionts+=[Exception|QualifiedName]
 		public Assignment getExceptiontsAssignment_5_2() { return cExceptiontsAssignment_5_2; }
 
 		//[Exception|QualifiedName]
@@ -722,13 +755,13 @@ public class SOAGrammarAccess extends AbstractGrammarElementFinder {
 		//QualifiedName
 		public RuleCall getExceptiontsExceptionQualifiedNameParserRuleCall_5_2_0_1() { return cExceptiontsExceptionQualifiedNameParserRuleCall_5_2_0_1; }
 
-		//("," exceptionts+=[Exception|QualifiedName]+)?
+		//("," exceptionts+=[Exception|QualifiedName])*
 		public Group getGroup_5_3() { return cGroup_5_3; }
 
 		//","
 		public Keyword getCommaKeyword_5_3_0() { return cCommaKeyword_5_3_0; }
 
-		//exceptionts+=[Exception|QualifiedName]+
+		//exceptionts+=[Exception|QualifiedName]
 		public Assignment getExceptiontsAssignment_5_3_1() { return cExceptiontsAssignment_5_3_1; }
 
 		//[Exception|QualifiedName]
@@ -892,8 +925,9 @@ public class SOAGrammarAccess extends AbstractGrammarElementFinder {
 	private final PrimitiveFeatureElements pPrimitiveFeature;
 	private final GenericListFeatureElements pGenericListFeature;
 	private final PrimitiveTypeElements unknownRulePrimitiveType;
-	private final ServiceElements pService;
+	private final ExceptionsElements pExceptions;
 	private final ExceptionElements pException;
+	private final ServiceElements pService;
 	private final OperationElements pOperation;
 	private final EventElements pEvent;
 	private final TerminalRule tCOMMENTS;
@@ -923,8 +957,9 @@ public class SOAGrammarAccess extends AbstractGrammarElementFinder {
 		this.pPrimitiveFeature = new PrimitiveFeatureElements();
 		this.pGenericListFeature = new GenericListFeatureElements();
 		this.unknownRulePrimitiveType = new PrimitiveTypeElements();
-		this.pService = new ServiceElements();
+		this.pExceptions = new ExceptionsElements();
 		this.pException = new ExceptionElements();
+		this.pService = new ServiceElements();
 		this.pOperation = new OperationElements();
 		this.pEvent = new EventElements();
 		this.tCOMMENTS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "COMMENTS");
@@ -968,8 +1003,8 @@ public class SOAGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Module:
-	//	"@moduleName" ":" name=ID "@version" ":" version=Version imports+=Import* model=Model? services+=Service*
-	//	event=Event?;
+	//	"@moduleName" ":" name=ID "@version" ":" version=Version imports+=Import* model=Model? exceptions=Exceptions?
+	//	services+=Service* event=Event?;
 	public ModuleElements getModuleAccess() {
 		return pModule;
 	}
@@ -1119,14 +1154,14 @@ public class SOAGrammarAccess extends AbstractGrammarElementFinder {
 		return getPrimitiveTypeAccess().getRule();
 	}
 
-	/// ************************ Service definition ************************* / Service:
-	//	"@service" name=ID "{" exceptions+=Exception* operations+=Operation* "}";
-	public ServiceElements getServiceAccess() {
-		return pService;
+	/// ************************ Service definition ************************* / Exceptions:
+	//	"@exceptions" "{" exceptions+=Exception+ "}";
+	public ExceptionsElements getExceptionsAccess() {
+		return pExceptions;
 	}
 	
-	public ParserRule getServiceRule() {
-		return getServiceAccess().getRule();
+	public ParserRule getExceptionsRule() {
+		return getExceptionsAccess().getRule();
 	}
 
 	//Exception:
@@ -1139,9 +1174,19 @@ public class SOAGrammarAccess extends AbstractGrammarElementFinder {
 		return getExceptionAccess().getRule();
 	}
 
+	/// ************************ Service definition ************************* / Service:
+	//	"@service" name=ID "{" operations+=Operation+ "}";
+	public ServiceElements getServiceAccess() {
+		return pService;
+	}
+	
+	public ParserRule getServiceRule() {
+		return getServiceAccess().getRule();
+	}
+
 	//Operation:
 	//	"@operation" name=ID "{" ("@input" ":" "{" featuresInput+=Feature+ "}")? ("@output" ":" "{" featuresOutput+=Feature+
-	//	"}")? ("@exception" ":" exceptionts+=[Exception|QualifiedName]+ ("," exceptionts+=[Exception|QualifiedName]+)?)? "}";
+	//	"}")? ("@exception" ":" exceptionts+=[Exception|QualifiedName] ("," exceptionts+=[Exception|QualifiedName])*)? "}";
 	public OperationElements getOperationAccess() {
 		return pOperation;
 	}

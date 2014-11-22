@@ -3,7 +3,6 @@ package com.mguidi.soa.generator.java
 import com.mguidi.soa.soa.Architecture
 import com.google.inject.Inject
 import org.eclipse.emf.ecore.resource.Resource
-import com.mguidi.soa.soa.Feature
 
 class GradleBuildGenerator {
 	
@@ -18,13 +17,14 @@ class GradleBuildGenerator {
 			mavenLocal()
 			mavenCentral()
 		}
+		«IF architecture.modelDependencies.size > 0»
 		
 		dependencies {
-		    compile 'com.google.code.gson:gson:2.3'
-		    «FOR dependency: dependencies(architecture, resource.allContents.toIterable.filter(typeof(Feature)))»
+		    «FOR dependency: architecture.modelDependencies»
 		    compile '«dependency.applicationId+":"+dependency.moduleName+"-model:"+dependency.version»'
 		    «ENDFOR»
 		}
+		«ENDIF»
 		
 		apply plugin: 'maven'
 
@@ -54,8 +54,11 @@ class GradleBuildGenerator {
 		dependencies {
 		    compile 'com.mguidi.soa:commons-service:1.0.0'
 		    compile '«architecture.applicationId»:«architecture.moduleName»-model:«architecture.version»'
-		    «FOR dependency: dependencies(architecture, resource.allContents.toIterable.filter(typeof(Feature)))»
+		    «FOR dependency: architecture.serviceModelDependencies»
 		    compile '«dependency.applicationId+":"+dependency.moduleName+"-model:"+dependency.version»'
+		    «ENDFOR»
+		    «FOR dependency: architecture.serviceExceptionDependencies»
+		    compile '«dependency.applicationId+":"+dependency.moduleName+"-service:"+dependency.version»'
 		    «ENDFOR»
 		}
 		

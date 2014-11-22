@@ -39,6 +39,7 @@ public class InternalSOALexer extends Lexer {
     public static final int T__40=40;
     public static final int T__41=41;
     public static final int T__46=46;
+    public static final int T__47=47;
     public static final int T__44=44;
     public static final int T__45=45;
     public static final int RULE_COMMENTS=6;
@@ -635,10 +636,10 @@ public class InternalSOALexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:38:7: ( '@service' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:38:9: '@service'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:38:7: ( '@exceptions' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:38:9: '@exceptions'
             {
-            match("@service"); 
+            match("@exceptions"); 
 
 
             }
@@ -698,10 +699,10 @@ public class InternalSOALexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:41:7: ( '@operation' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:41:9: '@operation'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:41:7: ( '@service' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:41:9: '@service'
             {
-            match("@operation"); 
+            match("@service"); 
 
 
             }
@@ -719,10 +720,10 @@ public class InternalSOALexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:42:7: ( '@input' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:42:9: '@input'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:42:7: ( '@operation' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:42:9: '@operation'
             {
-            match("@input"); 
+            match("@operation"); 
 
 
             }
@@ -740,10 +741,10 @@ public class InternalSOALexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:43:7: ( '@output' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:43:9: '@output'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:43:7: ( '@input' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:43:9: '@input'
             {
-            match("@output"); 
+            match("@input"); 
 
 
             }
@@ -761,10 +762,11 @@ public class InternalSOALexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:44:7: ( ',' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:44:9: ','
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:44:7: ( '@output' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:44:9: '@output'
             {
-            match(','); 
+            match("@output"); 
+
 
             }
 
@@ -781,8 +783,28 @@ public class InternalSOALexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:45:7: ( '@event' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:45:9: '@event'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:45:7: ( ',' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:45:9: ','
+            {
+            match(','); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__46"
+
+    // $ANTLR start "T__47"
+    public final void mT__47() throws RecognitionException {
+        try {
+            int _type = T__47;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:46:7: ( '@event' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:46:9: '@event'
             {
             match("@event"); 
 
@@ -795,18 +817,18 @@ public class InternalSOALexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__46"
+    // $ANTLR end "T__47"
 
     // $ANTLR start "RULE_COMMENTS"
     public final void mRULE_COMMENTS() throws RecognitionException {
         try {
             int _type = RULE_COMMENTS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4148:15: ( '#' ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | ' ' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | ' ' )* )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4148:17: '#' ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | ' ' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | ' ' )*
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4320:15: ( '#' ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | ' ' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | ' ' )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4320:17: '#' ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' | ' ' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | ' ' )*
             {
             match('#'); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4148:21: ( '^' )?
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4320:21: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -815,7 +837,7 @@ public class InternalSOALexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4148:21: '^'
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4320:21: '^'
                     {
                     match('^'); 
 
@@ -833,7 +855,7 @@ public class InternalSOALexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4148:54: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | ' ' )*
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4320:54: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | ' ' )*
             loop2:
             do {
                 int alt2=2;
@@ -882,10 +904,10 @@ public class InternalSOALexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4150:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4150:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4322:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4322:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4150:11: ( '^' )?
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4322:11: ( '^' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -894,7 +916,7 @@ public class InternalSOALexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4150:11: '^'
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4322:11: '^'
                     {
                     match('^'); 
 
@@ -912,7 +934,7 @@ public class InternalSOALexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4150:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4322:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop4:
             do {
                 int alt4=2;
@@ -961,10 +983,10 @@ public class InternalSOALexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4152:10: ( ( '0' .. '9' )+ )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4152:12: ( '0' .. '9' )+
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4324:10: ( ( '0' .. '9' )+ )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4324:12: ( '0' .. '9' )+
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4152:12: ( '0' .. '9' )+
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4324:12: ( '0' .. '9' )+
             int cnt5=0;
             loop5:
             do {
@@ -978,7 +1000,7 @@ public class InternalSOALexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4152:13: '0' .. '9'
+            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4324:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1010,10 +1032,10 @@ public class InternalSOALexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4154:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4154:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4326:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4326:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4154:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4326:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1031,10 +1053,10 @@ public class InternalSOALexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4154:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4326:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4154:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4326:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -1050,7 +1072,7 @@ public class InternalSOALexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4154:21: '\\\\' .
+                    	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4326:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1058,7 +1080,7 @@ public class InternalSOALexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4154:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4326:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1083,10 +1105,10 @@ public class InternalSOALexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4154:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4326:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4154:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4326:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop7:
                     do {
                         int alt7=3;
@@ -1102,7 +1124,7 @@ public class InternalSOALexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4154:54: '\\\\' .
+                    	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4326:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1110,7 +1132,7 @@ public class InternalSOALexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4154:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4326:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1153,12 +1175,12 @@ public class InternalSOALexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4156:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4156:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4328:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4328:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4156:24: ( options {greedy=false; } : . )*
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4328:24: ( options {greedy=false; } : . )*
             loop9:
             do {
                 int alt9=2;
@@ -1183,7 +1205,7 @@ public class InternalSOALexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4156:52: .
+            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4328:52: .
             	    {
             	    matchAny(); 
 
@@ -1213,12 +1235,12 @@ public class InternalSOALexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4158:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4158:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4330:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4330:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4158:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4330:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop10:
             do {
                 int alt10=2;
@@ -1231,7 +1253,7 @@ public class InternalSOALexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4158:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4330:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1251,7 +1273,7 @@ public class InternalSOALexer extends Lexer {
                 }
             } while (true);
 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4158:40: ( ( '\\r' )? '\\n' )?
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4330:40: ( ( '\\r' )? '\\n' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1260,9 +1282,9 @@ public class InternalSOALexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4158:41: ( '\\r' )? '\\n'
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4330:41: ( '\\r' )? '\\n'
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4158:41: ( '\\r' )?
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4330:41: ( '\\r' )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -1271,7 +1293,7 @@ public class InternalSOALexer extends Lexer {
                     }
                     switch (alt11) {
                         case 1 :
-                            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4158:41: '\\r'
+                            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4330:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1303,10 +1325,10 @@ public class InternalSOALexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4160:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4160:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4332:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4332:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4160:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4332:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt13=0;
             loop13:
             do {
@@ -1360,8 +1382,8 @@ public class InternalSOALexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4162:16: ( . )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4162:18: .
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4334:16: ( . )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4334:18: .
             {
             matchAny(); 
 
@@ -1376,8 +1398,8 @@ public class InternalSOALexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | RULE_COMMENTS | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt14=43;
+        // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | RULE_COMMENTS | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt14=44;
         alt14 = dfa14.predict(input);
         switch (alt14) {
             case 1 :
@@ -1626,56 +1648,63 @@ public class InternalSOALexer extends Lexer {
                 }
                 break;
             case 36 :
-                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:220: RULE_COMMENTS
+                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:220: T__47
+                {
+                mT__47(); 
+
+                }
+                break;
+            case 37 :
+                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:226: RULE_COMMENTS
                 {
                 mRULE_COMMENTS(); 
 
                 }
                 break;
-            case 37 :
-                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:234: RULE_ID
+            case 38 :
+                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:240: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 38 :
-                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:242: RULE_INT
+            case 39 :
+                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:248: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 39 :
-                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:251: RULE_STRING
+            case 40 :
+                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:257: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 40 :
-                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:263: RULE_ML_COMMENT
+            case 41 :
+                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:269: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 41 :
-                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:279: RULE_SL_COMMENT
+            case 42 :
+                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:285: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 42 :
-                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:295: RULE_WS
+            case 43 :
+                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:301: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 43 :
-                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:303: RULE_ANY_OTHER
+            case 44 :
+                // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1:309: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1689,17 +1718,17 @@ public class InternalSOALexer extends Lexer {
 
     protected DFA14 dfa14 = new DFA14(this);
     static final String DFA14_eotS =
-        "\1\uffff\1\22\10\uffff\2\22\2\uffff\3\22\65\uffff\1\112\4\uffff";
+        "\1\uffff\1\22\10\uffff\2\22\2\uffff\3\22\66\uffff\1\114\11\uffff\1\123\2\uffff";
     static final String DFA14_eofS =
-        "\113\uffff";
+        "\124\uffff";
     static final String DFA14_minS =
-        "\1\0\1\102\10\uffff\1\40\1\101\2\uffff\2\0\1\52\2\uffff\1\150\1\uffff\1\151\1\uffff\1\141\1\157\2\uffff\1\157\1\uffff\1\155\1\156\1\uffff\1\160\24\uffff\1\164\3\uffff\1\144\3\uffff\1\164\4\uffff\2\145\2\uffff\1\164\4\uffff";
+        "\1\0\1\102\10\uffff\1\40\1\101\2\uffff\2\0\1\52\2\uffff\1\150\1\uffff\1\151\1\uffff\1\141\1\157\2\uffff\1\157\1\uffff\1\155\1\156\1\uffff\1\160\24\uffff\1\164\3\uffff\1\144\3\uffff\1\164\1\143\3\uffff\2\145\2\uffff\1\145\1\164\2\uffff\1\160\2\uffff\1\164\1\151\1\157\1\156\1\163\2\uffff";
     static final String DFA14_maxS =
-        "\1\uffff\1\166\10\uffff\2\172\2\uffff\2\uffff\1\57\2\uffff\1\164\1\uffff\1\157\1\uffff\1\157\1\171\2\uffff\1\163\1\uffff\1\156\1\170\1\uffff\1\165\24\uffff\1\164\3\uffff\1\144\3\uffff\1\165\4\uffff\1\145\1\165\2\uffff\1\164\4\uffff";
+        "\1\uffff\1\166\10\uffff\2\172\2\uffff\2\uffff\1\57\2\uffff\1\164\1\uffff\1\157\1\uffff\1\157\1\171\2\uffff\1\163\1\uffff\1\156\1\170\1\uffff\1\165\24\uffff\1\164\3\uffff\1\144\3\uffff\1\165\1\143\3\uffff\1\145\1\165\2\uffff\1\145\1\164\2\uffff\1\160\2\uffff\1\164\1\151\1\157\1\156\1\163\2\uffff";
     static final String DFA14_acceptS =
-        "\2\uffff\1\16\1\21\1\22\1\25\1\26\1\32\1\33\1\42\2\uffff\1\45\1\46\3\uffff\1\52\1\53\1\uffff\1\3\1\uffff\1\5\2\uffff\1\13\1\15\1\uffff\1\20\2\uffff\1\34\1\uffff\1\16\1\21\1\22\1\25\1\26\1\32\1\33\1\42\1\44\1\45\1\46\1\47\1\50\1\51\1\52\1\1\1\2\1\4\1\31\1\6\1\uffff\1\14\1\7\1\10\1\uffff\1\36\1\23\1\40\1\uffff\1\35\1\43\1\37\1\41\2\uffff\1\27\1\30\1\uffff\1\17\1\24\1\12\1\11";
+        "\2\uffff\1\16\1\21\1\22\1\25\1\26\1\32\1\33\1\43\2\uffff\1\46\1\47\3\uffff\1\53\1\54\1\uffff\1\3\1\uffff\1\5\2\uffff\1\13\1\15\1\uffff\1\20\2\uffff\1\37\1\uffff\1\16\1\21\1\22\1\25\1\26\1\32\1\33\1\43\1\45\1\46\1\47\1\50\1\51\1\52\1\53\1\1\1\2\1\4\1\31\1\6\1\uffff\1\14\1\7\1\10\1\uffff\1\36\1\23\1\41\2\uffff\1\44\1\40\1\42\2\uffff\1\27\1\30\2\uffff\1\17\1\24\1\uffff\1\12\1\11\5\uffff\1\34\1\35";
     static final String DFA14_specialS =
-        "\1\1\15\uffff\1\0\1\2\73\uffff}>";
+        "\1\1\15\uffff\1\2\1\0\104\uffff}>";
     static final String[] DFA14_transitionS = {
             "\11\22\2\21\2\22\1\21\22\22\1\21\1\22\1\16\1\12\3\22\1\17\4\22\1\11\1\4\1\3\1\20\12\15\1\2\1\22\1\7\1\22\1\10\1\22\1\1\32\14\3\22\1\13\1\14\1\22\32\14\1\5\1\22\1\6\uff82\22",
             "\1\30\1\uffff\1\27\1\uffff\1\26\2\uffff\1\24\2\uffff\1\25\6\uffff\1\23\1\31\14\uffff\1\32\3\uffff\1\36\3\uffff\1\35\3\uffff\1\33\1\uffff\1\40\3\uffff\1\37\2\uffff\1\34",
@@ -1763,17 +1792,26 @@ public class InternalSOALexer extends Lexer {
             "",
             "",
             "\1\105\1\104",
-            "",
-            "",
-            "",
-            "",
             "\1\106",
-            "\1\110\17\uffff\1\107",
             "",
             "",
-            "\1\111",
+            "",
+            "\1\107",
+            "\1\111\17\uffff\1\110",
             "",
             "",
+            "\1\112",
+            "\1\113",
+            "",
+            "",
+            "\1\115",
+            "",
+            "",
+            "\1\116",
+            "\1\117",
+            "\1\120",
+            "\1\121",
+            "\1\122",
             "",
             ""
     };
@@ -1808,17 +1846,17 @@ public class InternalSOALexer extends Lexer {
             this.transition = DFA14_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | RULE_COMMENTS | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | RULE_COMMENTS | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA14_14 = input.LA(1);
+                        int LA14_15 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA14_14>='\u0000' && LA14_14<='\uFFFF')) ) {s = 44;}
+                        if ( ((LA14_15>='\u0000' && LA14_15<='\uFFFF')) ) {s = 44;}
 
                         else s = 18;
 
@@ -1867,10 +1905,10 @@ public class InternalSOALexer extends Lexer {
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA14_15 = input.LA(1);
+                        int LA14_14 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA14_15>='\u0000' && LA14_15<='\uFFFF')) ) {s = 44;}
+                        if ( ((LA14_14>='\u0000' && LA14_14<='\uFFFF')) ) {s = 44;}
 
                         else s = 18;
 

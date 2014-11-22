@@ -4,7 +4,6 @@ import com.mguidi.soa.soa.Architecture
 import com.mguidi.soa.generator.java.Utils
 import com.google.inject.Inject
 import org.eclipse.emf.ecore.resource.Resource
-import com.mguidi.soa.soa.Feature
 
 class GradleBuildGenerator {
 	
@@ -46,7 +45,7 @@ class GradleBuildGenerator {
 		    compile 'com.mguidi.soa:utils-webservice-json:1.0.0'
 		    compile '«architecture.applicationId+":"+architecture.moduleName+"-service:android_"+architecture.version»'
 		    compile '«architecture.applicationId+":"+architecture.moduleName+"-model-json:android_"+architecture.version»'
-		    «FOR dependency: dependencies(architecture, resource.allContents.toIterable.filter(typeof(Feature)))»
+		    «FOR dependency: architecture.serviceModelDependencies»
 		    compile '«dependency.applicationId+":"+dependency.moduleName+"-model-json:android_"+dependency.version»'
 		    «ENDFOR»
 		}

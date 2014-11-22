@@ -7,6 +7,7 @@ import com.mguidi.soa.soa.Comment;
 import com.mguidi.soa.soa.Entities;
 import com.mguidi.soa.soa.EntitiesFeature;
 import com.mguidi.soa.soa.Entity;
+import com.mguidi.soa.soa.Exceptions;
 import com.mguidi.soa.soa.Feature;
 import com.mguidi.soa.soa.FeatureType;
 import com.mguidi.soa.soa.GenericListFeature;
@@ -132,7 +133,7 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass serviceEClass = null;
+  private EClass exceptionsEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -140,6 +141,13 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
    * @generated
    */
   private EClass exceptionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass serviceEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -303,7 +311,7 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModule_Services()
+  public EReference getModule_Exceptions()
   {
     return (EReference)moduleEClass.getEStructuralFeatures().get(4);
   }
@@ -313,9 +321,19 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getModule_Services()
+  {
+    return (EReference)moduleEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getModule_Event()
   {
-    return (EAttribute)moduleEClass.getEStructuralFeatures().get(5);
+    return (EAttribute)moduleEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -553,9 +571,9 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getService()
+  public EClass getExceptions()
   {
-    return serviceEClass;
+    return exceptionsEClass;
   }
 
   /**
@@ -563,29 +581,9 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getService_Name()
+  public EReference getExceptions_Exceptions()
   {
-    return (EAttribute)serviceEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getService_Exceptions()
-  {
-    return (EReference)serviceEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getService_Operations()
-  {
-    return (EReference)serviceEClass.getEStructuralFeatures().get(2);
+    return (EReference)exceptionsEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -616,6 +614,36 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
   public EAttribute getException_Msg()
   {
     return (EAttribute)exceptionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getService()
+  {
+    return serviceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getService_Name()
+  {
+    return (EAttribute)serviceEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getService_Operations()
+  {
+    return (EReference)serviceEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -717,6 +745,7 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
     createEAttribute(moduleEClass, MODULE__VERSION);
     createEReference(moduleEClass, MODULE__IMPORTS);
     createEReference(moduleEClass, MODULE__MODEL);
+    createEReference(moduleEClass, MODULE__EXCEPTIONS);
     createEReference(moduleEClass, MODULE__SERVICES);
     createEAttribute(moduleEClass, MODULE__EVENT);
 
@@ -754,14 +783,16 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
     genericListFeatureEClass = createEClass(GENERIC_LIST_FEATURE);
     createEReference(genericListFeatureEClass, GENERIC_LIST_FEATURE__TYPE);
 
-    serviceEClass = createEClass(SERVICE);
-    createEAttribute(serviceEClass, SERVICE__NAME);
-    createEReference(serviceEClass, SERVICE__EXCEPTIONS);
-    createEReference(serviceEClass, SERVICE__OPERATIONS);
+    exceptionsEClass = createEClass(EXCEPTIONS);
+    createEReference(exceptionsEClass, EXCEPTIONS__EXCEPTIONS);
 
     exceptionEClass = createEClass(EXCEPTION);
     createEAttribute(exceptionEClass, EXCEPTION__NAME);
     createEAttribute(exceptionEClass, EXCEPTION__MSG);
+
+    serviceEClass = createEClass(SERVICE);
+    createEAttribute(serviceEClass, SERVICE__NAME);
+    createEReference(serviceEClass, SERVICE__OPERATIONS);
 
     operationEClass = createEClass(OPERATION);
     createEAttribute(operationEClass, OPERATION__NAME);
@@ -818,6 +849,7 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
     initEAttribute(getModule_Version(), ecorePackage.getEString(), "version", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModule_Imports(), this.getImport(), null, "imports", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModule_Model(), this.getModel(), null, "model", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModule_Exceptions(), this.getExceptions(), null, "exceptions", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModule_Services(), this.getService(), null, "services", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getModule_Event(), ecorePackage.getEString(), "event", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -855,14 +887,16 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
     initEClass(genericListFeatureEClass, GenericListFeature.class, "GenericListFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getGenericListFeature_Type(), this.getFeatureType(), null, "type", null, 0, 1, GenericListFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getService_Name(), ecorePackage.getEString(), "name", null, 0, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getService_Exceptions(), this.getException(), null, "exceptions", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getService_Operations(), this.getOperation(), null, "operations", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(exceptionsEClass, Exceptions.class, "Exceptions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getExceptions_Exceptions(), this.getException(), null, "exceptions", null, 0, -1, Exceptions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(exceptionEClass, com.mguidi.soa.soa.Exception.class, "Exception", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getException_Name(), ecorePackage.getEString(), "name", null, 0, 1, com.mguidi.soa.soa.Exception.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getException_Msg(), ecorePackage.getEString(), "msg", null, 0, 1, com.mguidi.soa.soa.Exception.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getService_Name(), ecorePackage.getEString(), "name", null, 0, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getService_Operations(), this.getOperation(), null, "operations", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getOperation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

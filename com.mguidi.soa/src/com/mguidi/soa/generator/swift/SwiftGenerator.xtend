@@ -1,7 +1,6 @@
 package com.mguidi.soa.generator.swift
 
 import org.eclipse.emf.ecore.resource.Resource
-import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
 import com.mguidi.soa.soa.Entity
 import com.google.inject.Inject
@@ -9,7 +8,7 @@ import com.mguidi.soa.generator.swift.ModelGenerator
 import com.mguidi.soa.soa.Service
 import com.mguidi.soa.soa.Operation
 
-class SwiftGenerator implements IGenerator {
+class SwiftGenerator {
 	
 	@Inject extension Utils utils
 	@Inject extension ModelGenerator modelGenerator
@@ -17,7 +16,7 @@ class SwiftGenerator implements IGenerator {
 	@Inject extension OperationOutputGenerator operationOutputGenerator
 	@Inject extension OperationInputGenerator operationInputGenerator
 	
-	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
+	def doGenerate(Resource resource, IFileSystemAccess fsa) {
 		for (e: resource.allContents.toIterable.filter(typeof(Entity))) {
 			fsa.generateFile("swift/"+e.version+"/commons/"+e.moduleName+"/src/model/" + e.className + ".swift", modelGenerator.generateEntity(e))
 		}

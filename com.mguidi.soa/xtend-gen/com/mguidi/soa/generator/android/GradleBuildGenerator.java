@@ -1,17 +1,12 @@
 package com.mguidi.soa.generator.android;
 
-import com.google.common.collect.Iterables;
 import com.google.inject.Inject;
 import com.mguidi.soa.generator.java.Utils;
 import com.mguidi.soa.soa.Architecture;
-import com.mguidi.soa.soa.Feature;
 import java.util.HashSet;
-import org.eclipse.emf.common.util.TreeIterator;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.Extension;
-import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 
 @SuppressWarnings("all")
 public class GradleBuildGenerator {
@@ -88,22 +83,16 @@ public class GradleBuildGenerator {
     _builder.append("}");
     _builder.newLine();
     {
-      TreeIterator<EObject> _allContents = resource.getAllContents();
-      Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
-      Iterable<Feature> _filter = Iterables.<Feature>filter(_iterable, Feature.class);
-      HashSet<Utils.Dependency> _dependencies = this.utils.dependencies(architecture, _filter);
-      int _size = _dependencies.size();
+      HashSet<Utils.Dependency> _modelDependencies = this.utils.modelDependencies(architecture);
+      int _size = _modelDependencies.size();
       boolean _greaterThan = (_size > 0);
       if (_greaterThan) {
         _builder.newLine();
         _builder.append("dependencies {");
         _builder.newLine();
         {
-          TreeIterator<EObject> _allContents_1 = resource.getAllContents();
-          Iterable<EObject> _iterable_1 = IteratorExtensions.<EObject>toIterable(_allContents_1);
-          Iterable<Feature> _filter_1 = Iterables.<Feature>filter(_iterable_1, Feature.class);
-          HashSet<Utils.Dependency> _dependencies_1 = this.utils.dependencies(architecture, _filter_1);
-          for(final Utils.Dependency dependency : _dependencies_1) {
+          HashSet<Utils.Dependency> _modelDependencies_1 = this.utils.modelDependencies(architecture);
+          for(final Utils.Dependency dependency : _modelDependencies_1) {
             _builder.append("    ");
             _builder.append("compile \'");
             _builder.append(((((dependency.applicationId + ":") + dependency.moduleName) + "-model:android_") + dependency.version), "    ");
@@ -249,14 +238,21 @@ public class GradleBuildGenerator {
     _builder.append("\'");
     _builder.newLineIfNotEmpty();
     {
-      TreeIterator<EObject> _allContents = resource.getAllContents();
-      Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
-      Iterable<Feature> _filter = Iterables.<Feature>filter(_iterable, Feature.class);
-      HashSet<Utils.Dependency> _dependencies = this.utils.dependencies(architecture, _filter);
-      for(final Utils.Dependency dependency : _dependencies) {
+      HashSet<Utils.Dependency> _serviceModelDependencies = this.utils.serviceModelDependencies(architecture);
+      for(final Utils.Dependency dependency : _serviceModelDependencies) {
         _builder.append("    ");
         _builder.append("compile \'");
         _builder.append(((((dependency.applicationId + ":") + dependency.moduleName) + "-model:android_") + dependency.version), "    ");
+        _builder.append("\'");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    {
+      HashSet<Utils.Dependency> _serviceExceptionDependencies = this.utils.serviceExceptionDependencies(architecture);
+      for(final Utils.Dependency dependency_1 : _serviceExceptionDependencies) {
+        _builder.append("    ");
+        _builder.append("compile \'");
+        _builder.append(((((dependency_1.applicationId + ":") + dependency_1.moduleName) + "-service:android_") + dependency_1.version), "    ");
         _builder.append("\'");
         _builder.newLineIfNotEmpty();
       }

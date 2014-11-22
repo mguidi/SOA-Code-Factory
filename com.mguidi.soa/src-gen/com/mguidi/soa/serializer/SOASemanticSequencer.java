@@ -7,6 +7,7 @@ import com.mguidi.soa.soa.Architecture;
 import com.mguidi.soa.soa.Comment;
 import com.mguidi.soa.soa.EntitiesFeature;
 import com.mguidi.soa.soa.Entity;
+import com.mguidi.soa.soa.Exceptions;
 import com.mguidi.soa.soa.Feature;
 import com.mguidi.soa.soa.GenericListFeature;
 import com.mguidi.soa.soa.Import;
@@ -72,6 +73,12 @@ public class SOASemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case SoaPackage.EXCEPTION:
 				if(context == grammarAccess.getExceptionRule()) {
 					sequence_Exception(context, (com.mguidi.soa.soa.Exception) semanticObject); 
+					return; 
+				}
+				else break;
+			case SoaPackage.EXCEPTIONS:
+				if(context == grammarAccess.getExceptionsRule()) {
+					sequence_Exceptions(context, (Exceptions) semanticObject); 
 					return; 
 				}
 				else break;
@@ -219,6 +226,15 @@ public class SOASemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     exceptions+=Exception+
+	 */
+	protected void sequence_Exceptions(EObject context, Exceptions semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (featureComment+=Comment* name=ID type=FeatureType)
 	 */
 	protected void sequence_Feature(EObject context, Feature semanticObject) {
@@ -274,6 +290,7 @@ public class SOASemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         version=Version 
 	 *         imports+=Import* 
 	 *         model=Model? 
+	 *         exceptions=Exceptions? 
 	 *         services+=Service* 
 	 *         event=Event?
 	 *     )
@@ -285,7 +302,7 @@ public class SOASemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID featuresInput+=Feature* featuresOutput+=Feature* (exceptionts+=[Exception|QualifiedName]+ exceptionts+=[Exception|QualifiedName]*)?)
+	 *     (name=ID featuresInput+=Feature* featuresOutput+=Feature* (exceptionts+=[Exception|QualifiedName] exceptionts+=[Exception|QualifiedName]*)?)
 	 */
 	protected void sequence_Operation(EObject context, Operation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -310,7 +327,7 @@ public class SOASemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID exceptions+=Exception* operations+=Operation*)
+	 *     (name=ID operations+=Operation+)
 	 */
 	protected void sequence_Service(EObject context, Service semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

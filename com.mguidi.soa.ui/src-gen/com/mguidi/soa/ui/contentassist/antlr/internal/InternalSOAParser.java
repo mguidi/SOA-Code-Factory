@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalSOAParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_COMMENTS", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'@String'", "'@Short'", "'@Integer'", "'@Long'", "'@Float'", "'@Double'", "'@Boolean'", "'@Byte'", "'@Date'", "'@Datetime'", "'@Timestamp'", "'@Decimal'", "'@applicationId'", "':'", "'@moduleName'", "'@version'", "'.'", "'-'", "'@import'", "'@model'", "'{'", "'}'", "'@enum'", "'@entity'", "'@List'", "'<'", "'>'", "'@service'", "'@exception'", "'@msg'", "'@operation'", "'@input'", "'@output'", "','", "'@event'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_COMMENTS", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'@String'", "'@Short'", "'@Integer'", "'@Long'", "'@Float'", "'@Double'", "'@Boolean'", "'@Byte'", "'@Date'", "'@Datetime'", "'@Timestamp'", "'@Decimal'", "'@applicationId'", "':'", "'@moduleName'", "'@version'", "'.'", "'-'", "'@import'", "'@model'", "'{'", "'}'", "'@enum'", "'@entity'", "'@List'", "'<'", "'>'", "'@exceptions'", "'@exception'", "'@msg'", "'@service'", "'@operation'", "'@input'", "'@output'", "','", "'@event'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -51,6 +51,7 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
     public static final int T__40=40;
     public static final int T__41=41;
     public static final int T__46=46;
+    public static final int T__47=47;
     public static final int T__44=44;
     public static final int T__45=45;
     public static final int RULE_COMMENTS=6;
@@ -1261,21 +1262,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleGenericListFeature"
 
 
-    // $ANTLR start "entryRuleService"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:480:1: entryRuleService : ruleService EOF ;
-    public final void entryRuleService() throws RecognitionException {
+    // $ANTLR start "entryRuleExceptions"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:480:1: entryRuleExceptions : ruleExceptions EOF ;
+    public final void entryRuleExceptions() throws RecognitionException {
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:481:1: ( ruleService EOF )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:482:1: ruleService EOF
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:481:1: ( ruleExceptions EOF )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:482:1: ruleExceptions EOF
             {
-             before(grammarAccess.getServiceRule()); 
-            pushFollow(FOLLOW_ruleService_in_entryRuleService961);
-            ruleService();
+             before(grammarAccess.getExceptionsRule()); 
+            pushFollow(FOLLOW_ruleExceptions_in_entryRuleExceptions961);
+            ruleExceptions();
 
             state._fsp--;
 
-             after(grammarAccess.getServiceRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleService968); 
+             after(grammarAccess.getExceptionsRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleExceptions968); 
 
             }
 
@@ -1288,35 +1289,35 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleService"
+    // $ANTLR end "entryRuleExceptions"
 
 
-    // $ANTLR start "ruleService"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:489:1: ruleService : ( ( rule__Service__Group__0 ) ) ;
-    public final void ruleService() throws RecognitionException {
+    // $ANTLR start "ruleExceptions"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:489:1: ruleExceptions : ( ( rule__Exceptions__Group__0 ) ) ;
+    public final void ruleExceptions() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:493:2: ( ( ( rule__Service__Group__0 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:494:1: ( ( rule__Service__Group__0 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:493:2: ( ( ( rule__Exceptions__Group__0 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:494:1: ( ( rule__Exceptions__Group__0 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:494:1: ( ( rule__Service__Group__0 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:495:1: ( rule__Service__Group__0 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:494:1: ( ( rule__Exceptions__Group__0 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:495:1: ( rule__Exceptions__Group__0 )
             {
-             before(grammarAccess.getServiceAccess().getGroup()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:496:1: ( rule__Service__Group__0 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:496:2: rule__Service__Group__0
+             before(grammarAccess.getExceptionsAccess().getGroup()); 
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:496:1: ( rule__Exceptions__Group__0 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:496:2: rule__Exceptions__Group__0
             {
-            pushFollow(FOLLOW_rule__Service__Group__0_in_ruleService994);
-            rule__Service__Group__0();
+            pushFollow(FOLLOW_rule__Exceptions__Group__0_in_ruleExceptions994);
+            rule__Exceptions__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getServiceAccess().getGroup()); 
+             after(grammarAccess.getExceptionsAccess().getGroup()); 
 
             }
 
@@ -1335,7 +1336,7 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleService"
+    // $ANTLR end "ruleExceptions"
 
 
     // $ANTLR start "entryRuleException"
@@ -1415,21 +1416,98 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleException"
 
 
+    // $ANTLR start "entryRuleService"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:536:1: entryRuleService : ruleService EOF ;
+    public final void entryRuleService() throws RecognitionException {
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:537:1: ( ruleService EOF )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:538:1: ruleService EOF
+            {
+             before(grammarAccess.getServiceRule()); 
+            pushFollow(FOLLOW_ruleService_in_entryRuleService1081);
+            ruleService();
+
+            state._fsp--;
+
+             after(grammarAccess.getServiceRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleService1088); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleService"
+
+
+    // $ANTLR start "ruleService"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:545:1: ruleService : ( ( rule__Service__Group__0 ) ) ;
+    public final void ruleService() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:549:2: ( ( ( rule__Service__Group__0 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:550:1: ( ( rule__Service__Group__0 ) )
+            {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:550:1: ( ( rule__Service__Group__0 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:551:1: ( rule__Service__Group__0 )
+            {
+             before(grammarAccess.getServiceAccess().getGroup()); 
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:552:1: ( rule__Service__Group__0 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:552:2: rule__Service__Group__0
+            {
+            pushFollow(FOLLOW_rule__Service__Group__0_in_ruleService1114);
+            rule__Service__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getServiceAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleService"
+
+
     // $ANTLR start "entryRuleOperation"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:536:1: entryRuleOperation : ruleOperation EOF ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:564:1: entryRuleOperation : ruleOperation EOF ;
     public final void entryRuleOperation() throws RecognitionException {
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:537:1: ( ruleOperation EOF )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:538:1: ruleOperation EOF
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:565:1: ( ruleOperation EOF )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:566:1: ruleOperation EOF
             {
              before(grammarAccess.getOperationRule()); 
-            pushFollow(FOLLOW_ruleOperation_in_entryRuleOperation1081);
+            pushFollow(FOLLOW_ruleOperation_in_entryRuleOperation1141);
             ruleOperation();
 
             state._fsp--;
 
              after(grammarAccess.getOperationRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOperation1088); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOperation1148); 
 
             }
 
@@ -1446,23 +1524,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleOperation"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:545:1: ruleOperation : ( ( rule__Operation__Group__0 ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:573:1: ruleOperation : ( ( rule__Operation__Group__0 ) ) ;
     public final void ruleOperation() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:549:2: ( ( ( rule__Operation__Group__0 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:550:1: ( ( rule__Operation__Group__0 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:577:2: ( ( ( rule__Operation__Group__0 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:578:1: ( ( rule__Operation__Group__0 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:550:1: ( ( rule__Operation__Group__0 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:551:1: ( rule__Operation__Group__0 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:578:1: ( ( rule__Operation__Group__0 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:579:1: ( rule__Operation__Group__0 )
             {
              before(grammarAccess.getOperationAccess().getGroup()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:552:1: ( rule__Operation__Group__0 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:552:2: rule__Operation__Group__0
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:580:1: ( rule__Operation__Group__0 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:580:2: rule__Operation__Group__0
             {
-            pushFollow(FOLLOW_rule__Operation__Group__0_in_ruleOperation1114);
+            pushFollow(FOLLOW_rule__Operation__Group__0_in_ruleOperation1174);
             rule__Operation__Group__0();
 
             state._fsp--;
@@ -1493,20 +1571,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleEvent"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:564:1: entryRuleEvent : ruleEvent EOF ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:592:1: entryRuleEvent : ruleEvent EOF ;
     public final void entryRuleEvent() throws RecognitionException {
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:565:1: ( ruleEvent EOF )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:566:1: ruleEvent EOF
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:593:1: ( ruleEvent EOF )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:594:1: ruleEvent EOF
             {
              before(grammarAccess.getEventRule()); 
-            pushFollow(FOLLOW_ruleEvent_in_entryRuleEvent1141);
+            pushFollow(FOLLOW_ruleEvent_in_entryRuleEvent1201);
             ruleEvent();
 
             state._fsp--;
 
              after(grammarAccess.getEventRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEvent1148); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEvent1208); 
 
             }
 
@@ -1523,23 +1601,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleEvent"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:573:1: ruleEvent : ( ( rule__Event__Group__0 ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:601:1: ruleEvent : ( ( rule__Event__Group__0 ) ) ;
     public final void ruleEvent() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:577:2: ( ( ( rule__Event__Group__0 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:578:1: ( ( rule__Event__Group__0 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:605:2: ( ( ( rule__Event__Group__0 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:606:1: ( ( rule__Event__Group__0 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:578:1: ( ( rule__Event__Group__0 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:579:1: ( rule__Event__Group__0 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:606:1: ( ( rule__Event__Group__0 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:607:1: ( rule__Event__Group__0 )
             {
              before(grammarAccess.getEventAccess().getGroup()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:580:1: ( rule__Event__Group__0 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:580:2: rule__Event__Group__0
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:608:1: ( rule__Event__Group__0 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:608:2: rule__Event__Group__0
             {
-            pushFollow(FOLLOW_rule__Event__Group__0_in_ruleEvent1174);
+            pushFollow(FOLLOW_rule__Event__Group__0_in_ruleEvent1234);
             rule__Event__Group__0();
 
             state._fsp--;
@@ -1570,23 +1648,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rulePrimitiveType"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:593:1: rulePrimitiveType : ( ( rule__PrimitiveType__Alternatives ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:621:1: rulePrimitiveType : ( ( rule__PrimitiveType__Alternatives ) ) ;
     public final void rulePrimitiveType() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:597:1: ( ( ( rule__PrimitiveType__Alternatives ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:598:1: ( ( rule__PrimitiveType__Alternatives ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:625:1: ( ( ( rule__PrimitiveType__Alternatives ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:626:1: ( ( rule__PrimitiveType__Alternatives ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:598:1: ( ( rule__PrimitiveType__Alternatives ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:599:1: ( rule__PrimitiveType__Alternatives )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:626:1: ( ( rule__PrimitiveType__Alternatives ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:627:1: ( rule__PrimitiveType__Alternatives )
             {
              before(grammarAccess.getPrimitiveTypeAccess().getAlternatives()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:600:1: ( rule__PrimitiveType__Alternatives )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:600:2: rule__PrimitiveType__Alternatives
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:628:1: ( rule__PrimitiveType__Alternatives )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:628:2: rule__PrimitiveType__Alternatives
             {
-            pushFollow(FOLLOW_rule__PrimitiveType__Alternatives_in_rulePrimitiveType1211);
+            pushFollow(FOLLOW_rule__PrimitiveType__Alternatives_in_rulePrimitiveType1271);
             rule__PrimitiveType__Alternatives();
 
             state._fsp--;
@@ -1617,13 +1695,13 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entities__Alternatives"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:611:1: rule__Entities__Alternatives : ( ( ruleEntity ) | ( ruleEnum ) );
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:639:1: rule__Entities__Alternatives : ( ( ruleEntity ) | ( ruleEnum ) );
     public final void rule__Entities__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:615:1: ( ( ruleEntity ) | ( ruleEnum ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:643:1: ( ( ruleEntity ) | ( ruleEnum ) )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -1641,13 +1719,13 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
             }
             switch (alt1) {
                 case 1 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:616:1: ( ruleEntity )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:644:1: ( ruleEntity )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:616:1: ( ruleEntity )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:617:1: ruleEntity
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:644:1: ( ruleEntity )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:645:1: ruleEntity
                     {
                      before(grammarAccess.getEntitiesAccess().getEntityParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleEntity_in_rule__Entities__Alternatives1246);
+                    pushFollow(FOLLOW_ruleEntity_in_rule__Entities__Alternatives1306);
                     ruleEntity();
 
                     state._fsp--;
@@ -1660,13 +1738,13 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:622:6: ( ruleEnum )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:650:6: ( ruleEnum )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:622:6: ( ruleEnum )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:623:1: ruleEnum
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:650:6: ( ruleEnum )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:651:1: ruleEnum
                     {
                      before(grammarAccess.getEntitiesAccess().getEnumParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleEnum_in_rule__Entities__Alternatives1263);
+                    pushFollow(FOLLOW_ruleEnum_in_rule__Entities__Alternatives1323);
                     ruleEnum();
 
                     state._fsp--;
@@ -1696,13 +1774,13 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__FeatureType__Alternatives"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:633:1: rule__FeatureType__Alternatives : ( ( ruleEntitiesFeature ) | ( rulePrimitiveFeature ) | ( ruleGenericListFeature ) );
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:661:1: rule__FeatureType__Alternatives : ( ( ruleEntitiesFeature ) | ( rulePrimitiveFeature ) | ( ruleGenericListFeature ) );
     public final void rule__FeatureType__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:637:1: ( ( ruleEntitiesFeature ) | ( rulePrimitiveFeature ) | ( ruleGenericListFeature ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:665:1: ( ( ruleEntitiesFeature ) | ( rulePrimitiveFeature ) | ( ruleGenericListFeature ) )
             int alt2=3;
             switch ( input.LA(1) ) {
             case RULE_ID:
@@ -1740,13 +1818,13 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
             switch (alt2) {
                 case 1 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:638:1: ( ruleEntitiesFeature )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:666:1: ( ruleEntitiesFeature )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:638:1: ( ruleEntitiesFeature )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:639:1: ruleEntitiesFeature
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:666:1: ( ruleEntitiesFeature )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:667:1: ruleEntitiesFeature
                     {
                      before(grammarAccess.getFeatureTypeAccess().getEntitiesFeatureParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleEntitiesFeature_in_rule__FeatureType__Alternatives1295);
+                    pushFollow(FOLLOW_ruleEntitiesFeature_in_rule__FeatureType__Alternatives1355);
                     ruleEntitiesFeature();
 
                     state._fsp--;
@@ -1759,13 +1837,13 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:644:6: ( rulePrimitiveFeature )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:672:6: ( rulePrimitiveFeature )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:644:6: ( rulePrimitiveFeature )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:645:1: rulePrimitiveFeature
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:672:6: ( rulePrimitiveFeature )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:673:1: rulePrimitiveFeature
                     {
                      before(grammarAccess.getFeatureTypeAccess().getPrimitiveFeatureParserRuleCall_1()); 
-                    pushFollow(FOLLOW_rulePrimitiveFeature_in_rule__FeatureType__Alternatives1312);
+                    pushFollow(FOLLOW_rulePrimitiveFeature_in_rule__FeatureType__Alternatives1372);
                     rulePrimitiveFeature();
 
                     state._fsp--;
@@ -1778,13 +1856,13 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:650:6: ( ruleGenericListFeature )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:678:6: ( ruleGenericListFeature )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:650:6: ( ruleGenericListFeature )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:651:1: ruleGenericListFeature
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:678:6: ( ruleGenericListFeature )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:679:1: ruleGenericListFeature
                     {
                      before(grammarAccess.getFeatureTypeAccess().getGenericListFeatureParserRuleCall_2()); 
-                    pushFollow(FOLLOW_ruleGenericListFeature_in_rule__FeatureType__Alternatives1329);
+                    pushFollow(FOLLOW_ruleGenericListFeature_in_rule__FeatureType__Alternatives1389);
                     ruleGenericListFeature();
 
                     state._fsp--;
@@ -1814,13 +1892,13 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimitiveType__Alternatives"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:661:1: rule__PrimitiveType__Alternatives : ( ( ( '@String' ) ) | ( ( '@Short' ) ) | ( ( '@Integer' ) ) | ( ( '@Long' ) ) | ( ( '@Float' ) ) | ( ( '@Double' ) ) | ( ( '@Boolean' ) ) | ( ( '@Byte' ) ) | ( ( '@Date' ) ) | ( ( '@Datetime' ) ) | ( ( '@Timestamp' ) ) | ( ( '@Decimal' ) ) );
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:689:1: rule__PrimitiveType__Alternatives : ( ( ( '@String' ) ) | ( ( '@Short' ) ) | ( ( '@Integer' ) ) | ( ( '@Long' ) ) | ( ( '@Float' ) ) | ( ( '@Double' ) ) | ( ( '@Boolean' ) ) | ( ( '@Byte' ) ) | ( ( '@Date' ) ) | ( ( '@Datetime' ) ) | ( ( '@Timestamp' ) ) | ( ( '@Decimal' ) ) );
     public final void rule__PrimitiveType__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:665:1: ( ( ( '@String' ) ) | ( ( '@Short' ) ) | ( ( '@Integer' ) ) | ( ( '@Long' ) ) | ( ( '@Float' ) ) | ( ( '@Double' ) ) | ( ( '@Boolean' ) ) | ( ( '@Byte' ) ) | ( ( '@Date' ) ) | ( ( '@Datetime' ) ) | ( ( '@Timestamp' ) ) | ( ( '@Decimal' ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:693:1: ( ( ( '@String' ) ) | ( ( '@Short' ) ) | ( ( '@Integer' ) ) | ( ( '@Long' ) ) | ( ( '@Float' ) ) | ( ( '@Double' ) ) | ( ( '@Boolean' ) ) | ( ( '@Byte' ) ) | ( ( '@Date' ) ) | ( ( '@Datetime' ) ) | ( ( '@Timestamp' ) ) | ( ( '@Decimal' ) ) )
             int alt3=12;
             switch ( input.LA(1) ) {
             case 12:
@@ -1892,16 +1970,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
             switch (alt3) {
                 case 1 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:666:1: ( ( '@String' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:694:1: ( ( '@String' ) )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:666:1: ( ( '@String' ) )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:667:1: ( '@String' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:694:1: ( ( '@String' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:695:1: ( '@String' )
                     {
                      before(grammarAccess.getPrimitiveTypeAccess().getStringEnumLiteralDeclaration_0()); 
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:668:1: ( '@String' )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:668:3: '@String'
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:696:1: ( '@String' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:696:3: '@String'
                     {
-                    match(input,12,FOLLOW_12_in_rule__PrimitiveType__Alternatives1362); 
+                    match(input,12,FOLLOW_12_in_rule__PrimitiveType__Alternatives1422); 
 
                     }
 
@@ -1913,16 +1991,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:673:6: ( ( '@Short' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:701:6: ( ( '@Short' ) )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:673:6: ( ( '@Short' ) )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:674:1: ( '@Short' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:701:6: ( ( '@Short' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:702:1: ( '@Short' )
                     {
                      before(grammarAccess.getPrimitiveTypeAccess().getShortEnumLiteralDeclaration_1()); 
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:675:1: ( '@Short' )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:675:3: '@Short'
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:703:1: ( '@Short' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:703:3: '@Short'
                     {
-                    match(input,13,FOLLOW_13_in_rule__PrimitiveType__Alternatives1383); 
+                    match(input,13,FOLLOW_13_in_rule__PrimitiveType__Alternatives1443); 
 
                     }
 
@@ -1934,16 +2012,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:680:6: ( ( '@Integer' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:708:6: ( ( '@Integer' ) )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:680:6: ( ( '@Integer' ) )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:681:1: ( '@Integer' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:708:6: ( ( '@Integer' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:709:1: ( '@Integer' )
                     {
                      before(grammarAccess.getPrimitiveTypeAccess().getIntegerEnumLiteralDeclaration_2()); 
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:682:1: ( '@Integer' )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:682:3: '@Integer'
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:710:1: ( '@Integer' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:710:3: '@Integer'
                     {
-                    match(input,14,FOLLOW_14_in_rule__PrimitiveType__Alternatives1404); 
+                    match(input,14,FOLLOW_14_in_rule__PrimitiveType__Alternatives1464); 
 
                     }
 
@@ -1955,16 +2033,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:687:6: ( ( '@Long' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:715:6: ( ( '@Long' ) )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:687:6: ( ( '@Long' ) )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:688:1: ( '@Long' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:715:6: ( ( '@Long' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:716:1: ( '@Long' )
                     {
                      before(grammarAccess.getPrimitiveTypeAccess().getLongEnumLiteralDeclaration_3()); 
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:689:1: ( '@Long' )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:689:3: '@Long'
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:717:1: ( '@Long' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:717:3: '@Long'
                     {
-                    match(input,15,FOLLOW_15_in_rule__PrimitiveType__Alternatives1425); 
+                    match(input,15,FOLLOW_15_in_rule__PrimitiveType__Alternatives1485); 
 
                     }
 
@@ -1976,16 +2054,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:694:6: ( ( '@Float' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:722:6: ( ( '@Float' ) )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:694:6: ( ( '@Float' ) )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:695:1: ( '@Float' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:722:6: ( ( '@Float' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:723:1: ( '@Float' )
                     {
                      before(grammarAccess.getPrimitiveTypeAccess().getFloatEnumLiteralDeclaration_4()); 
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:696:1: ( '@Float' )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:696:3: '@Float'
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:724:1: ( '@Float' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:724:3: '@Float'
                     {
-                    match(input,16,FOLLOW_16_in_rule__PrimitiveType__Alternatives1446); 
+                    match(input,16,FOLLOW_16_in_rule__PrimitiveType__Alternatives1506); 
 
                     }
 
@@ -1997,16 +2075,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:701:6: ( ( '@Double' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:729:6: ( ( '@Double' ) )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:701:6: ( ( '@Double' ) )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:702:1: ( '@Double' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:729:6: ( ( '@Double' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:730:1: ( '@Double' )
                     {
                      before(grammarAccess.getPrimitiveTypeAccess().getDoubleEnumLiteralDeclaration_5()); 
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:703:1: ( '@Double' )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:703:3: '@Double'
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:731:1: ( '@Double' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:731:3: '@Double'
                     {
-                    match(input,17,FOLLOW_17_in_rule__PrimitiveType__Alternatives1467); 
+                    match(input,17,FOLLOW_17_in_rule__PrimitiveType__Alternatives1527); 
 
                     }
 
@@ -2018,16 +2096,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 7 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:708:6: ( ( '@Boolean' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:736:6: ( ( '@Boolean' ) )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:708:6: ( ( '@Boolean' ) )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:709:1: ( '@Boolean' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:736:6: ( ( '@Boolean' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:737:1: ( '@Boolean' )
                     {
                      before(grammarAccess.getPrimitiveTypeAccess().getBooleanEnumLiteralDeclaration_6()); 
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:710:1: ( '@Boolean' )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:710:3: '@Boolean'
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:738:1: ( '@Boolean' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:738:3: '@Boolean'
                     {
-                    match(input,18,FOLLOW_18_in_rule__PrimitiveType__Alternatives1488); 
+                    match(input,18,FOLLOW_18_in_rule__PrimitiveType__Alternatives1548); 
 
                     }
 
@@ -2039,16 +2117,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 8 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:715:6: ( ( '@Byte' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:743:6: ( ( '@Byte' ) )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:715:6: ( ( '@Byte' ) )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:716:1: ( '@Byte' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:743:6: ( ( '@Byte' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:744:1: ( '@Byte' )
                     {
                      before(grammarAccess.getPrimitiveTypeAccess().getByteEnumLiteralDeclaration_7()); 
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:717:1: ( '@Byte' )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:717:3: '@Byte'
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:745:1: ( '@Byte' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:745:3: '@Byte'
                     {
-                    match(input,19,FOLLOW_19_in_rule__PrimitiveType__Alternatives1509); 
+                    match(input,19,FOLLOW_19_in_rule__PrimitiveType__Alternatives1569); 
 
                     }
 
@@ -2060,16 +2138,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 9 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:722:6: ( ( '@Date' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:750:6: ( ( '@Date' ) )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:722:6: ( ( '@Date' ) )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:723:1: ( '@Date' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:750:6: ( ( '@Date' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:751:1: ( '@Date' )
                     {
                      before(grammarAccess.getPrimitiveTypeAccess().getDateEnumLiteralDeclaration_8()); 
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:724:1: ( '@Date' )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:724:3: '@Date'
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:752:1: ( '@Date' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:752:3: '@Date'
                     {
-                    match(input,20,FOLLOW_20_in_rule__PrimitiveType__Alternatives1530); 
+                    match(input,20,FOLLOW_20_in_rule__PrimitiveType__Alternatives1590); 
 
                     }
 
@@ -2081,16 +2159,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 10 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:729:6: ( ( '@Datetime' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:757:6: ( ( '@Datetime' ) )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:729:6: ( ( '@Datetime' ) )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:730:1: ( '@Datetime' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:757:6: ( ( '@Datetime' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:758:1: ( '@Datetime' )
                     {
                      before(grammarAccess.getPrimitiveTypeAccess().getDatetimeEnumLiteralDeclaration_9()); 
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:731:1: ( '@Datetime' )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:731:3: '@Datetime'
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:759:1: ( '@Datetime' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:759:3: '@Datetime'
                     {
-                    match(input,21,FOLLOW_21_in_rule__PrimitiveType__Alternatives1551); 
+                    match(input,21,FOLLOW_21_in_rule__PrimitiveType__Alternatives1611); 
 
                     }
 
@@ -2102,16 +2180,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 11 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:736:6: ( ( '@Timestamp' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:764:6: ( ( '@Timestamp' ) )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:736:6: ( ( '@Timestamp' ) )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:737:1: ( '@Timestamp' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:764:6: ( ( '@Timestamp' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:765:1: ( '@Timestamp' )
                     {
                      before(grammarAccess.getPrimitiveTypeAccess().getTimestampEnumLiteralDeclaration_10()); 
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:738:1: ( '@Timestamp' )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:738:3: '@Timestamp'
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:766:1: ( '@Timestamp' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:766:3: '@Timestamp'
                     {
-                    match(input,22,FOLLOW_22_in_rule__PrimitiveType__Alternatives1572); 
+                    match(input,22,FOLLOW_22_in_rule__PrimitiveType__Alternatives1632); 
 
                     }
 
@@ -2123,16 +2201,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 12 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:743:6: ( ( '@Decimal' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:771:6: ( ( '@Decimal' ) )
                     {
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:743:6: ( ( '@Decimal' ) )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:744:1: ( '@Decimal' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:771:6: ( ( '@Decimal' ) )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:772:1: ( '@Decimal' )
                     {
                      before(grammarAccess.getPrimitiveTypeAccess().getDecimalEnumLiteralDeclaration_11()); 
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:745:1: ( '@Decimal' )
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:745:3: '@Decimal'
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:773:1: ( '@Decimal' )
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:773:3: '@Decimal'
                     {
-                    match(input,23,FOLLOW_23_in_rule__PrimitiveType__Alternatives1593); 
+                    match(input,23,FOLLOW_23_in_rule__PrimitiveType__Alternatives1653); 
 
                     }
 
@@ -2161,21 +2239,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Architecture__Group__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:757:1: rule__Architecture__Group__0 : rule__Architecture__Group__0__Impl rule__Architecture__Group__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:785:1: rule__Architecture__Group__0 : rule__Architecture__Group__0__Impl rule__Architecture__Group__1 ;
     public final void rule__Architecture__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:761:1: ( rule__Architecture__Group__0__Impl rule__Architecture__Group__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:762:2: rule__Architecture__Group__0__Impl rule__Architecture__Group__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:789:1: ( rule__Architecture__Group__0__Impl rule__Architecture__Group__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:790:2: rule__Architecture__Group__0__Impl rule__Architecture__Group__1
             {
-            pushFollow(FOLLOW_rule__Architecture__Group__0__Impl_in_rule__Architecture__Group__01626);
+            pushFollow(FOLLOW_rule__Architecture__Group__0__Impl_in_rule__Architecture__Group__01686);
             rule__Architecture__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Architecture__Group__1_in_rule__Architecture__Group__01629);
+            pushFollow(FOLLOW_rule__Architecture__Group__1_in_rule__Architecture__Group__01689);
             rule__Architecture__Group__1();
 
             state._fsp--;
@@ -2199,20 +2277,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Architecture__Group__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:769:1: rule__Architecture__Group__0__Impl : ( '@applicationId' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:797:1: rule__Architecture__Group__0__Impl : ( '@applicationId' ) ;
     public final void rule__Architecture__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:773:1: ( ( '@applicationId' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:774:1: ( '@applicationId' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:801:1: ( ( '@applicationId' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:802:1: ( '@applicationId' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:774:1: ( '@applicationId' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:775:1: '@applicationId'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:802:1: ( '@applicationId' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:803:1: '@applicationId'
             {
              before(grammarAccess.getArchitectureAccess().getApplicationIdKeyword_0()); 
-            match(input,24,FOLLOW_24_in_rule__Architecture__Group__0__Impl1657); 
+            match(input,24,FOLLOW_24_in_rule__Architecture__Group__0__Impl1717); 
              after(grammarAccess.getArchitectureAccess().getApplicationIdKeyword_0()); 
 
             }
@@ -2236,21 +2314,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Architecture__Group__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:788:1: rule__Architecture__Group__1 : rule__Architecture__Group__1__Impl rule__Architecture__Group__2 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:816:1: rule__Architecture__Group__1 : rule__Architecture__Group__1__Impl rule__Architecture__Group__2 ;
     public final void rule__Architecture__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:792:1: ( rule__Architecture__Group__1__Impl rule__Architecture__Group__2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:793:2: rule__Architecture__Group__1__Impl rule__Architecture__Group__2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:820:1: ( rule__Architecture__Group__1__Impl rule__Architecture__Group__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:821:2: rule__Architecture__Group__1__Impl rule__Architecture__Group__2
             {
-            pushFollow(FOLLOW_rule__Architecture__Group__1__Impl_in_rule__Architecture__Group__11688);
+            pushFollow(FOLLOW_rule__Architecture__Group__1__Impl_in_rule__Architecture__Group__11748);
             rule__Architecture__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Architecture__Group__2_in_rule__Architecture__Group__11691);
+            pushFollow(FOLLOW_rule__Architecture__Group__2_in_rule__Architecture__Group__11751);
             rule__Architecture__Group__2();
 
             state._fsp--;
@@ -2274,20 +2352,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Architecture__Group__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:800:1: rule__Architecture__Group__1__Impl : ( ':' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:828:1: rule__Architecture__Group__1__Impl : ( ':' ) ;
     public final void rule__Architecture__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:804:1: ( ( ':' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:805:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:832:1: ( ( ':' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:833:1: ( ':' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:805:1: ( ':' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:806:1: ':'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:833:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:834:1: ':'
             {
              before(grammarAccess.getArchitectureAccess().getColonKeyword_1()); 
-            match(input,25,FOLLOW_25_in_rule__Architecture__Group__1__Impl1719); 
+            match(input,25,FOLLOW_25_in_rule__Architecture__Group__1__Impl1779); 
              after(grammarAccess.getArchitectureAccess().getColonKeyword_1()); 
 
             }
@@ -2311,21 +2389,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Architecture__Group__2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:819:1: rule__Architecture__Group__2 : rule__Architecture__Group__2__Impl rule__Architecture__Group__3 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:847:1: rule__Architecture__Group__2 : rule__Architecture__Group__2__Impl rule__Architecture__Group__3 ;
     public final void rule__Architecture__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:823:1: ( rule__Architecture__Group__2__Impl rule__Architecture__Group__3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:824:2: rule__Architecture__Group__2__Impl rule__Architecture__Group__3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:851:1: ( rule__Architecture__Group__2__Impl rule__Architecture__Group__3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:852:2: rule__Architecture__Group__2__Impl rule__Architecture__Group__3
             {
-            pushFollow(FOLLOW_rule__Architecture__Group__2__Impl_in_rule__Architecture__Group__21750);
+            pushFollow(FOLLOW_rule__Architecture__Group__2__Impl_in_rule__Architecture__Group__21810);
             rule__Architecture__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Architecture__Group__3_in_rule__Architecture__Group__21753);
+            pushFollow(FOLLOW_rule__Architecture__Group__3_in_rule__Architecture__Group__21813);
             rule__Architecture__Group__3();
 
             state._fsp--;
@@ -2349,23 +2427,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Architecture__Group__2__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:831:1: rule__Architecture__Group__2__Impl : ( ( rule__Architecture__NameAssignment_2 ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:859:1: rule__Architecture__Group__2__Impl : ( ( rule__Architecture__NameAssignment_2 ) ) ;
     public final void rule__Architecture__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:835:1: ( ( ( rule__Architecture__NameAssignment_2 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:836:1: ( ( rule__Architecture__NameAssignment_2 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:863:1: ( ( ( rule__Architecture__NameAssignment_2 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:864:1: ( ( rule__Architecture__NameAssignment_2 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:836:1: ( ( rule__Architecture__NameAssignment_2 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:837:1: ( rule__Architecture__NameAssignment_2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:864:1: ( ( rule__Architecture__NameAssignment_2 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:865:1: ( rule__Architecture__NameAssignment_2 )
             {
              before(grammarAccess.getArchitectureAccess().getNameAssignment_2()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:838:1: ( rule__Architecture__NameAssignment_2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:838:2: rule__Architecture__NameAssignment_2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:866:1: ( rule__Architecture__NameAssignment_2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:866:2: rule__Architecture__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__Architecture__NameAssignment_2_in_rule__Architecture__Group__2__Impl1780);
+            pushFollow(FOLLOW_rule__Architecture__NameAssignment_2_in_rule__Architecture__Group__2__Impl1840);
             rule__Architecture__NameAssignment_2();
 
             state._fsp--;
@@ -2396,16 +2474,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Architecture__Group__3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:848:1: rule__Architecture__Group__3 : rule__Architecture__Group__3__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:876:1: rule__Architecture__Group__3 : rule__Architecture__Group__3__Impl ;
     public final void rule__Architecture__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:852:1: ( rule__Architecture__Group__3__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:853:2: rule__Architecture__Group__3__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:880:1: ( rule__Architecture__Group__3__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:881:2: rule__Architecture__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Architecture__Group__3__Impl_in_rule__Architecture__Group__31810);
+            pushFollow(FOLLOW_rule__Architecture__Group__3__Impl_in_rule__Architecture__Group__31870);
             rule__Architecture__Group__3__Impl();
 
             state._fsp--;
@@ -2429,23 +2507,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Architecture__Group__3__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:859:1: rule__Architecture__Group__3__Impl : ( ( rule__Architecture__ModuleAssignment_3 ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:887:1: rule__Architecture__Group__3__Impl : ( ( rule__Architecture__ModuleAssignment_3 ) ) ;
     public final void rule__Architecture__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:863:1: ( ( ( rule__Architecture__ModuleAssignment_3 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:864:1: ( ( rule__Architecture__ModuleAssignment_3 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:891:1: ( ( ( rule__Architecture__ModuleAssignment_3 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:892:1: ( ( rule__Architecture__ModuleAssignment_3 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:864:1: ( ( rule__Architecture__ModuleAssignment_3 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:865:1: ( rule__Architecture__ModuleAssignment_3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:892:1: ( ( rule__Architecture__ModuleAssignment_3 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:893:1: ( rule__Architecture__ModuleAssignment_3 )
             {
              before(grammarAccess.getArchitectureAccess().getModuleAssignment_3()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:866:1: ( rule__Architecture__ModuleAssignment_3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:866:2: rule__Architecture__ModuleAssignment_3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:894:1: ( rule__Architecture__ModuleAssignment_3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:894:2: rule__Architecture__ModuleAssignment_3
             {
-            pushFollow(FOLLOW_rule__Architecture__ModuleAssignment_3_in_rule__Architecture__Group__3__Impl1837);
+            pushFollow(FOLLOW_rule__Architecture__ModuleAssignment_3_in_rule__Architecture__Group__3__Impl1897);
             rule__Architecture__ModuleAssignment_3();
 
             state._fsp--;
@@ -2476,21 +2554,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:884:1: rule__Module__Group__0 : rule__Module__Group__0__Impl rule__Module__Group__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:912:1: rule__Module__Group__0 : rule__Module__Group__0__Impl rule__Module__Group__1 ;
     public final void rule__Module__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:888:1: ( rule__Module__Group__0__Impl rule__Module__Group__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:889:2: rule__Module__Group__0__Impl rule__Module__Group__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:916:1: ( rule__Module__Group__0__Impl rule__Module__Group__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:917:2: rule__Module__Group__0__Impl rule__Module__Group__1
             {
-            pushFollow(FOLLOW_rule__Module__Group__0__Impl_in_rule__Module__Group__01875);
+            pushFollow(FOLLOW_rule__Module__Group__0__Impl_in_rule__Module__Group__01935);
             rule__Module__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Module__Group__1_in_rule__Module__Group__01878);
+            pushFollow(FOLLOW_rule__Module__Group__1_in_rule__Module__Group__01938);
             rule__Module__Group__1();
 
             state._fsp--;
@@ -2514,20 +2592,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:896:1: rule__Module__Group__0__Impl : ( '@moduleName' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:924:1: rule__Module__Group__0__Impl : ( '@moduleName' ) ;
     public final void rule__Module__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:900:1: ( ( '@moduleName' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:901:1: ( '@moduleName' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:928:1: ( ( '@moduleName' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:929:1: ( '@moduleName' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:901:1: ( '@moduleName' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:902:1: '@moduleName'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:929:1: ( '@moduleName' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:930:1: '@moduleName'
             {
              before(grammarAccess.getModuleAccess().getModuleNameKeyword_0()); 
-            match(input,26,FOLLOW_26_in_rule__Module__Group__0__Impl1906); 
+            match(input,26,FOLLOW_26_in_rule__Module__Group__0__Impl1966); 
              after(grammarAccess.getModuleAccess().getModuleNameKeyword_0()); 
 
             }
@@ -2551,21 +2629,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:915:1: rule__Module__Group__1 : rule__Module__Group__1__Impl rule__Module__Group__2 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:943:1: rule__Module__Group__1 : rule__Module__Group__1__Impl rule__Module__Group__2 ;
     public final void rule__Module__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:919:1: ( rule__Module__Group__1__Impl rule__Module__Group__2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:920:2: rule__Module__Group__1__Impl rule__Module__Group__2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:947:1: ( rule__Module__Group__1__Impl rule__Module__Group__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:948:2: rule__Module__Group__1__Impl rule__Module__Group__2
             {
-            pushFollow(FOLLOW_rule__Module__Group__1__Impl_in_rule__Module__Group__11937);
+            pushFollow(FOLLOW_rule__Module__Group__1__Impl_in_rule__Module__Group__11997);
             rule__Module__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Module__Group__2_in_rule__Module__Group__11940);
+            pushFollow(FOLLOW_rule__Module__Group__2_in_rule__Module__Group__12000);
             rule__Module__Group__2();
 
             state._fsp--;
@@ -2589,20 +2667,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:927:1: rule__Module__Group__1__Impl : ( ':' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:955:1: rule__Module__Group__1__Impl : ( ':' ) ;
     public final void rule__Module__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:931:1: ( ( ':' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:932:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:959:1: ( ( ':' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:960:1: ( ':' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:932:1: ( ':' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:933:1: ':'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:960:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:961:1: ':'
             {
              before(grammarAccess.getModuleAccess().getColonKeyword_1()); 
-            match(input,25,FOLLOW_25_in_rule__Module__Group__1__Impl1968); 
+            match(input,25,FOLLOW_25_in_rule__Module__Group__1__Impl2028); 
              after(grammarAccess.getModuleAccess().getColonKeyword_1()); 
 
             }
@@ -2626,21 +2704,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:946:1: rule__Module__Group__2 : rule__Module__Group__2__Impl rule__Module__Group__3 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:974:1: rule__Module__Group__2 : rule__Module__Group__2__Impl rule__Module__Group__3 ;
     public final void rule__Module__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:950:1: ( rule__Module__Group__2__Impl rule__Module__Group__3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:951:2: rule__Module__Group__2__Impl rule__Module__Group__3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:978:1: ( rule__Module__Group__2__Impl rule__Module__Group__3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:979:2: rule__Module__Group__2__Impl rule__Module__Group__3
             {
-            pushFollow(FOLLOW_rule__Module__Group__2__Impl_in_rule__Module__Group__21999);
+            pushFollow(FOLLOW_rule__Module__Group__2__Impl_in_rule__Module__Group__22059);
             rule__Module__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Module__Group__3_in_rule__Module__Group__22002);
+            pushFollow(FOLLOW_rule__Module__Group__3_in_rule__Module__Group__22062);
             rule__Module__Group__3();
 
             state._fsp--;
@@ -2664,23 +2742,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__2__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:958:1: rule__Module__Group__2__Impl : ( ( rule__Module__NameAssignment_2 ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:986:1: rule__Module__Group__2__Impl : ( ( rule__Module__NameAssignment_2 ) ) ;
     public final void rule__Module__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:962:1: ( ( ( rule__Module__NameAssignment_2 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:963:1: ( ( rule__Module__NameAssignment_2 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:990:1: ( ( ( rule__Module__NameAssignment_2 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:991:1: ( ( rule__Module__NameAssignment_2 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:963:1: ( ( rule__Module__NameAssignment_2 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:964:1: ( rule__Module__NameAssignment_2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:991:1: ( ( rule__Module__NameAssignment_2 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:992:1: ( rule__Module__NameAssignment_2 )
             {
              before(grammarAccess.getModuleAccess().getNameAssignment_2()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:965:1: ( rule__Module__NameAssignment_2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:965:2: rule__Module__NameAssignment_2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:993:1: ( rule__Module__NameAssignment_2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:993:2: rule__Module__NameAssignment_2
             {
-            pushFollow(FOLLOW_rule__Module__NameAssignment_2_in_rule__Module__Group__2__Impl2029);
+            pushFollow(FOLLOW_rule__Module__NameAssignment_2_in_rule__Module__Group__2__Impl2089);
             rule__Module__NameAssignment_2();
 
             state._fsp--;
@@ -2711,21 +2789,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:975:1: rule__Module__Group__3 : rule__Module__Group__3__Impl rule__Module__Group__4 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1003:1: rule__Module__Group__3 : rule__Module__Group__3__Impl rule__Module__Group__4 ;
     public final void rule__Module__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:979:1: ( rule__Module__Group__3__Impl rule__Module__Group__4 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:980:2: rule__Module__Group__3__Impl rule__Module__Group__4
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1007:1: ( rule__Module__Group__3__Impl rule__Module__Group__4 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1008:2: rule__Module__Group__3__Impl rule__Module__Group__4
             {
-            pushFollow(FOLLOW_rule__Module__Group__3__Impl_in_rule__Module__Group__32059);
+            pushFollow(FOLLOW_rule__Module__Group__3__Impl_in_rule__Module__Group__32119);
             rule__Module__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Module__Group__4_in_rule__Module__Group__32062);
+            pushFollow(FOLLOW_rule__Module__Group__4_in_rule__Module__Group__32122);
             rule__Module__Group__4();
 
             state._fsp--;
@@ -2749,20 +2827,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__3__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:987:1: rule__Module__Group__3__Impl : ( '@version' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1015:1: rule__Module__Group__3__Impl : ( '@version' ) ;
     public final void rule__Module__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:991:1: ( ( '@version' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:992:1: ( '@version' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1019:1: ( ( '@version' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1020:1: ( '@version' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:992:1: ( '@version' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:993:1: '@version'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1020:1: ( '@version' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1021:1: '@version'
             {
              before(grammarAccess.getModuleAccess().getVersionKeyword_3()); 
-            match(input,27,FOLLOW_27_in_rule__Module__Group__3__Impl2090); 
+            match(input,27,FOLLOW_27_in_rule__Module__Group__3__Impl2150); 
              after(grammarAccess.getModuleAccess().getVersionKeyword_3()); 
 
             }
@@ -2786,21 +2864,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__4"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1006:1: rule__Module__Group__4 : rule__Module__Group__4__Impl rule__Module__Group__5 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1034:1: rule__Module__Group__4 : rule__Module__Group__4__Impl rule__Module__Group__5 ;
     public final void rule__Module__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1010:1: ( rule__Module__Group__4__Impl rule__Module__Group__5 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1011:2: rule__Module__Group__4__Impl rule__Module__Group__5
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1038:1: ( rule__Module__Group__4__Impl rule__Module__Group__5 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1039:2: rule__Module__Group__4__Impl rule__Module__Group__5
             {
-            pushFollow(FOLLOW_rule__Module__Group__4__Impl_in_rule__Module__Group__42121);
+            pushFollow(FOLLOW_rule__Module__Group__4__Impl_in_rule__Module__Group__42181);
             rule__Module__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Module__Group__5_in_rule__Module__Group__42124);
+            pushFollow(FOLLOW_rule__Module__Group__5_in_rule__Module__Group__42184);
             rule__Module__Group__5();
 
             state._fsp--;
@@ -2824,20 +2902,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__4__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1018:1: rule__Module__Group__4__Impl : ( ':' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1046:1: rule__Module__Group__4__Impl : ( ':' ) ;
     public final void rule__Module__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1022:1: ( ( ':' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1023:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1050:1: ( ( ':' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1051:1: ( ':' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1023:1: ( ':' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1024:1: ':'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1051:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1052:1: ':'
             {
              before(grammarAccess.getModuleAccess().getColonKeyword_4()); 
-            match(input,25,FOLLOW_25_in_rule__Module__Group__4__Impl2152); 
+            match(input,25,FOLLOW_25_in_rule__Module__Group__4__Impl2212); 
              after(grammarAccess.getModuleAccess().getColonKeyword_4()); 
 
             }
@@ -2861,21 +2939,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__5"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1037:1: rule__Module__Group__5 : rule__Module__Group__5__Impl rule__Module__Group__6 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1065:1: rule__Module__Group__5 : rule__Module__Group__5__Impl rule__Module__Group__6 ;
     public final void rule__Module__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1041:1: ( rule__Module__Group__5__Impl rule__Module__Group__6 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1042:2: rule__Module__Group__5__Impl rule__Module__Group__6
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1069:1: ( rule__Module__Group__5__Impl rule__Module__Group__6 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1070:2: rule__Module__Group__5__Impl rule__Module__Group__6
             {
-            pushFollow(FOLLOW_rule__Module__Group__5__Impl_in_rule__Module__Group__52183);
+            pushFollow(FOLLOW_rule__Module__Group__5__Impl_in_rule__Module__Group__52243);
             rule__Module__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Module__Group__6_in_rule__Module__Group__52186);
+            pushFollow(FOLLOW_rule__Module__Group__6_in_rule__Module__Group__52246);
             rule__Module__Group__6();
 
             state._fsp--;
@@ -2899,23 +2977,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__5__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1049:1: rule__Module__Group__5__Impl : ( ( rule__Module__VersionAssignment_5 ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1077:1: rule__Module__Group__5__Impl : ( ( rule__Module__VersionAssignment_5 ) ) ;
     public final void rule__Module__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1053:1: ( ( ( rule__Module__VersionAssignment_5 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1054:1: ( ( rule__Module__VersionAssignment_5 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1081:1: ( ( ( rule__Module__VersionAssignment_5 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1082:1: ( ( rule__Module__VersionAssignment_5 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1054:1: ( ( rule__Module__VersionAssignment_5 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1055:1: ( rule__Module__VersionAssignment_5 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1082:1: ( ( rule__Module__VersionAssignment_5 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1083:1: ( rule__Module__VersionAssignment_5 )
             {
              before(grammarAccess.getModuleAccess().getVersionAssignment_5()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1056:1: ( rule__Module__VersionAssignment_5 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1056:2: rule__Module__VersionAssignment_5
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1084:1: ( rule__Module__VersionAssignment_5 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1084:2: rule__Module__VersionAssignment_5
             {
-            pushFollow(FOLLOW_rule__Module__VersionAssignment_5_in_rule__Module__Group__5__Impl2213);
+            pushFollow(FOLLOW_rule__Module__VersionAssignment_5_in_rule__Module__Group__5__Impl2273);
             rule__Module__VersionAssignment_5();
 
             state._fsp--;
@@ -2946,21 +3024,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__6"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1066:1: rule__Module__Group__6 : rule__Module__Group__6__Impl rule__Module__Group__7 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1094:1: rule__Module__Group__6 : rule__Module__Group__6__Impl rule__Module__Group__7 ;
     public final void rule__Module__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1070:1: ( rule__Module__Group__6__Impl rule__Module__Group__7 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1071:2: rule__Module__Group__6__Impl rule__Module__Group__7
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1098:1: ( rule__Module__Group__6__Impl rule__Module__Group__7 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1099:2: rule__Module__Group__6__Impl rule__Module__Group__7
             {
-            pushFollow(FOLLOW_rule__Module__Group__6__Impl_in_rule__Module__Group__62243);
+            pushFollow(FOLLOW_rule__Module__Group__6__Impl_in_rule__Module__Group__62303);
             rule__Module__Group__6__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Module__Group__7_in_rule__Module__Group__62246);
+            pushFollow(FOLLOW_rule__Module__Group__7_in_rule__Module__Group__62306);
             rule__Module__Group__7();
 
             state._fsp--;
@@ -2984,20 +3062,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__6__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1078:1: rule__Module__Group__6__Impl : ( ( rule__Module__ImportsAssignment_6 )* ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1106:1: rule__Module__Group__6__Impl : ( ( rule__Module__ImportsAssignment_6 )* ) ;
     public final void rule__Module__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1082:1: ( ( ( rule__Module__ImportsAssignment_6 )* ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1083:1: ( ( rule__Module__ImportsAssignment_6 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1110:1: ( ( ( rule__Module__ImportsAssignment_6 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1111:1: ( ( rule__Module__ImportsAssignment_6 )* )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1083:1: ( ( rule__Module__ImportsAssignment_6 )* )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1084:1: ( rule__Module__ImportsAssignment_6 )*
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1111:1: ( ( rule__Module__ImportsAssignment_6 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1112:1: ( rule__Module__ImportsAssignment_6 )*
             {
              before(grammarAccess.getModuleAccess().getImportsAssignment_6()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1085:1: ( rule__Module__ImportsAssignment_6 )*
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1113:1: ( rule__Module__ImportsAssignment_6 )*
             loop4:
             do {
                 int alt4=2;
@@ -3010,9 +3088,9 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1085:2: rule__Module__ImportsAssignment_6
+            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1113:2: rule__Module__ImportsAssignment_6
             	    {
-            	    pushFollow(FOLLOW_rule__Module__ImportsAssignment_6_in_rule__Module__Group__6__Impl2273);
+            	    pushFollow(FOLLOW_rule__Module__ImportsAssignment_6_in_rule__Module__Group__6__Impl2333);
             	    rule__Module__ImportsAssignment_6();
 
             	    state._fsp--;
@@ -3049,21 +3127,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__7"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1095:1: rule__Module__Group__7 : rule__Module__Group__7__Impl rule__Module__Group__8 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1123:1: rule__Module__Group__7 : rule__Module__Group__7__Impl rule__Module__Group__8 ;
     public final void rule__Module__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1099:1: ( rule__Module__Group__7__Impl rule__Module__Group__8 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1100:2: rule__Module__Group__7__Impl rule__Module__Group__8
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1127:1: ( rule__Module__Group__7__Impl rule__Module__Group__8 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1128:2: rule__Module__Group__7__Impl rule__Module__Group__8
             {
-            pushFollow(FOLLOW_rule__Module__Group__7__Impl_in_rule__Module__Group__72304);
+            pushFollow(FOLLOW_rule__Module__Group__7__Impl_in_rule__Module__Group__72364);
             rule__Module__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Module__Group__8_in_rule__Module__Group__72307);
+            pushFollow(FOLLOW_rule__Module__Group__8_in_rule__Module__Group__72367);
             rule__Module__Group__8();
 
             state._fsp--;
@@ -3087,20 +3165,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__7__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1107:1: rule__Module__Group__7__Impl : ( ( rule__Module__ModelAssignment_7 )? ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1135:1: rule__Module__Group__7__Impl : ( ( rule__Module__ModelAssignment_7 )? ) ;
     public final void rule__Module__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1111:1: ( ( ( rule__Module__ModelAssignment_7 )? ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1112:1: ( ( rule__Module__ModelAssignment_7 )? )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1139:1: ( ( ( rule__Module__ModelAssignment_7 )? ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1140:1: ( ( rule__Module__ModelAssignment_7 )? )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1112:1: ( ( rule__Module__ModelAssignment_7 )? )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1113:1: ( rule__Module__ModelAssignment_7 )?
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1140:1: ( ( rule__Module__ModelAssignment_7 )? )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1141:1: ( rule__Module__ModelAssignment_7 )?
             {
              before(grammarAccess.getModuleAccess().getModelAssignment_7()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1114:1: ( rule__Module__ModelAssignment_7 )?
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1142:1: ( rule__Module__ModelAssignment_7 )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -3109,9 +3187,9 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
             }
             switch (alt5) {
                 case 1 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1114:2: rule__Module__ModelAssignment_7
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1142:2: rule__Module__ModelAssignment_7
                     {
-                    pushFollow(FOLLOW_rule__Module__ModelAssignment_7_in_rule__Module__Group__7__Impl2334);
+                    pushFollow(FOLLOW_rule__Module__ModelAssignment_7_in_rule__Module__Group__7__Impl2394);
                     rule__Module__ModelAssignment_7();
 
                     state._fsp--;
@@ -3145,21 +3223,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__8"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1124:1: rule__Module__Group__8 : rule__Module__Group__8__Impl rule__Module__Group__9 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1152:1: rule__Module__Group__8 : rule__Module__Group__8__Impl rule__Module__Group__9 ;
     public final void rule__Module__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1128:1: ( rule__Module__Group__8__Impl rule__Module__Group__9 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1129:2: rule__Module__Group__8__Impl rule__Module__Group__9
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1156:1: ( rule__Module__Group__8__Impl rule__Module__Group__9 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1157:2: rule__Module__Group__8__Impl rule__Module__Group__9
             {
-            pushFollow(FOLLOW_rule__Module__Group__8__Impl_in_rule__Module__Group__82365);
+            pushFollow(FOLLOW_rule__Module__Group__8__Impl_in_rule__Module__Group__82425);
             rule__Module__Group__8__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Module__Group__9_in_rule__Module__Group__82368);
+            pushFollow(FOLLOW_rule__Module__Group__9_in_rule__Module__Group__82428);
             rule__Module__Group__9();
 
             state._fsp--;
@@ -3183,49 +3261,42 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__8__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1136:1: rule__Module__Group__8__Impl : ( ( rule__Module__ServicesAssignment_8 )* ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1164:1: rule__Module__Group__8__Impl : ( ( rule__Module__ExceptionsAssignment_8 )? ) ;
     public final void rule__Module__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1140:1: ( ( ( rule__Module__ServicesAssignment_8 )* ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1141:1: ( ( rule__Module__ServicesAssignment_8 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1168:1: ( ( ( rule__Module__ExceptionsAssignment_8 )? ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1169:1: ( ( rule__Module__ExceptionsAssignment_8 )? )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1141:1: ( ( rule__Module__ServicesAssignment_8 )* )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1142:1: ( rule__Module__ServicesAssignment_8 )*
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1169:1: ( ( rule__Module__ExceptionsAssignment_8 )? )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1170:1: ( rule__Module__ExceptionsAssignment_8 )?
             {
-             before(grammarAccess.getModuleAccess().getServicesAssignment_8()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1143:1: ( rule__Module__ServicesAssignment_8 )*
-            loop6:
-            do {
-                int alt6=2;
-                int LA6_0 = input.LA(1);
+             before(grammarAccess.getModuleAccess().getExceptionsAssignment_8()); 
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1171:1: ( rule__Module__ExceptionsAssignment_8 )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-                if ( (LA6_0==39) ) {
-                    alt6=1;
-                }
+            if ( (LA6_0==39) ) {
+                alt6=1;
+            }
+            switch (alt6) {
+                case 1 :
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1171:2: rule__Module__ExceptionsAssignment_8
+                    {
+                    pushFollow(FOLLOW_rule__Module__ExceptionsAssignment_8_in_rule__Module__Group__8__Impl2455);
+                    rule__Module__ExceptionsAssignment_8();
 
-
-                switch (alt6) {
-            	case 1 :
-            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1143:2: rule__Module__ServicesAssignment_8
-            	    {
-            	    pushFollow(FOLLOW_rule__Module__ServicesAssignment_8_in_rule__Module__Group__8__Impl2395);
-            	    rule__Module__ServicesAssignment_8();
-
-            	    state._fsp--;
+                    state._fsp--;
 
 
-            	    }
-            	    break;
+                    }
+                    break;
 
-            	default :
-            	    break loop6;
-                }
-            } while (true);
+            }
 
-             after(grammarAccess.getModuleAccess().getServicesAssignment_8()); 
+             after(grammarAccess.getModuleAccess().getExceptionsAssignment_8()); 
 
             }
 
@@ -3248,17 +3319,22 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__9"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1153:1: rule__Module__Group__9 : rule__Module__Group__9__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1181:1: rule__Module__Group__9 : rule__Module__Group__9__Impl rule__Module__Group__10 ;
     public final void rule__Module__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1157:1: ( rule__Module__Group__9__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1158:2: rule__Module__Group__9__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1185:1: ( rule__Module__Group__9__Impl rule__Module__Group__10 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1186:2: rule__Module__Group__9__Impl rule__Module__Group__10
             {
-            pushFollow(FOLLOW_rule__Module__Group__9__Impl_in_rule__Module__Group__92426);
+            pushFollow(FOLLOW_rule__Module__Group__9__Impl_in_rule__Module__Group__92486);
             rule__Module__Group__9__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Module__Group__10_in_rule__Module__Group__92489);
+            rule__Module__Group__10();
 
             state._fsp--;
 
@@ -3281,42 +3357,49 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__Group__9__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1164:1: rule__Module__Group__9__Impl : ( ( rule__Module__EventAssignment_9 )? ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1193:1: rule__Module__Group__9__Impl : ( ( rule__Module__ServicesAssignment_9 )* ) ;
     public final void rule__Module__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1168:1: ( ( ( rule__Module__EventAssignment_9 )? ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1169:1: ( ( rule__Module__EventAssignment_9 )? )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1197:1: ( ( ( rule__Module__ServicesAssignment_9 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1198:1: ( ( rule__Module__ServicesAssignment_9 )* )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1169:1: ( ( rule__Module__EventAssignment_9 )? )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1170:1: ( rule__Module__EventAssignment_9 )?
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1198:1: ( ( rule__Module__ServicesAssignment_9 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1199:1: ( rule__Module__ServicesAssignment_9 )*
             {
-             before(grammarAccess.getModuleAccess().getEventAssignment_9()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1171:1: ( rule__Module__EventAssignment_9 )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+             before(grammarAccess.getModuleAccess().getServicesAssignment_9()); 
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1200:1: ( rule__Module__ServicesAssignment_9 )*
+            loop7:
+            do {
+                int alt7=2;
+                int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==46) ) {
-                alt7=1;
-            }
-            switch (alt7) {
-                case 1 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1171:2: rule__Module__EventAssignment_9
-                    {
-                    pushFollow(FOLLOW_rule__Module__EventAssignment_9_in_rule__Module__Group__9__Impl2453);
-                    rule__Module__EventAssignment_9();
-
-                    state._fsp--;
+                if ( (LA7_0==42) ) {
+                    alt7=1;
+                }
 
 
-                    }
-                    break;
+                switch (alt7) {
+            	case 1 :
+            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1200:2: rule__Module__ServicesAssignment_9
+            	    {
+            	    pushFollow(FOLLOW_rule__Module__ServicesAssignment_9_in_rule__Module__Group__9__Impl2516);
+            	    rule__Module__ServicesAssignment_9();
 
-            }
+            	    state._fsp--;
 
-             after(grammarAccess.getModuleAccess().getEventAssignment_9()); 
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop7;
+                }
+            } while (true);
+
+             after(grammarAccess.getModuleAccess().getServicesAssignment_9()); 
 
             }
 
@@ -3338,22 +3421,113 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Module__Group__9__Impl"
 
 
+    // $ANTLR start "rule__Module__Group__10"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1210:1: rule__Module__Group__10 : rule__Module__Group__10__Impl ;
+    public final void rule__Module__Group__10() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1214:1: ( rule__Module__Group__10__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1215:2: rule__Module__Group__10__Impl
+            {
+            pushFollow(FOLLOW_rule__Module__Group__10__Impl_in_rule__Module__Group__102547);
+            rule__Module__Group__10__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Module__Group__10"
+
+
+    // $ANTLR start "rule__Module__Group__10__Impl"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1221:1: rule__Module__Group__10__Impl : ( ( rule__Module__EventAssignment_10 )? ) ;
+    public final void rule__Module__Group__10__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1225:1: ( ( ( rule__Module__EventAssignment_10 )? ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1226:1: ( ( rule__Module__EventAssignment_10 )? )
+            {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1226:1: ( ( rule__Module__EventAssignment_10 )? )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1227:1: ( rule__Module__EventAssignment_10 )?
+            {
+             before(grammarAccess.getModuleAccess().getEventAssignment_10()); 
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1228:1: ( rule__Module__EventAssignment_10 )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
+
+            if ( (LA8_0==47) ) {
+                alt8=1;
+            }
+            switch (alt8) {
+                case 1 :
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1228:2: rule__Module__EventAssignment_10
+                    {
+                    pushFollow(FOLLOW_rule__Module__EventAssignment_10_in_rule__Module__Group__10__Impl2574);
+                    rule__Module__EventAssignment_10();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getModuleAccess().getEventAssignment_10()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Module__Group__10__Impl"
+
+
     // $ANTLR start "rule__QualifiedName__Group__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1201:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1260:1: rule__QualifiedName__Group__0 : rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 ;
     public final void rule__QualifiedName__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1205:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1206:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1264:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1265:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__02504);
+            pushFollow(FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__02627);
             rule__QualifiedName__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__02507);
+            pushFollow(FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__02630);
             rule__QualifiedName__Group__1();
 
             state._fsp--;
@@ -3377,20 +3551,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1213:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1272:1: rule__QualifiedName__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1217:1: ( ( RULE_ID ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1218:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1276:1: ( ( RULE_ID ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1277:1: ( RULE_ID )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1218:1: ( RULE_ID )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1219:1: RULE_ID
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1277:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1278:1: RULE_ID
             {
              before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl2534); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl2657); 
              after(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0()); 
 
             }
@@ -3414,16 +3588,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1230:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1289:1: rule__QualifiedName__Group__1 : rule__QualifiedName__Group__1__Impl ;
     public final void rule__QualifiedName__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1234:1: ( rule__QualifiedName__Group__1__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1235:2: rule__QualifiedName__Group__1__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1293:1: ( rule__QualifiedName__Group__1__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1294:2: rule__QualifiedName__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__12563);
+            pushFollow(FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__12686);
             rule__QualifiedName__Group__1__Impl();
 
             state._fsp--;
@@ -3447,35 +3621,35 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1241:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1300:1: rule__QualifiedName__Group__1__Impl : ( ( rule__QualifiedName__Group_1__0 )* ) ;
     public final void rule__QualifiedName__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1245:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1246:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1304:1: ( ( ( rule__QualifiedName__Group_1__0 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1305:1: ( ( rule__QualifiedName__Group_1__0 )* )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1246:1: ( ( rule__QualifiedName__Group_1__0 )* )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1247:1: ( rule__QualifiedName__Group_1__0 )*
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1305:1: ( ( rule__QualifiedName__Group_1__0 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1306:1: ( rule__QualifiedName__Group_1__0 )*
             {
              before(grammarAccess.getQualifiedNameAccess().getGroup_1()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1248:1: ( rule__QualifiedName__Group_1__0 )*
-            loop8:
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1307:1: ( rule__QualifiedName__Group_1__0 )*
+            loop9:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( (LA8_0==28) ) {
-                    alt8=1;
+                if ( (LA9_0==28) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt9) {
             	case 1 :
-            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1248:2: rule__QualifiedName__Group_1__0
+            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1307:2: rule__QualifiedName__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl2590);
+            	    pushFollow(FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl2713);
             	    rule__QualifiedName__Group_1__0();
 
             	    state._fsp--;
@@ -3485,7 +3659,7 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop8;
+            	    break loop9;
                 }
             } while (true);
 
@@ -3512,21 +3686,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1262:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1321:1: rule__QualifiedName__Group_1__0 : rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 ;
     public final void rule__QualifiedName__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1266:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1267:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1325:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1326:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__02625);
+            pushFollow(FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__02748);
             rule__QualifiedName__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__02628);
+            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__02751);
             rule__QualifiedName__Group_1__1();
 
             state._fsp--;
@@ -3550,20 +3724,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1274:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1333:1: rule__QualifiedName__Group_1__0__Impl : ( '.' ) ;
     public final void rule__QualifiedName__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1278:1: ( ( '.' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1279:1: ( '.' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1337:1: ( ( '.' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1338:1: ( '.' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1279:1: ( '.' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1280:1: '.'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1338:1: ( '.' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1339:1: '.'
             {
              before(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
-            match(input,28,FOLLOW_28_in_rule__QualifiedName__Group_1__0__Impl2656); 
+            match(input,28,FOLLOW_28_in_rule__QualifiedName__Group_1__0__Impl2779); 
              after(grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0()); 
 
             }
@@ -3587,16 +3761,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1293:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1352:1: rule__QualifiedName__Group_1__1 : rule__QualifiedName__Group_1__1__Impl ;
     public final void rule__QualifiedName__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1297:1: ( rule__QualifiedName__Group_1__1__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1298:2: rule__QualifiedName__Group_1__1__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1356:1: ( rule__QualifiedName__Group_1__1__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1357:2: rule__QualifiedName__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__12687);
+            pushFollow(FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__12810);
             rule__QualifiedName__Group_1__1__Impl();
 
             state._fsp--;
@@ -3620,20 +3794,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__QualifiedName__Group_1__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1304:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1363:1: rule__QualifiedName__Group_1__1__Impl : ( RULE_ID ) ;
     public final void rule__QualifiedName__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1308:1: ( ( RULE_ID ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1309:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1367:1: ( ( RULE_ID ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1368:1: ( RULE_ID )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1309:1: ( RULE_ID )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1310:1: RULE_ID
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1368:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1369:1: RULE_ID
             {
              before(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl2714); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl2837); 
              after(grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1()); 
 
             }
@@ -3657,21 +3831,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1325:1: rule__Version__Group__0 : rule__Version__Group__0__Impl rule__Version__Group__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1384:1: rule__Version__Group__0 : rule__Version__Group__0__Impl rule__Version__Group__1 ;
     public final void rule__Version__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1329:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1330:2: rule__Version__Group__0__Impl rule__Version__Group__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1388:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1389:2: rule__Version__Group__0__Impl rule__Version__Group__1
             {
-            pushFollow(FOLLOW_rule__Version__Group__0__Impl_in_rule__Version__Group__02747);
+            pushFollow(FOLLOW_rule__Version__Group__0__Impl_in_rule__Version__Group__02870);
             rule__Version__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Version__Group__1_in_rule__Version__Group__02750);
+            pushFollow(FOLLOW_rule__Version__Group__1_in_rule__Version__Group__02873);
             rule__Version__Group__1();
 
             state._fsp--;
@@ -3695,20 +3869,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1337:1: rule__Version__Group__0__Impl : ( RULE_INT ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1396:1: rule__Version__Group__0__Impl : ( RULE_INT ) ;
     public final void rule__Version__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1341:1: ( ( RULE_INT ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1342:1: ( RULE_INT )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1400:1: ( ( RULE_INT ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1401:1: ( RULE_INT )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1342:1: ( RULE_INT )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1343:1: RULE_INT
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1401:1: ( RULE_INT )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1402:1: RULE_INT
             {
              before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Version__Group__0__Impl2777); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Version__Group__0__Impl2900); 
              after(grammarAccess.getVersionAccess().getINTTerminalRuleCall_0()); 
 
             }
@@ -3732,21 +3906,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1354:1: rule__Version__Group__1 : rule__Version__Group__1__Impl rule__Version__Group__2 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1413:1: rule__Version__Group__1 : rule__Version__Group__1__Impl rule__Version__Group__2 ;
     public final void rule__Version__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1358:1: ( rule__Version__Group__1__Impl rule__Version__Group__2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1359:2: rule__Version__Group__1__Impl rule__Version__Group__2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1417:1: ( rule__Version__Group__1__Impl rule__Version__Group__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1418:2: rule__Version__Group__1__Impl rule__Version__Group__2
             {
-            pushFollow(FOLLOW_rule__Version__Group__1__Impl_in_rule__Version__Group__12806);
+            pushFollow(FOLLOW_rule__Version__Group__1__Impl_in_rule__Version__Group__12929);
             rule__Version__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Version__Group__2_in_rule__Version__Group__12809);
+            pushFollow(FOLLOW_rule__Version__Group__2_in_rule__Version__Group__12932);
             rule__Version__Group__2();
 
             state._fsp--;
@@ -3770,20 +3944,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1366:1: rule__Version__Group__1__Impl : ( '.' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1425:1: rule__Version__Group__1__Impl : ( '.' ) ;
     public final void rule__Version__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1370:1: ( ( '.' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1371:1: ( '.' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1429:1: ( ( '.' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1430:1: ( '.' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1371:1: ( '.' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1372:1: '.'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1430:1: ( '.' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1431:1: '.'
             {
              before(grammarAccess.getVersionAccess().getFullStopKeyword_1()); 
-            match(input,28,FOLLOW_28_in_rule__Version__Group__1__Impl2837); 
+            match(input,28,FOLLOW_28_in_rule__Version__Group__1__Impl2960); 
              after(grammarAccess.getVersionAccess().getFullStopKeyword_1()); 
 
             }
@@ -3807,21 +3981,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1385:1: rule__Version__Group__2 : rule__Version__Group__2__Impl rule__Version__Group__3 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1444:1: rule__Version__Group__2 : rule__Version__Group__2__Impl rule__Version__Group__3 ;
     public final void rule__Version__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1389:1: ( rule__Version__Group__2__Impl rule__Version__Group__3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1390:2: rule__Version__Group__2__Impl rule__Version__Group__3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1448:1: ( rule__Version__Group__2__Impl rule__Version__Group__3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1449:2: rule__Version__Group__2__Impl rule__Version__Group__3
             {
-            pushFollow(FOLLOW_rule__Version__Group__2__Impl_in_rule__Version__Group__22868);
+            pushFollow(FOLLOW_rule__Version__Group__2__Impl_in_rule__Version__Group__22991);
             rule__Version__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Version__Group__3_in_rule__Version__Group__22871);
+            pushFollow(FOLLOW_rule__Version__Group__3_in_rule__Version__Group__22994);
             rule__Version__Group__3();
 
             state._fsp--;
@@ -3845,20 +4019,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__2__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1397:1: rule__Version__Group__2__Impl : ( RULE_INT ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1456:1: rule__Version__Group__2__Impl : ( RULE_INT ) ;
     public final void rule__Version__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1401:1: ( ( RULE_INT ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1402:1: ( RULE_INT )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1460:1: ( ( RULE_INT ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1461:1: ( RULE_INT )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1402:1: ( RULE_INT )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1403:1: RULE_INT
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1461:1: ( RULE_INT )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1462:1: RULE_INT
             {
              before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_2()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Version__Group__2__Impl2898); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Version__Group__2__Impl3021); 
              after(grammarAccess.getVersionAccess().getINTTerminalRuleCall_2()); 
 
             }
@@ -3882,21 +4056,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1414:1: rule__Version__Group__3 : rule__Version__Group__3__Impl rule__Version__Group__4 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1473:1: rule__Version__Group__3 : rule__Version__Group__3__Impl rule__Version__Group__4 ;
     public final void rule__Version__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1418:1: ( rule__Version__Group__3__Impl rule__Version__Group__4 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1419:2: rule__Version__Group__3__Impl rule__Version__Group__4
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1477:1: ( rule__Version__Group__3__Impl rule__Version__Group__4 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1478:2: rule__Version__Group__3__Impl rule__Version__Group__4
             {
-            pushFollow(FOLLOW_rule__Version__Group__3__Impl_in_rule__Version__Group__32927);
+            pushFollow(FOLLOW_rule__Version__Group__3__Impl_in_rule__Version__Group__33050);
             rule__Version__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Version__Group__4_in_rule__Version__Group__32930);
+            pushFollow(FOLLOW_rule__Version__Group__4_in_rule__Version__Group__33053);
             rule__Version__Group__4();
 
             state._fsp--;
@@ -3920,20 +4094,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__3__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1426:1: rule__Version__Group__3__Impl : ( '.' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1485:1: rule__Version__Group__3__Impl : ( '.' ) ;
     public final void rule__Version__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1430:1: ( ( '.' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1431:1: ( '.' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1489:1: ( ( '.' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1490:1: ( '.' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1431:1: ( '.' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1432:1: '.'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1490:1: ( '.' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1491:1: '.'
             {
              before(grammarAccess.getVersionAccess().getFullStopKeyword_3()); 
-            match(input,28,FOLLOW_28_in_rule__Version__Group__3__Impl2958); 
+            match(input,28,FOLLOW_28_in_rule__Version__Group__3__Impl3081); 
              after(grammarAccess.getVersionAccess().getFullStopKeyword_3()); 
 
             }
@@ -3957,21 +4131,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__4"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1445:1: rule__Version__Group__4 : rule__Version__Group__4__Impl rule__Version__Group__5 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1504:1: rule__Version__Group__4 : rule__Version__Group__4__Impl rule__Version__Group__5 ;
     public final void rule__Version__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1449:1: ( rule__Version__Group__4__Impl rule__Version__Group__5 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1450:2: rule__Version__Group__4__Impl rule__Version__Group__5
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1508:1: ( rule__Version__Group__4__Impl rule__Version__Group__5 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1509:2: rule__Version__Group__4__Impl rule__Version__Group__5
             {
-            pushFollow(FOLLOW_rule__Version__Group__4__Impl_in_rule__Version__Group__42989);
+            pushFollow(FOLLOW_rule__Version__Group__4__Impl_in_rule__Version__Group__43112);
             rule__Version__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Version__Group__5_in_rule__Version__Group__42992);
+            pushFollow(FOLLOW_rule__Version__Group__5_in_rule__Version__Group__43115);
             rule__Version__Group__5();
 
             state._fsp--;
@@ -3995,20 +4169,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__4__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1457:1: rule__Version__Group__4__Impl : ( RULE_INT ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1516:1: rule__Version__Group__4__Impl : ( RULE_INT ) ;
     public final void rule__Version__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1461:1: ( ( RULE_INT ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1462:1: ( RULE_INT )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1520:1: ( ( RULE_INT ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1521:1: ( RULE_INT )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1462:1: ( RULE_INT )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1463:1: RULE_INT
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1521:1: ( RULE_INT )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1522:1: RULE_INT
             {
              before(grammarAccess.getVersionAccess().getINTTerminalRuleCall_4()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Version__Group__4__Impl3019); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Version__Group__4__Impl3142); 
              after(grammarAccess.getVersionAccess().getINTTerminalRuleCall_4()); 
 
             }
@@ -4032,16 +4206,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__5"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1474:1: rule__Version__Group__5 : rule__Version__Group__5__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1533:1: rule__Version__Group__5 : rule__Version__Group__5__Impl ;
     public final void rule__Version__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1478:1: ( rule__Version__Group__5__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1479:2: rule__Version__Group__5__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1537:1: ( rule__Version__Group__5__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1538:2: rule__Version__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__Version__Group__5__Impl_in_rule__Version__Group__53048);
+            pushFollow(FOLLOW_rule__Version__Group__5__Impl_in_rule__Version__Group__53171);
             rule__Version__Group__5__Impl();
 
             state._fsp--;
@@ -4065,31 +4239,31 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group__5__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1485:1: rule__Version__Group__5__Impl : ( ( rule__Version__Group_5__0 )? ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1544:1: rule__Version__Group__5__Impl : ( ( rule__Version__Group_5__0 )? ) ;
     public final void rule__Version__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1489:1: ( ( ( rule__Version__Group_5__0 )? ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1490:1: ( ( rule__Version__Group_5__0 )? )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1548:1: ( ( ( rule__Version__Group_5__0 )? ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1549:1: ( ( rule__Version__Group_5__0 )? )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1490:1: ( ( rule__Version__Group_5__0 )? )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1491:1: ( rule__Version__Group_5__0 )?
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1549:1: ( ( rule__Version__Group_5__0 )? )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1550:1: ( rule__Version__Group_5__0 )?
             {
              before(grammarAccess.getVersionAccess().getGroup_5()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1492:1: ( rule__Version__Group_5__0 )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1551:1: ( rule__Version__Group_5__0 )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA9_0==29) ) {
-                alt9=1;
+            if ( (LA10_0==29) ) {
+                alt10=1;
             }
-            switch (alt9) {
+            switch (alt10) {
                 case 1 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1492:2: rule__Version__Group_5__0
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1551:2: rule__Version__Group_5__0
                     {
-                    pushFollow(FOLLOW_rule__Version__Group_5__0_in_rule__Version__Group__5__Impl3075);
+                    pushFollow(FOLLOW_rule__Version__Group_5__0_in_rule__Version__Group__5__Impl3198);
                     rule__Version__Group_5__0();
 
                     state._fsp--;
@@ -4123,21 +4297,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_5__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1514:1: rule__Version__Group_5__0 : rule__Version__Group_5__0__Impl rule__Version__Group_5__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1573:1: rule__Version__Group_5__0 : rule__Version__Group_5__0__Impl rule__Version__Group_5__1 ;
     public final void rule__Version__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1518:1: ( rule__Version__Group_5__0__Impl rule__Version__Group_5__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1519:2: rule__Version__Group_5__0__Impl rule__Version__Group_5__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1577:1: ( rule__Version__Group_5__0__Impl rule__Version__Group_5__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1578:2: rule__Version__Group_5__0__Impl rule__Version__Group_5__1
             {
-            pushFollow(FOLLOW_rule__Version__Group_5__0__Impl_in_rule__Version__Group_5__03118);
+            pushFollow(FOLLOW_rule__Version__Group_5__0__Impl_in_rule__Version__Group_5__03241);
             rule__Version__Group_5__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Version__Group_5__1_in_rule__Version__Group_5__03121);
+            pushFollow(FOLLOW_rule__Version__Group_5__1_in_rule__Version__Group_5__03244);
             rule__Version__Group_5__1();
 
             state._fsp--;
@@ -4161,20 +4335,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_5__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1526:1: rule__Version__Group_5__0__Impl : ( '-' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1585:1: rule__Version__Group_5__0__Impl : ( '-' ) ;
     public final void rule__Version__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1530:1: ( ( '-' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1531:1: ( '-' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1589:1: ( ( '-' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1590:1: ( '-' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1531:1: ( '-' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1532:1: '-'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1590:1: ( '-' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1591:1: '-'
             {
              before(grammarAccess.getVersionAccess().getHyphenMinusKeyword_5_0()); 
-            match(input,29,FOLLOW_29_in_rule__Version__Group_5__0__Impl3149); 
+            match(input,29,FOLLOW_29_in_rule__Version__Group_5__0__Impl3272); 
              after(grammarAccess.getVersionAccess().getHyphenMinusKeyword_5_0()); 
 
             }
@@ -4198,16 +4372,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_5__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1545:1: rule__Version__Group_5__1 : rule__Version__Group_5__1__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1604:1: rule__Version__Group_5__1 : rule__Version__Group_5__1__Impl ;
     public final void rule__Version__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1549:1: ( rule__Version__Group_5__1__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1550:2: rule__Version__Group_5__1__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1608:1: ( rule__Version__Group_5__1__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1609:2: rule__Version__Group_5__1__Impl
             {
-            pushFollow(FOLLOW_rule__Version__Group_5__1__Impl_in_rule__Version__Group_5__13180);
+            pushFollow(FOLLOW_rule__Version__Group_5__1__Impl_in_rule__Version__Group_5__13303);
             rule__Version__Group_5__1__Impl();
 
             state._fsp--;
@@ -4231,20 +4405,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Version__Group_5__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1556:1: rule__Version__Group_5__1__Impl : ( RULE_ID ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1615:1: rule__Version__Group_5__1__Impl : ( RULE_ID ) ;
     public final void rule__Version__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1560:1: ( ( RULE_ID ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1561:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1619:1: ( ( RULE_ID ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1620:1: ( RULE_ID )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1561:1: ( RULE_ID )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1562:1: RULE_ID
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1620:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1621:1: RULE_ID
             {
              before(grammarAccess.getVersionAccess().getIDTerminalRuleCall_5_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Version__Group_5__1__Impl3207); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Version__Group_5__1__Impl3330); 
              after(grammarAccess.getVersionAccess().getIDTerminalRuleCall_5_1()); 
 
             }
@@ -4268,21 +4442,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Import__Group__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1577:1: rule__Import__Group__0 : rule__Import__Group__0__Impl rule__Import__Group__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1636:1: rule__Import__Group__0 : rule__Import__Group__0__Impl rule__Import__Group__1 ;
     public final void rule__Import__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1581:1: ( rule__Import__Group__0__Impl rule__Import__Group__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1582:2: rule__Import__Group__0__Impl rule__Import__Group__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1640:1: ( rule__Import__Group__0__Impl rule__Import__Group__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1641:2: rule__Import__Group__0__Impl rule__Import__Group__1
             {
-            pushFollow(FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__03240);
+            pushFollow(FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__03363);
             rule__Import__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Import__Group__1_in_rule__Import__Group__03243);
+            pushFollow(FOLLOW_rule__Import__Group__1_in_rule__Import__Group__03366);
             rule__Import__Group__1();
 
             state._fsp--;
@@ -4306,20 +4480,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Import__Group__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1589:1: rule__Import__Group__0__Impl : ( '@import' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1648:1: rule__Import__Group__0__Impl : ( '@import' ) ;
     public final void rule__Import__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1593:1: ( ( '@import' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1594:1: ( '@import' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1652:1: ( ( '@import' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1653:1: ( '@import' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1594:1: ( '@import' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1595:1: '@import'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1653:1: ( '@import' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1654:1: '@import'
             {
              before(grammarAccess.getImportAccess().getImportKeyword_0()); 
-            match(input,30,FOLLOW_30_in_rule__Import__Group__0__Impl3271); 
+            match(input,30,FOLLOW_30_in_rule__Import__Group__0__Impl3394); 
              after(grammarAccess.getImportAccess().getImportKeyword_0()); 
 
             }
@@ -4343,21 +4517,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Import__Group__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1608:1: rule__Import__Group__1 : rule__Import__Group__1__Impl rule__Import__Group__2 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1667:1: rule__Import__Group__1 : rule__Import__Group__1__Impl rule__Import__Group__2 ;
     public final void rule__Import__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1612:1: ( rule__Import__Group__1__Impl rule__Import__Group__2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1613:2: rule__Import__Group__1__Impl rule__Import__Group__2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1671:1: ( rule__Import__Group__1__Impl rule__Import__Group__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1672:2: rule__Import__Group__1__Impl rule__Import__Group__2
             {
-            pushFollow(FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__13302);
+            pushFollow(FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__13425);
             rule__Import__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Import__Group__2_in_rule__Import__Group__13305);
+            pushFollow(FOLLOW_rule__Import__Group__2_in_rule__Import__Group__13428);
             rule__Import__Group__2();
 
             state._fsp--;
@@ -4381,20 +4555,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Import__Group__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1620:1: rule__Import__Group__1__Impl : ( ':' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1679:1: rule__Import__Group__1__Impl : ( ':' ) ;
     public final void rule__Import__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1624:1: ( ( ':' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1625:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1683:1: ( ( ':' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1684:1: ( ':' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1625:1: ( ':' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1626:1: ':'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1684:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1685:1: ':'
             {
              before(grammarAccess.getImportAccess().getColonKeyword_1()); 
-            match(input,25,FOLLOW_25_in_rule__Import__Group__1__Impl3333); 
+            match(input,25,FOLLOW_25_in_rule__Import__Group__1__Impl3456); 
              after(grammarAccess.getImportAccess().getColonKeyword_1()); 
 
             }
@@ -4418,16 +4592,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Import__Group__2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1639:1: rule__Import__Group__2 : rule__Import__Group__2__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1698:1: rule__Import__Group__2 : rule__Import__Group__2__Impl ;
     public final void rule__Import__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1643:1: ( rule__Import__Group__2__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1644:2: rule__Import__Group__2__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1702:1: ( rule__Import__Group__2__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1703:2: rule__Import__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Import__Group__2__Impl_in_rule__Import__Group__23364);
+            pushFollow(FOLLOW_rule__Import__Group__2__Impl_in_rule__Import__Group__23487);
             rule__Import__Group__2__Impl();
 
             state._fsp--;
@@ -4451,23 +4625,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Import__Group__2__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1650:1: rule__Import__Group__2__Impl : ( ( rule__Import__ImportedNamespaceAssignment_2 ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1709:1: rule__Import__Group__2__Impl : ( ( rule__Import__ImportedNamespaceAssignment_2 ) ) ;
     public final void rule__Import__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1654:1: ( ( ( rule__Import__ImportedNamespaceAssignment_2 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1655:1: ( ( rule__Import__ImportedNamespaceAssignment_2 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1713:1: ( ( ( rule__Import__ImportedNamespaceAssignment_2 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1714:1: ( ( rule__Import__ImportedNamespaceAssignment_2 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1655:1: ( ( rule__Import__ImportedNamespaceAssignment_2 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1656:1: ( rule__Import__ImportedNamespaceAssignment_2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1714:1: ( ( rule__Import__ImportedNamespaceAssignment_2 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1715:1: ( rule__Import__ImportedNamespaceAssignment_2 )
             {
              before(grammarAccess.getImportAccess().getImportedNamespaceAssignment_2()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1657:1: ( rule__Import__ImportedNamespaceAssignment_2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1657:2: rule__Import__ImportedNamespaceAssignment_2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1716:1: ( rule__Import__ImportedNamespaceAssignment_2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1716:2: rule__Import__ImportedNamespaceAssignment_2
             {
-            pushFollow(FOLLOW_rule__Import__ImportedNamespaceAssignment_2_in_rule__Import__Group__2__Impl3391);
+            pushFollow(FOLLOW_rule__Import__ImportedNamespaceAssignment_2_in_rule__Import__Group__2__Impl3514);
             rule__Import__ImportedNamespaceAssignment_2();
 
             state._fsp--;
@@ -4498,21 +4672,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1673:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1732:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
     public final void rule__Model__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1677:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1678:2: rule__Model__Group__0__Impl rule__Model__Group__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1736:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1737:2: rule__Model__Group__0__Impl rule__Model__Group__1
             {
-            pushFollow(FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__03427);
+            pushFollow(FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__03550);
             rule__Model__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__1_in_rule__Model__Group__03430);
+            pushFollow(FOLLOW_rule__Model__Group__1_in_rule__Model__Group__03553);
             rule__Model__Group__1();
 
             state._fsp--;
@@ -4536,20 +4710,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1685:1: rule__Model__Group__0__Impl : ( '@model' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1744:1: rule__Model__Group__0__Impl : ( '@model' ) ;
     public final void rule__Model__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1689:1: ( ( '@model' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1690:1: ( '@model' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1748:1: ( ( '@model' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1749:1: ( '@model' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1690:1: ( '@model' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1691:1: '@model'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1749:1: ( '@model' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1750:1: '@model'
             {
              before(grammarAccess.getModelAccess().getModelKeyword_0()); 
-            match(input,31,FOLLOW_31_in_rule__Model__Group__0__Impl3458); 
+            match(input,31,FOLLOW_31_in_rule__Model__Group__0__Impl3581); 
              after(grammarAccess.getModelAccess().getModelKeyword_0()); 
 
             }
@@ -4573,21 +4747,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1704:1: rule__Model__Group__1 : rule__Model__Group__1__Impl rule__Model__Group__2 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1763:1: rule__Model__Group__1 : rule__Model__Group__1__Impl rule__Model__Group__2 ;
     public final void rule__Model__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1708:1: ( rule__Model__Group__1__Impl rule__Model__Group__2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1709:2: rule__Model__Group__1__Impl rule__Model__Group__2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1767:1: ( rule__Model__Group__1__Impl rule__Model__Group__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1768:2: rule__Model__Group__1__Impl rule__Model__Group__2
             {
-            pushFollow(FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__13489);
+            pushFollow(FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__13612);
             rule__Model__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__2_in_rule__Model__Group__13492);
+            pushFollow(FOLLOW_rule__Model__Group__2_in_rule__Model__Group__13615);
             rule__Model__Group__2();
 
             state._fsp--;
@@ -4611,20 +4785,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1716:1: rule__Model__Group__1__Impl : ( '{' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1775:1: rule__Model__Group__1__Impl : ( '{' ) ;
     public final void rule__Model__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1720:1: ( ( '{' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1721:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1779:1: ( ( '{' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1780:1: ( '{' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1721:1: ( '{' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1722:1: '{'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1780:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1781:1: '{'
             {
              before(grammarAccess.getModelAccess().getLeftCurlyBracketKeyword_1()); 
-            match(input,32,FOLLOW_32_in_rule__Model__Group__1__Impl3520); 
+            match(input,32,FOLLOW_32_in_rule__Model__Group__1__Impl3643); 
              after(grammarAccess.getModelAccess().getLeftCurlyBracketKeyword_1()); 
 
             }
@@ -4648,21 +4822,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1735:1: rule__Model__Group__2 : rule__Model__Group__2__Impl rule__Model__Group__3 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1794:1: rule__Model__Group__2 : rule__Model__Group__2__Impl rule__Model__Group__3 ;
     public final void rule__Model__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1739:1: ( rule__Model__Group__2__Impl rule__Model__Group__3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1740:2: rule__Model__Group__2__Impl rule__Model__Group__3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1798:1: ( rule__Model__Group__2__Impl rule__Model__Group__3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1799:2: rule__Model__Group__2__Impl rule__Model__Group__3
             {
-            pushFollow(FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__23551);
+            pushFollow(FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__23674);
             rule__Model__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Model__Group__3_in_rule__Model__Group__23554);
+            pushFollow(FOLLOW_rule__Model__Group__3_in_rule__Model__Group__23677);
             rule__Model__Group__3();
 
             state._fsp--;
@@ -4686,35 +4860,35 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__2__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1747:1: rule__Model__Group__2__Impl : ( ( rule__Model__EntitiesAssignment_2 )* ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1806:1: rule__Model__Group__2__Impl : ( ( rule__Model__EntitiesAssignment_2 )* ) ;
     public final void rule__Model__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1751:1: ( ( ( rule__Model__EntitiesAssignment_2 )* ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1752:1: ( ( rule__Model__EntitiesAssignment_2 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1810:1: ( ( ( rule__Model__EntitiesAssignment_2 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1811:1: ( ( rule__Model__EntitiesAssignment_2 )* )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1752:1: ( ( rule__Model__EntitiesAssignment_2 )* )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1753:1: ( rule__Model__EntitiesAssignment_2 )*
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1811:1: ( ( rule__Model__EntitiesAssignment_2 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1812:1: ( rule__Model__EntitiesAssignment_2 )*
             {
              before(grammarAccess.getModelAccess().getEntitiesAssignment_2()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1754:1: ( rule__Model__EntitiesAssignment_2 )*
-            loop10:
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1813:1: ( rule__Model__EntitiesAssignment_2 )*
+            loop11:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-                if ( ((LA10_0>=34 && LA10_0<=35)) ) {
-                    alt10=1;
+                if ( ((LA11_0>=34 && LA11_0<=35)) ) {
+                    alt11=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt11) {
             	case 1 :
-            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1754:2: rule__Model__EntitiesAssignment_2
+            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1813:2: rule__Model__EntitiesAssignment_2
             	    {
-            	    pushFollow(FOLLOW_rule__Model__EntitiesAssignment_2_in_rule__Model__Group__2__Impl3581);
+            	    pushFollow(FOLLOW_rule__Model__EntitiesAssignment_2_in_rule__Model__Group__2__Impl3704);
             	    rule__Model__EntitiesAssignment_2();
 
             	    state._fsp--;
@@ -4724,7 +4898,7 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop10;
+            	    break loop11;
                 }
             } while (true);
 
@@ -4751,16 +4925,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1764:1: rule__Model__Group__3 : rule__Model__Group__3__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1823:1: rule__Model__Group__3 : rule__Model__Group__3__Impl ;
     public final void rule__Model__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1768:1: ( rule__Model__Group__3__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1769:2: rule__Model__Group__3__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1827:1: ( rule__Model__Group__3__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1828:2: rule__Model__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__33612);
+            pushFollow(FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__33735);
             rule__Model__Group__3__Impl();
 
             state._fsp--;
@@ -4784,20 +4958,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__Group__3__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1775:1: rule__Model__Group__3__Impl : ( '}' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1834:1: rule__Model__Group__3__Impl : ( '}' ) ;
     public final void rule__Model__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1779:1: ( ( '}' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1780:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1838:1: ( ( '}' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1839:1: ( '}' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1780:1: ( '}' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1781:1: '}'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1839:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1840:1: '}'
             {
              before(grammarAccess.getModelAccess().getRightCurlyBracketKeyword_3()); 
-            match(input,33,FOLLOW_33_in_rule__Model__Group__3__Impl3640); 
+            match(input,33,FOLLOW_33_in_rule__Model__Group__3__Impl3763); 
              after(grammarAccess.getModelAccess().getRightCurlyBracketKeyword_3()); 
 
             }
@@ -4821,21 +4995,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum__Group__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1802:1: rule__Enum__Group__0 : rule__Enum__Group__0__Impl rule__Enum__Group__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1861:1: rule__Enum__Group__0 : rule__Enum__Group__0__Impl rule__Enum__Group__1 ;
     public final void rule__Enum__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1806:1: ( rule__Enum__Group__0__Impl rule__Enum__Group__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1807:2: rule__Enum__Group__0__Impl rule__Enum__Group__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1865:1: ( rule__Enum__Group__0__Impl rule__Enum__Group__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1866:2: rule__Enum__Group__0__Impl rule__Enum__Group__1
             {
-            pushFollow(FOLLOW_rule__Enum__Group__0__Impl_in_rule__Enum__Group__03679);
+            pushFollow(FOLLOW_rule__Enum__Group__0__Impl_in_rule__Enum__Group__03802);
             rule__Enum__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Enum__Group__1_in_rule__Enum__Group__03682);
+            pushFollow(FOLLOW_rule__Enum__Group__1_in_rule__Enum__Group__03805);
             rule__Enum__Group__1();
 
             state._fsp--;
@@ -4859,20 +5033,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum__Group__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1814:1: rule__Enum__Group__0__Impl : ( '@enum' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1873:1: rule__Enum__Group__0__Impl : ( '@enum' ) ;
     public final void rule__Enum__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1818:1: ( ( '@enum' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1819:1: ( '@enum' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1877:1: ( ( '@enum' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1878:1: ( '@enum' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1819:1: ( '@enum' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1820:1: '@enum'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1878:1: ( '@enum' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1879:1: '@enum'
             {
              before(grammarAccess.getEnumAccess().getEnumKeyword_0()); 
-            match(input,34,FOLLOW_34_in_rule__Enum__Group__0__Impl3710); 
+            match(input,34,FOLLOW_34_in_rule__Enum__Group__0__Impl3833); 
              after(grammarAccess.getEnumAccess().getEnumKeyword_0()); 
 
             }
@@ -4896,21 +5070,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum__Group__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1833:1: rule__Enum__Group__1 : rule__Enum__Group__1__Impl rule__Enum__Group__2 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1892:1: rule__Enum__Group__1 : rule__Enum__Group__1__Impl rule__Enum__Group__2 ;
     public final void rule__Enum__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1837:1: ( rule__Enum__Group__1__Impl rule__Enum__Group__2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1838:2: rule__Enum__Group__1__Impl rule__Enum__Group__2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1896:1: ( rule__Enum__Group__1__Impl rule__Enum__Group__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1897:2: rule__Enum__Group__1__Impl rule__Enum__Group__2
             {
-            pushFollow(FOLLOW_rule__Enum__Group__1__Impl_in_rule__Enum__Group__13741);
+            pushFollow(FOLLOW_rule__Enum__Group__1__Impl_in_rule__Enum__Group__13864);
             rule__Enum__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Enum__Group__2_in_rule__Enum__Group__13744);
+            pushFollow(FOLLOW_rule__Enum__Group__2_in_rule__Enum__Group__13867);
             rule__Enum__Group__2();
 
             state._fsp--;
@@ -4934,23 +5108,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum__Group__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1845:1: rule__Enum__Group__1__Impl : ( ( rule__Enum__NameAssignment_1 ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1904:1: rule__Enum__Group__1__Impl : ( ( rule__Enum__NameAssignment_1 ) ) ;
     public final void rule__Enum__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1849:1: ( ( ( rule__Enum__NameAssignment_1 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1850:1: ( ( rule__Enum__NameAssignment_1 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1908:1: ( ( ( rule__Enum__NameAssignment_1 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1909:1: ( ( rule__Enum__NameAssignment_1 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1850:1: ( ( rule__Enum__NameAssignment_1 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1851:1: ( rule__Enum__NameAssignment_1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1909:1: ( ( rule__Enum__NameAssignment_1 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1910:1: ( rule__Enum__NameAssignment_1 )
             {
              before(grammarAccess.getEnumAccess().getNameAssignment_1()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1852:1: ( rule__Enum__NameAssignment_1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1852:2: rule__Enum__NameAssignment_1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1911:1: ( rule__Enum__NameAssignment_1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1911:2: rule__Enum__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Enum__NameAssignment_1_in_rule__Enum__Group__1__Impl3771);
+            pushFollow(FOLLOW_rule__Enum__NameAssignment_1_in_rule__Enum__Group__1__Impl3894);
             rule__Enum__NameAssignment_1();
 
             state._fsp--;
@@ -4981,21 +5155,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum__Group__2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1862:1: rule__Enum__Group__2 : rule__Enum__Group__2__Impl rule__Enum__Group__3 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1921:1: rule__Enum__Group__2 : rule__Enum__Group__2__Impl rule__Enum__Group__3 ;
     public final void rule__Enum__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1866:1: ( rule__Enum__Group__2__Impl rule__Enum__Group__3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1867:2: rule__Enum__Group__2__Impl rule__Enum__Group__3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1925:1: ( rule__Enum__Group__2__Impl rule__Enum__Group__3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1926:2: rule__Enum__Group__2__Impl rule__Enum__Group__3
             {
-            pushFollow(FOLLOW_rule__Enum__Group__2__Impl_in_rule__Enum__Group__23801);
+            pushFollow(FOLLOW_rule__Enum__Group__2__Impl_in_rule__Enum__Group__23924);
             rule__Enum__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Enum__Group__3_in_rule__Enum__Group__23804);
+            pushFollow(FOLLOW_rule__Enum__Group__3_in_rule__Enum__Group__23927);
             rule__Enum__Group__3();
 
             state._fsp--;
@@ -5019,20 +5193,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum__Group__2__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1874:1: rule__Enum__Group__2__Impl : ( '{' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1933:1: rule__Enum__Group__2__Impl : ( '{' ) ;
     public final void rule__Enum__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1878:1: ( ( '{' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1879:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1937:1: ( ( '{' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1938:1: ( '{' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1879:1: ( '{' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1880:1: '{'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1938:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1939:1: '{'
             {
              before(grammarAccess.getEnumAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,32,FOLLOW_32_in_rule__Enum__Group__2__Impl3832); 
+            match(input,32,FOLLOW_32_in_rule__Enum__Group__2__Impl3955); 
              after(grammarAccess.getEnumAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -5056,21 +5230,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum__Group__3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1893:1: rule__Enum__Group__3 : rule__Enum__Group__3__Impl rule__Enum__Group__4 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1952:1: rule__Enum__Group__3 : rule__Enum__Group__3__Impl rule__Enum__Group__4 ;
     public final void rule__Enum__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1897:1: ( rule__Enum__Group__3__Impl rule__Enum__Group__4 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1898:2: rule__Enum__Group__3__Impl rule__Enum__Group__4
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1956:1: ( rule__Enum__Group__3__Impl rule__Enum__Group__4 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1957:2: rule__Enum__Group__3__Impl rule__Enum__Group__4
             {
-            pushFollow(FOLLOW_rule__Enum__Group__3__Impl_in_rule__Enum__Group__33863);
+            pushFollow(FOLLOW_rule__Enum__Group__3__Impl_in_rule__Enum__Group__33986);
             rule__Enum__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Enum__Group__4_in_rule__Enum__Group__33866);
+            pushFollow(FOLLOW_rule__Enum__Group__4_in_rule__Enum__Group__33989);
             rule__Enum__Group__4();
 
             state._fsp--;
@@ -5094,26 +5268,26 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum__Group__3__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1905:1: rule__Enum__Group__3__Impl : ( ( ( rule__Enum__FeaturesAssignment_3 ) ) ( ( rule__Enum__FeaturesAssignment_3 )* ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1964:1: rule__Enum__Group__3__Impl : ( ( ( rule__Enum__FeaturesAssignment_3 ) ) ( ( rule__Enum__FeaturesAssignment_3 )* ) ) ;
     public final void rule__Enum__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1909:1: ( ( ( ( rule__Enum__FeaturesAssignment_3 ) ) ( ( rule__Enum__FeaturesAssignment_3 )* ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1910:1: ( ( ( rule__Enum__FeaturesAssignment_3 ) ) ( ( rule__Enum__FeaturesAssignment_3 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1968:1: ( ( ( ( rule__Enum__FeaturesAssignment_3 ) ) ( ( rule__Enum__FeaturesAssignment_3 )* ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1969:1: ( ( ( rule__Enum__FeaturesAssignment_3 ) ) ( ( rule__Enum__FeaturesAssignment_3 )* ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1910:1: ( ( ( rule__Enum__FeaturesAssignment_3 ) ) ( ( rule__Enum__FeaturesAssignment_3 )* ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1911:1: ( ( rule__Enum__FeaturesAssignment_3 ) ) ( ( rule__Enum__FeaturesAssignment_3 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1969:1: ( ( ( rule__Enum__FeaturesAssignment_3 ) ) ( ( rule__Enum__FeaturesAssignment_3 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1970:1: ( ( rule__Enum__FeaturesAssignment_3 ) ) ( ( rule__Enum__FeaturesAssignment_3 )* )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1911:1: ( ( rule__Enum__FeaturesAssignment_3 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1912:1: ( rule__Enum__FeaturesAssignment_3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1970:1: ( ( rule__Enum__FeaturesAssignment_3 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1971:1: ( rule__Enum__FeaturesAssignment_3 )
             {
              before(grammarAccess.getEnumAccess().getFeaturesAssignment_3()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1913:1: ( rule__Enum__FeaturesAssignment_3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1913:2: rule__Enum__FeaturesAssignment_3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1972:1: ( rule__Enum__FeaturesAssignment_3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1972:2: rule__Enum__FeaturesAssignment_3
             {
-            pushFollow(FOLLOW_rule__Enum__FeaturesAssignment_3_in_rule__Enum__Group__3__Impl3895);
+            pushFollow(FOLLOW_rule__Enum__FeaturesAssignment_3_in_rule__Enum__Group__3__Impl4018);
             rule__Enum__FeaturesAssignment_3();
 
             state._fsp--;
@@ -5125,26 +5299,26 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1916:1: ( ( rule__Enum__FeaturesAssignment_3 )* )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1917:1: ( rule__Enum__FeaturesAssignment_3 )*
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1975:1: ( ( rule__Enum__FeaturesAssignment_3 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1976:1: ( rule__Enum__FeaturesAssignment_3 )*
             {
              before(grammarAccess.getEnumAccess().getFeaturesAssignment_3()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1918:1: ( rule__Enum__FeaturesAssignment_3 )*
-            loop11:
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1977:1: ( rule__Enum__FeaturesAssignment_3 )*
+            loop12:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt12=2;
+                int LA12_0 = input.LA(1);
 
-                if ( (LA11_0==RULE_ID) ) {
-                    alt11=1;
+                if ( (LA12_0==RULE_ID) ) {
+                    alt12=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt12) {
             	case 1 :
-            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1918:2: rule__Enum__FeaturesAssignment_3
+            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1977:2: rule__Enum__FeaturesAssignment_3
             	    {
-            	    pushFollow(FOLLOW_rule__Enum__FeaturesAssignment_3_in_rule__Enum__Group__3__Impl3907);
+            	    pushFollow(FOLLOW_rule__Enum__FeaturesAssignment_3_in_rule__Enum__Group__3__Impl4030);
             	    rule__Enum__FeaturesAssignment_3();
 
             	    state._fsp--;
@@ -5154,7 +5328,7 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop11;
+            	    break loop12;
                 }
             } while (true);
 
@@ -5184,16 +5358,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum__Group__4"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1929:1: rule__Enum__Group__4 : rule__Enum__Group__4__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1988:1: rule__Enum__Group__4 : rule__Enum__Group__4__Impl ;
     public final void rule__Enum__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1933:1: ( rule__Enum__Group__4__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1934:2: rule__Enum__Group__4__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1992:1: ( rule__Enum__Group__4__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1993:2: rule__Enum__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Enum__Group__4__Impl_in_rule__Enum__Group__43940);
+            pushFollow(FOLLOW_rule__Enum__Group__4__Impl_in_rule__Enum__Group__44063);
             rule__Enum__Group__4__Impl();
 
             state._fsp--;
@@ -5217,20 +5391,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum__Group__4__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1940:1: rule__Enum__Group__4__Impl : ( '}' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1999:1: rule__Enum__Group__4__Impl : ( '}' ) ;
     public final void rule__Enum__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1944:1: ( ( '}' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1945:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2003:1: ( ( '}' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2004:1: ( '}' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1945:1: ( '}' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1946:1: '}'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2004:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2005:1: '}'
             {
              before(grammarAccess.getEnumAccess().getRightCurlyBracketKeyword_4()); 
-            match(input,33,FOLLOW_33_in_rule__Enum__Group__4__Impl3968); 
+            match(input,33,FOLLOW_33_in_rule__Enum__Group__4__Impl4091); 
              after(grammarAccess.getEnumAccess().getRightCurlyBracketKeyword_4()); 
 
             }
@@ -5254,21 +5428,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__Group__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1969:1: rule__Entity__Group__0 : rule__Entity__Group__0__Impl rule__Entity__Group__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2028:1: rule__Entity__Group__0 : rule__Entity__Group__0__Impl rule__Entity__Group__1 ;
     public final void rule__Entity__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1973:1: ( rule__Entity__Group__0__Impl rule__Entity__Group__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1974:2: rule__Entity__Group__0__Impl rule__Entity__Group__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2032:1: ( rule__Entity__Group__0__Impl rule__Entity__Group__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2033:2: rule__Entity__Group__0__Impl rule__Entity__Group__1
             {
-            pushFollow(FOLLOW_rule__Entity__Group__0__Impl_in_rule__Entity__Group__04009);
+            pushFollow(FOLLOW_rule__Entity__Group__0__Impl_in_rule__Entity__Group__04132);
             rule__Entity__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Entity__Group__1_in_rule__Entity__Group__04012);
+            pushFollow(FOLLOW_rule__Entity__Group__1_in_rule__Entity__Group__04135);
             rule__Entity__Group__1();
 
             state._fsp--;
@@ -5292,20 +5466,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__Group__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1981:1: rule__Entity__Group__0__Impl : ( '@entity' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2040:1: rule__Entity__Group__0__Impl : ( '@entity' ) ;
     public final void rule__Entity__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1985:1: ( ( '@entity' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1986:1: ( '@entity' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2044:1: ( ( '@entity' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2045:1: ( '@entity' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1986:1: ( '@entity' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:1987:1: '@entity'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2045:1: ( '@entity' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2046:1: '@entity'
             {
              before(grammarAccess.getEntityAccess().getEntityKeyword_0()); 
-            match(input,35,FOLLOW_35_in_rule__Entity__Group__0__Impl4040); 
+            match(input,35,FOLLOW_35_in_rule__Entity__Group__0__Impl4163); 
              after(grammarAccess.getEntityAccess().getEntityKeyword_0()); 
 
             }
@@ -5329,21 +5503,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__Group__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2000:1: rule__Entity__Group__1 : rule__Entity__Group__1__Impl rule__Entity__Group__2 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2059:1: rule__Entity__Group__1 : rule__Entity__Group__1__Impl rule__Entity__Group__2 ;
     public final void rule__Entity__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2004:1: ( rule__Entity__Group__1__Impl rule__Entity__Group__2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2005:2: rule__Entity__Group__1__Impl rule__Entity__Group__2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2063:1: ( rule__Entity__Group__1__Impl rule__Entity__Group__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2064:2: rule__Entity__Group__1__Impl rule__Entity__Group__2
             {
-            pushFollow(FOLLOW_rule__Entity__Group__1__Impl_in_rule__Entity__Group__14071);
+            pushFollow(FOLLOW_rule__Entity__Group__1__Impl_in_rule__Entity__Group__14194);
             rule__Entity__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Entity__Group__2_in_rule__Entity__Group__14074);
+            pushFollow(FOLLOW_rule__Entity__Group__2_in_rule__Entity__Group__14197);
             rule__Entity__Group__2();
 
             state._fsp--;
@@ -5367,23 +5541,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__Group__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2012:1: rule__Entity__Group__1__Impl : ( ( rule__Entity__NameAssignment_1 ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2071:1: rule__Entity__Group__1__Impl : ( ( rule__Entity__NameAssignment_1 ) ) ;
     public final void rule__Entity__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2016:1: ( ( ( rule__Entity__NameAssignment_1 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2017:1: ( ( rule__Entity__NameAssignment_1 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2075:1: ( ( ( rule__Entity__NameAssignment_1 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2076:1: ( ( rule__Entity__NameAssignment_1 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2017:1: ( ( rule__Entity__NameAssignment_1 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2018:1: ( rule__Entity__NameAssignment_1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2076:1: ( ( rule__Entity__NameAssignment_1 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2077:1: ( rule__Entity__NameAssignment_1 )
             {
              before(grammarAccess.getEntityAccess().getNameAssignment_1()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2019:1: ( rule__Entity__NameAssignment_1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2019:2: rule__Entity__NameAssignment_1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2078:1: ( rule__Entity__NameAssignment_1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2078:2: rule__Entity__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Entity__NameAssignment_1_in_rule__Entity__Group__1__Impl4101);
+            pushFollow(FOLLOW_rule__Entity__NameAssignment_1_in_rule__Entity__Group__1__Impl4224);
             rule__Entity__NameAssignment_1();
 
             state._fsp--;
@@ -5414,21 +5588,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__Group__2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2029:1: rule__Entity__Group__2 : rule__Entity__Group__2__Impl rule__Entity__Group__3 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2088:1: rule__Entity__Group__2 : rule__Entity__Group__2__Impl rule__Entity__Group__3 ;
     public final void rule__Entity__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2033:1: ( rule__Entity__Group__2__Impl rule__Entity__Group__3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2034:2: rule__Entity__Group__2__Impl rule__Entity__Group__3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2092:1: ( rule__Entity__Group__2__Impl rule__Entity__Group__3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2093:2: rule__Entity__Group__2__Impl rule__Entity__Group__3
             {
-            pushFollow(FOLLOW_rule__Entity__Group__2__Impl_in_rule__Entity__Group__24131);
+            pushFollow(FOLLOW_rule__Entity__Group__2__Impl_in_rule__Entity__Group__24254);
             rule__Entity__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Entity__Group__3_in_rule__Entity__Group__24134);
+            pushFollow(FOLLOW_rule__Entity__Group__3_in_rule__Entity__Group__24257);
             rule__Entity__Group__3();
 
             state._fsp--;
@@ -5452,20 +5626,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__Group__2__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2041:1: rule__Entity__Group__2__Impl : ( '{' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2100:1: rule__Entity__Group__2__Impl : ( '{' ) ;
     public final void rule__Entity__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2045:1: ( ( '{' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2046:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2104:1: ( ( '{' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2105:1: ( '{' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2046:1: ( '{' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2047:1: '{'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2105:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2106:1: '{'
             {
              before(grammarAccess.getEntityAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,32,FOLLOW_32_in_rule__Entity__Group__2__Impl4162); 
+            match(input,32,FOLLOW_32_in_rule__Entity__Group__2__Impl4285); 
              after(grammarAccess.getEntityAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -5489,21 +5663,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__Group__3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2060:1: rule__Entity__Group__3 : rule__Entity__Group__3__Impl rule__Entity__Group__4 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2119:1: rule__Entity__Group__3 : rule__Entity__Group__3__Impl rule__Entity__Group__4 ;
     public final void rule__Entity__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2064:1: ( rule__Entity__Group__3__Impl rule__Entity__Group__4 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2065:2: rule__Entity__Group__3__Impl rule__Entity__Group__4
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2123:1: ( rule__Entity__Group__3__Impl rule__Entity__Group__4 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2124:2: rule__Entity__Group__3__Impl rule__Entity__Group__4
             {
-            pushFollow(FOLLOW_rule__Entity__Group__3__Impl_in_rule__Entity__Group__34193);
+            pushFollow(FOLLOW_rule__Entity__Group__3__Impl_in_rule__Entity__Group__34316);
             rule__Entity__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Entity__Group__4_in_rule__Entity__Group__34196);
+            pushFollow(FOLLOW_rule__Entity__Group__4_in_rule__Entity__Group__34319);
             rule__Entity__Group__4();
 
             state._fsp--;
@@ -5527,26 +5701,26 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__Group__3__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2072:1: rule__Entity__Group__3__Impl : ( ( ( rule__Entity__FeaturesAssignment_3 ) ) ( ( rule__Entity__FeaturesAssignment_3 )* ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2131:1: rule__Entity__Group__3__Impl : ( ( ( rule__Entity__FeaturesAssignment_3 ) ) ( ( rule__Entity__FeaturesAssignment_3 )* ) ) ;
     public final void rule__Entity__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2076:1: ( ( ( ( rule__Entity__FeaturesAssignment_3 ) ) ( ( rule__Entity__FeaturesAssignment_3 )* ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2077:1: ( ( ( rule__Entity__FeaturesAssignment_3 ) ) ( ( rule__Entity__FeaturesAssignment_3 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2135:1: ( ( ( ( rule__Entity__FeaturesAssignment_3 ) ) ( ( rule__Entity__FeaturesAssignment_3 )* ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2136:1: ( ( ( rule__Entity__FeaturesAssignment_3 ) ) ( ( rule__Entity__FeaturesAssignment_3 )* ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2077:1: ( ( ( rule__Entity__FeaturesAssignment_3 ) ) ( ( rule__Entity__FeaturesAssignment_3 )* ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2078:1: ( ( rule__Entity__FeaturesAssignment_3 ) ) ( ( rule__Entity__FeaturesAssignment_3 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2136:1: ( ( ( rule__Entity__FeaturesAssignment_3 ) ) ( ( rule__Entity__FeaturesAssignment_3 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2137:1: ( ( rule__Entity__FeaturesAssignment_3 ) ) ( ( rule__Entity__FeaturesAssignment_3 )* )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2078:1: ( ( rule__Entity__FeaturesAssignment_3 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2079:1: ( rule__Entity__FeaturesAssignment_3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2137:1: ( ( rule__Entity__FeaturesAssignment_3 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2138:1: ( rule__Entity__FeaturesAssignment_3 )
             {
              before(grammarAccess.getEntityAccess().getFeaturesAssignment_3()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2080:1: ( rule__Entity__FeaturesAssignment_3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2080:2: rule__Entity__FeaturesAssignment_3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2139:1: ( rule__Entity__FeaturesAssignment_3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2139:2: rule__Entity__FeaturesAssignment_3
             {
-            pushFollow(FOLLOW_rule__Entity__FeaturesAssignment_3_in_rule__Entity__Group__3__Impl4225);
+            pushFollow(FOLLOW_rule__Entity__FeaturesAssignment_3_in_rule__Entity__Group__3__Impl4348);
             rule__Entity__FeaturesAssignment_3();
 
             state._fsp--;
@@ -5558,26 +5732,26 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2083:1: ( ( rule__Entity__FeaturesAssignment_3 )* )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2084:1: ( rule__Entity__FeaturesAssignment_3 )*
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2142:1: ( ( rule__Entity__FeaturesAssignment_3 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2143:1: ( rule__Entity__FeaturesAssignment_3 )*
             {
              before(grammarAccess.getEntityAccess().getFeaturesAssignment_3()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2085:1: ( rule__Entity__FeaturesAssignment_3 )*
-            loop12:
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2144:1: ( rule__Entity__FeaturesAssignment_3 )*
+            loop13:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA12_0==RULE_ID||LA12_0==RULE_COMMENTS) ) {
-                    alt12=1;
+                if ( (LA13_0==RULE_ID||LA13_0==RULE_COMMENTS) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt12) {
+                switch (alt13) {
             	case 1 :
-            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2085:2: rule__Entity__FeaturesAssignment_3
+            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2144:2: rule__Entity__FeaturesAssignment_3
             	    {
-            	    pushFollow(FOLLOW_rule__Entity__FeaturesAssignment_3_in_rule__Entity__Group__3__Impl4237);
+            	    pushFollow(FOLLOW_rule__Entity__FeaturesAssignment_3_in_rule__Entity__Group__3__Impl4360);
             	    rule__Entity__FeaturesAssignment_3();
 
             	    state._fsp--;
@@ -5587,7 +5761,7 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop12;
+            	    break loop13;
                 }
             } while (true);
 
@@ -5617,16 +5791,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__Group__4"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2096:1: rule__Entity__Group__4 : rule__Entity__Group__4__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2155:1: rule__Entity__Group__4 : rule__Entity__Group__4__Impl ;
     public final void rule__Entity__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2100:1: ( rule__Entity__Group__4__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2101:2: rule__Entity__Group__4__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2159:1: ( rule__Entity__Group__4__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2160:2: rule__Entity__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Entity__Group__4__Impl_in_rule__Entity__Group__44270);
+            pushFollow(FOLLOW_rule__Entity__Group__4__Impl_in_rule__Entity__Group__44393);
             rule__Entity__Group__4__Impl();
 
             state._fsp--;
@@ -5650,20 +5824,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__Group__4__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2107:1: rule__Entity__Group__4__Impl : ( '}' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2166:1: rule__Entity__Group__4__Impl : ( '}' ) ;
     public final void rule__Entity__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2111:1: ( ( '}' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2112:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2170:1: ( ( '}' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2171:1: ( '}' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2112:1: ( '}' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2113:1: '}'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2171:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2172:1: '}'
             {
              before(grammarAccess.getEntityAccess().getRightCurlyBracketKeyword_4()); 
-            match(input,33,FOLLOW_33_in_rule__Entity__Group__4__Impl4298); 
+            match(input,33,FOLLOW_33_in_rule__Entity__Group__4__Impl4421); 
              after(grammarAccess.getEntityAccess().getRightCurlyBracketKeyword_4()); 
 
             }
@@ -5687,21 +5861,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature__Group__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2136:1: rule__Feature__Group__0 : rule__Feature__Group__0__Impl rule__Feature__Group__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2195:1: rule__Feature__Group__0 : rule__Feature__Group__0__Impl rule__Feature__Group__1 ;
     public final void rule__Feature__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2140:1: ( rule__Feature__Group__0__Impl rule__Feature__Group__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2141:2: rule__Feature__Group__0__Impl rule__Feature__Group__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2199:1: ( rule__Feature__Group__0__Impl rule__Feature__Group__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2200:2: rule__Feature__Group__0__Impl rule__Feature__Group__1
             {
-            pushFollow(FOLLOW_rule__Feature__Group__0__Impl_in_rule__Feature__Group__04339);
+            pushFollow(FOLLOW_rule__Feature__Group__0__Impl_in_rule__Feature__Group__04462);
             rule__Feature__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Feature__Group__1_in_rule__Feature__Group__04342);
+            pushFollow(FOLLOW_rule__Feature__Group__1_in_rule__Feature__Group__04465);
             rule__Feature__Group__1();
 
             state._fsp--;
@@ -5725,35 +5899,35 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature__Group__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2148:1: rule__Feature__Group__0__Impl : ( ( rule__Feature__FeatureCommentAssignment_0 )* ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2207:1: rule__Feature__Group__0__Impl : ( ( rule__Feature__FeatureCommentAssignment_0 )* ) ;
     public final void rule__Feature__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2152:1: ( ( ( rule__Feature__FeatureCommentAssignment_0 )* ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2153:1: ( ( rule__Feature__FeatureCommentAssignment_0 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2211:1: ( ( ( rule__Feature__FeatureCommentAssignment_0 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2212:1: ( ( rule__Feature__FeatureCommentAssignment_0 )* )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2153:1: ( ( rule__Feature__FeatureCommentAssignment_0 )* )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2154:1: ( rule__Feature__FeatureCommentAssignment_0 )*
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2212:1: ( ( rule__Feature__FeatureCommentAssignment_0 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2213:1: ( rule__Feature__FeatureCommentAssignment_0 )*
             {
              before(grammarAccess.getFeatureAccess().getFeatureCommentAssignment_0()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2155:1: ( rule__Feature__FeatureCommentAssignment_0 )*
-            loop13:
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2214:1: ( rule__Feature__FeatureCommentAssignment_0 )*
+            loop14:
             do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
+                int alt14=2;
+                int LA14_0 = input.LA(1);
 
-                if ( (LA13_0==RULE_COMMENTS) ) {
-                    alt13=1;
+                if ( (LA14_0==RULE_COMMENTS) ) {
+                    alt14=1;
                 }
 
 
-                switch (alt13) {
+                switch (alt14) {
             	case 1 :
-            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2155:2: rule__Feature__FeatureCommentAssignment_0
+            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2214:2: rule__Feature__FeatureCommentAssignment_0
             	    {
-            	    pushFollow(FOLLOW_rule__Feature__FeatureCommentAssignment_0_in_rule__Feature__Group__0__Impl4369);
+            	    pushFollow(FOLLOW_rule__Feature__FeatureCommentAssignment_0_in_rule__Feature__Group__0__Impl4492);
             	    rule__Feature__FeatureCommentAssignment_0();
 
             	    state._fsp--;
@@ -5763,7 +5937,7 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop13;
+            	    break loop14;
                 }
             } while (true);
 
@@ -5790,21 +5964,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature__Group__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2165:1: rule__Feature__Group__1 : rule__Feature__Group__1__Impl rule__Feature__Group__2 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2224:1: rule__Feature__Group__1 : rule__Feature__Group__1__Impl rule__Feature__Group__2 ;
     public final void rule__Feature__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2169:1: ( rule__Feature__Group__1__Impl rule__Feature__Group__2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2170:2: rule__Feature__Group__1__Impl rule__Feature__Group__2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2228:1: ( rule__Feature__Group__1__Impl rule__Feature__Group__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2229:2: rule__Feature__Group__1__Impl rule__Feature__Group__2
             {
-            pushFollow(FOLLOW_rule__Feature__Group__1__Impl_in_rule__Feature__Group__14400);
+            pushFollow(FOLLOW_rule__Feature__Group__1__Impl_in_rule__Feature__Group__14523);
             rule__Feature__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Feature__Group__2_in_rule__Feature__Group__14403);
+            pushFollow(FOLLOW_rule__Feature__Group__2_in_rule__Feature__Group__14526);
             rule__Feature__Group__2();
 
             state._fsp--;
@@ -5828,23 +6002,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature__Group__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2177:1: rule__Feature__Group__1__Impl : ( ( rule__Feature__NameAssignment_1 ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2236:1: rule__Feature__Group__1__Impl : ( ( rule__Feature__NameAssignment_1 ) ) ;
     public final void rule__Feature__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2181:1: ( ( ( rule__Feature__NameAssignment_1 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2182:1: ( ( rule__Feature__NameAssignment_1 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2240:1: ( ( ( rule__Feature__NameAssignment_1 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2241:1: ( ( rule__Feature__NameAssignment_1 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2182:1: ( ( rule__Feature__NameAssignment_1 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2183:1: ( rule__Feature__NameAssignment_1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2241:1: ( ( rule__Feature__NameAssignment_1 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2242:1: ( rule__Feature__NameAssignment_1 )
             {
              before(grammarAccess.getFeatureAccess().getNameAssignment_1()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2184:1: ( rule__Feature__NameAssignment_1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2184:2: rule__Feature__NameAssignment_1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2243:1: ( rule__Feature__NameAssignment_1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2243:2: rule__Feature__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Feature__NameAssignment_1_in_rule__Feature__Group__1__Impl4430);
+            pushFollow(FOLLOW_rule__Feature__NameAssignment_1_in_rule__Feature__Group__1__Impl4553);
             rule__Feature__NameAssignment_1();
 
             state._fsp--;
@@ -5875,21 +6049,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature__Group__2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2194:1: rule__Feature__Group__2 : rule__Feature__Group__2__Impl rule__Feature__Group__3 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2253:1: rule__Feature__Group__2 : rule__Feature__Group__2__Impl rule__Feature__Group__3 ;
     public final void rule__Feature__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2198:1: ( rule__Feature__Group__2__Impl rule__Feature__Group__3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2199:2: rule__Feature__Group__2__Impl rule__Feature__Group__3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2257:1: ( rule__Feature__Group__2__Impl rule__Feature__Group__3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2258:2: rule__Feature__Group__2__Impl rule__Feature__Group__3
             {
-            pushFollow(FOLLOW_rule__Feature__Group__2__Impl_in_rule__Feature__Group__24460);
+            pushFollow(FOLLOW_rule__Feature__Group__2__Impl_in_rule__Feature__Group__24583);
             rule__Feature__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Feature__Group__3_in_rule__Feature__Group__24463);
+            pushFollow(FOLLOW_rule__Feature__Group__3_in_rule__Feature__Group__24586);
             rule__Feature__Group__3();
 
             state._fsp--;
@@ -5913,20 +6087,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature__Group__2__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2206:1: rule__Feature__Group__2__Impl : ( ':' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2265:1: rule__Feature__Group__2__Impl : ( ':' ) ;
     public final void rule__Feature__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2210:1: ( ( ':' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2211:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2269:1: ( ( ':' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2270:1: ( ':' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2211:1: ( ':' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2212:1: ':'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2270:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2271:1: ':'
             {
              before(grammarAccess.getFeatureAccess().getColonKeyword_2()); 
-            match(input,25,FOLLOW_25_in_rule__Feature__Group__2__Impl4491); 
+            match(input,25,FOLLOW_25_in_rule__Feature__Group__2__Impl4614); 
              after(grammarAccess.getFeatureAccess().getColonKeyword_2()); 
 
             }
@@ -5950,16 +6124,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature__Group__3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2225:1: rule__Feature__Group__3 : rule__Feature__Group__3__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2284:1: rule__Feature__Group__3 : rule__Feature__Group__3__Impl ;
     public final void rule__Feature__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2229:1: ( rule__Feature__Group__3__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2230:2: rule__Feature__Group__3__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2288:1: ( rule__Feature__Group__3__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2289:2: rule__Feature__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Feature__Group__3__Impl_in_rule__Feature__Group__34522);
+            pushFollow(FOLLOW_rule__Feature__Group__3__Impl_in_rule__Feature__Group__34645);
             rule__Feature__Group__3__Impl();
 
             state._fsp--;
@@ -5983,23 +6157,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature__Group__3__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2236:1: rule__Feature__Group__3__Impl : ( ( rule__Feature__TypeAssignment_3 ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2295:1: rule__Feature__Group__3__Impl : ( ( rule__Feature__TypeAssignment_3 ) ) ;
     public final void rule__Feature__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2240:1: ( ( ( rule__Feature__TypeAssignment_3 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2241:1: ( ( rule__Feature__TypeAssignment_3 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2299:1: ( ( ( rule__Feature__TypeAssignment_3 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2300:1: ( ( rule__Feature__TypeAssignment_3 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2241:1: ( ( rule__Feature__TypeAssignment_3 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2242:1: ( rule__Feature__TypeAssignment_3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2300:1: ( ( rule__Feature__TypeAssignment_3 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2301:1: ( rule__Feature__TypeAssignment_3 )
             {
              before(grammarAccess.getFeatureAccess().getTypeAssignment_3()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2243:1: ( rule__Feature__TypeAssignment_3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2243:2: rule__Feature__TypeAssignment_3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2302:1: ( rule__Feature__TypeAssignment_3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2302:2: rule__Feature__TypeAssignment_3
             {
-            pushFollow(FOLLOW_rule__Feature__TypeAssignment_3_in_rule__Feature__Group__3__Impl4549);
+            pushFollow(FOLLOW_rule__Feature__TypeAssignment_3_in_rule__Feature__Group__3__Impl4672);
             rule__Feature__TypeAssignment_3();
 
             state._fsp--;
@@ -6030,21 +6204,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GenericListFeature__Group__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2261:1: rule__GenericListFeature__Group__0 : rule__GenericListFeature__Group__0__Impl rule__GenericListFeature__Group__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2320:1: rule__GenericListFeature__Group__0 : rule__GenericListFeature__Group__0__Impl rule__GenericListFeature__Group__1 ;
     public final void rule__GenericListFeature__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2265:1: ( rule__GenericListFeature__Group__0__Impl rule__GenericListFeature__Group__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2266:2: rule__GenericListFeature__Group__0__Impl rule__GenericListFeature__Group__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2324:1: ( rule__GenericListFeature__Group__0__Impl rule__GenericListFeature__Group__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2325:2: rule__GenericListFeature__Group__0__Impl rule__GenericListFeature__Group__1
             {
-            pushFollow(FOLLOW_rule__GenericListFeature__Group__0__Impl_in_rule__GenericListFeature__Group__04587);
+            pushFollow(FOLLOW_rule__GenericListFeature__Group__0__Impl_in_rule__GenericListFeature__Group__04710);
             rule__GenericListFeature__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GenericListFeature__Group__1_in_rule__GenericListFeature__Group__04590);
+            pushFollow(FOLLOW_rule__GenericListFeature__Group__1_in_rule__GenericListFeature__Group__04713);
             rule__GenericListFeature__Group__1();
 
             state._fsp--;
@@ -6068,20 +6242,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GenericListFeature__Group__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2273:1: rule__GenericListFeature__Group__0__Impl : ( '@List' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2332:1: rule__GenericListFeature__Group__0__Impl : ( '@List' ) ;
     public final void rule__GenericListFeature__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2277:1: ( ( '@List' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2278:1: ( '@List' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2336:1: ( ( '@List' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2337:1: ( '@List' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2278:1: ( '@List' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2279:1: '@List'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2337:1: ( '@List' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2338:1: '@List'
             {
              before(grammarAccess.getGenericListFeatureAccess().getListKeyword_0()); 
-            match(input,36,FOLLOW_36_in_rule__GenericListFeature__Group__0__Impl4618); 
+            match(input,36,FOLLOW_36_in_rule__GenericListFeature__Group__0__Impl4741); 
              after(grammarAccess.getGenericListFeatureAccess().getListKeyword_0()); 
 
             }
@@ -6105,21 +6279,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GenericListFeature__Group__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2292:1: rule__GenericListFeature__Group__1 : rule__GenericListFeature__Group__1__Impl rule__GenericListFeature__Group__2 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2351:1: rule__GenericListFeature__Group__1 : rule__GenericListFeature__Group__1__Impl rule__GenericListFeature__Group__2 ;
     public final void rule__GenericListFeature__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2296:1: ( rule__GenericListFeature__Group__1__Impl rule__GenericListFeature__Group__2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2297:2: rule__GenericListFeature__Group__1__Impl rule__GenericListFeature__Group__2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2355:1: ( rule__GenericListFeature__Group__1__Impl rule__GenericListFeature__Group__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2356:2: rule__GenericListFeature__Group__1__Impl rule__GenericListFeature__Group__2
             {
-            pushFollow(FOLLOW_rule__GenericListFeature__Group__1__Impl_in_rule__GenericListFeature__Group__14649);
+            pushFollow(FOLLOW_rule__GenericListFeature__Group__1__Impl_in_rule__GenericListFeature__Group__14772);
             rule__GenericListFeature__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GenericListFeature__Group__2_in_rule__GenericListFeature__Group__14652);
+            pushFollow(FOLLOW_rule__GenericListFeature__Group__2_in_rule__GenericListFeature__Group__14775);
             rule__GenericListFeature__Group__2();
 
             state._fsp--;
@@ -6143,20 +6317,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GenericListFeature__Group__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2304:1: rule__GenericListFeature__Group__1__Impl : ( '<' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2363:1: rule__GenericListFeature__Group__1__Impl : ( '<' ) ;
     public final void rule__GenericListFeature__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2308:1: ( ( '<' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2309:1: ( '<' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2367:1: ( ( '<' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2368:1: ( '<' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2309:1: ( '<' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2310:1: '<'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2368:1: ( '<' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2369:1: '<'
             {
              before(grammarAccess.getGenericListFeatureAccess().getLessThanSignKeyword_1()); 
-            match(input,37,FOLLOW_37_in_rule__GenericListFeature__Group__1__Impl4680); 
+            match(input,37,FOLLOW_37_in_rule__GenericListFeature__Group__1__Impl4803); 
              after(grammarAccess.getGenericListFeatureAccess().getLessThanSignKeyword_1()); 
 
             }
@@ -6180,21 +6354,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GenericListFeature__Group__2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2323:1: rule__GenericListFeature__Group__2 : rule__GenericListFeature__Group__2__Impl rule__GenericListFeature__Group__3 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2382:1: rule__GenericListFeature__Group__2 : rule__GenericListFeature__Group__2__Impl rule__GenericListFeature__Group__3 ;
     public final void rule__GenericListFeature__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2327:1: ( rule__GenericListFeature__Group__2__Impl rule__GenericListFeature__Group__3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2328:2: rule__GenericListFeature__Group__2__Impl rule__GenericListFeature__Group__3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2386:1: ( rule__GenericListFeature__Group__2__Impl rule__GenericListFeature__Group__3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2387:2: rule__GenericListFeature__Group__2__Impl rule__GenericListFeature__Group__3
             {
-            pushFollow(FOLLOW_rule__GenericListFeature__Group__2__Impl_in_rule__GenericListFeature__Group__24711);
+            pushFollow(FOLLOW_rule__GenericListFeature__Group__2__Impl_in_rule__GenericListFeature__Group__24834);
             rule__GenericListFeature__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__GenericListFeature__Group__3_in_rule__GenericListFeature__Group__24714);
+            pushFollow(FOLLOW_rule__GenericListFeature__Group__3_in_rule__GenericListFeature__Group__24837);
             rule__GenericListFeature__Group__3();
 
             state._fsp--;
@@ -6218,23 +6392,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GenericListFeature__Group__2__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2335:1: rule__GenericListFeature__Group__2__Impl : ( ( rule__GenericListFeature__TypeAssignment_2 ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2394:1: rule__GenericListFeature__Group__2__Impl : ( ( rule__GenericListFeature__TypeAssignment_2 ) ) ;
     public final void rule__GenericListFeature__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2339:1: ( ( ( rule__GenericListFeature__TypeAssignment_2 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2340:1: ( ( rule__GenericListFeature__TypeAssignment_2 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2398:1: ( ( ( rule__GenericListFeature__TypeAssignment_2 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2399:1: ( ( rule__GenericListFeature__TypeAssignment_2 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2340:1: ( ( rule__GenericListFeature__TypeAssignment_2 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2341:1: ( rule__GenericListFeature__TypeAssignment_2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2399:1: ( ( rule__GenericListFeature__TypeAssignment_2 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2400:1: ( rule__GenericListFeature__TypeAssignment_2 )
             {
              before(grammarAccess.getGenericListFeatureAccess().getTypeAssignment_2()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2342:1: ( rule__GenericListFeature__TypeAssignment_2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2342:2: rule__GenericListFeature__TypeAssignment_2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2401:1: ( rule__GenericListFeature__TypeAssignment_2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2401:2: rule__GenericListFeature__TypeAssignment_2
             {
-            pushFollow(FOLLOW_rule__GenericListFeature__TypeAssignment_2_in_rule__GenericListFeature__Group__2__Impl4741);
+            pushFollow(FOLLOW_rule__GenericListFeature__TypeAssignment_2_in_rule__GenericListFeature__Group__2__Impl4864);
             rule__GenericListFeature__TypeAssignment_2();
 
             state._fsp--;
@@ -6265,16 +6439,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GenericListFeature__Group__3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2352:1: rule__GenericListFeature__Group__3 : rule__GenericListFeature__Group__3__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2411:1: rule__GenericListFeature__Group__3 : rule__GenericListFeature__Group__3__Impl ;
     public final void rule__GenericListFeature__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2356:1: ( rule__GenericListFeature__Group__3__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2357:2: rule__GenericListFeature__Group__3__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2415:1: ( rule__GenericListFeature__Group__3__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2416:2: rule__GenericListFeature__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__GenericListFeature__Group__3__Impl_in_rule__GenericListFeature__Group__34771);
+            pushFollow(FOLLOW_rule__GenericListFeature__Group__3__Impl_in_rule__GenericListFeature__Group__34894);
             rule__GenericListFeature__Group__3__Impl();
 
             state._fsp--;
@@ -6298,20 +6472,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GenericListFeature__Group__3__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2363:1: rule__GenericListFeature__Group__3__Impl : ( '>' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2422:1: rule__GenericListFeature__Group__3__Impl : ( '>' ) ;
     public final void rule__GenericListFeature__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2367:1: ( ( '>' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2368:1: ( '>' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2426:1: ( ( '>' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2427:1: ( '>' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2368:1: ( '>' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2369:1: '>'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2427:1: ( '>' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2428:1: '>'
             {
              before(grammarAccess.getGenericListFeatureAccess().getGreaterThanSignKeyword_3()); 
-            match(input,38,FOLLOW_38_in_rule__GenericListFeature__Group__3__Impl4799); 
+            match(input,38,FOLLOW_38_in_rule__GenericListFeature__Group__3__Impl4922); 
              after(grammarAccess.getGenericListFeatureAccess().getGreaterThanSignKeyword_3()); 
 
             }
@@ -6334,23 +6508,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GenericListFeature__Group__3__Impl"
 
 
-    // $ANTLR start "rule__Service__Group__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2390:1: rule__Service__Group__0 : rule__Service__Group__0__Impl rule__Service__Group__1 ;
-    public final void rule__Service__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__Exceptions__Group__0"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2449:1: rule__Exceptions__Group__0 : rule__Exceptions__Group__0__Impl rule__Exceptions__Group__1 ;
+    public final void rule__Exceptions__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2394:1: ( rule__Service__Group__0__Impl rule__Service__Group__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2395:2: rule__Service__Group__0__Impl rule__Service__Group__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2453:1: ( rule__Exceptions__Group__0__Impl rule__Exceptions__Group__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2454:2: rule__Exceptions__Group__0__Impl rule__Exceptions__Group__1
             {
-            pushFollow(FOLLOW_rule__Service__Group__0__Impl_in_rule__Service__Group__04838);
-            rule__Service__Group__0__Impl();
+            pushFollow(FOLLOW_rule__Exceptions__Group__0__Impl_in_rule__Exceptions__Group__04961);
+            rule__Exceptions__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Service__Group__1_in_rule__Service__Group__04841);
-            rule__Service__Group__1();
+            pushFollow(FOLLOW_rule__Exceptions__Group__1_in_rule__Exceptions__Group__04964);
+            rule__Exceptions__Group__1();
 
             state._fsp--;
 
@@ -6369,25 +6543,25 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Service__Group__0"
+    // $ANTLR end "rule__Exceptions__Group__0"
 
 
-    // $ANTLR start "rule__Service__Group__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2402:1: rule__Service__Group__0__Impl : ( '@service' ) ;
-    public final void rule__Service__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Exceptions__Group__0__Impl"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2461:1: rule__Exceptions__Group__0__Impl : ( '@exceptions' ) ;
+    public final void rule__Exceptions__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2406:1: ( ( '@service' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2407:1: ( '@service' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2465:1: ( ( '@exceptions' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2466:1: ( '@exceptions' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2407:1: ( '@service' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2408:1: '@service'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2466:1: ( '@exceptions' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2467:1: '@exceptions'
             {
-             before(grammarAccess.getServiceAccess().getServiceKeyword_0()); 
-            match(input,39,FOLLOW_39_in_rule__Service__Group__0__Impl4869); 
-             after(grammarAccess.getServiceAccess().getServiceKeyword_0()); 
+             before(grammarAccess.getExceptionsAccess().getExceptionsKeyword_0()); 
+            match(input,39,FOLLOW_39_in_rule__Exceptions__Group__0__Impl4992); 
+             after(grammarAccess.getExceptionsAccess().getExceptionsKeyword_0()); 
 
             }
 
@@ -6406,26 +6580,26 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Service__Group__0__Impl"
+    // $ANTLR end "rule__Exceptions__Group__0__Impl"
 
 
-    // $ANTLR start "rule__Service__Group__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2421:1: rule__Service__Group__1 : rule__Service__Group__1__Impl rule__Service__Group__2 ;
-    public final void rule__Service__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__Exceptions__Group__1"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2480:1: rule__Exceptions__Group__1 : rule__Exceptions__Group__1__Impl rule__Exceptions__Group__2 ;
+    public final void rule__Exceptions__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2425:1: ( rule__Service__Group__1__Impl rule__Service__Group__2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2426:2: rule__Service__Group__1__Impl rule__Service__Group__2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2484:1: ( rule__Exceptions__Group__1__Impl rule__Exceptions__Group__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2485:2: rule__Exceptions__Group__1__Impl rule__Exceptions__Group__2
             {
-            pushFollow(FOLLOW_rule__Service__Group__1__Impl_in_rule__Service__Group__14900);
-            rule__Service__Group__1__Impl();
+            pushFollow(FOLLOW_rule__Exceptions__Group__1__Impl_in_rule__Exceptions__Group__15023);
+            rule__Exceptions__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Service__Group__2_in_rule__Service__Group__14903);
-            rule__Service__Group__2();
+            pushFollow(FOLLOW_rule__Exceptions__Group__2_in_rule__Exceptions__Group__15026);
+            rule__Exceptions__Group__2();
 
             state._fsp--;
 
@@ -6444,35 +6618,25 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Service__Group__1"
+    // $ANTLR end "rule__Exceptions__Group__1"
 
 
-    // $ANTLR start "rule__Service__Group__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2433:1: rule__Service__Group__1__Impl : ( ( rule__Service__NameAssignment_1 ) ) ;
-    public final void rule__Service__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Exceptions__Group__1__Impl"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2492:1: rule__Exceptions__Group__1__Impl : ( '{' ) ;
+    public final void rule__Exceptions__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2437:1: ( ( ( rule__Service__NameAssignment_1 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2438:1: ( ( rule__Service__NameAssignment_1 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2496:1: ( ( '{' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2497:1: ( '{' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2438:1: ( ( rule__Service__NameAssignment_1 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2439:1: ( rule__Service__NameAssignment_1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2497:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2498:1: '{'
             {
-             before(grammarAccess.getServiceAccess().getNameAssignment_1()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2440:1: ( rule__Service__NameAssignment_1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2440:2: rule__Service__NameAssignment_1
-            {
-            pushFollow(FOLLOW_rule__Service__NameAssignment_1_in_rule__Service__Group__1__Impl4930);
-            rule__Service__NameAssignment_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getServiceAccess().getNameAssignment_1()); 
+             before(grammarAccess.getExceptionsAccess().getLeftCurlyBracketKeyword_1()); 
+            match(input,32,FOLLOW_32_in_rule__Exceptions__Group__1__Impl5054); 
+             after(grammarAccess.getExceptionsAccess().getLeftCurlyBracketKeyword_1()); 
 
             }
 
@@ -6491,101 +6655,26 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Service__Group__1__Impl"
+    // $ANTLR end "rule__Exceptions__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Service__Group__2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2450:1: rule__Service__Group__2 : rule__Service__Group__2__Impl rule__Service__Group__3 ;
-    public final void rule__Service__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2454:1: ( rule__Service__Group__2__Impl rule__Service__Group__3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2455:2: rule__Service__Group__2__Impl rule__Service__Group__3
-            {
-            pushFollow(FOLLOW_rule__Service__Group__2__Impl_in_rule__Service__Group__24960);
-            rule__Service__Group__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Service__Group__3_in_rule__Service__Group__24963);
-            rule__Service__Group__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Service__Group__2"
-
-
-    // $ANTLR start "rule__Service__Group__2__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2462:1: rule__Service__Group__2__Impl : ( '{' ) ;
-    public final void rule__Service__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Exceptions__Group__2"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2511:1: rule__Exceptions__Group__2 : rule__Exceptions__Group__2__Impl rule__Exceptions__Group__3 ;
+    public final void rule__Exceptions__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2466:1: ( ( '{' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2467:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2515:1: ( rule__Exceptions__Group__2__Impl rule__Exceptions__Group__3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2516:2: rule__Exceptions__Group__2__Impl rule__Exceptions__Group__3
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2467:1: ( '{' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2468:1: '{'
-            {
-             before(grammarAccess.getServiceAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,32,FOLLOW_32_in_rule__Service__Group__2__Impl4991); 
-             after(grammarAccess.getServiceAccess().getLeftCurlyBracketKeyword_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Service__Group__2__Impl"
-
-
-    // $ANTLR start "rule__Service__Group__3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2481:1: rule__Service__Group__3 : rule__Service__Group__3__Impl rule__Service__Group__4 ;
-    public final void rule__Service__Group__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2485:1: ( rule__Service__Group__3__Impl rule__Service__Group__4 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2486:2: rule__Service__Group__3__Impl rule__Service__Group__4
-            {
-            pushFollow(FOLLOW_rule__Service__Group__3__Impl_in_rule__Service__Group__35022);
-            rule__Service__Group__3__Impl();
+            pushFollow(FOLLOW_rule__Exceptions__Group__2__Impl_in_rule__Exceptions__Group__25085);
+            rule__Exceptions__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Service__Group__4_in_rule__Service__Group__35025);
-            rule__Service__Group__4();
+            pushFollow(FOLLOW_rule__Exceptions__Group__3_in_rule__Exceptions__Group__25088);
+            rule__Exceptions__Group__3();
 
             state._fsp--;
 
@@ -6604,143 +6693,62 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Service__Group__3"
+    // $ANTLR end "rule__Exceptions__Group__2"
 
 
-    // $ANTLR start "rule__Service__Group__3__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2493:1: rule__Service__Group__3__Impl : ( ( rule__Service__ExceptionsAssignment_3 )* ) ;
-    public final void rule__Service__Group__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2497:1: ( ( ( rule__Service__ExceptionsAssignment_3 )* ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2498:1: ( ( rule__Service__ExceptionsAssignment_3 )* )
-            {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2498:1: ( ( rule__Service__ExceptionsAssignment_3 )* )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2499:1: ( rule__Service__ExceptionsAssignment_3 )*
-            {
-             before(grammarAccess.getServiceAccess().getExceptionsAssignment_3()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2500:1: ( rule__Service__ExceptionsAssignment_3 )*
-            loop14:
-            do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
-
-                if ( (LA14_0==40) ) {
-                    alt14=1;
-                }
-
-
-                switch (alt14) {
-            	case 1 :
-            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2500:2: rule__Service__ExceptionsAssignment_3
-            	    {
-            	    pushFollow(FOLLOW_rule__Service__ExceptionsAssignment_3_in_rule__Service__Group__3__Impl5052);
-            	    rule__Service__ExceptionsAssignment_3();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop14;
-                }
-            } while (true);
-
-             after(grammarAccess.getServiceAccess().getExceptionsAssignment_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Service__Group__3__Impl"
-
-
-    // $ANTLR start "rule__Service__Group__4"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2510:1: rule__Service__Group__4 : rule__Service__Group__4__Impl rule__Service__Group__5 ;
-    public final void rule__Service__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__Exceptions__Group__2__Impl"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2523:1: rule__Exceptions__Group__2__Impl : ( ( ( rule__Exceptions__ExceptionsAssignment_2 ) ) ( ( rule__Exceptions__ExceptionsAssignment_2 )* ) ) ;
+    public final void rule__Exceptions__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2514:1: ( rule__Service__Group__4__Impl rule__Service__Group__5 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2515:2: rule__Service__Group__4__Impl rule__Service__Group__5
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2527:1: ( ( ( ( rule__Exceptions__ExceptionsAssignment_2 ) ) ( ( rule__Exceptions__ExceptionsAssignment_2 )* ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2528:1: ( ( ( rule__Exceptions__ExceptionsAssignment_2 ) ) ( ( rule__Exceptions__ExceptionsAssignment_2 )* ) )
             {
-            pushFollow(FOLLOW_rule__Service__Group__4__Impl_in_rule__Service__Group__45083);
-            rule__Service__Group__4__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Service__Group__5_in_rule__Service__Group__45086);
-            rule__Service__Group__5();
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2528:1: ( ( ( rule__Exceptions__ExceptionsAssignment_2 ) ) ( ( rule__Exceptions__ExceptionsAssignment_2 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2529:1: ( ( rule__Exceptions__ExceptionsAssignment_2 ) ) ( ( rule__Exceptions__ExceptionsAssignment_2 )* )
+            {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2529:1: ( ( rule__Exceptions__ExceptionsAssignment_2 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2530:1: ( rule__Exceptions__ExceptionsAssignment_2 )
+            {
+             before(grammarAccess.getExceptionsAccess().getExceptionsAssignment_2()); 
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2531:1: ( rule__Exceptions__ExceptionsAssignment_2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2531:2: rule__Exceptions__ExceptionsAssignment_2
+            {
+            pushFollow(FOLLOW_rule__Exceptions__ExceptionsAssignment_2_in_rule__Exceptions__Group__2__Impl5117);
+            rule__Exceptions__ExceptionsAssignment_2();
 
             state._fsp--;
 
 
             }
 
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
+             after(grammarAccess.getExceptionsAccess().getExceptionsAssignment_2()); 
 
-            	restoreStackSize(stackSize);
+            }
 
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Service__Group__4"
-
-
-    // $ANTLR start "rule__Service__Group__4__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2522:1: rule__Service__Group__4__Impl : ( ( rule__Service__OperationsAssignment_4 )* ) ;
-    public final void rule__Service__Group__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2526:1: ( ( ( rule__Service__OperationsAssignment_4 )* ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2527:1: ( ( rule__Service__OperationsAssignment_4 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2534:1: ( ( rule__Exceptions__ExceptionsAssignment_2 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2535:1: ( rule__Exceptions__ExceptionsAssignment_2 )*
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2527:1: ( ( rule__Service__OperationsAssignment_4 )* )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2528:1: ( rule__Service__OperationsAssignment_4 )*
-            {
-             before(grammarAccess.getServiceAccess().getOperationsAssignment_4()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2529:1: ( rule__Service__OperationsAssignment_4 )*
+             before(grammarAccess.getExceptionsAccess().getExceptionsAssignment_2()); 
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2536:1: ( rule__Exceptions__ExceptionsAssignment_2 )*
             loop15:
             do {
                 int alt15=2;
                 int LA15_0 = input.LA(1);
 
-                if ( (LA15_0==42) ) {
+                if ( (LA15_0==40) ) {
                     alt15=1;
                 }
 
 
                 switch (alt15) {
             	case 1 :
-            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2529:2: rule__Service__OperationsAssignment_4
+            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2536:2: rule__Exceptions__ExceptionsAssignment_2
             	    {
-            	    pushFollow(FOLLOW_rule__Service__OperationsAssignment_4_in_rule__Service__Group__4__Impl5113);
-            	    rule__Service__OperationsAssignment_4();
+            	    pushFollow(FOLLOW_rule__Exceptions__ExceptionsAssignment_2_in_rule__Exceptions__Group__2__Impl5129);
+            	    rule__Exceptions__ExceptionsAssignment_2();
 
             	    state._fsp--;
 
@@ -6753,7 +6761,10 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getServiceAccess().getOperationsAssignment_4()); 
+             after(grammarAccess.getExceptionsAccess().getExceptionsAssignment_2()); 
+
+            }
+
 
             }
 
@@ -6772,21 +6783,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Service__Group__4__Impl"
+    // $ANTLR end "rule__Exceptions__Group__2__Impl"
 
 
-    // $ANTLR start "rule__Service__Group__5"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2539:1: rule__Service__Group__5 : rule__Service__Group__5__Impl ;
-    public final void rule__Service__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__Exceptions__Group__3"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2547:1: rule__Exceptions__Group__3 : rule__Exceptions__Group__3__Impl ;
+    public final void rule__Exceptions__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2543:1: ( rule__Service__Group__5__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2544:2: rule__Service__Group__5__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2551:1: ( rule__Exceptions__Group__3__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2552:2: rule__Exceptions__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Service__Group__5__Impl_in_rule__Service__Group__55144);
-            rule__Service__Group__5__Impl();
+            pushFollow(FOLLOW_rule__Exceptions__Group__3__Impl_in_rule__Exceptions__Group__35162);
+            rule__Exceptions__Group__3__Impl();
 
             state._fsp--;
 
@@ -6805,25 +6816,25 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Service__Group__5"
+    // $ANTLR end "rule__Exceptions__Group__3"
 
 
-    // $ANTLR start "rule__Service__Group__5__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2550:1: rule__Service__Group__5__Impl : ( '}' ) ;
-    public final void rule__Service__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Exceptions__Group__3__Impl"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2558:1: rule__Exceptions__Group__3__Impl : ( '}' ) ;
+    public final void rule__Exceptions__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2554:1: ( ( '}' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2555:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2562:1: ( ( '}' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2563:1: ( '}' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2555:1: ( '}' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2556:1: '}'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2563:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2564:1: '}'
             {
-             before(grammarAccess.getServiceAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,33,FOLLOW_33_in_rule__Service__Group__5__Impl5172); 
-             after(grammarAccess.getServiceAccess().getRightCurlyBracketKeyword_5()); 
+             before(grammarAccess.getExceptionsAccess().getRightCurlyBracketKeyword_3()); 
+            match(input,33,FOLLOW_33_in_rule__Exceptions__Group__3__Impl5190); 
+             after(grammarAccess.getExceptionsAccess().getRightCurlyBracketKeyword_3()); 
 
             }
 
@@ -6842,25 +6853,25 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Service__Group__5__Impl"
+    // $ANTLR end "rule__Exceptions__Group__3__Impl"
 
 
     // $ANTLR start "rule__Exception__Group__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2581:1: rule__Exception__Group__0 : rule__Exception__Group__0__Impl rule__Exception__Group__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2585:1: rule__Exception__Group__0 : rule__Exception__Group__0__Impl rule__Exception__Group__1 ;
     public final void rule__Exception__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2585:1: ( rule__Exception__Group__0__Impl rule__Exception__Group__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2586:2: rule__Exception__Group__0__Impl rule__Exception__Group__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2589:1: ( rule__Exception__Group__0__Impl rule__Exception__Group__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2590:2: rule__Exception__Group__0__Impl rule__Exception__Group__1
             {
-            pushFollow(FOLLOW_rule__Exception__Group__0__Impl_in_rule__Exception__Group__05215);
+            pushFollow(FOLLOW_rule__Exception__Group__0__Impl_in_rule__Exception__Group__05229);
             rule__Exception__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Exception__Group__1_in_rule__Exception__Group__05218);
+            pushFollow(FOLLOW_rule__Exception__Group__1_in_rule__Exception__Group__05232);
             rule__Exception__Group__1();
 
             state._fsp--;
@@ -6884,20 +6895,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exception__Group__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2593:1: rule__Exception__Group__0__Impl : ( '@exception' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2597:1: rule__Exception__Group__0__Impl : ( '@exception' ) ;
     public final void rule__Exception__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2597:1: ( ( '@exception' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2598:1: ( '@exception' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2601:1: ( ( '@exception' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2602:1: ( '@exception' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2598:1: ( '@exception' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2599:1: '@exception'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2602:1: ( '@exception' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2603:1: '@exception'
             {
              before(grammarAccess.getExceptionAccess().getExceptionKeyword_0()); 
-            match(input,40,FOLLOW_40_in_rule__Exception__Group__0__Impl5246); 
+            match(input,40,FOLLOW_40_in_rule__Exception__Group__0__Impl5260); 
              after(grammarAccess.getExceptionAccess().getExceptionKeyword_0()); 
 
             }
@@ -6921,21 +6932,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exception__Group__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2612:1: rule__Exception__Group__1 : rule__Exception__Group__1__Impl rule__Exception__Group__2 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2616:1: rule__Exception__Group__1 : rule__Exception__Group__1__Impl rule__Exception__Group__2 ;
     public final void rule__Exception__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2616:1: ( rule__Exception__Group__1__Impl rule__Exception__Group__2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2617:2: rule__Exception__Group__1__Impl rule__Exception__Group__2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2620:1: ( rule__Exception__Group__1__Impl rule__Exception__Group__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2621:2: rule__Exception__Group__1__Impl rule__Exception__Group__2
             {
-            pushFollow(FOLLOW_rule__Exception__Group__1__Impl_in_rule__Exception__Group__15277);
+            pushFollow(FOLLOW_rule__Exception__Group__1__Impl_in_rule__Exception__Group__15291);
             rule__Exception__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Exception__Group__2_in_rule__Exception__Group__15280);
+            pushFollow(FOLLOW_rule__Exception__Group__2_in_rule__Exception__Group__15294);
             rule__Exception__Group__2();
 
             state._fsp--;
@@ -6959,23 +6970,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exception__Group__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2624:1: rule__Exception__Group__1__Impl : ( ( rule__Exception__NameAssignment_1 ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2628:1: rule__Exception__Group__1__Impl : ( ( rule__Exception__NameAssignment_1 ) ) ;
     public final void rule__Exception__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2628:1: ( ( ( rule__Exception__NameAssignment_1 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2629:1: ( ( rule__Exception__NameAssignment_1 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2632:1: ( ( ( rule__Exception__NameAssignment_1 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2633:1: ( ( rule__Exception__NameAssignment_1 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2629:1: ( ( rule__Exception__NameAssignment_1 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2630:1: ( rule__Exception__NameAssignment_1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2633:1: ( ( rule__Exception__NameAssignment_1 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2634:1: ( rule__Exception__NameAssignment_1 )
             {
              before(grammarAccess.getExceptionAccess().getNameAssignment_1()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2631:1: ( rule__Exception__NameAssignment_1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2631:2: rule__Exception__NameAssignment_1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2635:1: ( rule__Exception__NameAssignment_1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2635:2: rule__Exception__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Exception__NameAssignment_1_in_rule__Exception__Group__1__Impl5307);
+            pushFollow(FOLLOW_rule__Exception__NameAssignment_1_in_rule__Exception__Group__1__Impl5321);
             rule__Exception__NameAssignment_1();
 
             state._fsp--;
@@ -7006,21 +7017,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exception__Group__2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2641:1: rule__Exception__Group__2 : rule__Exception__Group__2__Impl rule__Exception__Group__3 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2645:1: rule__Exception__Group__2 : rule__Exception__Group__2__Impl rule__Exception__Group__3 ;
     public final void rule__Exception__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2645:1: ( rule__Exception__Group__2__Impl rule__Exception__Group__3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2646:2: rule__Exception__Group__2__Impl rule__Exception__Group__3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2649:1: ( rule__Exception__Group__2__Impl rule__Exception__Group__3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2650:2: rule__Exception__Group__2__Impl rule__Exception__Group__3
             {
-            pushFollow(FOLLOW_rule__Exception__Group__2__Impl_in_rule__Exception__Group__25337);
+            pushFollow(FOLLOW_rule__Exception__Group__2__Impl_in_rule__Exception__Group__25351);
             rule__Exception__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Exception__Group__3_in_rule__Exception__Group__25340);
+            pushFollow(FOLLOW_rule__Exception__Group__3_in_rule__Exception__Group__25354);
             rule__Exception__Group__3();
 
             state._fsp--;
@@ -7044,20 +7055,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exception__Group__2__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2653:1: rule__Exception__Group__2__Impl : ( '{' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2657:1: rule__Exception__Group__2__Impl : ( '{' ) ;
     public final void rule__Exception__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2657:1: ( ( '{' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2658:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2661:1: ( ( '{' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2662:1: ( '{' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2658:1: ( '{' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2659:1: '{'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2662:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2663:1: '{'
             {
              before(grammarAccess.getExceptionAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,32,FOLLOW_32_in_rule__Exception__Group__2__Impl5368); 
+            match(input,32,FOLLOW_32_in_rule__Exception__Group__2__Impl5382); 
              after(grammarAccess.getExceptionAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -7081,21 +7092,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exception__Group__3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2672:1: rule__Exception__Group__3 : rule__Exception__Group__3__Impl rule__Exception__Group__4 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2676:1: rule__Exception__Group__3 : rule__Exception__Group__3__Impl rule__Exception__Group__4 ;
     public final void rule__Exception__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2676:1: ( rule__Exception__Group__3__Impl rule__Exception__Group__4 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2677:2: rule__Exception__Group__3__Impl rule__Exception__Group__4
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2680:1: ( rule__Exception__Group__3__Impl rule__Exception__Group__4 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2681:2: rule__Exception__Group__3__Impl rule__Exception__Group__4
             {
-            pushFollow(FOLLOW_rule__Exception__Group__3__Impl_in_rule__Exception__Group__35399);
+            pushFollow(FOLLOW_rule__Exception__Group__3__Impl_in_rule__Exception__Group__35413);
             rule__Exception__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Exception__Group__4_in_rule__Exception__Group__35402);
+            pushFollow(FOLLOW_rule__Exception__Group__4_in_rule__Exception__Group__35416);
             rule__Exception__Group__4();
 
             state._fsp--;
@@ -7119,20 +7130,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exception__Group__3__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2684:1: rule__Exception__Group__3__Impl : ( '@msg' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2688:1: rule__Exception__Group__3__Impl : ( '@msg' ) ;
     public final void rule__Exception__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2688:1: ( ( '@msg' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2689:1: ( '@msg' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2692:1: ( ( '@msg' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2693:1: ( '@msg' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2689:1: ( '@msg' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2690:1: '@msg'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2693:1: ( '@msg' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2694:1: '@msg'
             {
              before(grammarAccess.getExceptionAccess().getMsgKeyword_3()); 
-            match(input,41,FOLLOW_41_in_rule__Exception__Group__3__Impl5430); 
+            match(input,41,FOLLOW_41_in_rule__Exception__Group__3__Impl5444); 
              after(grammarAccess.getExceptionAccess().getMsgKeyword_3()); 
 
             }
@@ -7156,21 +7167,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exception__Group__4"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2703:1: rule__Exception__Group__4 : rule__Exception__Group__4__Impl rule__Exception__Group__5 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2707:1: rule__Exception__Group__4 : rule__Exception__Group__4__Impl rule__Exception__Group__5 ;
     public final void rule__Exception__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2707:1: ( rule__Exception__Group__4__Impl rule__Exception__Group__5 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2708:2: rule__Exception__Group__4__Impl rule__Exception__Group__5
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2711:1: ( rule__Exception__Group__4__Impl rule__Exception__Group__5 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2712:2: rule__Exception__Group__4__Impl rule__Exception__Group__5
             {
-            pushFollow(FOLLOW_rule__Exception__Group__4__Impl_in_rule__Exception__Group__45461);
+            pushFollow(FOLLOW_rule__Exception__Group__4__Impl_in_rule__Exception__Group__45475);
             rule__Exception__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Exception__Group__5_in_rule__Exception__Group__45464);
+            pushFollow(FOLLOW_rule__Exception__Group__5_in_rule__Exception__Group__45478);
             rule__Exception__Group__5();
 
             state._fsp--;
@@ -7194,20 +7205,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exception__Group__4__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2715:1: rule__Exception__Group__4__Impl : ( ':' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2719:1: rule__Exception__Group__4__Impl : ( ':' ) ;
     public final void rule__Exception__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2719:1: ( ( ':' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2720:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2723:1: ( ( ':' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2724:1: ( ':' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2720:1: ( ':' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2721:1: ':'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2724:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2725:1: ':'
             {
              before(grammarAccess.getExceptionAccess().getColonKeyword_4()); 
-            match(input,25,FOLLOW_25_in_rule__Exception__Group__4__Impl5492); 
+            match(input,25,FOLLOW_25_in_rule__Exception__Group__4__Impl5506); 
              after(grammarAccess.getExceptionAccess().getColonKeyword_4()); 
 
             }
@@ -7231,21 +7242,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exception__Group__5"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2734:1: rule__Exception__Group__5 : rule__Exception__Group__5__Impl rule__Exception__Group__6 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2738:1: rule__Exception__Group__5 : rule__Exception__Group__5__Impl rule__Exception__Group__6 ;
     public final void rule__Exception__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2738:1: ( rule__Exception__Group__5__Impl rule__Exception__Group__6 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2739:2: rule__Exception__Group__5__Impl rule__Exception__Group__6
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2742:1: ( rule__Exception__Group__5__Impl rule__Exception__Group__6 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2743:2: rule__Exception__Group__5__Impl rule__Exception__Group__6
             {
-            pushFollow(FOLLOW_rule__Exception__Group__5__Impl_in_rule__Exception__Group__55523);
+            pushFollow(FOLLOW_rule__Exception__Group__5__Impl_in_rule__Exception__Group__55537);
             rule__Exception__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Exception__Group__6_in_rule__Exception__Group__55526);
+            pushFollow(FOLLOW_rule__Exception__Group__6_in_rule__Exception__Group__55540);
             rule__Exception__Group__6();
 
             state._fsp--;
@@ -7269,23 +7280,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exception__Group__5__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2746:1: rule__Exception__Group__5__Impl : ( ( rule__Exception__MsgAssignment_5 ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2750:1: rule__Exception__Group__5__Impl : ( ( rule__Exception__MsgAssignment_5 ) ) ;
     public final void rule__Exception__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2750:1: ( ( ( rule__Exception__MsgAssignment_5 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2751:1: ( ( rule__Exception__MsgAssignment_5 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2754:1: ( ( ( rule__Exception__MsgAssignment_5 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2755:1: ( ( rule__Exception__MsgAssignment_5 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2751:1: ( ( rule__Exception__MsgAssignment_5 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2752:1: ( rule__Exception__MsgAssignment_5 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2755:1: ( ( rule__Exception__MsgAssignment_5 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2756:1: ( rule__Exception__MsgAssignment_5 )
             {
              before(grammarAccess.getExceptionAccess().getMsgAssignment_5()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2753:1: ( rule__Exception__MsgAssignment_5 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2753:2: rule__Exception__MsgAssignment_5
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2757:1: ( rule__Exception__MsgAssignment_5 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2757:2: rule__Exception__MsgAssignment_5
             {
-            pushFollow(FOLLOW_rule__Exception__MsgAssignment_5_in_rule__Exception__Group__5__Impl5553);
+            pushFollow(FOLLOW_rule__Exception__MsgAssignment_5_in_rule__Exception__Group__5__Impl5567);
             rule__Exception__MsgAssignment_5();
 
             state._fsp--;
@@ -7316,16 +7327,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exception__Group__6"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2763:1: rule__Exception__Group__6 : rule__Exception__Group__6__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2767:1: rule__Exception__Group__6 : rule__Exception__Group__6__Impl ;
     public final void rule__Exception__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2767:1: ( rule__Exception__Group__6__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2768:2: rule__Exception__Group__6__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2771:1: ( rule__Exception__Group__6__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2772:2: rule__Exception__Group__6__Impl
             {
-            pushFollow(FOLLOW_rule__Exception__Group__6__Impl_in_rule__Exception__Group__65583);
+            pushFollow(FOLLOW_rule__Exception__Group__6__Impl_in_rule__Exception__Group__65597);
             rule__Exception__Group__6__Impl();
 
             state._fsp--;
@@ -7349,20 +7360,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exception__Group__6__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2774:1: rule__Exception__Group__6__Impl : ( '}' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2778:1: rule__Exception__Group__6__Impl : ( '}' ) ;
     public final void rule__Exception__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2778:1: ( ( '}' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2779:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2782:1: ( ( '}' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2783:1: ( '}' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2779:1: ( '}' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2780:1: '}'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2783:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2784:1: '}'
             {
              before(grammarAccess.getExceptionAccess().getRightCurlyBracketKeyword_6()); 
-            match(input,33,FOLLOW_33_in_rule__Exception__Group__6__Impl5611); 
+            match(input,33,FOLLOW_33_in_rule__Exception__Group__6__Impl5625); 
              after(grammarAccess.getExceptionAccess().getRightCurlyBracketKeyword_6()); 
 
             }
@@ -7385,22 +7396,455 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Exception__Group__6__Impl"
 
 
+    // $ANTLR start "rule__Service__Group__0"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2811:1: rule__Service__Group__0 : rule__Service__Group__0__Impl rule__Service__Group__1 ;
+    public final void rule__Service__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2815:1: ( rule__Service__Group__0__Impl rule__Service__Group__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2816:2: rule__Service__Group__0__Impl rule__Service__Group__1
+            {
+            pushFollow(FOLLOW_rule__Service__Group__0__Impl_in_rule__Service__Group__05670);
+            rule__Service__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Service__Group__1_in_rule__Service__Group__05673);
+            rule__Service__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Service__Group__0"
+
+
+    // $ANTLR start "rule__Service__Group__0__Impl"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2823:1: rule__Service__Group__0__Impl : ( '@service' ) ;
+    public final void rule__Service__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2827:1: ( ( '@service' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2828:1: ( '@service' )
+            {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2828:1: ( '@service' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2829:1: '@service'
+            {
+             before(grammarAccess.getServiceAccess().getServiceKeyword_0()); 
+            match(input,42,FOLLOW_42_in_rule__Service__Group__0__Impl5701); 
+             after(grammarAccess.getServiceAccess().getServiceKeyword_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Service__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Service__Group__1"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2842:1: rule__Service__Group__1 : rule__Service__Group__1__Impl rule__Service__Group__2 ;
+    public final void rule__Service__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2846:1: ( rule__Service__Group__1__Impl rule__Service__Group__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2847:2: rule__Service__Group__1__Impl rule__Service__Group__2
+            {
+            pushFollow(FOLLOW_rule__Service__Group__1__Impl_in_rule__Service__Group__15732);
+            rule__Service__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Service__Group__2_in_rule__Service__Group__15735);
+            rule__Service__Group__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Service__Group__1"
+
+
+    // $ANTLR start "rule__Service__Group__1__Impl"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2854:1: rule__Service__Group__1__Impl : ( ( rule__Service__NameAssignment_1 ) ) ;
+    public final void rule__Service__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2858:1: ( ( ( rule__Service__NameAssignment_1 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2859:1: ( ( rule__Service__NameAssignment_1 ) )
+            {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2859:1: ( ( rule__Service__NameAssignment_1 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2860:1: ( rule__Service__NameAssignment_1 )
+            {
+             before(grammarAccess.getServiceAccess().getNameAssignment_1()); 
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2861:1: ( rule__Service__NameAssignment_1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2861:2: rule__Service__NameAssignment_1
+            {
+            pushFollow(FOLLOW_rule__Service__NameAssignment_1_in_rule__Service__Group__1__Impl5762);
+            rule__Service__NameAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getServiceAccess().getNameAssignment_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Service__Group__1__Impl"
+
+
+    // $ANTLR start "rule__Service__Group__2"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2871:1: rule__Service__Group__2 : rule__Service__Group__2__Impl rule__Service__Group__3 ;
+    public final void rule__Service__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2875:1: ( rule__Service__Group__2__Impl rule__Service__Group__3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2876:2: rule__Service__Group__2__Impl rule__Service__Group__3
+            {
+            pushFollow(FOLLOW_rule__Service__Group__2__Impl_in_rule__Service__Group__25792);
+            rule__Service__Group__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Service__Group__3_in_rule__Service__Group__25795);
+            rule__Service__Group__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Service__Group__2"
+
+
+    // $ANTLR start "rule__Service__Group__2__Impl"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2883:1: rule__Service__Group__2__Impl : ( '{' ) ;
+    public final void rule__Service__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2887:1: ( ( '{' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2888:1: ( '{' )
+            {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2888:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2889:1: '{'
+            {
+             before(grammarAccess.getServiceAccess().getLeftCurlyBracketKeyword_2()); 
+            match(input,32,FOLLOW_32_in_rule__Service__Group__2__Impl5823); 
+             after(grammarAccess.getServiceAccess().getLeftCurlyBracketKeyword_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Service__Group__2__Impl"
+
+
+    // $ANTLR start "rule__Service__Group__3"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2902:1: rule__Service__Group__3 : rule__Service__Group__3__Impl rule__Service__Group__4 ;
+    public final void rule__Service__Group__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2906:1: ( rule__Service__Group__3__Impl rule__Service__Group__4 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2907:2: rule__Service__Group__3__Impl rule__Service__Group__4
+            {
+            pushFollow(FOLLOW_rule__Service__Group__3__Impl_in_rule__Service__Group__35854);
+            rule__Service__Group__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Service__Group__4_in_rule__Service__Group__35857);
+            rule__Service__Group__4();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Service__Group__3"
+
+
+    // $ANTLR start "rule__Service__Group__3__Impl"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2914:1: rule__Service__Group__3__Impl : ( ( ( rule__Service__OperationsAssignment_3 ) ) ( ( rule__Service__OperationsAssignment_3 )* ) ) ;
+    public final void rule__Service__Group__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2918:1: ( ( ( ( rule__Service__OperationsAssignment_3 ) ) ( ( rule__Service__OperationsAssignment_3 )* ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2919:1: ( ( ( rule__Service__OperationsAssignment_3 ) ) ( ( rule__Service__OperationsAssignment_3 )* ) )
+            {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2919:1: ( ( ( rule__Service__OperationsAssignment_3 ) ) ( ( rule__Service__OperationsAssignment_3 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2920:1: ( ( rule__Service__OperationsAssignment_3 ) ) ( ( rule__Service__OperationsAssignment_3 )* )
+            {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2920:1: ( ( rule__Service__OperationsAssignment_3 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2921:1: ( rule__Service__OperationsAssignment_3 )
+            {
+             before(grammarAccess.getServiceAccess().getOperationsAssignment_3()); 
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2922:1: ( rule__Service__OperationsAssignment_3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2922:2: rule__Service__OperationsAssignment_3
+            {
+            pushFollow(FOLLOW_rule__Service__OperationsAssignment_3_in_rule__Service__Group__3__Impl5886);
+            rule__Service__OperationsAssignment_3();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getServiceAccess().getOperationsAssignment_3()); 
+
+            }
+
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2925:1: ( ( rule__Service__OperationsAssignment_3 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2926:1: ( rule__Service__OperationsAssignment_3 )*
+            {
+             before(grammarAccess.getServiceAccess().getOperationsAssignment_3()); 
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2927:1: ( rule__Service__OperationsAssignment_3 )*
+            loop16:
+            do {
+                int alt16=2;
+                int LA16_0 = input.LA(1);
+
+                if ( (LA16_0==43) ) {
+                    alt16=1;
+                }
+
+
+                switch (alt16) {
+            	case 1 :
+            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2927:2: rule__Service__OperationsAssignment_3
+            	    {
+            	    pushFollow(FOLLOW_rule__Service__OperationsAssignment_3_in_rule__Service__Group__3__Impl5898);
+            	    rule__Service__OperationsAssignment_3();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop16;
+                }
+            } while (true);
+
+             after(grammarAccess.getServiceAccess().getOperationsAssignment_3()); 
+
+            }
+
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Service__Group__3__Impl"
+
+
+    // $ANTLR start "rule__Service__Group__4"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2938:1: rule__Service__Group__4 : rule__Service__Group__4__Impl ;
+    public final void rule__Service__Group__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2942:1: ( rule__Service__Group__4__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2943:2: rule__Service__Group__4__Impl
+            {
+            pushFollow(FOLLOW_rule__Service__Group__4__Impl_in_rule__Service__Group__45931);
+            rule__Service__Group__4__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Service__Group__4"
+
+
+    // $ANTLR start "rule__Service__Group__4__Impl"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2949:1: rule__Service__Group__4__Impl : ( '}' ) ;
+    public final void rule__Service__Group__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2953:1: ( ( '}' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2954:1: ( '}' )
+            {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2954:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2955:1: '}'
+            {
+             before(grammarAccess.getServiceAccess().getRightCurlyBracketKeyword_4()); 
+            match(input,33,FOLLOW_33_in_rule__Service__Group__4__Impl5959); 
+             after(grammarAccess.getServiceAccess().getRightCurlyBracketKeyword_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Service__Group__4__Impl"
+
+
     // $ANTLR start "rule__Operation__Group__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2807:1: rule__Operation__Group__0 : rule__Operation__Group__0__Impl rule__Operation__Group__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2978:1: rule__Operation__Group__0 : rule__Operation__Group__0__Impl rule__Operation__Group__1 ;
     public final void rule__Operation__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2811:1: ( rule__Operation__Group__0__Impl rule__Operation__Group__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2812:2: rule__Operation__Group__0__Impl rule__Operation__Group__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2982:1: ( rule__Operation__Group__0__Impl rule__Operation__Group__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2983:2: rule__Operation__Group__0__Impl rule__Operation__Group__1
             {
-            pushFollow(FOLLOW_rule__Operation__Group__0__Impl_in_rule__Operation__Group__05656);
+            pushFollow(FOLLOW_rule__Operation__Group__0__Impl_in_rule__Operation__Group__06000);
             rule__Operation__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group__1_in_rule__Operation__Group__05659);
+            pushFollow(FOLLOW_rule__Operation__Group__1_in_rule__Operation__Group__06003);
             rule__Operation__Group__1();
 
             state._fsp--;
@@ -7424,20 +7868,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2819:1: rule__Operation__Group__0__Impl : ( '@operation' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2990:1: rule__Operation__Group__0__Impl : ( '@operation' ) ;
     public final void rule__Operation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2823:1: ( ( '@operation' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2824:1: ( '@operation' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2994:1: ( ( '@operation' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2995:1: ( '@operation' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2824:1: ( '@operation' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2825:1: '@operation'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2995:1: ( '@operation' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2996:1: '@operation'
             {
              before(grammarAccess.getOperationAccess().getOperationKeyword_0()); 
-            match(input,42,FOLLOW_42_in_rule__Operation__Group__0__Impl5687); 
+            match(input,43,FOLLOW_43_in_rule__Operation__Group__0__Impl6031); 
              after(grammarAccess.getOperationAccess().getOperationKeyword_0()); 
 
             }
@@ -7461,21 +7905,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2838:1: rule__Operation__Group__1 : rule__Operation__Group__1__Impl rule__Operation__Group__2 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3009:1: rule__Operation__Group__1 : rule__Operation__Group__1__Impl rule__Operation__Group__2 ;
     public final void rule__Operation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2842:1: ( rule__Operation__Group__1__Impl rule__Operation__Group__2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2843:2: rule__Operation__Group__1__Impl rule__Operation__Group__2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3013:1: ( rule__Operation__Group__1__Impl rule__Operation__Group__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3014:2: rule__Operation__Group__1__Impl rule__Operation__Group__2
             {
-            pushFollow(FOLLOW_rule__Operation__Group__1__Impl_in_rule__Operation__Group__15718);
+            pushFollow(FOLLOW_rule__Operation__Group__1__Impl_in_rule__Operation__Group__16062);
             rule__Operation__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group__2_in_rule__Operation__Group__15721);
+            pushFollow(FOLLOW_rule__Operation__Group__2_in_rule__Operation__Group__16065);
             rule__Operation__Group__2();
 
             state._fsp--;
@@ -7499,23 +7943,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2850:1: rule__Operation__Group__1__Impl : ( ( rule__Operation__NameAssignment_1 ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3021:1: rule__Operation__Group__1__Impl : ( ( rule__Operation__NameAssignment_1 ) ) ;
     public final void rule__Operation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2854:1: ( ( ( rule__Operation__NameAssignment_1 ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2855:1: ( ( rule__Operation__NameAssignment_1 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3025:1: ( ( ( rule__Operation__NameAssignment_1 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3026:1: ( ( rule__Operation__NameAssignment_1 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2855:1: ( ( rule__Operation__NameAssignment_1 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2856:1: ( rule__Operation__NameAssignment_1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3026:1: ( ( rule__Operation__NameAssignment_1 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3027:1: ( rule__Operation__NameAssignment_1 )
             {
              before(grammarAccess.getOperationAccess().getNameAssignment_1()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2857:1: ( rule__Operation__NameAssignment_1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2857:2: rule__Operation__NameAssignment_1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3028:1: ( rule__Operation__NameAssignment_1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3028:2: rule__Operation__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Operation__NameAssignment_1_in_rule__Operation__Group__1__Impl5748);
+            pushFollow(FOLLOW_rule__Operation__NameAssignment_1_in_rule__Operation__Group__1__Impl6092);
             rule__Operation__NameAssignment_1();
 
             state._fsp--;
@@ -7546,21 +7990,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group__2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2867:1: rule__Operation__Group__2 : rule__Operation__Group__2__Impl rule__Operation__Group__3 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3038:1: rule__Operation__Group__2 : rule__Operation__Group__2__Impl rule__Operation__Group__3 ;
     public final void rule__Operation__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2871:1: ( rule__Operation__Group__2__Impl rule__Operation__Group__3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2872:2: rule__Operation__Group__2__Impl rule__Operation__Group__3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3042:1: ( rule__Operation__Group__2__Impl rule__Operation__Group__3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3043:2: rule__Operation__Group__2__Impl rule__Operation__Group__3
             {
-            pushFollow(FOLLOW_rule__Operation__Group__2__Impl_in_rule__Operation__Group__25778);
+            pushFollow(FOLLOW_rule__Operation__Group__2__Impl_in_rule__Operation__Group__26122);
             rule__Operation__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group__3_in_rule__Operation__Group__25781);
+            pushFollow(FOLLOW_rule__Operation__Group__3_in_rule__Operation__Group__26125);
             rule__Operation__Group__3();
 
             state._fsp--;
@@ -7584,20 +8028,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group__2__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2879:1: rule__Operation__Group__2__Impl : ( '{' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3050:1: rule__Operation__Group__2__Impl : ( '{' ) ;
     public final void rule__Operation__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2883:1: ( ( '{' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2884:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3054:1: ( ( '{' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3055:1: ( '{' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2884:1: ( '{' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2885:1: '{'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3055:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3056:1: '{'
             {
              before(grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,32,FOLLOW_32_in_rule__Operation__Group__2__Impl5809); 
+            match(input,32,FOLLOW_32_in_rule__Operation__Group__2__Impl6153); 
              after(grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -7621,21 +8065,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group__3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2898:1: rule__Operation__Group__3 : rule__Operation__Group__3__Impl rule__Operation__Group__4 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3069:1: rule__Operation__Group__3 : rule__Operation__Group__3__Impl rule__Operation__Group__4 ;
     public final void rule__Operation__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2902:1: ( rule__Operation__Group__3__Impl rule__Operation__Group__4 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2903:2: rule__Operation__Group__3__Impl rule__Operation__Group__4
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3073:1: ( rule__Operation__Group__3__Impl rule__Operation__Group__4 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3074:2: rule__Operation__Group__3__Impl rule__Operation__Group__4
             {
-            pushFollow(FOLLOW_rule__Operation__Group__3__Impl_in_rule__Operation__Group__35840);
+            pushFollow(FOLLOW_rule__Operation__Group__3__Impl_in_rule__Operation__Group__36184);
             rule__Operation__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group__4_in_rule__Operation__Group__35843);
+            pushFollow(FOLLOW_rule__Operation__Group__4_in_rule__Operation__Group__36187);
             rule__Operation__Group__4();
 
             state._fsp--;
@@ -7659,31 +8103,31 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group__3__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2910:1: rule__Operation__Group__3__Impl : ( ( rule__Operation__Group_3__0 )? ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3081:1: rule__Operation__Group__3__Impl : ( ( rule__Operation__Group_3__0 )? ) ;
     public final void rule__Operation__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2914:1: ( ( ( rule__Operation__Group_3__0 )? ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2915:1: ( ( rule__Operation__Group_3__0 )? )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3085:1: ( ( ( rule__Operation__Group_3__0 )? ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3086:1: ( ( rule__Operation__Group_3__0 )? )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2915:1: ( ( rule__Operation__Group_3__0 )? )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2916:1: ( rule__Operation__Group_3__0 )?
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3086:1: ( ( rule__Operation__Group_3__0 )? )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3087:1: ( rule__Operation__Group_3__0 )?
             {
              before(grammarAccess.getOperationAccess().getGroup_3()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2917:1: ( rule__Operation__Group_3__0 )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3088:1: ( rule__Operation__Group_3__0 )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA16_0==43) ) {
-                alt16=1;
+            if ( (LA17_0==44) ) {
+                alt17=1;
             }
-            switch (alt16) {
+            switch (alt17) {
                 case 1 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2917:2: rule__Operation__Group_3__0
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3088:2: rule__Operation__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Operation__Group_3__0_in_rule__Operation__Group__3__Impl5870);
+                    pushFollow(FOLLOW_rule__Operation__Group_3__0_in_rule__Operation__Group__3__Impl6214);
                     rule__Operation__Group_3__0();
 
                     state._fsp--;
@@ -7717,21 +8161,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group__4"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2927:1: rule__Operation__Group__4 : rule__Operation__Group__4__Impl rule__Operation__Group__5 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3098:1: rule__Operation__Group__4 : rule__Operation__Group__4__Impl rule__Operation__Group__5 ;
     public final void rule__Operation__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2931:1: ( rule__Operation__Group__4__Impl rule__Operation__Group__5 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2932:2: rule__Operation__Group__4__Impl rule__Operation__Group__5
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3102:1: ( rule__Operation__Group__4__Impl rule__Operation__Group__5 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3103:2: rule__Operation__Group__4__Impl rule__Operation__Group__5
             {
-            pushFollow(FOLLOW_rule__Operation__Group__4__Impl_in_rule__Operation__Group__45901);
+            pushFollow(FOLLOW_rule__Operation__Group__4__Impl_in_rule__Operation__Group__46245);
             rule__Operation__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group__5_in_rule__Operation__Group__45904);
+            pushFollow(FOLLOW_rule__Operation__Group__5_in_rule__Operation__Group__46248);
             rule__Operation__Group__5();
 
             state._fsp--;
@@ -7755,31 +8199,31 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group__4__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2939:1: rule__Operation__Group__4__Impl : ( ( rule__Operation__Group_4__0 )? ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3110:1: rule__Operation__Group__4__Impl : ( ( rule__Operation__Group_4__0 )? ) ;
     public final void rule__Operation__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2943:1: ( ( ( rule__Operation__Group_4__0 )? ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2944:1: ( ( rule__Operation__Group_4__0 )? )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3114:1: ( ( ( rule__Operation__Group_4__0 )? ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3115:1: ( ( rule__Operation__Group_4__0 )? )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2944:1: ( ( rule__Operation__Group_4__0 )? )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2945:1: ( rule__Operation__Group_4__0 )?
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3115:1: ( ( rule__Operation__Group_4__0 )? )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3116:1: ( rule__Operation__Group_4__0 )?
             {
              before(grammarAccess.getOperationAccess().getGroup_4()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2946:1: ( rule__Operation__Group_4__0 )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3117:1: ( rule__Operation__Group_4__0 )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA17_0==44) ) {
-                alt17=1;
+            if ( (LA18_0==45) ) {
+                alt18=1;
             }
-            switch (alt17) {
+            switch (alt18) {
                 case 1 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2946:2: rule__Operation__Group_4__0
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3117:2: rule__Operation__Group_4__0
                     {
-                    pushFollow(FOLLOW_rule__Operation__Group_4__0_in_rule__Operation__Group__4__Impl5931);
+                    pushFollow(FOLLOW_rule__Operation__Group_4__0_in_rule__Operation__Group__4__Impl6275);
                     rule__Operation__Group_4__0();
 
                     state._fsp--;
@@ -7813,21 +8257,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group__5"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2956:1: rule__Operation__Group__5 : rule__Operation__Group__5__Impl rule__Operation__Group__6 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3127:1: rule__Operation__Group__5 : rule__Operation__Group__5__Impl rule__Operation__Group__6 ;
     public final void rule__Operation__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2960:1: ( rule__Operation__Group__5__Impl rule__Operation__Group__6 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2961:2: rule__Operation__Group__5__Impl rule__Operation__Group__6
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3131:1: ( rule__Operation__Group__5__Impl rule__Operation__Group__6 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3132:2: rule__Operation__Group__5__Impl rule__Operation__Group__6
             {
-            pushFollow(FOLLOW_rule__Operation__Group__5__Impl_in_rule__Operation__Group__55962);
+            pushFollow(FOLLOW_rule__Operation__Group__5__Impl_in_rule__Operation__Group__56306);
             rule__Operation__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group__6_in_rule__Operation__Group__55965);
+            pushFollow(FOLLOW_rule__Operation__Group__6_in_rule__Operation__Group__56309);
             rule__Operation__Group__6();
 
             state._fsp--;
@@ -7851,31 +8295,31 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group__5__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2968:1: rule__Operation__Group__5__Impl : ( ( rule__Operation__Group_5__0 )? ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3139:1: rule__Operation__Group__5__Impl : ( ( rule__Operation__Group_5__0 )? ) ;
     public final void rule__Operation__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2972:1: ( ( ( rule__Operation__Group_5__0 )? ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2973:1: ( ( rule__Operation__Group_5__0 )? )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3143:1: ( ( ( rule__Operation__Group_5__0 )? ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3144:1: ( ( rule__Operation__Group_5__0 )? )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2973:1: ( ( rule__Operation__Group_5__0 )? )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2974:1: ( rule__Operation__Group_5__0 )?
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3144:1: ( ( rule__Operation__Group_5__0 )? )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3145:1: ( rule__Operation__Group_5__0 )?
             {
              before(grammarAccess.getOperationAccess().getGroup_5()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2975:1: ( rule__Operation__Group_5__0 )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3146:1: ( rule__Operation__Group_5__0 )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA18_0==40) ) {
-                alt18=1;
+            if ( (LA19_0==40) ) {
+                alt19=1;
             }
-            switch (alt18) {
+            switch (alt19) {
                 case 1 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2975:2: rule__Operation__Group_5__0
+                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3146:2: rule__Operation__Group_5__0
                     {
-                    pushFollow(FOLLOW_rule__Operation__Group_5__0_in_rule__Operation__Group__5__Impl5992);
+                    pushFollow(FOLLOW_rule__Operation__Group_5__0_in_rule__Operation__Group__5__Impl6336);
                     rule__Operation__Group_5__0();
 
                     state._fsp--;
@@ -7909,16 +8353,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group__6"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2985:1: rule__Operation__Group__6 : rule__Operation__Group__6__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3156:1: rule__Operation__Group__6 : rule__Operation__Group__6__Impl ;
     public final void rule__Operation__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2989:1: ( rule__Operation__Group__6__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2990:2: rule__Operation__Group__6__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3160:1: ( rule__Operation__Group__6__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3161:2: rule__Operation__Group__6__Impl
             {
-            pushFollow(FOLLOW_rule__Operation__Group__6__Impl_in_rule__Operation__Group__66023);
+            pushFollow(FOLLOW_rule__Operation__Group__6__Impl_in_rule__Operation__Group__66367);
             rule__Operation__Group__6__Impl();
 
             state._fsp--;
@@ -7942,20 +8386,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group__6__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:2996:1: rule__Operation__Group__6__Impl : ( '}' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3167:1: rule__Operation__Group__6__Impl : ( '}' ) ;
     public final void rule__Operation__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3000:1: ( ( '}' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3001:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3171:1: ( ( '}' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3172:1: ( '}' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3001:1: ( '}' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3002:1: '}'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3172:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3173:1: '}'
             {
              before(grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_6()); 
-            match(input,33,FOLLOW_33_in_rule__Operation__Group__6__Impl6051); 
+            match(input,33,FOLLOW_33_in_rule__Operation__Group__6__Impl6395); 
              after(grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_6()); 
 
             }
@@ -7979,21 +8423,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_3__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3029:1: rule__Operation__Group_3__0 : rule__Operation__Group_3__0__Impl rule__Operation__Group_3__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3200:1: rule__Operation__Group_3__0 : rule__Operation__Group_3__0__Impl rule__Operation__Group_3__1 ;
     public final void rule__Operation__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3033:1: ( rule__Operation__Group_3__0__Impl rule__Operation__Group_3__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3034:2: rule__Operation__Group_3__0__Impl rule__Operation__Group_3__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3204:1: ( rule__Operation__Group_3__0__Impl rule__Operation__Group_3__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3205:2: rule__Operation__Group_3__0__Impl rule__Operation__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Operation__Group_3__0__Impl_in_rule__Operation__Group_3__06096);
+            pushFollow(FOLLOW_rule__Operation__Group_3__0__Impl_in_rule__Operation__Group_3__06440);
             rule__Operation__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_3__1_in_rule__Operation__Group_3__06099);
+            pushFollow(FOLLOW_rule__Operation__Group_3__1_in_rule__Operation__Group_3__06443);
             rule__Operation__Group_3__1();
 
             state._fsp--;
@@ -8017,20 +8461,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_3__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3041:1: rule__Operation__Group_3__0__Impl : ( '@input' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3212:1: rule__Operation__Group_3__0__Impl : ( '@input' ) ;
     public final void rule__Operation__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3045:1: ( ( '@input' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3046:1: ( '@input' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3216:1: ( ( '@input' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3217:1: ( '@input' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3046:1: ( '@input' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3047:1: '@input'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3217:1: ( '@input' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3218:1: '@input'
             {
              before(grammarAccess.getOperationAccess().getInputKeyword_3_0()); 
-            match(input,43,FOLLOW_43_in_rule__Operation__Group_3__0__Impl6127); 
+            match(input,44,FOLLOW_44_in_rule__Operation__Group_3__0__Impl6471); 
              after(grammarAccess.getOperationAccess().getInputKeyword_3_0()); 
 
             }
@@ -8054,21 +8498,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_3__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3060:1: rule__Operation__Group_3__1 : rule__Operation__Group_3__1__Impl rule__Operation__Group_3__2 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3231:1: rule__Operation__Group_3__1 : rule__Operation__Group_3__1__Impl rule__Operation__Group_3__2 ;
     public final void rule__Operation__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3064:1: ( rule__Operation__Group_3__1__Impl rule__Operation__Group_3__2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3065:2: rule__Operation__Group_3__1__Impl rule__Operation__Group_3__2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3235:1: ( rule__Operation__Group_3__1__Impl rule__Operation__Group_3__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3236:2: rule__Operation__Group_3__1__Impl rule__Operation__Group_3__2
             {
-            pushFollow(FOLLOW_rule__Operation__Group_3__1__Impl_in_rule__Operation__Group_3__16158);
+            pushFollow(FOLLOW_rule__Operation__Group_3__1__Impl_in_rule__Operation__Group_3__16502);
             rule__Operation__Group_3__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_3__2_in_rule__Operation__Group_3__16161);
+            pushFollow(FOLLOW_rule__Operation__Group_3__2_in_rule__Operation__Group_3__16505);
             rule__Operation__Group_3__2();
 
             state._fsp--;
@@ -8092,20 +8536,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_3__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3072:1: rule__Operation__Group_3__1__Impl : ( ':' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3243:1: rule__Operation__Group_3__1__Impl : ( ':' ) ;
     public final void rule__Operation__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3076:1: ( ( ':' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3077:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3247:1: ( ( ':' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3248:1: ( ':' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3077:1: ( ':' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3078:1: ':'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3248:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3249:1: ':'
             {
              before(grammarAccess.getOperationAccess().getColonKeyword_3_1()); 
-            match(input,25,FOLLOW_25_in_rule__Operation__Group_3__1__Impl6189); 
+            match(input,25,FOLLOW_25_in_rule__Operation__Group_3__1__Impl6533); 
              after(grammarAccess.getOperationAccess().getColonKeyword_3_1()); 
 
             }
@@ -8129,21 +8573,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_3__2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3091:1: rule__Operation__Group_3__2 : rule__Operation__Group_3__2__Impl rule__Operation__Group_3__3 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3262:1: rule__Operation__Group_3__2 : rule__Operation__Group_3__2__Impl rule__Operation__Group_3__3 ;
     public final void rule__Operation__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3095:1: ( rule__Operation__Group_3__2__Impl rule__Operation__Group_3__3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3096:2: rule__Operation__Group_3__2__Impl rule__Operation__Group_3__3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3266:1: ( rule__Operation__Group_3__2__Impl rule__Operation__Group_3__3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3267:2: rule__Operation__Group_3__2__Impl rule__Operation__Group_3__3
             {
-            pushFollow(FOLLOW_rule__Operation__Group_3__2__Impl_in_rule__Operation__Group_3__26220);
+            pushFollow(FOLLOW_rule__Operation__Group_3__2__Impl_in_rule__Operation__Group_3__26564);
             rule__Operation__Group_3__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_3__3_in_rule__Operation__Group_3__26223);
+            pushFollow(FOLLOW_rule__Operation__Group_3__3_in_rule__Operation__Group_3__26567);
             rule__Operation__Group_3__3();
 
             state._fsp--;
@@ -8167,20 +8611,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_3__2__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3103:1: rule__Operation__Group_3__2__Impl : ( '{' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3274:1: rule__Operation__Group_3__2__Impl : ( '{' ) ;
     public final void rule__Operation__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3107:1: ( ( '{' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3108:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3278:1: ( ( '{' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3279:1: ( '{' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3108:1: ( '{' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3109:1: '{'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3279:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3280:1: '{'
             {
              before(grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_3_2()); 
-            match(input,32,FOLLOW_32_in_rule__Operation__Group_3__2__Impl6251); 
+            match(input,32,FOLLOW_32_in_rule__Operation__Group_3__2__Impl6595); 
              after(grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_3_2()); 
 
             }
@@ -8204,21 +8648,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_3__3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3122:1: rule__Operation__Group_3__3 : rule__Operation__Group_3__3__Impl rule__Operation__Group_3__4 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3293:1: rule__Operation__Group_3__3 : rule__Operation__Group_3__3__Impl rule__Operation__Group_3__4 ;
     public final void rule__Operation__Group_3__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3126:1: ( rule__Operation__Group_3__3__Impl rule__Operation__Group_3__4 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3127:2: rule__Operation__Group_3__3__Impl rule__Operation__Group_3__4
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3297:1: ( rule__Operation__Group_3__3__Impl rule__Operation__Group_3__4 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3298:2: rule__Operation__Group_3__3__Impl rule__Operation__Group_3__4
             {
-            pushFollow(FOLLOW_rule__Operation__Group_3__3__Impl_in_rule__Operation__Group_3__36282);
+            pushFollow(FOLLOW_rule__Operation__Group_3__3__Impl_in_rule__Operation__Group_3__36626);
             rule__Operation__Group_3__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_3__4_in_rule__Operation__Group_3__36285);
+            pushFollow(FOLLOW_rule__Operation__Group_3__4_in_rule__Operation__Group_3__36629);
             rule__Operation__Group_3__4();
 
             state._fsp--;
@@ -8242,26 +8686,26 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_3__3__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3134:1: rule__Operation__Group_3__3__Impl : ( ( ( rule__Operation__FeaturesInputAssignment_3_3 ) ) ( ( rule__Operation__FeaturesInputAssignment_3_3 )* ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3305:1: rule__Operation__Group_3__3__Impl : ( ( ( rule__Operation__FeaturesInputAssignment_3_3 ) ) ( ( rule__Operation__FeaturesInputAssignment_3_3 )* ) ) ;
     public final void rule__Operation__Group_3__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3138:1: ( ( ( ( rule__Operation__FeaturesInputAssignment_3_3 ) ) ( ( rule__Operation__FeaturesInputAssignment_3_3 )* ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3139:1: ( ( ( rule__Operation__FeaturesInputAssignment_3_3 ) ) ( ( rule__Operation__FeaturesInputAssignment_3_3 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3309:1: ( ( ( ( rule__Operation__FeaturesInputAssignment_3_3 ) ) ( ( rule__Operation__FeaturesInputAssignment_3_3 )* ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3310:1: ( ( ( rule__Operation__FeaturesInputAssignment_3_3 ) ) ( ( rule__Operation__FeaturesInputAssignment_3_3 )* ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3139:1: ( ( ( rule__Operation__FeaturesInputAssignment_3_3 ) ) ( ( rule__Operation__FeaturesInputAssignment_3_3 )* ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3140:1: ( ( rule__Operation__FeaturesInputAssignment_3_3 ) ) ( ( rule__Operation__FeaturesInputAssignment_3_3 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3310:1: ( ( ( rule__Operation__FeaturesInputAssignment_3_3 ) ) ( ( rule__Operation__FeaturesInputAssignment_3_3 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3311:1: ( ( rule__Operation__FeaturesInputAssignment_3_3 ) ) ( ( rule__Operation__FeaturesInputAssignment_3_3 )* )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3140:1: ( ( rule__Operation__FeaturesInputAssignment_3_3 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3141:1: ( rule__Operation__FeaturesInputAssignment_3_3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3311:1: ( ( rule__Operation__FeaturesInputAssignment_3_3 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3312:1: ( rule__Operation__FeaturesInputAssignment_3_3 )
             {
              before(grammarAccess.getOperationAccess().getFeaturesInputAssignment_3_3()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3142:1: ( rule__Operation__FeaturesInputAssignment_3_3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3142:2: rule__Operation__FeaturesInputAssignment_3_3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3313:1: ( rule__Operation__FeaturesInputAssignment_3_3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3313:2: rule__Operation__FeaturesInputAssignment_3_3
             {
-            pushFollow(FOLLOW_rule__Operation__FeaturesInputAssignment_3_3_in_rule__Operation__Group_3__3__Impl6314);
+            pushFollow(FOLLOW_rule__Operation__FeaturesInputAssignment_3_3_in_rule__Operation__Group_3__3__Impl6658);
             rule__Operation__FeaturesInputAssignment_3_3();
 
             state._fsp--;
@@ -8273,26 +8717,26 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3145:1: ( ( rule__Operation__FeaturesInputAssignment_3_3 )* )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3146:1: ( rule__Operation__FeaturesInputAssignment_3_3 )*
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3316:1: ( ( rule__Operation__FeaturesInputAssignment_3_3 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3317:1: ( rule__Operation__FeaturesInputAssignment_3_3 )*
             {
              before(grammarAccess.getOperationAccess().getFeaturesInputAssignment_3_3()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3147:1: ( rule__Operation__FeaturesInputAssignment_3_3 )*
-            loop19:
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3318:1: ( rule__Operation__FeaturesInputAssignment_3_3 )*
+            loop20:
             do {
-                int alt19=2;
-                int LA19_0 = input.LA(1);
+                int alt20=2;
+                int LA20_0 = input.LA(1);
 
-                if ( (LA19_0==RULE_ID||LA19_0==RULE_COMMENTS) ) {
-                    alt19=1;
+                if ( (LA20_0==RULE_ID||LA20_0==RULE_COMMENTS) ) {
+                    alt20=1;
                 }
 
 
-                switch (alt19) {
+                switch (alt20) {
             	case 1 :
-            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3147:2: rule__Operation__FeaturesInputAssignment_3_3
+            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3318:2: rule__Operation__FeaturesInputAssignment_3_3
             	    {
-            	    pushFollow(FOLLOW_rule__Operation__FeaturesInputAssignment_3_3_in_rule__Operation__Group_3__3__Impl6326);
+            	    pushFollow(FOLLOW_rule__Operation__FeaturesInputAssignment_3_3_in_rule__Operation__Group_3__3__Impl6670);
             	    rule__Operation__FeaturesInputAssignment_3_3();
 
             	    state._fsp--;
@@ -8302,7 +8746,7 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop19;
+            	    break loop20;
                 }
             } while (true);
 
@@ -8332,16 +8776,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_3__4"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3158:1: rule__Operation__Group_3__4 : rule__Operation__Group_3__4__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3329:1: rule__Operation__Group_3__4 : rule__Operation__Group_3__4__Impl ;
     public final void rule__Operation__Group_3__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3162:1: ( rule__Operation__Group_3__4__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3163:2: rule__Operation__Group_3__4__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3333:1: ( rule__Operation__Group_3__4__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3334:2: rule__Operation__Group_3__4__Impl
             {
-            pushFollow(FOLLOW_rule__Operation__Group_3__4__Impl_in_rule__Operation__Group_3__46359);
+            pushFollow(FOLLOW_rule__Operation__Group_3__4__Impl_in_rule__Operation__Group_3__46703);
             rule__Operation__Group_3__4__Impl();
 
             state._fsp--;
@@ -8365,20 +8809,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_3__4__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3169:1: rule__Operation__Group_3__4__Impl : ( '}' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3340:1: rule__Operation__Group_3__4__Impl : ( '}' ) ;
     public final void rule__Operation__Group_3__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3173:1: ( ( '}' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3174:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3344:1: ( ( '}' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3345:1: ( '}' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3174:1: ( '}' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3175:1: '}'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3345:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3346:1: '}'
             {
              before(grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_3_4()); 
-            match(input,33,FOLLOW_33_in_rule__Operation__Group_3__4__Impl6387); 
+            match(input,33,FOLLOW_33_in_rule__Operation__Group_3__4__Impl6731); 
              after(grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_3_4()); 
 
             }
@@ -8402,21 +8846,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_4__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3198:1: rule__Operation__Group_4__0 : rule__Operation__Group_4__0__Impl rule__Operation__Group_4__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3369:1: rule__Operation__Group_4__0 : rule__Operation__Group_4__0__Impl rule__Operation__Group_4__1 ;
     public final void rule__Operation__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3202:1: ( rule__Operation__Group_4__0__Impl rule__Operation__Group_4__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3203:2: rule__Operation__Group_4__0__Impl rule__Operation__Group_4__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3373:1: ( rule__Operation__Group_4__0__Impl rule__Operation__Group_4__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3374:2: rule__Operation__Group_4__0__Impl rule__Operation__Group_4__1
             {
-            pushFollow(FOLLOW_rule__Operation__Group_4__0__Impl_in_rule__Operation__Group_4__06428);
+            pushFollow(FOLLOW_rule__Operation__Group_4__0__Impl_in_rule__Operation__Group_4__06772);
             rule__Operation__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_4__1_in_rule__Operation__Group_4__06431);
+            pushFollow(FOLLOW_rule__Operation__Group_4__1_in_rule__Operation__Group_4__06775);
             rule__Operation__Group_4__1();
 
             state._fsp--;
@@ -8440,20 +8884,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_4__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3210:1: rule__Operation__Group_4__0__Impl : ( '@output' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3381:1: rule__Operation__Group_4__0__Impl : ( '@output' ) ;
     public final void rule__Operation__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3214:1: ( ( '@output' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3215:1: ( '@output' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3385:1: ( ( '@output' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3386:1: ( '@output' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3215:1: ( '@output' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3216:1: '@output'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3386:1: ( '@output' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3387:1: '@output'
             {
              before(grammarAccess.getOperationAccess().getOutputKeyword_4_0()); 
-            match(input,44,FOLLOW_44_in_rule__Operation__Group_4__0__Impl6459); 
+            match(input,45,FOLLOW_45_in_rule__Operation__Group_4__0__Impl6803); 
              after(grammarAccess.getOperationAccess().getOutputKeyword_4_0()); 
 
             }
@@ -8477,21 +8921,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_4__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3229:1: rule__Operation__Group_4__1 : rule__Operation__Group_4__1__Impl rule__Operation__Group_4__2 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3400:1: rule__Operation__Group_4__1 : rule__Operation__Group_4__1__Impl rule__Operation__Group_4__2 ;
     public final void rule__Operation__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3233:1: ( rule__Operation__Group_4__1__Impl rule__Operation__Group_4__2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3234:2: rule__Operation__Group_4__1__Impl rule__Operation__Group_4__2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3404:1: ( rule__Operation__Group_4__1__Impl rule__Operation__Group_4__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3405:2: rule__Operation__Group_4__1__Impl rule__Operation__Group_4__2
             {
-            pushFollow(FOLLOW_rule__Operation__Group_4__1__Impl_in_rule__Operation__Group_4__16490);
+            pushFollow(FOLLOW_rule__Operation__Group_4__1__Impl_in_rule__Operation__Group_4__16834);
             rule__Operation__Group_4__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_4__2_in_rule__Operation__Group_4__16493);
+            pushFollow(FOLLOW_rule__Operation__Group_4__2_in_rule__Operation__Group_4__16837);
             rule__Operation__Group_4__2();
 
             state._fsp--;
@@ -8515,20 +8959,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_4__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3241:1: rule__Operation__Group_4__1__Impl : ( ':' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3412:1: rule__Operation__Group_4__1__Impl : ( ':' ) ;
     public final void rule__Operation__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3245:1: ( ( ':' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3246:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3416:1: ( ( ':' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3417:1: ( ':' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3246:1: ( ':' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3247:1: ':'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3417:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3418:1: ':'
             {
              before(grammarAccess.getOperationAccess().getColonKeyword_4_1()); 
-            match(input,25,FOLLOW_25_in_rule__Operation__Group_4__1__Impl6521); 
+            match(input,25,FOLLOW_25_in_rule__Operation__Group_4__1__Impl6865); 
              after(grammarAccess.getOperationAccess().getColonKeyword_4_1()); 
 
             }
@@ -8552,21 +8996,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_4__2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3260:1: rule__Operation__Group_4__2 : rule__Operation__Group_4__2__Impl rule__Operation__Group_4__3 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3431:1: rule__Operation__Group_4__2 : rule__Operation__Group_4__2__Impl rule__Operation__Group_4__3 ;
     public final void rule__Operation__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3264:1: ( rule__Operation__Group_4__2__Impl rule__Operation__Group_4__3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3265:2: rule__Operation__Group_4__2__Impl rule__Operation__Group_4__3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3435:1: ( rule__Operation__Group_4__2__Impl rule__Operation__Group_4__3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3436:2: rule__Operation__Group_4__2__Impl rule__Operation__Group_4__3
             {
-            pushFollow(FOLLOW_rule__Operation__Group_4__2__Impl_in_rule__Operation__Group_4__26552);
+            pushFollow(FOLLOW_rule__Operation__Group_4__2__Impl_in_rule__Operation__Group_4__26896);
             rule__Operation__Group_4__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_4__3_in_rule__Operation__Group_4__26555);
+            pushFollow(FOLLOW_rule__Operation__Group_4__3_in_rule__Operation__Group_4__26899);
             rule__Operation__Group_4__3();
 
             state._fsp--;
@@ -8590,20 +9034,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_4__2__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3272:1: rule__Operation__Group_4__2__Impl : ( '{' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3443:1: rule__Operation__Group_4__2__Impl : ( '{' ) ;
     public final void rule__Operation__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3276:1: ( ( '{' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3277:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3447:1: ( ( '{' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3448:1: ( '{' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3277:1: ( '{' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3278:1: '{'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3448:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3449:1: '{'
             {
              before(grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_4_2()); 
-            match(input,32,FOLLOW_32_in_rule__Operation__Group_4__2__Impl6583); 
+            match(input,32,FOLLOW_32_in_rule__Operation__Group_4__2__Impl6927); 
              after(grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_4_2()); 
 
             }
@@ -8627,21 +9071,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_4__3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3291:1: rule__Operation__Group_4__3 : rule__Operation__Group_4__3__Impl rule__Operation__Group_4__4 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3462:1: rule__Operation__Group_4__3 : rule__Operation__Group_4__3__Impl rule__Operation__Group_4__4 ;
     public final void rule__Operation__Group_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3295:1: ( rule__Operation__Group_4__3__Impl rule__Operation__Group_4__4 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3296:2: rule__Operation__Group_4__3__Impl rule__Operation__Group_4__4
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3466:1: ( rule__Operation__Group_4__3__Impl rule__Operation__Group_4__4 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3467:2: rule__Operation__Group_4__3__Impl rule__Operation__Group_4__4
             {
-            pushFollow(FOLLOW_rule__Operation__Group_4__3__Impl_in_rule__Operation__Group_4__36614);
+            pushFollow(FOLLOW_rule__Operation__Group_4__3__Impl_in_rule__Operation__Group_4__36958);
             rule__Operation__Group_4__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_4__4_in_rule__Operation__Group_4__36617);
+            pushFollow(FOLLOW_rule__Operation__Group_4__4_in_rule__Operation__Group_4__36961);
             rule__Operation__Group_4__4();
 
             state._fsp--;
@@ -8665,26 +9109,26 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_4__3__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3303:1: rule__Operation__Group_4__3__Impl : ( ( ( rule__Operation__FeaturesOutputAssignment_4_3 ) ) ( ( rule__Operation__FeaturesOutputAssignment_4_3 )* ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3474:1: rule__Operation__Group_4__3__Impl : ( ( ( rule__Operation__FeaturesOutputAssignment_4_3 ) ) ( ( rule__Operation__FeaturesOutputAssignment_4_3 )* ) ) ;
     public final void rule__Operation__Group_4__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3307:1: ( ( ( ( rule__Operation__FeaturesOutputAssignment_4_3 ) ) ( ( rule__Operation__FeaturesOutputAssignment_4_3 )* ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3308:1: ( ( ( rule__Operation__FeaturesOutputAssignment_4_3 ) ) ( ( rule__Operation__FeaturesOutputAssignment_4_3 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3478:1: ( ( ( ( rule__Operation__FeaturesOutputAssignment_4_3 ) ) ( ( rule__Operation__FeaturesOutputAssignment_4_3 )* ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3479:1: ( ( ( rule__Operation__FeaturesOutputAssignment_4_3 ) ) ( ( rule__Operation__FeaturesOutputAssignment_4_3 )* ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3308:1: ( ( ( rule__Operation__FeaturesOutputAssignment_4_3 ) ) ( ( rule__Operation__FeaturesOutputAssignment_4_3 )* ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3309:1: ( ( rule__Operation__FeaturesOutputAssignment_4_3 ) ) ( ( rule__Operation__FeaturesOutputAssignment_4_3 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3479:1: ( ( ( rule__Operation__FeaturesOutputAssignment_4_3 ) ) ( ( rule__Operation__FeaturesOutputAssignment_4_3 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3480:1: ( ( rule__Operation__FeaturesOutputAssignment_4_3 ) ) ( ( rule__Operation__FeaturesOutputAssignment_4_3 )* )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3309:1: ( ( rule__Operation__FeaturesOutputAssignment_4_3 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3310:1: ( rule__Operation__FeaturesOutputAssignment_4_3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3480:1: ( ( rule__Operation__FeaturesOutputAssignment_4_3 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3481:1: ( rule__Operation__FeaturesOutputAssignment_4_3 )
             {
              before(grammarAccess.getOperationAccess().getFeaturesOutputAssignment_4_3()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3311:1: ( rule__Operation__FeaturesOutputAssignment_4_3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3311:2: rule__Operation__FeaturesOutputAssignment_4_3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3482:1: ( rule__Operation__FeaturesOutputAssignment_4_3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3482:2: rule__Operation__FeaturesOutputAssignment_4_3
             {
-            pushFollow(FOLLOW_rule__Operation__FeaturesOutputAssignment_4_3_in_rule__Operation__Group_4__3__Impl6646);
+            pushFollow(FOLLOW_rule__Operation__FeaturesOutputAssignment_4_3_in_rule__Operation__Group_4__3__Impl6990);
             rule__Operation__FeaturesOutputAssignment_4_3();
 
             state._fsp--;
@@ -8696,26 +9140,26 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3314:1: ( ( rule__Operation__FeaturesOutputAssignment_4_3 )* )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3315:1: ( rule__Operation__FeaturesOutputAssignment_4_3 )*
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3485:1: ( ( rule__Operation__FeaturesOutputAssignment_4_3 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3486:1: ( rule__Operation__FeaturesOutputAssignment_4_3 )*
             {
              before(grammarAccess.getOperationAccess().getFeaturesOutputAssignment_4_3()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3316:1: ( rule__Operation__FeaturesOutputAssignment_4_3 )*
-            loop20:
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3487:1: ( rule__Operation__FeaturesOutputAssignment_4_3 )*
+            loop21:
             do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+                int alt21=2;
+                int LA21_0 = input.LA(1);
 
-                if ( (LA20_0==RULE_ID||LA20_0==RULE_COMMENTS) ) {
-                    alt20=1;
+                if ( (LA21_0==RULE_ID||LA21_0==RULE_COMMENTS) ) {
+                    alt21=1;
                 }
 
 
-                switch (alt20) {
+                switch (alt21) {
             	case 1 :
-            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3316:2: rule__Operation__FeaturesOutputAssignment_4_3
+            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3487:2: rule__Operation__FeaturesOutputAssignment_4_3
             	    {
-            	    pushFollow(FOLLOW_rule__Operation__FeaturesOutputAssignment_4_3_in_rule__Operation__Group_4__3__Impl6658);
+            	    pushFollow(FOLLOW_rule__Operation__FeaturesOutputAssignment_4_3_in_rule__Operation__Group_4__3__Impl7002);
             	    rule__Operation__FeaturesOutputAssignment_4_3();
 
             	    state._fsp--;
@@ -8725,7 +9169,7 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop20;
+            	    break loop21;
                 }
             } while (true);
 
@@ -8755,16 +9199,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_4__4"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3327:1: rule__Operation__Group_4__4 : rule__Operation__Group_4__4__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3498:1: rule__Operation__Group_4__4 : rule__Operation__Group_4__4__Impl ;
     public final void rule__Operation__Group_4__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3331:1: ( rule__Operation__Group_4__4__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3332:2: rule__Operation__Group_4__4__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3502:1: ( rule__Operation__Group_4__4__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3503:2: rule__Operation__Group_4__4__Impl
             {
-            pushFollow(FOLLOW_rule__Operation__Group_4__4__Impl_in_rule__Operation__Group_4__46691);
+            pushFollow(FOLLOW_rule__Operation__Group_4__4__Impl_in_rule__Operation__Group_4__47035);
             rule__Operation__Group_4__4__Impl();
 
             state._fsp--;
@@ -8788,20 +9232,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_4__4__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3338:1: rule__Operation__Group_4__4__Impl : ( '}' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3509:1: rule__Operation__Group_4__4__Impl : ( '}' ) ;
     public final void rule__Operation__Group_4__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3342:1: ( ( '}' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3343:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3513:1: ( ( '}' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3514:1: ( '}' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3343:1: ( '}' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3344:1: '}'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3514:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3515:1: '}'
             {
              before(grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_4_4()); 
-            match(input,33,FOLLOW_33_in_rule__Operation__Group_4__4__Impl6719); 
+            match(input,33,FOLLOW_33_in_rule__Operation__Group_4__4__Impl7063); 
              after(grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_4_4()); 
 
             }
@@ -8825,21 +9269,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_5__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3367:1: rule__Operation__Group_5__0 : rule__Operation__Group_5__0__Impl rule__Operation__Group_5__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3538:1: rule__Operation__Group_5__0 : rule__Operation__Group_5__0__Impl rule__Operation__Group_5__1 ;
     public final void rule__Operation__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3371:1: ( rule__Operation__Group_5__0__Impl rule__Operation__Group_5__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3372:2: rule__Operation__Group_5__0__Impl rule__Operation__Group_5__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3542:1: ( rule__Operation__Group_5__0__Impl rule__Operation__Group_5__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3543:2: rule__Operation__Group_5__0__Impl rule__Operation__Group_5__1
             {
-            pushFollow(FOLLOW_rule__Operation__Group_5__0__Impl_in_rule__Operation__Group_5__06760);
+            pushFollow(FOLLOW_rule__Operation__Group_5__0__Impl_in_rule__Operation__Group_5__07104);
             rule__Operation__Group_5__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_5__1_in_rule__Operation__Group_5__06763);
+            pushFollow(FOLLOW_rule__Operation__Group_5__1_in_rule__Operation__Group_5__07107);
             rule__Operation__Group_5__1();
 
             state._fsp--;
@@ -8863,20 +9307,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_5__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3379:1: rule__Operation__Group_5__0__Impl : ( '@exception' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3550:1: rule__Operation__Group_5__0__Impl : ( '@exception' ) ;
     public final void rule__Operation__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3383:1: ( ( '@exception' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3384:1: ( '@exception' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3554:1: ( ( '@exception' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3555:1: ( '@exception' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3384:1: ( '@exception' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3385:1: '@exception'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3555:1: ( '@exception' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3556:1: '@exception'
             {
              before(grammarAccess.getOperationAccess().getExceptionKeyword_5_0()); 
-            match(input,40,FOLLOW_40_in_rule__Operation__Group_5__0__Impl6791); 
+            match(input,40,FOLLOW_40_in_rule__Operation__Group_5__0__Impl7135); 
              after(grammarAccess.getOperationAccess().getExceptionKeyword_5_0()); 
 
             }
@@ -8900,21 +9344,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_5__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3398:1: rule__Operation__Group_5__1 : rule__Operation__Group_5__1__Impl rule__Operation__Group_5__2 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3569:1: rule__Operation__Group_5__1 : rule__Operation__Group_5__1__Impl rule__Operation__Group_5__2 ;
     public final void rule__Operation__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3402:1: ( rule__Operation__Group_5__1__Impl rule__Operation__Group_5__2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3403:2: rule__Operation__Group_5__1__Impl rule__Operation__Group_5__2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3573:1: ( rule__Operation__Group_5__1__Impl rule__Operation__Group_5__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3574:2: rule__Operation__Group_5__1__Impl rule__Operation__Group_5__2
             {
-            pushFollow(FOLLOW_rule__Operation__Group_5__1__Impl_in_rule__Operation__Group_5__16822);
+            pushFollow(FOLLOW_rule__Operation__Group_5__1__Impl_in_rule__Operation__Group_5__17166);
             rule__Operation__Group_5__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_5__2_in_rule__Operation__Group_5__16825);
+            pushFollow(FOLLOW_rule__Operation__Group_5__2_in_rule__Operation__Group_5__17169);
             rule__Operation__Group_5__2();
 
             state._fsp--;
@@ -8938,20 +9382,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_5__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3410:1: rule__Operation__Group_5__1__Impl : ( ':' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3581:1: rule__Operation__Group_5__1__Impl : ( ':' ) ;
     public final void rule__Operation__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3414:1: ( ( ':' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3415:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3585:1: ( ( ':' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3586:1: ( ':' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3415:1: ( ':' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3416:1: ':'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3586:1: ( ':' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3587:1: ':'
             {
              before(grammarAccess.getOperationAccess().getColonKeyword_5_1()); 
-            match(input,25,FOLLOW_25_in_rule__Operation__Group_5__1__Impl6853); 
+            match(input,25,FOLLOW_25_in_rule__Operation__Group_5__1__Impl7197); 
              after(grammarAccess.getOperationAccess().getColonKeyword_5_1()); 
 
             }
@@ -8975,21 +9419,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_5__2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3429:1: rule__Operation__Group_5__2 : rule__Operation__Group_5__2__Impl rule__Operation__Group_5__3 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3600:1: rule__Operation__Group_5__2 : rule__Operation__Group_5__2__Impl rule__Operation__Group_5__3 ;
     public final void rule__Operation__Group_5__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3433:1: ( rule__Operation__Group_5__2__Impl rule__Operation__Group_5__3 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3434:2: rule__Operation__Group_5__2__Impl rule__Operation__Group_5__3
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3604:1: ( rule__Operation__Group_5__2__Impl rule__Operation__Group_5__3 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3605:2: rule__Operation__Group_5__2__Impl rule__Operation__Group_5__3
             {
-            pushFollow(FOLLOW_rule__Operation__Group_5__2__Impl_in_rule__Operation__Group_5__26884);
+            pushFollow(FOLLOW_rule__Operation__Group_5__2__Impl_in_rule__Operation__Group_5__27228);
             rule__Operation__Group_5__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_5__3_in_rule__Operation__Group_5__26887);
+            pushFollow(FOLLOW_rule__Operation__Group_5__3_in_rule__Operation__Group_5__27231);
             rule__Operation__Group_5__3();
 
             state._fsp--;
@@ -9013,26 +9457,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_5__2__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3441:1: rule__Operation__Group_5__2__Impl : ( ( ( rule__Operation__ExceptiontsAssignment_5_2 ) ) ( ( rule__Operation__ExceptiontsAssignment_5_2 )* ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3612:1: rule__Operation__Group_5__2__Impl : ( ( rule__Operation__ExceptiontsAssignment_5_2 ) ) ;
     public final void rule__Operation__Group_5__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3445:1: ( ( ( ( rule__Operation__ExceptiontsAssignment_5_2 ) ) ( ( rule__Operation__ExceptiontsAssignment_5_2 )* ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3446:1: ( ( ( rule__Operation__ExceptiontsAssignment_5_2 ) ) ( ( rule__Operation__ExceptiontsAssignment_5_2 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3616:1: ( ( ( rule__Operation__ExceptiontsAssignment_5_2 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3617:1: ( ( rule__Operation__ExceptiontsAssignment_5_2 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3446:1: ( ( ( rule__Operation__ExceptiontsAssignment_5_2 ) ) ( ( rule__Operation__ExceptiontsAssignment_5_2 )* ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3447:1: ( ( rule__Operation__ExceptiontsAssignment_5_2 ) ) ( ( rule__Operation__ExceptiontsAssignment_5_2 )* )
-            {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3447:1: ( ( rule__Operation__ExceptiontsAssignment_5_2 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3448:1: ( rule__Operation__ExceptiontsAssignment_5_2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3617:1: ( ( rule__Operation__ExceptiontsAssignment_5_2 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3618:1: ( rule__Operation__ExceptiontsAssignment_5_2 )
             {
              before(grammarAccess.getOperationAccess().getExceptiontsAssignment_5_2()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3449:1: ( rule__Operation__ExceptiontsAssignment_5_2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3449:2: rule__Operation__ExceptiontsAssignment_5_2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3619:1: ( rule__Operation__ExceptiontsAssignment_5_2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3619:2: rule__Operation__ExceptiontsAssignment_5_2
             {
-            pushFollow(FOLLOW_rule__Operation__ExceptiontsAssignment_5_2_in_rule__Operation__Group_5__2__Impl6916);
+            pushFollow(FOLLOW_rule__Operation__ExceptiontsAssignment_5_2_in_rule__Operation__Group_5__2__Impl7258);
             rule__Operation__ExceptiontsAssignment_5_2();
 
             state._fsp--;
@@ -9041,46 +9482,6 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
             }
 
              after(grammarAccess.getOperationAccess().getExceptiontsAssignment_5_2()); 
-
-            }
-
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3452:1: ( ( rule__Operation__ExceptiontsAssignment_5_2 )* )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3453:1: ( rule__Operation__ExceptiontsAssignment_5_2 )*
-            {
-             before(grammarAccess.getOperationAccess().getExceptiontsAssignment_5_2()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3454:1: ( rule__Operation__ExceptiontsAssignment_5_2 )*
-            loop21:
-            do {
-                int alt21=2;
-                int LA21_0 = input.LA(1);
-
-                if ( (LA21_0==RULE_ID) ) {
-                    alt21=1;
-                }
-
-
-                switch (alt21) {
-            	case 1 :
-            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3454:2: rule__Operation__ExceptiontsAssignment_5_2
-            	    {
-            	    pushFollow(FOLLOW_rule__Operation__ExceptiontsAssignment_5_2_in_rule__Operation__Group_5__2__Impl6928);
-            	    rule__Operation__ExceptiontsAssignment_5_2();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop21;
-                }
-            } while (true);
-
-             after(grammarAccess.getOperationAccess().getExceptiontsAssignment_5_2()); 
-
-            }
-
 
             }
 
@@ -9103,16 +9504,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_5__3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3465:1: rule__Operation__Group_5__3 : rule__Operation__Group_5__3__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3629:1: rule__Operation__Group_5__3 : rule__Operation__Group_5__3__Impl ;
     public final void rule__Operation__Group_5__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3469:1: ( rule__Operation__Group_5__3__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3470:2: rule__Operation__Group_5__3__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3633:1: ( rule__Operation__Group_5__3__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3634:2: rule__Operation__Group_5__3__Impl
             {
-            pushFollow(FOLLOW_rule__Operation__Group_5__3__Impl_in_rule__Operation__Group_5__36961);
+            pushFollow(FOLLOW_rule__Operation__Group_5__3__Impl_in_rule__Operation__Group_5__37288);
             rule__Operation__Group_5__3__Impl();
 
             state._fsp--;
@@ -9136,40 +9537,47 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_5__3__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3476:1: rule__Operation__Group_5__3__Impl : ( ( rule__Operation__Group_5_3__0 )? ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3640:1: rule__Operation__Group_5__3__Impl : ( ( rule__Operation__Group_5_3__0 )* ) ;
     public final void rule__Operation__Group_5__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3480:1: ( ( ( rule__Operation__Group_5_3__0 )? ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3481:1: ( ( rule__Operation__Group_5_3__0 )? )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3644:1: ( ( ( rule__Operation__Group_5_3__0 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3645:1: ( ( rule__Operation__Group_5_3__0 )* )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3481:1: ( ( rule__Operation__Group_5_3__0 )? )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3482:1: ( rule__Operation__Group_5_3__0 )?
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3645:1: ( ( rule__Operation__Group_5_3__0 )* )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3646:1: ( rule__Operation__Group_5_3__0 )*
             {
              before(grammarAccess.getOperationAccess().getGroup_5_3()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3483:1: ( rule__Operation__Group_5_3__0 )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3647:1: ( rule__Operation__Group_5_3__0 )*
+            loop22:
+            do {
+                int alt22=2;
+                int LA22_0 = input.LA(1);
 
-            if ( (LA22_0==45) ) {
-                alt22=1;
-            }
-            switch (alt22) {
-                case 1 :
-                    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3483:2: rule__Operation__Group_5_3__0
-                    {
-                    pushFollow(FOLLOW_rule__Operation__Group_5_3__0_in_rule__Operation__Group_5__3__Impl6988);
-                    rule__Operation__Group_5_3__0();
-
-                    state._fsp--;
+                if ( (LA22_0==46) ) {
+                    alt22=1;
+                }
 
 
-                    }
-                    break;
+                switch (alt22) {
+            	case 1 :
+            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3647:2: rule__Operation__Group_5_3__0
+            	    {
+            	    pushFollow(FOLLOW_rule__Operation__Group_5_3__0_in_rule__Operation__Group_5__3__Impl7315);
+            	    rule__Operation__Group_5_3__0();
 
-            }
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop22;
+                }
+            } while (true);
 
              after(grammarAccess.getOperationAccess().getGroup_5_3()); 
 
@@ -9194,21 +9602,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_5_3__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3501:1: rule__Operation__Group_5_3__0 : rule__Operation__Group_5_3__0__Impl rule__Operation__Group_5_3__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3665:1: rule__Operation__Group_5_3__0 : rule__Operation__Group_5_3__0__Impl rule__Operation__Group_5_3__1 ;
     public final void rule__Operation__Group_5_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3505:1: ( rule__Operation__Group_5_3__0__Impl rule__Operation__Group_5_3__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3506:2: rule__Operation__Group_5_3__0__Impl rule__Operation__Group_5_3__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3669:1: ( rule__Operation__Group_5_3__0__Impl rule__Operation__Group_5_3__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3670:2: rule__Operation__Group_5_3__0__Impl rule__Operation__Group_5_3__1
             {
-            pushFollow(FOLLOW_rule__Operation__Group_5_3__0__Impl_in_rule__Operation__Group_5_3__07027);
+            pushFollow(FOLLOW_rule__Operation__Group_5_3__0__Impl_in_rule__Operation__Group_5_3__07354);
             rule__Operation__Group_5_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Operation__Group_5_3__1_in_rule__Operation__Group_5_3__07030);
+            pushFollow(FOLLOW_rule__Operation__Group_5_3__1_in_rule__Operation__Group_5_3__07357);
             rule__Operation__Group_5_3__1();
 
             state._fsp--;
@@ -9232,20 +9640,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_5_3__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3513:1: rule__Operation__Group_5_3__0__Impl : ( ',' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3677:1: rule__Operation__Group_5_3__0__Impl : ( ',' ) ;
     public final void rule__Operation__Group_5_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3517:1: ( ( ',' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3518:1: ( ',' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3681:1: ( ( ',' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3682:1: ( ',' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3518:1: ( ',' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3519:1: ','
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3682:1: ( ',' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3683:1: ','
             {
              before(grammarAccess.getOperationAccess().getCommaKeyword_5_3_0()); 
-            match(input,45,FOLLOW_45_in_rule__Operation__Group_5_3__0__Impl7058); 
+            match(input,46,FOLLOW_46_in_rule__Operation__Group_5_3__0__Impl7385); 
              after(grammarAccess.getOperationAccess().getCommaKeyword_5_3_0()); 
 
             }
@@ -9269,16 +9677,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_5_3__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3532:1: rule__Operation__Group_5_3__1 : rule__Operation__Group_5_3__1__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3696:1: rule__Operation__Group_5_3__1 : rule__Operation__Group_5_3__1__Impl ;
     public final void rule__Operation__Group_5_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3536:1: ( rule__Operation__Group_5_3__1__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3537:2: rule__Operation__Group_5_3__1__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3700:1: ( rule__Operation__Group_5_3__1__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3701:2: rule__Operation__Group_5_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Operation__Group_5_3__1__Impl_in_rule__Operation__Group_5_3__17089);
+            pushFollow(FOLLOW_rule__Operation__Group_5_3__1__Impl_in_rule__Operation__Group_5_3__17416);
             rule__Operation__Group_5_3__1__Impl();
 
             state._fsp--;
@@ -9302,26 +9710,23 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__Group_5_3__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3543:1: rule__Operation__Group_5_3__1__Impl : ( ( ( rule__Operation__ExceptiontsAssignment_5_3_1 ) ) ( ( rule__Operation__ExceptiontsAssignment_5_3_1 )* ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3707:1: rule__Operation__Group_5_3__1__Impl : ( ( rule__Operation__ExceptiontsAssignment_5_3_1 ) ) ;
     public final void rule__Operation__Group_5_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3547:1: ( ( ( ( rule__Operation__ExceptiontsAssignment_5_3_1 ) ) ( ( rule__Operation__ExceptiontsAssignment_5_3_1 )* ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3548:1: ( ( ( rule__Operation__ExceptiontsAssignment_5_3_1 ) ) ( ( rule__Operation__ExceptiontsAssignment_5_3_1 )* ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3711:1: ( ( ( rule__Operation__ExceptiontsAssignment_5_3_1 ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3712:1: ( ( rule__Operation__ExceptiontsAssignment_5_3_1 ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3548:1: ( ( ( rule__Operation__ExceptiontsAssignment_5_3_1 ) ) ( ( rule__Operation__ExceptiontsAssignment_5_3_1 )* ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3549:1: ( ( rule__Operation__ExceptiontsAssignment_5_3_1 ) ) ( ( rule__Operation__ExceptiontsAssignment_5_3_1 )* )
-            {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3549:1: ( ( rule__Operation__ExceptiontsAssignment_5_3_1 ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3550:1: ( rule__Operation__ExceptiontsAssignment_5_3_1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3712:1: ( ( rule__Operation__ExceptiontsAssignment_5_3_1 ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3713:1: ( rule__Operation__ExceptiontsAssignment_5_3_1 )
             {
              before(grammarAccess.getOperationAccess().getExceptiontsAssignment_5_3_1()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3551:1: ( rule__Operation__ExceptiontsAssignment_5_3_1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3551:2: rule__Operation__ExceptiontsAssignment_5_3_1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3714:1: ( rule__Operation__ExceptiontsAssignment_5_3_1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3714:2: rule__Operation__ExceptiontsAssignment_5_3_1
             {
-            pushFollow(FOLLOW_rule__Operation__ExceptiontsAssignment_5_3_1_in_rule__Operation__Group_5_3__1__Impl7118);
+            pushFollow(FOLLOW_rule__Operation__ExceptiontsAssignment_5_3_1_in_rule__Operation__Group_5_3__1__Impl7443);
             rule__Operation__ExceptiontsAssignment_5_3_1();
 
             state._fsp--;
@@ -9330,46 +9735,6 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
             }
 
              after(grammarAccess.getOperationAccess().getExceptiontsAssignment_5_3_1()); 
-
-            }
-
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3554:1: ( ( rule__Operation__ExceptiontsAssignment_5_3_1 )* )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3555:1: ( rule__Operation__ExceptiontsAssignment_5_3_1 )*
-            {
-             before(grammarAccess.getOperationAccess().getExceptiontsAssignment_5_3_1()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3556:1: ( rule__Operation__ExceptiontsAssignment_5_3_1 )*
-            loop23:
-            do {
-                int alt23=2;
-                int LA23_0 = input.LA(1);
-
-                if ( (LA23_0==RULE_ID) ) {
-                    alt23=1;
-                }
-
-
-                switch (alt23) {
-            	case 1 :
-            	    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3556:2: rule__Operation__ExceptiontsAssignment_5_3_1
-            	    {
-            	    pushFollow(FOLLOW_rule__Operation__ExceptiontsAssignment_5_3_1_in_rule__Operation__Group_5_3__1__Impl7130);
-            	    rule__Operation__ExceptiontsAssignment_5_3_1();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop23;
-                }
-            } while (true);
-
-             after(grammarAccess.getOperationAccess().getExceptiontsAssignment_5_3_1()); 
-
-            }
-
 
             }
 
@@ -9392,21 +9757,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Event__Group__0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3571:1: rule__Event__Group__0 : rule__Event__Group__0__Impl rule__Event__Group__1 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3728:1: rule__Event__Group__0 : rule__Event__Group__0__Impl rule__Event__Group__1 ;
     public final void rule__Event__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3575:1: ( rule__Event__Group__0__Impl rule__Event__Group__1 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3576:2: rule__Event__Group__0__Impl rule__Event__Group__1
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3732:1: ( rule__Event__Group__0__Impl rule__Event__Group__1 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3733:2: rule__Event__Group__0__Impl rule__Event__Group__1
             {
-            pushFollow(FOLLOW_rule__Event__Group__0__Impl_in_rule__Event__Group__07167);
+            pushFollow(FOLLOW_rule__Event__Group__0__Impl_in_rule__Event__Group__07477);
             rule__Event__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Event__Group__1_in_rule__Event__Group__07170);
+            pushFollow(FOLLOW_rule__Event__Group__1_in_rule__Event__Group__07480);
             rule__Event__Group__1();
 
             state._fsp--;
@@ -9430,20 +9795,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Event__Group__0__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3583:1: rule__Event__Group__0__Impl : ( '@event' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3740:1: rule__Event__Group__0__Impl : ( '@event' ) ;
     public final void rule__Event__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3587:1: ( ( '@event' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3588:1: ( '@event' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3744:1: ( ( '@event' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3745:1: ( '@event' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3588:1: ( '@event' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3589:1: '@event'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3745:1: ( '@event' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3746:1: '@event'
             {
              before(grammarAccess.getEventAccess().getEventKeyword_0()); 
-            match(input,46,FOLLOW_46_in_rule__Event__Group__0__Impl7198); 
+            match(input,47,FOLLOW_47_in_rule__Event__Group__0__Impl7508); 
              after(grammarAccess.getEventAccess().getEventKeyword_0()); 
 
             }
@@ -9467,21 +9832,21 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Event__Group__1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3602:1: rule__Event__Group__1 : rule__Event__Group__1__Impl rule__Event__Group__2 ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3759:1: rule__Event__Group__1 : rule__Event__Group__1__Impl rule__Event__Group__2 ;
     public final void rule__Event__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3606:1: ( rule__Event__Group__1__Impl rule__Event__Group__2 )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3607:2: rule__Event__Group__1__Impl rule__Event__Group__2
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3763:1: ( rule__Event__Group__1__Impl rule__Event__Group__2 )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3764:2: rule__Event__Group__1__Impl rule__Event__Group__2
             {
-            pushFollow(FOLLOW_rule__Event__Group__1__Impl_in_rule__Event__Group__17229);
+            pushFollow(FOLLOW_rule__Event__Group__1__Impl_in_rule__Event__Group__17539);
             rule__Event__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Event__Group__2_in_rule__Event__Group__17232);
+            pushFollow(FOLLOW_rule__Event__Group__2_in_rule__Event__Group__17542);
             rule__Event__Group__2();
 
             state._fsp--;
@@ -9505,20 +9870,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Event__Group__1__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3614:1: rule__Event__Group__1__Impl : ( '{' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3771:1: rule__Event__Group__1__Impl : ( '{' ) ;
     public final void rule__Event__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3618:1: ( ( '{' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3619:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3775:1: ( ( '{' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3776:1: ( '{' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3619:1: ( '{' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3620:1: '{'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3776:1: ( '{' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3777:1: '{'
             {
              before(grammarAccess.getEventAccess().getLeftCurlyBracketKeyword_1()); 
-            match(input,32,FOLLOW_32_in_rule__Event__Group__1__Impl7260); 
+            match(input,32,FOLLOW_32_in_rule__Event__Group__1__Impl7570); 
              after(grammarAccess.getEventAccess().getLeftCurlyBracketKeyword_1()); 
 
             }
@@ -9542,16 +9907,16 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Event__Group__2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3633:1: rule__Event__Group__2 : rule__Event__Group__2__Impl ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3790:1: rule__Event__Group__2 : rule__Event__Group__2__Impl ;
     public final void rule__Event__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3637:1: ( rule__Event__Group__2__Impl )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3638:2: rule__Event__Group__2__Impl
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3794:1: ( rule__Event__Group__2__Impl )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3795:2: rule__Event__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Event__Group__2__Impl_in_rule__Event__Group__27291);
+            pushFollow(FOLLOW_rule__Event__Group__2__Impl_in_rule__Event__Group__27601);
             rule__Event__Group__2__Impl();
 
             state._fsp--;
@@ -9575,20 +9940,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Event__Group__2__Impl"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3644:1: rule__Event__Group__2__Impl : ( '}' ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3801:1: rule__Event__Group__2__Impl : ( '}' ) ;
     public final void rule__Event__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3648:1: ( ( '}' ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3649:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3805:1: ( ( '}' ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3806:1: ( '}' )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3649:1: ( '}' )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3650:1: '}'
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3806:1: ( '}' )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3807:1: '}'
             {
              before(grammarAccess.getEventAccess().getRightCurlyBracketKeyword_2()); 
-            match(input,33,FOLLOW_33_in_rule__Event__Group__2__Impl7319); 
+            match(input,33,FOLLOW_33_in_rule__Event__Group__2__Impl7629); 
              after(grammarAccess.getEventAccess().getRightCurlyBracketKeyword_2()); 
 
             }
@@ -9612,20 +9977,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Architecture__NameAssignment_2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3670:1: rule__Architecture__NameAssignment_2 : ( ruleQualifiedName ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3827:1: rule__Architecture__NameAssignment_2 : ( ruleQualifiedName ) ;
     public final void rule__Architecture__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3674:1: ( ( ruleQualifiedName ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3675:1: ( ruleQualifiedName )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3831:1: ( ( ruleQualifiedName ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3832:1: ( ruleQualifiedName )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3675:1: ( ruleQualifiedName )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3676:1: ruleQualifiedName
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3832:1: ( ruleQualifiedName )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3833:1: ruleQualifiedName
             {
              before(grammarAccess.getArchitectureAccess().getNameQualifiedNameParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Architecture__NameAssignment_27361);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Architecture__NameAssignment_27671);
             ruleQualifiedName();
 
             state._fsp--;
@@ -9653,20 +10018,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Architecture__ModuleAssignment_3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3685:1: rule__Architecture__ModuleAssignment_3 : ( ruleModule ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3842:1: rule__Architecture__ModuleAssignment_3 : ( ruleModule ) ;
     public final void rule__Architecture__ModuleAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3689:1: ( ( ruleModule ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3690:1: ( ruleModule )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3846:1: ( ( ruleModule ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3847:1: ( ruleModule )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3690:1: ( ruleModule )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3691:1: ruleModule
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3847:1: ( ruleModule )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3848:1: ruleModule
             {
              before(grammarAccess.getArchitectureAccess().getModuleModuleParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleModule_in_rule__Architecture__ModuleAssignment_37392);
+            pushFollow(FOLLOW_ruleModule_in_rule__Architecture__ModuleAssignment_37702);
             ruleModule();
 
             state._fsp--;
@@ -9694,20 +10059,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__NameAssignment_2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3700:1: rule__Module__NameAssignment_2 : ( RULE_ID ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3857:1: rule__Module__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__Module__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3704:1: ( ( RULE_ID ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3705:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3861:1: ( ( RULE_ID ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3862:1: ( RULE_ID )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3705:1: ( RULE_ID )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3706:1: RULE_ID
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3862:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3863:1: RULE_ID
             {
              before(grammarAccess.getModuleAccess().getNameIDTerminalRuleCall_2_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Module__NameAssignment_27423); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Module__NameAssignment_27733); 
              after(grammarAccess.getModuleAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
@@ -9731,20 +10096,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__VersionAssignment_5"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3715:1: rule__Module__VersionAssignment_5 : ( ruleVersion ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3872:1: rule__Module__VersionAssignment_5 : ( ruleVersion ) ;
     public final void rule__Module__VersionAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3719:1: ( ( ruleVersion ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3720:1: ( ruleVersion )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3876:1: ( ( ruleVersion ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3877:1: ( ruleVersion )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3720:1: ( ruleVersion )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3721:1: ruleVersion
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3877:1: ( ruleVersion )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3878:1: ruleVersion
             {
              before(grammarAccess.getModuleAccess().getVersionVersionParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_ruleVersion_in_rule__Module__VersionAssignment_57454);
+            pushFollow(FOLLOW_ruleVersion_in_rule__Module__VersionAssignment_57764);
             ruleVersion();
 
             state._fsp--;
@@ -9772,20 +10137,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__ImportsAssignment_6"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3730:1: rule__Module__ImportsAssignment_6 : ( ruleImport ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3887:1: rule__Module__ImportsAssignment_6 : ( ruleImport ) ;
     public final void rule__Module__ImportsAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3734:1: ( ( ruleImport ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3735:1: ( ruleImport )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3891:1: ( ( ruleImport ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3892:1: ( ruleImport )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3735:1: ( ruleImport )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3736:1: ruleImport
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3892:1: ( ruleImport )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3893:1: ruleImport
             {
              before(grammarAccess.getModuleAccess().getImportsImportParserRuleCall_6_0()); 
-            pushFollow(FOLLOW_ruleImport_in_rule__Module__ImportsAssignment_67485);
+            pushFollow(FOLLOW_ruleImport_in_rule__Module__ImportsAssignment_67795);
             ruleImport();
 
             state._fsp--;
@@ -9813,20 +10178,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Module__ModelAssignment_7"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3745:1: rule__Module__ModelAssignment_7 : ( ruleModel ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3902:1: rule__Module__ModelAssignment_7 : ( ruleModel ) ;
     public final void rule__Module__ModelAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3749:1: ( ( ruleModel ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3750:1: ( ruleModel )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3906:1: ( ( ruleModel ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3907:1: ( ruleModel )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3750:1: ( ruleModel )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3751:1: ruleModel
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3907:1: ( ruleModel )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3908:1: ruleModel
             {
              before(grammarAccess.getModuleAccess().getModelModelParserRuleCall_7_0()); 
-            pushFollow(FOLLOW_ruleModel_in_rule__Module__ModelAssignment_77516);
+            pushFollow(FOLLOW_ruleModel_in_rule__Module__ModelAssignment_77826);
             ruleModel();
 
             state._fsp--;
@@ -9853,26 +10218,67 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Module__ModelAssignment_7"
 
 
-    // $ANTLR start "rule__Module__ServicesAssignment_8"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3760:1: rule__Module__ServicesAssignment_8 : ( ruleService ) ;
-    public final void rule__Module__ServicesAssignment_8() throws RecognitionException {
+    // $ANTLR start "rule__Module__ExceptionsAssignment_8"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3917:1: rule__Module__ExceptionsAssignment_8 : ( ruleExceptions ) ;
+    public final void rule__Module__ExceptionsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3764:1: ( ( ruleService ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3765:1: ( ruleService )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3921:1: ( ( ruleExceptions ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3922:1: ( ruleExceptions )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3765:1: ( ruleService )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3766:1: ruleService
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3922:1: ( ruleExceptions )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3923:1: ruleExceptions
             {
-             before(grammarAccess.getModuleAccess().getServicesServiceParserRuleCall_8_0()); 
-            pushFollow(FOLLOW_ruleService_in_rule__Module__ServicesAssignment_87547);
+             before(grammarAccess.getModuleAccess().getExceptionsExceptionsParserRuleCall_8_0()); 
+            pushFollow(FOLLOW_ruleExceptions_in_rule__Module__ExceptionsAssignment_87857);
+            ruleExceptions();
+
+            state._fsp--;
+
+             after(grammarAccess.getModuleAccess().getExceptionsExceptionsParserRuleCall_8_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Module__ExceptionsAssignment_8"
+
+
+    // $ANTLR start "rule__Module__ServicesAssignment_9"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3932:1: rule__Module__ServicesAssignment_9 : ( ruleService ) ;
+    public final void rule__Module__ServicesAssignment_9() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3936:1: ( ( ruleService ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3937:1: ( ruleService )
+            {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3937:1: ( ruleService )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3938:1: ruleService
+            {
+             before(grammarAccess.getModuleAccess().getServicesServiceParserRuleCall_9_0()); 
+            pushFollow(FOLLOW_ruleService_in_rule__Module__ServicesAssignment_97888);
             ruleService();
 
             state._fsp--;
 
-             after(grammarAccess.getModuleAccess().getServicesServiceParserRuleCall_8_0()); 
+             after(grammarAccess.getModuleAccess().getServicesServiceParserRuleCall_9_0()); 
 
             }
 
@@ -9891,29 +10297,29 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Module__ServicesAssignment_8"
+    // $ANTLR end "rule__Module__ServicesAssignment_9"
 
 
-    // $ANTLR start "rule__Module__EventAssignment_9"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3775:1: rule__Module__EventAssignment_9 : ( ruleEvent ) ;
-    public final void rule__Module__EventAssignment_9() throws RecognitionException {
+    // $ANTLR start "rule__Module__EventAssignment_10"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3947:1: rule__Module__EventAssignment_10 : ( ruleEvent ) ;
+    public final void rule__Module__EventAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3779:1: ( ( ruleEvent ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3780:1: ( ruleEvent )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3951:1: ( ( ruleEvent ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3952:1: ( ruleEvent )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3780:1: ( ruleEvent )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3781:1: ruleEvent
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3952:1: ( ruleEvent )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3953:1: ruleEvent
             {
-             before(grammarAccess.getModuleAccess().getEventEventParserRuleCall_9_0()); 
-            pushFollow(FOLLOW_ruleEvent_in_rule__Module__EventAssignment_97578);
+             before(grammarAccess.getModuleAccess().getEventEventParserRuleCall_10_0()); 
+            pushFollow(FOLLOW_ruleEvent_in_rule__Module__EventAssignment_107919);
             ruleEvent();
 
             state._fsp--;
 
-             after(grammarAccess.getModuleAccess().getEventEventParserRuleCall_9_0()); 
+             after(grammarAccess.getModuleAccess().getEventEventParserRuleCall_10_0()); 
 
             }
 
@@ -9932,24 +10338,24 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Module__EventAssignment_9"
+    // $ANTLR end "rule__Module__EventAssignment_10"
 
 
     // $ANTLR start "rule__Import__ImportedNamespaceAssignment_2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3790:1: rule__Import__ImportedNamespaceAssignment_2 : ( ruleQualifiedName ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3962:1: rule__Import__ImportedNamespaceAssignment_2 : ( ruleQualifiedName ) ;
     public final void rule__Import__ImportedNamespaceAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3794:1: ( ( ruleQualifiedName ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3795:1: ( ruleQualifiedName )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3966:1: ( ( ruleQualifiedName ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3967:1: ( ruleQualifiedName )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3795:1: ( ruleQualifiedName )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3796:1: ruleQualifiedName
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3967:1: ( ruleQualifiedName )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3968:1: ruleQualifiedName
             {
              before(grammarAccess.getImportAccess().getImportedNamespaceQualifiedNameParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Import__ImportedNamespaceAssignment_27609);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Import__ImportedNamespaceAssignment_27950);
             ruleQualifiedName();
 
             state._fsp--;
@@ -9977,20 +10383,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__EntitiesAssignment_2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3805:1: rule__Model__EntitiesAssignment_2 : ( ruleEntities ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3977:1: rule__Model__EntitiesAssignment_2 : ( ruleEntities ) ;
     public final void rule__Model__EntitiesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3809:1: ( ( ruleEntities ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3810:1: ( ruleEntities )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3981:1: ( ( ruleEntities ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3982:1: ( ruleEntities )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3810:1: ( ruleEntities )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3811:1: ruleEntities
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3982:1: ( ruleEntities )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3983:1: ruleEntities
             {
              before(grammarAccess.getModelAccess().getEntitiesEntitiesParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleEntities_in_rule__Model__EntitiesAssignment_27640);
+            pushFollow(FOLLOW_ruleEntities_in_rule__Model__EntitiesAssignment_27981);
             ruleEntities();
 
             state._fsp--;
@@ -10018,20 +10424,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Comment__ValueAssignment"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3820:1: rule__Comment__ValueAssignment : ( RULE_COMMENTS ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3992:1: rule__Comment__ValueAssignment : ( RULE_COMMENTS ) ;
     public final void rule__Comment__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3824:1: ( ( RULE_COMMENTS ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3825:1: ( RULE_COMMENTS )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3996:1: ( ( RULE_COMMENTS ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3997:1: ( RULE_COMMENTS )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3825:1: ( RULE_COMMENTS )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3826:1: RULE_COMMENTS
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3997:1: ( RULE_COMMENTS )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3998:1: RULE_COMMENTS
             {
              before(grammarAccess.getCommentAccess().getValueCOMMENTSTerminalRuleCall_0()); 
-            match(input,RULE_COMMENTS,FOLLOW_RULE_COMMENTS_in_rule__Comment__ValueAssignment7671); 
+            match(input,RULE_COMMENTS,FOLLOW_RULE_COMMENTS_in_rule__Comment__ValueAssignment8012); 
              after(grammarAccess.getCommentAccess().getValueCOMMENTSTerminalRuleCall_0()); 
 
             }
@@ -10055,20 +10461,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum__NameAssignment_1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3835:1: rule__Enum__NameAssignment_1 : ( RULE_ID ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4007:1: rule__Enum__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Enum__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3839:1: ( ( RULE_ID ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3840:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4011:1: ( ( RULE_ID ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4012:1: ( RULE_ID )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3840:1: ( RULE_ID )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3841:1: RULE_ID
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4012:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4013:1: RULE_ID
             {
              before(grammarAccess.getEnumAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Enum__NameAssignment_17702); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Enum__NameAssignment_18043); 
              after(grammarAccess.getEnumAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -10092,20 +10498,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Enum__FeaturesAssignment_3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3850:1: rule__Enum__FeaturesAssignment_3 : ( RULE_ID ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4022:1: rule__Enum__FeaturesAssignment_3 : ( RULE_ID ) ;
     public final void rule__Enum__FeaturesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3854:1: ( ( RULE_ID ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3855:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4026:1: ( ( RULE_ID ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4027:1: ( RULE_ID )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3855:1: ( RULE_ID )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3856:1: RULE_ID
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4027:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4028:1: RULE_ID
             {
              before(grammarAccess.getEnumAccess().getFeaturesIDTerminalRuleCall_3_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Enum__FeaturesAssignment_37733); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Enum__FeaturesAssignment_38074); 
              after(grammarAccess.getEnumAccess().getFeaturesIDTerminalRuleCall_3_0()); 
 
             }
@@ -10129,20 +10535,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__NameAssignment_1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3865:1: rule__Entity__NameAssignment_1 : ( RULE_ID ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4037:1: rule__Entity__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Entity__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3869:1: ( ( RULE_ID ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3870:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4041:1: ( ( RULE_ID ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4042:1: ( RULE_ID )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3870:1: ( RULE_ID )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3871:1: RULE_ID
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4042:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4043:1: RULE_ID
             {
              before(grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Entity__NameAssignment_17764); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Entity__NameAssignment_18105); 
              after(grammarAccess.getEntityAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -10166,20 +10572,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entity__FeaturesAssignment_3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3880:1: rule__Entity__FeaturesAssignment_3 : ( ruleFeature ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4052:1: rule__Entity__FeaturesAssignment_3 : ( ruleFeature ) ;
     public final void rule__Entity__FeaturesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3884:1: ( ( ruleFeature ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3885:1: ( ruleFeature )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4056:1: ( ( ruleFeature ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4057:1: ( ruleFeature )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3885:1: ( ruleFeature )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3886:1: ruleFeature
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4057:1: ( ruleFeature )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4058:1: ruleFeature
             {
              before(grammarAccess.getEntityAccess().getFeaturesFeatureParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleFeature_in_rule__Entity__FeaturesAssignment_37795);
+            pushFollow(FOLLOW_ruleFeature_in_rule__Entity__FeaturesAssignment_38136);
             ruleFeature();
 
             state._fsp--;
@@ -10207,20 +10613,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature__FeatureCommentAssignment_0"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3895:1: rule__Feature__FeatureCommentAssignment_0 : ( ruleComment ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4067:1: rule__Feature__FeatureCommentAssignment_0 : ( ruleComment ) ;
     public final void rule__Feature__FeatureCommentAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3899:1: ( ( ruleComment ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3900:1: ( ruleComment )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4071:1: ( ( ruleComment ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4072:1: ( ruleComment )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3900:1: ( ruleComment )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3901:1: ruleComment
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4072:1: ( ruleComment )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4073:1: ruleComment
             {
              before(grammarAccess.getFeatureAccess().getFeatureCommentCommentParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleComment_in_rule__Feature__FeatureCommentAssignment_07826);
+            pushFollow(FOLLOW_ruleComment_in_rule__Feature__FeatureCommentAssignment_08167);
             ruleComment();
 
             state._fsp--;
@@ -10248,20 +10654,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature__NameAssignment_1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3910:1: rule__Feature__NameAssignment_1 : ( RULE_ID ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4082:1: rule__Feature__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Feature__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3914:1: ( ( RULE_ID ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3915:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4086:1: ( ( RULE_ID ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4087:1: ( RULE_ID )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3915:1: ( RULE_ID )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3916:1: RULE_ID
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4087:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4088:1: RULE_ID
             {
              before(grammarAccess.getFeatureAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Feature__NameAssignment_17857); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Feature__NameAssignment_18198); 
              after(grammarAccess.getFeatureAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -10285,20 +10691,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Feature__TypeAssignment_3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3925:1: rule__Feature__TypeAssignment_3 : ( ruleFeatureType ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4097:1: rule__Feature__TypeAssignment_3 : ( ruleFeatureType ) ;
     public final void rule__Feature__TypeAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3929:1: ( ( ruleFeatureType ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3930:1: ( ruleFeatureType )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4101:1: ( ( ruleFeatureType ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4102:1: ( ruleFeatureType )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3930:1: ( ruleFeatureType )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3931:1: ruleFeatureType
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4102:1: ( ruleFeatureType )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4103:1: ruleFeatureType
             {
              before(grammarAccess.getFeatureAccess().getTypeFeatureTypeParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleFeatureType_in_rule__Feature__TypeAssignment_37888);
+            pushFollow(FOLLOW_ruleFeatureType_in_rule__Feature__TypeAssignment_38229);
             ruleFeatureType();
 
             state._fsp--;
@@ -10326,24 +10732,24 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__EntitiesFeature__TypeAssignment"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3940:1: rule__EntitiesFeature__TypeAssignment : ( ( ruleQualifiedName ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4112:1: rule__EntitiesFeature__TypeAssignment : ( ( ruleQualifiedName ) ) ;
     public final void rule__EntitiesFeature__TypeAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3944:1: ( ( ( ruleQualifiedName ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3945:1: ( ( ruleQualifiedName ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4116:1: ( ( ( ruleQualifiedName ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4117:1: ( ( ruleQualifiedName ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3945:1: ( ( ruleQualifiedName ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3946:1: ( ruleQualifiedName )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4117:1: ( ( ruleQualifiedName ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4118:1: ( ruleQualifiedName )
             {
              before(grammarAccess.getEntitiesFeatureAccess().getTypeEntitiesCrossReference_0()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3947:1: ( ruleQualifiedName )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3948:1: ruleQualifiedName
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4119:1: ( ruleQualifiedName )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4120:1: ruleQualifiedName
             {
              before(grammarAccess.getEntitiesFeatureAccess().getTypeEntitiesQualifiedNameParserRuleCall_0_1()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__EntitiesFeature__TypeAssignment7923);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__EntitiesFeature__TypeAssignment8264);
             ruleQualifiedName();
 
             state._fsp--;
@@ -10375,20 +10781,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__PrimitiveFeature__TypeAssignment"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3959:1: rule__PrimitiveFeature__TypeAssignment : ( rulePrimitiveType ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4131:1: rule__PrimitiveFeature__TypeAssignment : ( rulePrimitiveType ) ;
     public final void rule__PrimitiveFeature__TypeAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3963:1: ( ( rulePrimitiveType ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3964:1: ( rulePrimitiveType )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4135:1: ( ( rulePrimitiveType ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4136:1: ( rulePrimitiveType )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3964:1: ( rulePrimitiveType )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3965:1: rulePrimitiveType
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4136:1: ( rulePrimitiveType )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4137:1: rulePrimitiveType
             {
              before(grammarAccess.getPrimitiveFeatureAccess().getTypePrimitiveTypeEnumRuleCall_0()); 
-            pushFollow(FOLLOW_rulePrimitiveType_in_rule__PrimitiveFeature__TypeAssignment7958);
+            pushFollow(FOLLOW_rulePrimitiveType_in_rule__PrimitiveFeature__TypeAssignment8299);
             rulePrimitiveType();
 
             state._fsp--;
@@ -10416,20 +10822,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__GenericListFeature__TypeAssignment_2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3974:1: rule__GenericListFeature__TypeAssignment_2 : ( ruleFeatureType ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4146:1: rule__GenericListFeature__TypeAssignment_2 : ( ruleFeatureType ) ;
     public final void rule__GenericListFeature__TypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3978:1: ( ( ruleFeatureType ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3979:1: ( ruleFeatureType )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4150:1: ( ( ruleFeatureType ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4151:1: ( ruleFeatureType )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3979:1: ( ruleFeatureType )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3980:1: ruleFeatureType
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4151:1: ( ruleFeatureType )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4152:1: ruleFeatureType
             {
              before(grammarAccess.getGenericListFeatureAccess().getTypeFeatureTypeParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleFeatureType_in_rule__GenericListFeature__TypeAssignment_27989);
+            pushFollow(FOLLOW_ruleFeatureType_in_rule__GenericListFeature__TypeAssignment_28330);
             ruleFeatureType();
 
             state._fsp--;
@@ -10456,63 +10862,26 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__GenericListFeature__TypeAssignment_2"
 
 
-    // $ANTLR start "rule__Service__NameAssignment_1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3989:1: rule__Service__NameAssignment_1 : ( RULE_ID ) ;
-    public final void rule__Service__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Exceptions__ExceptionsAssignment_2"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4161:1: rule__Exceptions__ExceptionsAssignment_2 : ( ruleException ) ;
+    public final void rule__Exceptions__ExceptionsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3993:1: ( ( RULE_ID ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3994:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4165:1: ( ( ruleException ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4166:1: ( ruleException )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3994:1: ( RULE_ID )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:3995:1: RULE_ID
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4166:1: ( ruleException )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4167:1: ruleException
             {
-             before(grammarAccess.getServiceAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Service__NameAssignment_18020); 
-             after(grammarAccess.getServiceAccess().getNameIDTerminalRuleCall_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Service__NameAssignment_1"
-
-
-    // $ANTLR start "rule__Service__ExceptionsAssignment_3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4004:1: rule__Service__ExceptionsAssignment_3 : ( ruleException ) ;
-    public final void rule__Service__ExceptionsAssignment_3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4008:1: ( ( ruleException ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4009:1: ( ruleException )
-            {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4009:1: ( ruleException )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4010:1: ruleException
-            {
-             before(grammarAccess.getServiceAccess().getExceptionsExceptionParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleException_in_rule__Service__ExceptionsAssignment_38051);
+             before(grammarAccess.getExceptionsAccess().getExceptionsExceptionParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleException_in_rule__Exceptions__ExceptionsAssignment_28361);
             ruleException();
 
             state._fsp--;
 
-             after(grammarAccess.getServiceAccess().getExceptionsExceptionParserRuleCall_3_0()); 
+             after(grammarAccess.getExceptionsAccess().getExceptionsExceptionParserRuleCall_2_0()); 
 
             }
 
@@ -10531,65 +10900,24 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Service__ExceptionsAssignment_3"
-
-
-    // $ANTLR start "rule__Service__OperationsAssignment_4"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4019:1: rule__Service__OperationsAssignment_4 : ( ruleOperation ) ;
-    public final void rule__Service__OperationsAssignment_4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4023:1: ( ( ruleOperation ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4024:1: ( ruleOperation )
-            {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4024:1: ( ruleOperation )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4025:1: ruleOperation
-            {
-             before(grammarAccess.getServiceAccess().getOperationsOperationParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_ruleOperation_in_rule__Service__OperationsAssignment_48082);
-            ruleOperation();
-
-            state._fsp--;
-
-             after(grammarAccess.getServiceAccess().getOperationsOperationParserRuleCall_4_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Service__OperationsAssignment_4"
+    // $ANTLR end "rule__Exceptions__ExceptionsAssignment_2"
 
 
     // $ANTLR start "rule__Exception__NameAssignment_1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4034:1: rule__Exception__NameAssignment_1 : ( RULE_ID ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4176:1: rule__Exception__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Exception__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4038:1: ( ( RULE_ID ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4039:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4180:1: ( ( RULE_ID ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4181:1: ( RULE_ID )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4039:1: ( RULE_ID )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4040:1: RULE_ID
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4181:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4182:1: RULE_ID
             {
              before(grammarAccess.getExceptionAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Exception__NameAssignment_18113); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Exception__NameAssignment_18392); 
              after(grammarAccess.getExceptionAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -10613,20 +10941,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Exception__MsgAssignment_5"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4049:1: rule__Exception__MsgAssignment_5 : ( RULE_STRING ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4191:1: rule__Exception__MsgAssignment_5 : ( RULE_STRING ) ;
     public final void rule__Exception__MsgAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4053:1: ( ( RULE_STRING ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4054:1: ( RULE_STRING )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4195:1: ( ( RULE_STRING ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4196:1: ( RULE_STRING )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4054:1: ( RULE_STRING )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4055:1: RULE_STRING
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4196:1: ( RULE_STRING )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4197:1: RULE_STRING
             {
              before(grammarAccess.getExceptionAccess().getMsgSTRINGTerminalRuleCall_5_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Exception__MsgAssignment_58144); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Exception__MsgAssignment_58423); 
              after(grammarAccess.getExceptionAccess().getMsgSTRINGTerminalRuleCall_5_0()); 
 
             }
@@ -10649,21 +10977,99 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Exception__MsgAssignment_5"
 
 
+    // $ANTLR start "rule__Service__NameAssignment_1"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4206:1: rule__Service__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Service__NameAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4210:1: ( ( RULE_ID ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4211:1: ( RULE_ID )
+            {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4211:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4212:1: RULE_ID
+            {
+             before(grammarAccess.getServiceAccess().getNameIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Service__NameAssignment_18454); 
+             after(grammarAccess.getServiceAccess().getNameIDTerminalRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Service__NameAssignment_1"
+
+
+    // $ANTLR start "rule__Service__OperationsAssignment_3"
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4221:1: rule__Service__OperationsAssignment_3 : ( ruleOperation ) ;
+    public final void rule__Service__OperationsAssignment_3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4225:1: ( ( ruleOperation ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4226:1: ( ruleOperation )
+            {
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4226:1: ( ruleOperation )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4227:1: ruleOperation
+            {
+             before(grammarAccess.getServiceAccess().getOperationsOperationParserRuleCall_3_0()); 
+            pushFollow(FOLLOW_ruleOperation_in_rule__Service__OperationsAssignment_38485);
+            ruleOperation();
+
+            state._fsp--;
+
+             after(grammarAccess.getServiceAccess().getOperationsOperationParserRuleCall_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Service__OperationsAssignment_3"
+
+
     // $ANTLR start "rule__Operation__NameAssignment_1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4064:1: rule__Operation__NameAssignment_1 : ( RULE_ID ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4236:1: rule__Operation__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Operation__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4068:1: ( ( RULE_ID ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4069:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4240:1: ( ( RULE_ID ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4241:1: ( RULE_ID )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4069:1: ( RULE_ID )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4070:1: RULE_ID
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4241:1: ( RULE_ID )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4242:1: RULE_ID
             {
              before(grammarAccess.getOperationAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Operation__NameAssignment_18175); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Operation__NameAssignment_18516); 
              after(grammarAccess.getOperationAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -10687,20 +11093,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__FeaturesInputAssignment_3_3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4079:1: rule__Operation__FeaturesInputAssignment_3_3 : ( ruleFeature ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4251:1: rule__Operation__FeaturesInputAssignment_3_3 : ( ruleFeature ) ;
     public final void rule__Operation__FeaturesInputAssignment_3_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4083:1: ( ( ruleFeature ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4084:1: ( ruleFeature )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4255:1: ( ( ruleFeature ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4256:1: ( ruleFeature )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4084:1: ( ruleFeature )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4085:1: ruleFeature
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4256:1: ( ruleFeature )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4257:1: ruleFeature
             {
              before(grammarAccess.getOperationAccess().getFeaturesInputFeatureParserRuleCall_3_3_0()); 
-            pushFollow(FOLLOW_ruleFeature_in_rule__Operation__FeaturesInputAssignment_3_38206);
+            pushFollow(FOLLOW_ruleFeature_in_rule__Operation__FeaturesInputAssignment_3_38547);
             ruleFeature();
 
             state._fsp--;
@@ -10728,20 +11134,20 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__FeaturesOutputAssignment_4_3"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4094:1: rule__Operation__FeaturesOutputAssignment_4_3 : ( ruleFeature ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4266:1: rule__Operation__FeaturesOutputAssignment_4_3 : ( ruleFeature ) ;
     public final void rule__Operation__FeaturesOutputAssignment_4_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4098:1: ( ( ruleFeature ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4099:1: ( ruleFeature )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4270:1: ( ( ruleFeature ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4271:1: ( ruleFeature )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4099:1: ( ruleFeature )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4100:1: ruleFeature
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4271:1: ( ruleFeature )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4272:1: ruleFeature
             {
              before(grammarAccess.getOperationAccess().getFeaturesOutputFeatureParserRuleCall_4_3_0()); 
-            pushFollow(FOLLOW_ruleFeature_in_rule__Operation__FeaturesOutputAssignment_4_38237);
+            pushFollow(FOLLOW_ruleFeature_in_rule__Operation__FeaturesOutputAssignment_4_38578);
             ruleFeature();
 
             state._fsp--;
@@ -10769,24 +11175,24 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__ExceptiontsAssignment_5_2"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4109:1: rule__Operation__ExceptiontsAssignment_5_2 : ( ( ruleQualifiedName ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4281:1: rule__Operation__ExceptiontsAssignment_5_2 : ( ( ruleQualifiedName ) ) ;
     public final void rule__Operation__ExceptiontsAssignment_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4113:1: ( ( ( ruleQualifiedName ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4114:1: ( ( ruleQualifiedName ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4285:1: ( ( ( ruleQualifiedName ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4286:1: ( ( ruleQualifiedName ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4114:1: ( ( ruleQualifiedName ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4115:1: ( ruleQualifiedName )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4286:1: ( ( ruleQualifiedName ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4287:1: ( ruleQualifiedName )
             {
              before(grammarAccess.getOperationAccess().getExceptiontsExceptionCrossReference_5_2_0()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4116:1: ( ruleQualifiedName )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4117:1: ruleQualifiedName
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4288:1: ( ruleQualifiedName )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4289:1: ruleQualifiedName
             {
              before(grammarAccess.getOperationAccess().getExceptiontsExceptionQualifiedNameParserRuleCall_5_2_0_1()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Operation__ExceptiontsAssignment_5_28272);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Operation__ExceptiontsAssignment_5_28613);
             ruleQualifiedName();
 
             state._fsp--;
@@ -10818,24 +11224,24 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Operation__ExceptiontsAssignment_5_3_1"
-    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4128:1: rule__Operation__ExceptiontsAssignment_5_3_1 : ( ( ruleQualifiedName ) ) ;
+    // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4300:1: rule__Operation__ExceptiontsAssignment_5_3_1 : ( ( ruleQualifiedName ) ) ;
     public final void rule__Operation__ExceptiontsAssignment_5_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4132:1: ( ( ( ruleQualifiedName ) ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4133:1: ( ( ruleQualifiedName ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4304:1: ( ( ( ruleQualifiedName ) ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4305:1: ( ( ruleQualifiedName ) )
             {
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4133:1: ( ( ruleQualifiedName ) )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4134:1: ( ruleQualifiedName )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4305:1: ( ( ruleQualifiedName ) )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4306:1: ( ruleQualifiedName )
             {
              before(grammarAccess.getOperationAccess().getExceptiontsExceptionCrossReference_5_3_1_0()); 
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4135:1: ( ruleQualifiedName )
-            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4136:1: ruleQualifiedName
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4307:1: ( ruleQualifiedName )
+            // ../com.mguidi.soa.ui/src-gen/com/mguidi/soa/ui/contentassist/antlr/internal/InternalSOA.g:4308:1: ruleQualifiedName
             {
              before(grammarAccess.getOperationAccess().getExceptiontsExceptionQualifiedNameParserRuleCall_5_3_1_0_1()); 
-            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Operation__ExceptiontsAssignment_5_3_18311);
+            pushFollow(FOLLOW_ruleQualifiedName_in_rule__Operation__ExceptiontsAssignment_5_3_18652);
             ruleQualifiedName();
 
             state._fsp--;
@@ -10915,322 +11321,337 @@ public class InternalSOAParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleGenericListFeature_in_entryRuleGenericListFeature901 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleGenericListFeature908 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__GenericListFeature__Group__0_in_ruleGenericListFeature934 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleService_in_entryRuleService961 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleService968 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group__0_in_ruleService994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExceptions_in_entryRuleExceptions961 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleExceptions968 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exceptions__Group__0_in_ruleExceptions994 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleException_in_entryRuleException1021 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleException1028 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Exception__Group__0_in_ruleException1054 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOperation_in_entryRuleOperation1081 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOperation1088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group__0_in_ruleOperation1114 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEvent_in_entryRuleEvent1141 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEvent1148 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Event__Group__0_in_ruleEvent1174 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimitiveType__Alternatives_in_rulePrimitiveType1211 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntity_in_rule__Entities__Alternatives1246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEnum_in_rule__Entities__Alternatives1263 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntitiesFeature_in_rule__FeatureType__Alternatives1295 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimitiveFeature_in_rule__FeatureType__Alternatives1312 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGenericListFeature_in_rule__FeatureType__Alternatives1329 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__PrimitiveType__Alternatives1362 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__PrimitiveType__Alternatives1383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__PrimitiveType__Alternatives1404 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__PrimitiveType__Alternatives1425 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__PrimitiveType__Alternatives1446 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__PrimitiveType__Alternatives1467 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__PrimitiveType__Alternatives1488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__PrimitiveType__Alternatives1509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__PrimitiveType__Alternatives1530 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__PrimitiveType__Alternatives1551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__PrimitiveType__Alternatives1572 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__PrimitiveType__Alternatives1593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Architecture__Group__0__Impl_in_rule__Architecture__Group__01626 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Architecture__Group__1_in_rule__Architecture__Group__01629 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Architecture__Group__0__Impl1657 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Architecture__Group__1__Impl_in_rule__Architecture__Group__11688 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Architecture__Group__2_in_rule__Architecture__Group__11691 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Architecture__Group__1__Impl1719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Architecture__Group__2__Impl_in_rule__Architecture__Group__21750 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__Architecture__Group__3_in_rule__Architecture__Group__21753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Architecture__NameAssignment_2_in_rule__Architecture__Group__2__Impl1780 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Architecture__Group__3__Impl_in_rule__Architecture__Group__31810 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Architecture__ModuleAssignment_3_in_rule__Architecture__Group__3__Impl1837 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__Group__0__Impl_in_rule__Module__Group__01875 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Module__Group__1_in_rule__Module__Group__01878 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__Module__Group__0__Impl1906 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__Group__1__Impl_in_rule__Module__Group__11937 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Module__Group__2_in_rule__Module__Group__11940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Module__Group__1__Impl1968 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__Group__2__Impl_in_rule__Module__Group__21999 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__Module__Group__3_in_rule__Module__Group__22002 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__NameAssignment_2_in_rule__Module__Group__2__Impl2029 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__Group__3__Impl_in_rule__Module__Group__32059 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Module__Group__4_in_rule__Module__Group__32062 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__Module__Group__3__Impl2090 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__Group__4__Impl_in_rule__Module__Group__42121 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Module__Group__5_in_rule__Module__Group__42124 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Module__Group__4__Impl2152 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__Group__5__Impl_in_rule__Module__Group__52183 = new BitSet(new long[]{0x00004080C0000000L});
-    public static final BitSet FOLLOW_rule__Module__Group__6_in_rule__Module__Group__52186 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__VersionAssignment_5_in_rule__Module__Group__5__Impl2213 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__Group__6__Impl_in_rule__Module__Group__62243 = new BitSet(new long[]{0x00004080C0000000L});
-    public static final BitSet FOLLOW_rule__Module__Group__7_in_rule__Module__Group__62246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__ImportsAssignment_6_in_rule__Module__Group__6__Impl2273 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_rule__Module__Group__7__Impl_in_rule__Module__Group__72304 = new BitSet(new long[]{0x00004080C0000000L});
-    public static final BitSet FOLLOW_rule__Module__Group__8_in_rule__Module__Group__72307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__ModelAssignment_7_in_rule__Module__Group__7__Impl2334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__Group__8__Impl_in_rule__Module__Group__82365 = new BitSet(new long[]{0x00004080C0000000L});
-    public static final BitSet FOLLOW_rule__Module__Group__9_in_rule__Module__Group__82368 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__ServicesAssignment_8_in_rule__Module__Group__8__Impl2395 = new BitSet(new long[]{0x0000008000000002L});
-    public static final BitSet FOLLOW_rule__Module__Group__9__Impl_in_rule__Module__Group__92426 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Module__EventAssignment_9_in_rule__Module__Group__9__Impl2453 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__02504 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__02507 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl2534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__12563 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl2590 = new BitSet(new long[]{0x0000000010000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__02625 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__02628 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__QualifiedName__Group_1__0__Impl2656 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__12687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl2714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Version__Group__0__Impl_in_rule__Version__Group__02747 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_rule__Version__Group__1_in_rule__Version__Group__02750 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Version__Group__0__Impl2777 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Version__Group__1__Impl_in_rule__Version__Group__12806 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Version__Group__2_in_rule__Version__Group__12809 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Version__Group__1__Impl2837 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Version__Group__2__Impl_in_rule__Version__Group__22868 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_rule__Version__Group__3_in_rule__Version__Group__22871 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Version__Group__2__Impl2898 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Version__Group__3__Impl_in_rule__Version__Group__32927 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Version__Group__4_in_rule__Version__Group__32930 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Version__Group__3__Impl2958 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Version__Group__4__Impl_in_rule__Version__Group__42989 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_rule__Version__Group__5_in_rule__Version__Group__42992 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Version__Group__4__Impl3019 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Version__Group__5__Impl_in_rule__Version__Group__53048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Version__Group_5__0_in_rule__Version__Group__5__Impl3075 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Version__Group_5__0__Impl_in_rule__Version__Group_5__03118 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Version__Group_5__1_in_rule__Version__Group_5__03121 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__Version__Group_5__0__Impl3149 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Version__Group_5__1__Impl_in_rule__Version__Group_5__13180 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Version__Group_5__1__Impl3207 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__03240 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Import__Group__1_in_rule__Import__Group__03243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__Import__Group__0__Impl3271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__13302 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Import__Group__2_in_rule__Import__Group__13305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Import__Group__1__Impl3333 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Import__Group__2__Impl_in_rule__Import__Group__23364 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Import__ImportedNamespaceAssignment_2_in_rule__Import__Group__2__Impl3391 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__03427 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__03430 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__Model__Group__0__Impl3458 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__13489 = new BitSet(new long[]{0x0000000E00000000L});
-    public static final BitSet FOLLOW_rule__Model__Group__2_in_rule__Model__Group__13492 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Model__Group__1__Impl3520 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__23551 = new BitSet(new long[]{0x0000000E00000000L});
-    public static final BitSet FOLLOW_rule__Model__Group__3_in_rule__Model__Group__23554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__EntitiesAssignment_2_in_rule__Model__Group__2__Impl3581 = new BitSet(new long[]{0x0000000C00000002L});
-    public static final BitSet FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__33612 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Model__Group__3__Impl3640 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enum__Group__0__Impl_in_rule__Enum__Group__03679 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Enum__Group__1_in_rule__Enum__Group__03682 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Enum__Group__0__Impl3710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enum__Group__1__Impl_in_rule__Enum__Group__13741 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Enum__Group__2_in_rule__Enum__Group__13744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enum__NameAssignment_1_in_rule__Enum__Group__1__Impl3771 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enum__Group__2__Impl_in_rule__Enum__Group__23801 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Enum__Group__3_in_rule__Enum__Group__23804 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Enum__Group__2__Impl3832 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enum__Group__3__Impl_in_rule__Enum__Group__33863 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__Enum__Group__4_in_rule__Enum__Group__33866 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Enum__FeaturesAssignment_3_in_rule__Enum__Group__3__Impl3895 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Enum__FeaturesAssignment_3_in_rule__Enum__Group__3__Impl3907 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Enum__Group__4__Impl_in_rule__Enum__Group__43940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Enum__Group__4__Impl3968 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Entity__Group__0__Impl_in_rule__Entity__Group__04009 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Entity__Group__1_in_rule__Entity__Group__04012 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__Entity__Group__0__Impl4040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Entity__Group__1__Impl_in_rule__Entity__Group__14071 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Entity__Group__2_in_rule__Entity__Group__14074 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Entity__NameAssignment_1_in_rule__Entity__Group__1__Impl4101 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Entity__Group__2__Impl_in_rule__Entity__Group__24131 = new BitSet(new long[]{0x0000000000000050L});
-    public static final BitSet FOLLOW_rule__Entity__Group__3_in_rule__Entity__Group__24134 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Entity__Group__2__Impl4162 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Entity__Group__3__Impl_in_rule__Entity__Group__34193 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__Entity__Group__4_in_rule__Entity__Group__34196 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Entity__FeaturesAssignment_3_in_rule__Entity__Group__3__Impl4225 = new BitSet(new long[]{0x0000000000000052L});
-    public static final BitSet FOLLOW_rule__Entity__FeaturesAssignment_3_in_rule__Entity__Group__3__Impl4237 = new BitSet(new long[]{0x0000000000000052L});
-    public static final BitSet FOLLOW_rule__Entity__Group__4__Impl_in_rule__Entity__Group__44270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Entity__Group__4__Impl4298 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature__Group__0__Impl_in_rule__Feature__Group__04339 = new BitSet(new long[]{0x0000000000000050L});
-    public static final BitSet FOLLOW_rule__Feature__Group__1_in_rule__Feature__Group__04342 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature__FeatureCommentAssignment_0_in_rule__Feature__Group__0__Impl4369 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__Feature__Group__1__Impl_in_rule__Feature__Group__14400 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Feature__Group__2_in_rule__Feature__Group__14403 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature__NameAssignment_1_in_rule__Feature__Group__1__Impl4430 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature__Group__2__Impl_in_rule__Feature__Group__24460 = new BitSet(new long[]{0x0000001000FFF010L});
-    public static final BitSet FOLLOW_rule__Feature__Group__3_in_rule__Feature__Group__24463 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Feature__Group__2__Impl4491 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature__Group__3__Impl_in_rule__Feature__Group__34522 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Feature__TypeAssignment_3_in_rule__Feature__Group__3__Impl4549 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GenericListFeature__Group__0__Impl_in_rule__GenericListFeature__Group__04587 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_rule__GenericListFeature__Group__1_in_rule__GenericListFeature__Group__04590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__GenericListFeature__Group__0__Impl4618 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GenericListFeature__Group__1__Impl_in_rule__GenericListFeature__Group__14649 = new BitSet(new long[]{0x0000001000FFF010L});
-    public static final BitSet FOLLOW_rule__GenericListFeature__Group__2_in_rule__GenericListFeature__Group__14652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__GenericListFeature__Group__1__Impl4680 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GenericListFeature__Group__2__Impl_in_rule__GenericListFeature__Group__24711 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_rule__GenericListFeature__Group__3_in_rule__GenericListFeature__Group__24714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GenericListFeature__TypeAssignment_2_in_rule__GenericListFeature__Group__2__Impl4741 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__GenericListFeature__Group__3__Impl_in_rule__GenericListFeature__Group__34771 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rule__GenericListFeature__Group__3__Impl4799 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group__0__Impl_in_rule__Service__Group__04838 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Service__Group__1_in_rule__Service__Group__04841 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_rule__Service__Group__0__Impl4869 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group__1__Impl_in_rule__Service__Group__14900 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Service__Group__2_in_rule__Service__Group__14903 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__NameAssignment_1_in_rule__Service__Group__1__Impl4930 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group__2__Impl_in_rule__Service__Group__24960 = new BitSet(new long[]{0x0000050200000000L});
-    public static final BitSet FOLLOW_rule__Service__Group__3_in_rule__Service__Group__24963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Service__Group__2__Impl4991 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group__3__Impl_in_rule__Service__Group__35022 = new BitSet(new long[]{0x0000050200000000L});
-    public static final BitSet FOLLOW_rule__Service__Group__4_in_rule__Service__Group__35025 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__ExceptionsAssignment_3_in_rule__Service__Group__3__Impl5052 = new BitSet(new long[]{0x0000010000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group__4__Impl_in_rule__Service__Group__45083 = new BitSet(new long[]{0x0000050200000000L});
-    public static final BitSet FOLLOW_rule__Service__Group__5_in_rule__Service__Group__45086 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Service__OperationsAssignment_4_in_rule__Service__Group__4__Impl5113 = new BitSet(new long[]{0x0000040000000002L});
-    public static final BitSet FOLLOW_rule__Service__Group__5__Impl_in_rule__Service__Group__55144 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Service__Group__5__Impl5172 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exception__Group__0__Impl_in_rule__Exception__Group__05215 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Exception__Group__1_in_rule__Exception__Group__05218 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__Exception__Group__0__Impl5246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exception__Group__1__Impl_in_rule__Exception__Group__15277 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Exception__Group__2_in_rule__Exception__Group__15280 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exception__NameAssignment_1_in_rule__Exception__Group__1__Impl5307 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exception__Group__2__Impl_in_rule__Exception__Group__25337 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_rule__Exception__Group__3_in_rule__Exception__Group__25340 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Exception__Group__2__Impl5368 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exception__Group__3__Impl_in_rule__Exception__Group__35399 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Exception__Group__4_in_rule__Exception__Group__35402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rule__Exception__Group__3__Impl5430 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exception__Group__4__Impl_in_rule__Exception__Group__45461 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__Exception__Group__5_in_rule__Exception__Group__45464 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Exception__Group__4__Impl5492 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exception__Group__5__Impl_in_rule__Exception__Group__55523 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__Exception__Group__6_in_rule__Exception__Group__55526 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exception__MsgAssignment_5_in_rule__Exception__Group__5__Impl5553 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exception__Group__6__Impl_in_rule__Exception__Group__65583 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Exception__Group__6__Impl5611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group__0__Impl_in_rule__Operation__Group__05656 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Operation__Group__1_in_rule__Operation__Group__05659 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_rule__Operation__Group__0__Impl5687 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group__1__Impl_in_rule__Operation__Group__15718 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group__2_in_rule__Operation__Group__15721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__NameAssignment_1_in_rule__Operation__Group__1__Impl5748 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group__2__Impl_in_rule__Operation__Group__25778 = new BitSet(new long[]{0x0000190200000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group__3_in_rule__Operation__Group__25781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Operation__Group__2__Impl5809 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group__3__Impl_in_rule__Operation__Group__35840 = new BitSet(new long[]{0x0000190200000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group__4_in_rule__Operation__Group__35843 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__0_in_rule__Operation__Group__3__Impl5870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group__4__Impl_in_rule__Operation__Group__45901 = new BitSet(new long[]{0x0000190200000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group__5_in_rule__Operation__Group__45904 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__0_in_rule__Operation__Group__4__Impl5931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group__5__Impl_in_rule__Operation__Group__55962 = new BitSet(new long[]{0x0000190200000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group__6_in_rule__Operation__Group__55965 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_5__0_in_rule__Operation__Group__5__Impl5992 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group__6__Impl_in_rule__Operation__Group__66023 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Operation__Group__6__Impl6051 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__0__Impl_in_rule__Operation__Group_3__06096 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__1_in_rule__Operation__Group_3__06099 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_rule__Operation__Group_3__0__Impl6127 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__1__Impl_in_rule__Operation__Group_3__16158 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__2_in_rule__Operation__Group_3__16161 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Operation__Group_3__1__Impl6189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__2__Impl_in_rule__Operation__Group_3__26220 = new BitSet(new long[]{0x0000000000000050L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__3_in_rule__Operation__Group_3__26223 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Operation__Group_3__2__Impl6251 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__3__Impl_in_rule__Operation__Group_3__36282 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__4_in_rule__Operation__Group_3__36285 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__FeaturesInputAssignment_3_3_in_rule__Operation__Group_3__3__Impl6314 = new BitSet(new long[]{0x0000000000000052L});
-    public static final BitSet FOLLOW_rule__Operation__FeaturesInputAssignment_3_3_in_rule__Operation__Group_3__3__Impl6326 = new BitSet(new long[]{0x0000000000000052L});
-    public static final BitSet FOLLOW_rule__Operation__Group_3__4__Impl_in_rule__Operation__Group_3__46359 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Operation__Group_3__4__Impl6387 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__0__Impl_in_rule__Operation__Group_4__06428 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__1_in_rule__Operation__Group_4__06431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_rule__Operation__Group_4__0__Impl6459 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__1__Impl_in_rule__Operation__Group_4__16490 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__2_in_rule__Operation__Group_4__16493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Operation__Group_4__1__Impl6521 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__2__Impl_in_rule__Operation__Group_4__26552 = new BitSet(new long[]{0x0000000000000050L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__3_in_rule__Operation__Group_4__26555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Operation__Group_4__2__Impl6583 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__3__Impl_in_rule__Operation__Group_4__36614 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__4_in_rule__Operation__Group_4__36617 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__FeaturesOutputAssignment_4_3_in_rule__Operation__Group_4__3__Impl6646 = new BitSet(new long[]{0x0000000000000052L});
-    public static final BitSet FOLLOW_rule__Operation__FeaturesOutputAssignment_4_3_in_rule__Operation__Group_4__3__Impl6658 = new BitSet(new long[]{0x0000000000000052L});
-    public static final BitSet FOLLOW_rule__Operation__Group_4__4__Impl_in_rule__Operation__Group_4__46691 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Operation__Group_4__4__Impl6719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_5__0__Impl_in_rule__Operation__Group_5__06760 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group_5__1_in_rule__Operation__Group_5__06763 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_rule__Operation__Group_5__0__Impl6791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_5__1__Impl_in_rule__Operation__Group_5__16822 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Operation__Group_5__2_in_rule__Operation__Group_5__16825 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Operation__Group_5__1__Impl6853 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_5__2__Impl_in_rule__Operation__Group_5__26884 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_rule__Operation__Group_5__3_in_rule__Operation__Group_5__26887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__ExceptiontsAssignment_5_2_in_rule__Operation__Group_5__2__Impl6916 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Operation__ExceptiontsAssignment_5_2_in_rule__Operation__Group_5__2__Impl6928 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Operation__Group_5__3__Impl_in_rule__Operation__Group_5__36961 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_5_3__0_in_rule__Operation__Group_5__3__Impl6988 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_5_3__0__Impl_in_rule__Operation__Group_5_3__07027 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Operation__Group_5_3__1_in_rule__Operation__Group_5_3__07030 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_rule__Operation__Group_5_3__0__Impl7058 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__Group_5_3__1__Impl_in_rule__Operation__Group_5_3__17089 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Operation__ExceptiontsAssignment_5_3_1_in_rule__Operation__Group_5_3__1__Impl7118 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Operation__ExceptiontsAssignment_5_3_1_in_rule__Operation__Group_5_3__1__Impl7130 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Event__Group__0__Impl_in_rule__Event__Group__07167 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Event__Group__1_in_rule__Event__Group__07170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_rule__Event__Group__0__Impl7198 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Event__Group__1__Impl_in_rule__Event__Group__17229 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__Event__Group__2_in_rule__Event__Group__17232 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Event__Group__1__Impl7260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Event__Group__2__Impl_in_rule__Event__Group__27291 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Event__Group__2__Impl7319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Architecture__NameAssignment_27361 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleModule_in_rule__Architecture__ModuleAssignment_37392 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Module__NameAssignment_27423 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVersion_in_rule__Module__VersionAssignment_57454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_rule__Module__ImportsAssignment_67485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleModel_in_rule__Module__ModelAssignment_77516 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleService_in_rule__Module__ServicesAssignment_87547 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEvent_in_rule__Module__EventAssignment_97578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Import__ImportedNamespaceAssignment_27609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntities_in_rule__Model__EntitiesAssignment_27640 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_COMMENTS_in_rule__Comment__ValueAssignment7671 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Enum__NameAssignment_17702 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Enum__FeaturesAssignment_37733 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Entity__NameAssignment_17764 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFeature_in_rule__Entity__FeaturesAssignment_37795 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComment_in_rule__Feature__FeatureCommentAssignment_07826 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Feature__NameAssignment_17857 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFeatureType_in_rule__Feature__TypeAssignment_37888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__EntitiesFeature__TypeAssignment7923 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimitiveType_in_rule__PrimitiveFeature__TypeAssignment7958 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFeatureType_in_rule__GenericListFeature__TypeAssignment_27989 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Service__NameAssignment_18020 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleException_in_rule__Service__ExceptionsAssignment_38051 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOperation_in_rule__Service__OperationsAssignment_48082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Exception__NameAssignment_18113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Exception__MsgAssignment_58144 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Operation__NameAssignment_18175 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFeature_in_rule__Operation__FeaturesInputAssignment_3_38206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFeature_in_rule__Operation__FeaturesOutputAssignment_4_38237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Operation__ExceptiontsAssignment_5_28272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Operation__ExceptiontsAssignment_5_3_18311 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleService_in_entryRuleService1081 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleService1088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group__0_in_ruleService1114 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOperation_in_entryRuleOperation1141 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOperation1148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group__0_in_ruleOperation1174 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEvent_in_entryRuleEvent1201 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEvent1208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Event__Group__0_in_ruleEvent1234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimitiveType__Alternatives_in_rulePrimitiveType1271 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEntity_in_rule__Entities__Alternatives1306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEnum_in_rule__Entities__Alternatives1323 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEntitiesFeature_in_rule__FeatureType__Alternatives1355 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimitiveFeature_in_rule__FeatureType__Alternatives1372 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGenericListFeature_in_rule__FeatureType__Alternatives1389 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__PrimitiveType__Alternatives1422 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__PrimitiveType__Alternatives1443 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__PrimitiveType__Alternatives1464 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__PrimitiveType__Alternatives1485 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__PrimitiveType__Alternatives1506 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__PrimitiveType__Alternatives1527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__PrimitiveType__Alternatives1548 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__PrimitiveType__Alternatives1569 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__PrimitiveType__Alternatives1590 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__PrimitiveType__Alternatives1611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__PrimitiveType__Alternatives1632 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__PrimitiveType__Alternatives1653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Architecture__Group__0__Impl_in_rule__Architecture__Group__01686 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Architecture__Group__1_in_rule__Architecture__Group__01689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Architecture__Group__0__Impl1717 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Architecture__Group__1__Impl_in_rule__Architecture__Group__11748 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Architecture__Group__2_in_rule__Architecture__Group__11751 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Architecture__Group__1__Impl1779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Architecture__Group__2__Impl_in_rule__Architecture__Group__21810 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__Architecture__Group__3_in_rule__Architecture__Group__21813 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Architecture__NameAssignment_2_in_rule__Architecture__Group__2__Impl1840 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Architecture__Group__3__Impl_in_rule__Architecture__Group__31870 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Architecture__ModuleAssignment_3_in_rule__Architecture__Group__3__Impl1897 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__Group__0__Impl_in_rule__Module__Group__01935 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Module__Group__1_in_rule__Module__Group__01938 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__Module__Group__0__Impl1966 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__Group__1__Impl_in_rule__Module__Group__11997 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Module__Group__2_in_rule__Module__Group__12000 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Module__Group__1__Impl2028 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__Group__2__Impl_in_rule__Module__Group__22059 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__Module__Group__3_in_rule__Module__Group__22062 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__NameAssignment_2_in_rule__Module__Group__2__Impl2089 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__Group__3__Impl_in_rule__Module__Group__32119 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Module__Group__4_in_rule__Module__Group__32122 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__Module__Group__3__Impl2150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__Group__4__Impl_in_rule__Module__Group__42181 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Module__Group__5_in_rule__Module__Group__42184 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Module__Group__4__Impl2212 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__Group__5__Impl_in_rule__Module__Group__52243 = new BitSet(new long[]{0x00008480C0000000L});
+    public static final BitSet FOLLOW_rule__Module__Group__6_in_rule__Module__Group__52246 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__VersionAssignment_5_in_rule__Module__Group__5__Impl2273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__Group__6__Impl_in_rule__Module__Group__62303 = new BitSet(new long[]{0x00008480C0000000L});
+    public static final BitSet FOLLOW_rule__Module__Group__7_in_rule__Module__Group__62306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__ImportsAssignment_6_in_rule__Module__Group__6__Impl2333 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_rule__Module__Group__7__Impl_in_rule__Module__Group__72364 = new BitSet(new long[]{0x00008480C0000000L});
+    public static final BitSet FOLLOW_rule__Module__Group__8_in_rule__Module__Group__72367 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__ModelAssignment_7_in_rule__Module__Group__7__Impl2394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__Group__8__Impl_in_rule__Module__Group__82425 = new BitSet(new long[]{0x00008480C0000000L});
+    public static final BitSet FOLLOW_rule__Module__Group__9_in_rule__Module__Group__82428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__ExceptionsAssignment_8_in_rule__Module__Group__8__Impl2455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__Group__9__Impl_in_rule__Module__Group__92486 = new BitSet(new long[]{0x00008480C0000000L});
+    public static final BitSet FOLLOW_rule__Module__Group__10_in_rule__Module__Group__92489 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__ServicesAssignment_9_in_rule__Module__Group__9__Impl2516 = new BitSet(new long[]{0x0000040000000002L});
+    public static final BitSet FOLLOW_rule__Module__Group__10__Impl_in_rule__Module__Group__102547 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Module__EventAssignment_10_in_rule__Module__Group__10__Impl2574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group__0__Impl_in_rule__QualifiedName__Group__02627 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group__1_in_rule__QualifiedName__Group__02630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group__0__Impl2657 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group__1__Impl_in_rule__QualifiedName__Group__12686 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0_in_rule__QualifiedName__Group__1__Impl2713 = new BitSet(new long[]{0x0000000010000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__0__Impl_in_rule__QualifiedName__Group_1__02748 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1_in_rule__QualifiedName__Group_1__02751 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__QualifiedName__Group_1__0__Impl2779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__QualifiedName__Group_1__1__Impl_in_rule__QualifiedName__Group_1__12810 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__QualifiedName__Group_1__1__Impl2837 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Version__Group__0__Impl_in_rule__Version__Group__02870 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__Version__Group__1_in_rule__Version__Group__02873 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Version__Group__0__Impl2900 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Version__Group__1__Impl_in_rule__Version__Group__12929 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Version__Group__2_in_rule__Version__Group__12932 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Version__Group__1__Impl2960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Version__Group__2__Impl_in_rule__Version__Group__22991 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__Version__Group__3_in_rule__Version__Group__22994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Version__Group__2__Impl3021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Version__Group__3__Impl_in_rule__Version__Group__33050 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Version__Group__4_in_rule__Version__Group__33053 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Version__Group__3__Impl3081 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Version__Group__4__Impl_in_rule__Version__Group__43112 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_rule__Version__Group__5_in_rule__Version__Group__43115 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Version__Group__4__Impl3142 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Version__Group__5__Impl_in_rule__Version__Group__53171 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Version__Group_5__0_in_rule__Version__Group__5__Impl3198 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Version__Group_5__0__Impl_in_rule__Version__Group_5__03241 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Version__Group_5__1_in_rule__Version__Group_5__03244 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__Version__Group_5__0__Impl3272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Version__Group_5__1__Impl_in_rule__Version__Group_5__13303 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Version__Group_5__1__Impl3330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__03363 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Import__Group__1_in_rule__Import__Group__03366 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Import__Group__0__Impl3394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__13425 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Import__Group__2_in_rule__Import__Group__13428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Import__Group__1__Impl3456 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Group__2__Impl_in_rule__Import__Group__23487 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__ImportedNamespaceAssignment_2_in_rule__Import__Group__2__Impl3514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__03550 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__03553 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__Model__Group__0__Impl3581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__13612 = new BitSet(new long[]{0x0000000E00000000L});
+    public static final BitSet FOLLOW_rule__Model__Group__2_in_rule__Model__Group__13615 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Model__Group__1__Impl3643 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__2__Impl_in_rule__Model__Group__23674 = new BitSet(new long[]{0x0000000E00000000L});
+    public static final BitSet FOLLOW_rule__Model__Group__3_in_rule__Model__Group__23677 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__EntitiesAssignment_2_in_rule__Model__Group__2__Impl3704 = new BitSet(new long[]{0x0000000C00000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__3__Impl_in_rule__Model__Group__33735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Model__Group__3__Impl3763 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enum__Group__0__Impl_in_rule__Enum__Group__03802 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Enum__Group__1_in_rule__Enum__Group__03805 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__Enum__Group__0__Impl3833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enum__Group__1__Impl_in_rule__Enum__Group__13864 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Enum__Group__2_in_rule__Enum__Group__13867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enum__NameAssignment_1_in_rule__Enum__Group__1__Impl3894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enum__Group__2__Impl_in_rule__Enum__Group__23924 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Enum__Group__3_in_rule__Enum__Group__23927 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Enum__Group__2__Impl3955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enum__Group__3__Impl_in_rule__Enum__Group__33986 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__Enum__Group__4_in_rule__Enum__Group__33989 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Enum__FeaturesAssignment_3_in_rule__Enum__Group__3__Impl4018 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__Enum__FeaturesAssignment_3_in_rule__Enum__Group__3__Impl4030 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__Enum__Group__4__Impl_in_rule__Enum__Group__44063 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Enum__Group__4__Impl4091 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Entity__Group__0__Impl_in_rule__Entity__Group__04132 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Entity__Group__1_in_rule__Entity__Group__04135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Entity__Group__0__Impl4163 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Entity__Group__1__Impl_in_rule__Entity__Group__14194 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Entity__Group__2_in_rule__Entity__Group__14197 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Entity__NameAssignment_1_in_rule__Entity__Group__1__Impl4224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Entity__Group__2__Impl_in_rule__Entity__Group__24254 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__Entity__Group__3_in_rule__Entity__Group__24257 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Entity__Group__2__Impl4285 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Entity__Group__3__Impl_in_rule__Entity__Group__34316 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__Entity__Group__4_in_rule__Entity__Group__34319 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Entity__FeaturesAssignment_3_in_rule__Entity__Group__3__Impl4348 = new BitSet(new long[]{0x0000000000000052L});
+    public static final BitSet FOLLOW_rule__Entity__FeaturesAssignment_3_in_rule__Entity__Group__3__Impl4360 = new BitSet(new long[]{0x0000000000000052L});
+    public static final BitSet FOLLOW_rule__Entity__Group__4__Impl_in_rule__Entity__Group__44393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Entity__Group__4__Impl4421 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature__Group__0__Impl_in_rule__Feature__Group__04462 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__Feature__Group__1_in_rule__Feature__Group__04465 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature__FeatureCommentAssignment_0_in_rule__Feature__Group__0__Impl4492 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__Feature__Group__1__Impl_in_rule__Feature__Group__14523 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Feature__Group__2_in_rule__Feature__Group__14526 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature__NameAssignment_1_in_rule__Feature__Group__1__Impl4553 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature__Group__2__Impl_in_rule__Feature__Group__24583 = new BitSet(new long[]{0x0000001000FFF010L});
+    public static final BitSet FOLLOW_rule__Feature__Group__3_in_rule__Feature__Group__24586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Feature__Group__2__Impl4614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature__Group__3__Impl_in_rule__Feature__Group__34645 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Feature__TypeAssignment_3_in_rule__Feature__Group__3__Impl4672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GenericListFeature__Group__0__Impl_in_rule__GenericListFeature__Group__04710 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_rule__GenericListFeature__Group__1_in_rule__GenericListFeature__Group__04713 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__GenericListFeature__Group__0__Impl4741 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GenericListFeature__Group__1__Impl_in_rule__GenericListFeature__Group__14772 = new BitSet(new long[]{0x0000001000FFF010L});
+    public static final BitSet FOLLOW_rule__GenericListFeature__Group__2_in_rule__GenericListFeature__Group__14775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__GenericListFeature__Group__1__Impl4803 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GenericListFeature__Group__2__Impl_in_rule__GenericListFeature__Group__24834 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_rule__GenericListFeature__Group__3_in_rule__GenericListFeature__Group__24837 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GenericListFeature__TypeAssignment_2_in_rule__GenericListFeature__Group__2__Impl4864 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__GenericListFeature__Group__3__Impl_in_rule__GenericListFeature__Group__34894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__GenericListFeature__Group__3__Impl4922 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exceptions__Group__0__Impl_in_rule__Exceptions__Group__04961 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Exceptions__Group__1_in_rule__Exceptions__Group__04964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__Exceptions__Group__0__Impl4992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exceptions__Group__1__Impl_in_rule__Exceptions__Group__15023 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__Exceptions__Group__2_in_rule__Exceptions__Group__15026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Exceptions__Group__1__Impl5054 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exceptions__Group__2__Impl_in_rule__Exceptions__Group__25085 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__Exceptions__Group__3_in_rule__Exceptions__Group__25088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exceptions__ExceptionsAssignment_2_in_rule__Exceptions__Group__2__Impl5117 = new BitSet(new long[]{0x0000010000000002L});
+    public static final BitSet FOLLOW_rule__Exceptions__ExceptionsAssignment_2_in_rule__Exceptions__Group__2__Impl5129 = new BitSet(new long[]{0x0000010000000002L});
+    public static final BitSet FOLLOW_rule__Exceptions__Group__3__Impl_in_rule__Exceptions__Group__35162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Exceptions__Group__3__Impl5190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exception__Group__0__Impl_in_rule__Exception__Group__05229 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Exception__Group__1_in_rule__Exception__Group__05232 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Exception__Group__0__Impl5260 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exception__Group__1__Impl_in_rule__Exception__Group__15291 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Exception__Group__2_in_rule__Exception__Group__15294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exception__NameAssignment_1_in_rule__Exception__Group__1__Impl5321 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exception__Group__2__Impl_in_rule__Exception__Group__25351 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__Exception__Group__3_in_rule__Exception__Group__25354 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Exception__Group__2__Impl5382 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exception__Group__3__Impl_in_rule__Exception__Group__35413 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Exception__Group__4_in_rule__Exception__Group__35416 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Exception__Group__3__Impl5444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exception__Group__4__Impl_in_rule__Exception__Group__45475 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_rule__Exception__Group__5_in_rule__Exception__Group__45478 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Exception__Group__4__Impl5506 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exception__Group__5__Impl_in_rule__Exception__Group__55537 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__Exception__Group__6_in_rule__Exception__Group__55540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exception__MsgAssignment_5_in_rule__Exception__Group__5__Impl5567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exception__Group__6__Impl_in_rule__Exception__Group__65597 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Exception__Group__6__Impl5625 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group__0__Impl_in_rule__Service__Group__05670 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Service__Group__1_in_rule__Service__Group__05673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__Service__Group__0__Impl5701 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group__1__Impl_in_rule__Service__Group__15732 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Service__Group__2_in_rule__Service__Group__15735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__NameAssignment_1_in_rule__Service__Group__1__Impl5762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group__2__Impl_in_rule__Service__Group__25792 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_rule__Service__Group__3_in_rule__Service__Group__25795 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Service__Group__2__Impl5823 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group__3__Impl_in_rule__Service__Group__35854 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__Service__Group__4_in_rule__Service__Group__35857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Service__OperationsAssignment_3_in_rule__Service__Group__3__Impl5886 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_rule__Service__OperationsAssignment_3_in_rule__Service__Group__3__Impl5898 = new BitSet(new long[]{0x0000080000000002L});
+    public static final BitSet FOLLOW_rule__Service__Group__4__Impl_in_rule__Service__Group__45931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Service__Group__4__Impl5959 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group__0__Impl_in_rule__Operation__Group__06000 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Operation__Group__1_in_rule__Operation__Group__06003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_rule__Operation__Group__0__Impl6031 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group__1__Impl_in_rule__Operation__Group__16062 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group__2_in_rule__Operation__Group__16065 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__NameAssignment_1_in_rule__Operation__Group__1__Impl6092 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group__2__Impl_in_rule__Operation__Group__26122 = new BitSet(new long[]{0x0000310200000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group__3_in_rule__Operation__Group__26125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Operation__Group__2__Impl6153 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group__3__Impl_in_rule__Operation__Group__36184 = new BitSet(new long[]{0x0000310200000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group__4_in_rule__Operation__Group__36187 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__0_in_rule__Operation__Group__3__Impl6214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group__4__Impl_in_rule__Operation__Group__46245 = new BitSet(new long[]{0x0000310200000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group__5_in_rule__Operation__Group__46248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__0_in_rule__Operation__Group__4__Impl6275 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group__5__Impl_in_rule__Operation__Group__56306 = new BitSet(new long[]{0x0000310200000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group__6_in_rule__Operation__Group__56309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_5__0_in_rule__Operation__Group__5__Impl6336 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group__6__Impl_in_rule__Operation__Group__66367 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Operation__Group__6__Impl6395 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__0__Impl_in_rule__Operation__Group_3__06440 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__1_in_rule__Operation__Group_3__06443 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_rule__Operation__Group_3__0__Impl6471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__1__Impl_in_rule__Operation__Group_3__16502 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__2_in_rule__Operation__Group_3__16505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Operation__Group_3__1__Impl6533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__2__Impl_in_rule__Operation__Group_3__26564 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__3_in_rule__Operation__Group_3__26567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Operation__Group_3__2__Impl6595 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__3__Impl_in_rule__Operation__Group_3__36626 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__4_in_rule__Operation__Group_3__36629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__FeaturesInputAssignment_3_3_in_rule__Operation__Group_3__3__Impl6658 = new BitSet(new long[]{0x0000000000000052L});
+    public static final BitSet FOLLOW_rule__Operation__FeaturesInputAssignment_3_3_in_rule__Operation__Group_3__3__Impl6670 = new BitSet(new long[]{0x0000000000000052L});
+    public static final BitSet FOLLOW_rule__Operation__Group_3__4__Impl_in_rule__Operation__Group_3__46703 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Operation__Group_3__4__Impl6731 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__0__Impl_in_rule__Operation__Group_4__06772 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__1_in_rule__Operation__Group_4__06775 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_rule__Operation__Group_4__0__Impl6803 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__1__Impl_in_rule__Operation__Group_4__16834 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__2_in_rule__Operation__Group_4__16837 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Operation__Group_4__1__Impl6865 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__2__Impl_in_rule__Operation__Group_4__26896 = new BitSet(new long[]{0x0000000000000050L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__3_in_rule__Operation__Group_4__26899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Operation__Group_4__2__Impl6927 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__3__Impl_in_rule__Operation__Group_4__36958 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__4_in_rule__Operation__Group_4__36961 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__FeaturesOutputAssignment_4_3_in_rule__Operation__Group_4__3__Impl6990 = new BitSet(new long[]{0x0000000000000052L});
+    public static final BitSet FOLLOW_rule__Operation__FeaturesOutputAssignment_4_3_in_rule__Operation__Group_4__3__Impl7002 = new BitSet(new long[]{0x0000000000000052L});
+    public static final BitSet FOLLOW_rule__Operation__Group_4__4__Impl_in_rule__Operation__Group_4__47035 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Operation__Group_4__4__Impl7063 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_5__0__Impl_in_rule__Operation__Group_5__07104 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group_5__1_in_rule__Operation__Group_5__07107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Operation__Group_5__0__Impl7135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_5__1__Impl_in_rule__Operation__Group_5__17166 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Operation__Group_5__2_in_rule__Operation__Group_5__17169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Operation__Group_5__1__Impl7197 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_5__2__Impl_in_rule__Operation__Group_5__27228 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_rule__Operation__Group_5__3_in_rule__Operation__Group_5__27231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__ExceptiontsAssignment_5_2_in_rule__Operation__Group_5__2__Impl7258 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_5__3__Impl_in_rule__Operation__Group_5__37288 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_5_3__0_in_rule__Operation__Group_5__3__Impl7315 = new BitSet(new long[]{0x0000400000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_5_3__0__Impl_in_rule__Operation__Group_5_3__07354 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Operation__Group_5_3__1_in_rule__Operation__Group_5_3__07357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_rule__Operation__Group_5_3__0__Impl7385 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__Group_5_3__1__Impl_in_rule__Operation__Group_5_3__17416 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Operation__ExceptiontsAssignment_5_3_1_in_rule__Operation__Group_5_3__1__Impl7443 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Event__Group__0__Impl_in_rule__Event__Group__07477 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Event__Group__1_in_rule__Event__Group__07480 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_rule__Event__Group__0__Impl7508 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Event__Group__1__Impl_in_rule__Event__Group__17539 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_rule__Event__Group__2_in_rule__Event__Group__17542 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Event__Group__1__Impl7570 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Event__Group__2__Impl_in_rule__Event__Group__27601 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Event__Group__2__Impl7629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Architecture__NameAssignment_27671 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleModule_in_rule__Architecture__ModuleAssignment_37702 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Module__NameAssignment_27733 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVersion_in_rule__Module__VersionAssignment_57764 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImport_in_rule__Module__ImportsAssignment_67795 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleModel_in_rule__Module__ModelAssignment_77826 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExceptions_in_rule__Module__ExceptionsAssignment_87857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleService_in_rule__Module__ServicesAssignment_97888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEvent_in_rule__Module__EventAssignment_107919 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Import__ImportedNamespaceAssignment_27950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEntities_in_rule__Model__EntitiesAssignment_27981 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_COMMENTS_in_rule__Comment__ValueAssignment8012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Enum__NameAssignment_18043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Enum__FeaturesAssignment_38074 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Entity__NameAssignment_18105 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFeature_in_rule__Entity__FeaturesAssignment_38136 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComment_in_rule__Feature__FeatureCommentAssignment_08167 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Feature__NameAssignment_18198 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFeatureType_in_rule__Feature__TypeAssignment_38229 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__EntitiesFeature__TypeAssignment8264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimitiveType_in_rule__PrimitiveFeature__TypeAssignment8299 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFeatureType_in_rule__GenericListFeature__TypeAssignment_28330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleException_in_rule__Exceptions__ExceptionsAssignment_28361 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Exception__NameAssignment_18392 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Exception__MsgAssignment_58423 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Service__NameAssignment_18454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOperation_in_rule__Service__OperationsAssignment_38485 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Operation__NameAssignment_18516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFeature_in_rule__Operation__FeaturesInputAssignment_3_38547 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFeature_in_rule__Operation__FeaturesOutputAssignment_4_38578 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Operation__ExceptiontsAssignment_5_28613 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQualifiedName_in_rule__Operation__ExceptiontsAssignment_5_3_18652 = new BitSet(new long[]{0x0000000000000002L});
 
 }

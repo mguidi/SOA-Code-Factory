@@ -7,6 +7,7 @@ import com.mguidi.soa.soa.Comment;
 import com.mguidi.soa.soa.Entities;
 import com.mguidi.soa.soa.EntitiesFeature;
 import com.mguidi.soa.soa.Entity;
+import com.mguidi.soa.soa.Exceptions;
 import com.mguidi.soa.soa.Feature;
 import com.mguidi.soa.soa.FeatureType;
 import com.mguidi.soa.soa.GenericListFeature;
@@ -154,14 +155,19 @@ public class SoaAdapterFactory extends AdapterFactoryImpl
         return createGenericListFeatureAdapter();
       }
       @Override
-      public Adapter caseService(Service object)
+      public Adapter caseExceptions(Exceptions object)
       {
-        return createServiceAdapter();
+        return createExceptionsAdapter();
       }
       @Override
       public Adapter caseException(com.mguidi.soa.soa.Exception object)
       {
         return createExceptionAdapter();
+      }
+      @Override
+      public Adapter caseService(Service object)
+      {
+        return createServiceAdapter();
       }
       @Override
       public Adapter caseOperation(Operation object)
@@ -386,16 +392,16 @@ public class SoaAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.mguidi.soa.soa.Service <em>Service</em>}'.
+   * Creates a new adapter for an object of class '{@link com.mguidi.soa.soa.Exceptions <em>Exceptions</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.mguidi.soa.soa.Service
+   * @see com.mguidi.soa.soa.Exceptions
    * @generated
    */
-  public Adapter createServiceAdapter()
+  public Adapter createExceptionsAdapter()
   {
     return null;
   }
@@ -411,6 +417,21 @@ public class SoaAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExceptionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.mguidi.soa.soa.Service <em>Service</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.mguidi.soa.soa.Service
+   * @generated
+   */
+  public Adapter createServiceAdapter()
   {
     return null;
   }

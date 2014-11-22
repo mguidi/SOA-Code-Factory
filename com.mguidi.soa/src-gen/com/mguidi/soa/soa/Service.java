@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link com.mguidi.soa.soa.Service#getName <em>Name</em>}</li>
- *   <li>{@link com.mguidi.soa.soa.Service#getExceptions <em>Exceptions</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.Service#getOperations <em>Operations</em>}</li>
  * </ul>
  * </p>
@@ -51,22 +50,6 @@ public interface Service extends EObject
    * @generated
    */
   void setName(String value);
-
-  /**
-   * Returns the value of the '<em><b>Exceptions</b></em>' containment reference list.
-   * The list contents are of type {@link com.mguidi.soa.soa.Exception}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Exceptions</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Exceptions</em>' containment reference list.
-   * @see com.mguidi.soa.soa.SoaPackage#getService_Exceptions()
-   * @model containment="true"
-   * @generated
-   */
-  EList<com.mguidi.soa.soa.Exception> getExceptions();
 
   /**
    * Returns the value of the '<em><b>Operations</b></em>' containment reference list.

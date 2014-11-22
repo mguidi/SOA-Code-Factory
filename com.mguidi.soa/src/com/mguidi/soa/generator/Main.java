@@ -63,12 +63,13 @@ public class Main {
 
 	private void runGenerator(String folderName, String target) throws IOException {
 		// check target
-		if (!target.equals("android_gradle") && !target.equals("android_eclipse") && 
-				!target.equals("java") && !target.equals("swift")) {
-			
+		if (!target.equals("android") &&  !target.equals("java") && !target.equals("swift")) {
 			System.out.println("Invalid target.");
 			System.exit(-2);
 		}
+		
+		// configure and start the generator
+		fileAccess.setOutputPath("output/");
 		
 		// load the resource
 		ResourceSet set = resourceSetProvider.get();
@@ -78,9 +79,15 @@ public class Main {
 					true);
 			resources.add(modelResource);
 		}
+		
+		if (target.equals("android")) {
+			generatorAndroid.doGenerate(resources, fileAccess);
+			
+		} else if (target.equals("java")) {
+			generatorJava.doGenerate(resources, fileAccess);
+			
+		}
 
-		// configure and start the generator
-		fileAccess.setOutputPath("output/");
 		for (Resource resource : resources) {
 			// validate the resource
 			List<Issue> list = validator.validate(resource, CheckMode.ALL,

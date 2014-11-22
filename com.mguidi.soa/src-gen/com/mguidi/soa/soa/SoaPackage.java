@@ -141,13 +141,22 @@ public interface SoaPackage extends EPackage
   int MODULE__MODEL = 3;
 
   /**
+   * The feature id for the '<em><b>Exceptions</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODULE__EXCEPTIONS = 4;
+
+  /**
    * The feature id for the '<em><b>Services</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODULE__SERVICES = 4;
+  int MODULE__SERVICES = 5;
 
   /**
    * The feature id for the '<em><b>Event</b></em>' attribute.
@@ -156,7 +165,7 @@ public interface SoaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODULE__EVENT = 5;
+  int MODULE__EVENT = 6;
 
   /**
    * The number of structural features of the '<em>Module</em>' class.
@@ -165,7 +174,7 @@ public interface SoaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODULE_FEATURE_COUNT = 6;
+  int MODULE_FEATURE_COUNT = 7;
 
   /**
    * The meta object id for the '{@link com.mguidi.soa.soa.impl.ImportImpl <em>Import</em>}' class.
@@ -503,23 +512,14 @@ public interface SoaPackage extends EPackage
   int GENERIC_LIST_FEATURE_FEATURE_COUNT = FEATURE_TYPE_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link com.mguidi.soa.soa.impl.ServiceImpl <em>Service</em>}' class.
+   * The meta object id for the '{@link com.mguidi.soa.soa.impl.ExceptionsImpl <em>Exceptions</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.mguidi.soa.soa.impl.ServiceImpl
-   * @see com.mguidi.soa.soa.impl.SoaPackageImpl#getService()
+   * @see com.mguidi.soa.soa.impl.ExceptionsImpl
+   * @see com.mguidi.soa.soa.impl.SoaPackageImpl#getExceptions()
    * @generated
    */
-  int SERVICE = 13;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SERVICE__NAME = 0;
+  int EXCEPTIONS = 13;
 
   /**
    * The feature id for the '<em><b>Exceptions</b></em>' containment reference list.
@@ -528,25 +528,16 @@ public interface SoaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SERVICE__EXCEPTIONS = 1;
+  int EXCEPTIONS__EXCEPTIONS = 0;
 
   /**
-   * The feature id for the '<em><b>Operations</b></em>' containment reference list.
+   * The number of structural features of the '<em>Exceptions</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SERVICE__OPERATIONS = 2;
-
-  /**
-   * The number of structural features of the '<em>Service</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SERVICE_FEATURE_COUNT = 3;
+  int EXCEPTIONS_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link com.mguidi.soa.soa.impl.ExceptionImpl <em>Exception</em>}' class.
@@ -586,6 +577,43 @@ public interface SoaPackage extends EPackage
   int EXCEPTION_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link com.mguidi.soa.soa.impl.ServiceImpl <em>Service</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.mguidi.soa.soa.impl.ServiceImpl
+   * @see com.mguidi.soa.soa.impl.SoaPackageImpl#getService()
+   * @generated
+   */
+  int SERVICE = 15;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SERVICE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Operations</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SERVICE__OPERATIONS = 1;
+
+  /**
+   * The number of structural features of the '<em>Service</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SERVICE_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link com.mguidi.soa.soa.impl.OperationImpl <em>Operation</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -593,7 +621,7 @@ public interface SoaPackage extends EPackage
    * @see com.mguidi.soa.soa.impl.SoaPackageImpl#getOperation()
    * @generated
    */
-  int OPERATION = 15;
+  int OPERATION = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -648,7 +676,7 @@ public interface SoaPackage extends EPackage
    * @see com.mguidi.soa.soa.impl.SoaPackageImpl#getPrimitiveType()
    * @generated
    */
-  int PRIMITIVE_TYPE = 16;
+  int PRIMITIVE_TYPE = 17;
 
 
   /**
@@ -736,6 +764,17 @@ public interface SoaPackage extends EPackage
    * @generated
    */
   EReference getModule_Model();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.mguidi.soa.soa.Module#getExceptions <em>Exceptions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exceptions</em>'.
+   * @see com.mguidi.soa.soa.Module#getExceptions()
+   * @see #getModule()
+   * @generated
+   */
+  EReference getModule_Exceptions();
 
   /**
    * Returns the meta object for the containment reference list '{@link com.mguidi.soa.soa.Module#getServices <em>Services</em>}'.
@@ -1002,47 +1041,25 @@ public interface SoaPackage extends EPackage
   EReference getGenericListFeature_Type();
 
   /**
-   * Returns the meta object for class '{@link com.mguidi.soa.soa.Service <em>Service</em>}'.
+   * Returns the meta object for class '{@link com.mguidi.soa.soa.Exceptions <em>Exceptions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Service</em>'.
-   * @see com.mguidi.soa.soa.Service
+   * @return the meta object for class '<em>Exceptions</em>'.
+   * @see com.mguidi.soa.soa.Exceptions
    * @generated
    */
-  EClass getService();
+  EClass getExceptions();
 
   /**
-   * Returns the meta object for the attribute '{@link com.mguidi.soa.soa.Service#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see com.mguidi.soa.soa.Service#getName()
-   * @see #getService()
-   * @generated
-   */
-  EAttribute getService_Name();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link com.mguidi.soa.soa.Service#getExceptions <em>Exceptions</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.mguidi.soa.soa.Exceptions#getExceptions <em>Exceptions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Exceptions</em>'.
-   * @see com.mguidi.soa.soa.Service#getExceptions()
-   * @see #getService()
+   * @see com.mguidi.soa.soa.Exceptions#getExceptions()
+   * @see #getExceptions()
    * @generated
    */
-  EReference getService_Exceptions();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link com.mguidi.soa.soa.Service#getOperations <em>Operations</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Operations</em>'.
-   * @see com.mguidi.soa.soa.Service#getOperations()
-   * @see #getService()
-   * @generated
-   */
-  EReference getService_Operations();
+  EReference getExceptions_Exceptions();
 
   /**
    * Returns the meta object for class '{@link com.mguidi.soa.soa.Exception <em>Exception</em>}'.
@@ -1075,6 +1092,38 @@ public interface SoaPackage extends EPackage
    * @generated
    */
   EAttribute getException_Msg();
+
+  /**
+   * Returns the meta object for class '{@link com.mguidi.soa.soa.Service <em>Service</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Service</em>'.
+   * @see com.mguidi.soa.soa.Service
+   * @generated
+   */
+  EClass getService();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.mguidi.soa.soa.Service#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see com.mguidi.soa.soa.Service#getName()
+   * @see #getService()
+   * @generated
+   */
+  EAttribute getService_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link com.mguidi.soa.soa.Service#getOperations <em>Operations</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Operations</em>'.
+   * @see com.mguidi.soa.soa.Service#getOperations()
+   * @see #getService()
+   * @generated
+   */
+  EReference getService_Operations();
 
   /**
    * Returns the meta object for class '{@link com.mguidi.soa.soa.Operation <em>Operation</em>}'.
@@ -1230,6 +1279,14 @@ public interface SoaPackage extends EPackage
      * @generated
      */
     EReference MODULE__MODEL = eINSTANCE.getModule_Model();
+
+    /**
+     * The meta object literal for the '<em><b>Exceptions</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODULE__EXCEPTIONS = eINSTANCE.getModule_Exceptions();
 
     /**
      * The meta object literal for the '<em><b>Services</b></em>' containment reference list feature.
@@ -1454,22 +1511,14 @@ public interface SoaPackage extends EPackage
     EReference GENERIC_LIST_FEATURE__TYPE = eINSTANCE.getGenericListFeature_Type();
 
     /**
-     * The meta object literal for the '{@link com.mguidi.soa.soa.impl.ServiceImpl <em>Service</em>}' class.
+     * The meta object literal for the '{@link com.mguidi.soa.soa.impl.ExceptionsImpl <em>Exceptions</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.mguidi.soa.soa.impl.ServiceImpl
-     * @see com.mguidi.soa.soa.impl.SoaPackageImpl#getService()
+     * @see com.mguidi.soa.soa.impl.ExceptionsImpl
+     * @see com.mguidi.soa.soa.impl.SoaPackageImpl#getExceptions()
      * @generated
      */
-    EClass SERVICE = eINSTANCE.getService();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute SERVICE__NAME = eINSTANCE.getService_Name();
+    EClass EXCEPTIONS = eINSTANCE.getExceptions();
 
     /**
      * The meta object literal for the '<em><b>Exceptions</b></em>' containment reference list feature.
@@ -1477,15 +1526,7 @@ public interface SoaPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SERVICE__EXCEPTIONS = eINSTANCE.getService_Exceptions();
-
-    /**
-     * The meta object literal for the '<em><b>Operations</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SERVICE__OPERATIONS = eINSTANCE.getService_Operations();
+    EReference EXCEPTIONS__EXCEPTIONS = eINSTANCE.getExceptions_Exceptions();
 
     /**
      * The meta object literal for the '{@link com.mguidi.soa.soa.impl.ExceptionImpl <em>Exception</em>}' class.
@@ -1512,6 +1553,32 @@ public interface SoaPackage extends EPackage
      * @generated
      */
     EAttribute EXCEPTION__MSG = eINSTANCE.getException_Msg();
+
+    /**
+     * The meta object literal for the '{@link com.mguidi.soa.soa.impl.ServiceImpl <em>Service</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.mguidi.soa.soa.impl.ServiceImpl
+     * @see com.mguidi.soa.soa.impl.SoaPackageImpl#getService()
+     * @generated
+     */
+    EClass SERVICE = eINSTANCE.getService();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SERVICE__NAME = eINSTANCE.getService_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Operations</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SERVICE__OPERATIONS = eINSTANCE.getService_Operations();
 
     /**
      * The meta object literal for the '{@link com.mguidi.soa.soa.impl.OperationImpl <em>Operation</em>}' class.

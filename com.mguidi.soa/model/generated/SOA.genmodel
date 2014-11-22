@@ -30,6 +30,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SOA.ecore#//Module/version"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SOA.ecore#//Module/imports"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SOA.ecore#//Module/model"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SOA.ecore#//Module/exceptions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SOA.ecore#//Module/services"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SOA.ecore#//Module/event"/>
     </genClasses>
@@ -66,14 +67,16 @@
     <genClasses ecoreClass="SOA.ecore#//GenericListFeature">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SOA.ecore#//GenericListFeature/type"/>
     </genClasses>
-    <genClasses ecoreClass="SOA.ecore#//Service">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SOA.ecore#//Service/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SOA.ecore#//Service/exceptions"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SOA.ecore#//Service/operations"/>
+    <genClasses ecoreClass="SOA.ecore#//Exceptions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SOA.ecore#//Exceptions/exceptions"/>
     </genClasses>
     <genClasses ecoreClass="SOA.ecore#//Exception">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SOA.ecore#//Exception/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SOA.ecore#//Exception/msg"/>
+    </genClasses>
+    <genClasses ecoreClass="SOA.ecore#//Service">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SOA.ecore#//Service/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SOA.ecore#//Service/operations"/>
     </genClasses>
     <genClasses ecoreClass="SOA.ecore#//Operation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SOA.ecore#//Operation/name"/>

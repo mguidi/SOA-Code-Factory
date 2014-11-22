@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.mguidi.soa.soa.Module#getVersion <em>Version</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.Module#getImports <em>Imports</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.Module#getModel <em>Model</em>}</li>
+ *   <li>{@link com.mguidi.soa.soa.Module#getExceptions <em>Exceptions</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.Module#getServices <em>Services</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.Module#getEvent <em>Event</em>}</li>
  * </ul>
@@ -122,6 +123,32 @@ public interface Module extends EObject
    * @generated
    */
   void setModel(Model value);
+
+  /**
+   * Returns the value of the '<em><b>Exceptions</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Exceptions</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Exceptions</em>' containment reference.
+   * @see #setExceptions(Exceptions)
+   * @see com.mguidi.soa.soa.SoaPackage#getModule_Exceptions()
+   * @model containment="true"
+   * @generated
+   */
+  Exceptions getExceptions();
+
+  /**
+   * Sets the value of the '{@link com.mguidi.soa.soa.Module#getExceptions <em>Exceptions</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Exceptions</em>' containment reference.
+   * @see #getExceptions()
+   * @generated
+   */
+  void setExceptions(Exceptions value);
 
   /**
    * Returns the value of the '<em><b>Services</b></em>' containment reference list.

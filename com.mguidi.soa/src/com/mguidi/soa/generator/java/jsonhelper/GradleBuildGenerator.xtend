@@ -3,7 +3,6 @@ package com.mguidi.soa.generator.java.jsonhelper
 import com.mguidi.soa.soa.Architecture
 import com.google.inject.Inject
 import org.eclipse.emf.ecore.resource.Resource
-import com.mguidi.soa.soa.Feature
 import com.mguidi.soa.generator.java.Utils
 
 class GradleBuildGenerator {
@@ -23,7 +22,7 @@ class GradleBuildGenerator {
 		dependencies {
 		    compile 'com.google.code.gson:gson:2.3'
 		    compile '«architecture.applicationId+":"+architecture.moduleName+"-model:"+architecture.version»'
-		    «FOR dependency: dependencies(architecture, resource.allContents.toIterable.filter(typeof(Feature)))»
+		    «FOR dependency: architecture.modelDependencies»
 		    compile '«dependency.applicationId+":"+dependency.moduleName+"-model-json:"+dependency.version»'
 		    «ENDFOR»
 		}

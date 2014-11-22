@@ -14,6 +14,10 @@ import com.mguidi.soa.soa.Architecture
 import com.mguidi.soa.soa.Module
 import java.util.HashSet
 import com.mguidi.soa.soa.Entity
+import java.util.Set
+import org.eclipse.emf.ecore.resource.Resource
+import java.util.LinkedList
+import java.util.Collection
 
 class Utils {
 	
@@ -148,6 +152,10 @@ class Utils {
 		operation.packageNameInput + "." + operation.classNameInput
 	}
 	
+	def applicationId(Operation operation) {
+		(operation.eContainer as Service).applicationId
+	}
+	
 	def moduleName(Operation operation) {
 		(operation.eContainer as Service).moduleName
 	}
@@ -158,7 +166,8 @@ class Utils {
 
 	/******************************** Exception  ********************************/	
 	def packageName(com.mguidi.soa.soa.Exception exception) {
-		(exception.eContainer as Service).qualifiedClassName.toLowerCase + ".exception"
+		(exception.eContainer.eContainer.eContainer as Architecture).name + "." +
+		(exception.eContainer.eContainer as Module).name + ".exception"
 	}
 
 	def className(com.mguidi.soa.soa.Exception exception) {
@@ -169,12 +178,16 @@ class Utils {
 		exception.packageName + "." + exception.className
 	}
 	
+	def applicationId(com.mguidi.soa.soa.Exception exception) {
+		(exception.eContainer.eContainer.eContainer as Architecture).applicationId
+	}
+	
 	def moduleName(com.mguidi.soa.soa.Exception exception) {
-		(exception.eContainer as Service).moduleName
+		(exception.eContainer.eContainer.eContainer as Architecture).moduleName
 	}
 	
 	def version(com.mguidi.soa.soa.Exception exception) {
-		(exception.eContainer as Service).version
+		(exception.eContainer.eContainer.eContainer as Architecture).version
 	}
 	
 	/******************************** PrimitiveType  ********************************/
@@ -304,45 +317,158 @@ class Utils {
 	}
 	
 	
-	def dependencies(Architecture architecture, Iterable<Feature> features) {
+	def moduleDependencies(Architecture architecture) {
 		var dependencies = new HashSet<Dependency>()
-		for (Feature f: features) {
-			if (f.type.applicationId != null && f.type.moduleName !=null && (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName))) {
-				var dependency = new Dependency()
-				dependency.applicationId = f.type.applicationId
-				dependency.moduleName = f.type.moduleName
-				dependency.version = f.type.version 
-				
-				dependencies.add(dependency)
-			}
-		}
+
+		dependencies.addAll(architecture.modelDependencies)
+		dependencies.addAll(architecture.serviceModelDependencies)
+		dependencies.addAll(architecture.serviceExceptionDependencies)
+		
 		return dependencies
 	}
 	
-	def dependenciesEntity(Architecture architecture, Iterable<Feature> features) {
+	def modelDependencies(Architecture architecture) {
 		var dependencies = new HashSet<Dependency>()
-		for (Feature f: features) {
-			if (f.type instanceof EntitiesFeature && (f.type as EntitiesFeature).type instanceof Entity) {
-				if (f.type.applicationId != null && f.type.moduleName !=null && (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName))) {
-					var dependency = new Dependency()
-					dependency.applicationId = f.type.applicationId
-					dependency.moduleName = f.type.moduleName
-					dependency.version = f.type.version 
-					
-					dependencies.add(dependency)
-				}
-			} else if (f.type instanceof GenericListFeature && (f.type as GenericListFeature).baseType instanceof EntitiesFeature && ((f.type as GenericListFeature).baseType as EntitiesFeature).type instanceof Entity) {
-				if (f.type.applicationId != null && f.type.moduleName !=null && (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName))) {
-					var dependency = new Dependency()
-					dependency.applicationId = f.type.applicationId
-					dependency.moduleName = f.type.moduleName
-					dependency.version = f.type.version 
-					
-					dependencies.add(dependency)
+
+		if (architecture.module.model != null) {
+			for (Entity entity : architecture.module.model.entities.filter(typeof(Entity))) {
+				for (Feature f: entity.features) {
+					if (f.type instanceof EntitiesFeature && (f.type as EntitiesFeature).type instanceof Entity) {
+						if (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName)) {
+							var dependency = new Dependency()
+							dependency.applicationId = f.type.applicationId
+							dependency.moduleName = f.type.moduleName
+							dependency.version = f.type.version 
+							
+							dependencies.add(dependency)
+						}
+					} else if (f.type instanceof GenericListFeature && (f.type as GenericListFeature).baseType instanceof EntitiesFeature && ((f.type as GenericListFeature).baseType as EntitiesFeature).type instanceof Entity) {
+						if (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName)) {
+							var dependency = new Dependency()
+							dependency.applicationId = f.type.applicationId
+							dependency.moduleName = f.type.moduleName
+							dependency.version = f.type.version 
+							
+							dependencies.add(dependency)
+						}
+					}
 				}
 			}
 		}
+		
 		return dependencies
+	}
+	
+	def serviceModelDependencies(Architecture architecture) {
+		var dependencies = new HashSet<Dependency>()
+
+		for (Service service: architecture.module.services) {
+			for (Operation operation: service.operations) {
+				for (Feature f: operation.featuresInput) {
+					if (f.type instanceof EntitiesFeature && (f.type as EntitiesFeature).type instanceof Entity) {
+						if (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName)) {
+							var dependency = new Dependency()
+							dependency.applicationId = f.type.applicationId
+							dependency.moduleName = f.type.moduleName
+							dependency.version = f.type.version 
+							
+							dependencies.add(dependency)
+						}
+					} else if (f.type instanceof GenericListFeature && (f.type as GenericListFeature).baseType instanceof EntitiesFeature && ((f.type as GenericListFeature).baseType as EntitiesFeature).type instanceof Entity) {
+						if (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName)) {
+							var dependency = new Dependency()
+							dependency.applicationId = f.type.applicationId
+							dependency.moduleName = f.type.moduleName
+							dependency.version = f.type.version 
+							
+							dependencies.add(dependency)
+						}
+					}
+				}
+				
+				for (Feature f: operation.featuresOutput) {
+					if (f.type instanceof EntitiesFeature && (f.type as EntitiesFeature).type instanceof Entity) {
+						if (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName)) {
+							var dependency = new Dependency()
+							dependency.applicationId = f.type.applicationId
+							dependency.moduleName = f.type.moduleName
+							dependency.version = f.type.version 
+							
+							dependencies.add(dependency)
+						}
+					} else if (f.type instanceof GenericListFeature && (f.type as GenericListFeature).baseType instanceof EntitiesFeature && ((f.type as GenericListFeature).baseType as EntitiesFeature).type instanceof Entity) {
+						if (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName)) {
+							var dependency = new Dependency()
+							dependency.applicationId = f.type.applicationId
+							dependency.moduleName = f.type.moduleName
+							dependency.version = f.type.version 
+							
+							dependencies.add(dependency)
+						}
+					}
+				}
+			}
+		}	
+		
+		return dependencies
+	}
+	
+	def serviceExceptionDependencies(Architecture architecture) {
+		var dependencies = new HashSet<Dependency>()
+
+		for (Service service: architecture.module.services) {
+			for (Operation operation: service.operations) {
+				for (com.mguidi.soa.soa.Exception exception: operation.exceptionts) {
+					if (!exception.applicationId.equals(architecture.applicationId) || !exception.moduleName.equals(architecture.moduleName)) {
+						var dependency = new Dependency()
+						dependency.applicationId = exception.applicationId
+						dependency.moduleName = exception.moduleName
+						dependency.version = exception.version 
+						
+						dependencies.add(dependency)
+					}
+				}
+			}
+		}	
+		
+		return dependencies
+	}
+	
+	def architectureOrder(Set<Resource> resources) {
+		var queue = new LinkedList<Architecture>()
+		for (Resource resource: resources) {
+			queue.add((resource.contents.get(0) as Architecture))
+		}
+		
+		var repository = new LinkedList<Dependency>()
+		var architectures = new LinkedList<Architecture>()
+		while (queue.size > 0) {
+			var architecture = queue.remove(0)
+			
+			if (!checkDependency(architecture.moduleDependencies, repository)) {
+				queue.add(architecture)
+				
+			} else {
+				var dependency = new Dependency()
+				dependency.applicationId = architecture.applicationId
+				dependency.moduleName = architecture.moduleName
+				dependency.version = architecture.version
+				
+				repository.add(dependency)
+				architectures.add(architecture)
+			}
+		}
+		
+		return architectures
+	}
+	
+	def checkDependency(Collection<Dependency> dependencies, Collection<Dependency> repository) {
+		for (Dependency dependency: dependencies) {
+			if (!repository.contains(dependency)) {
+				return false
+			}
+		}
+		return true
 	}
 	
 	static class Dependency {

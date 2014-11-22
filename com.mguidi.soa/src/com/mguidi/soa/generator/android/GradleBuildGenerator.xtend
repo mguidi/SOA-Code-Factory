@@ -4,7 +4,6 @@ import com.mguidi.soa.soa.Architecture
 import com.mguidi.soa.generator.java.Utils
 import com.google.inject.Inject
 import org.eclipse.emf.ecore.resource.Resource
-import com.mguidi.soa.soa.Feature
 
 class GradleBuildGenerator {
 	
@@ -40,10 +39,10 @@ class GradleBuildGenerator {
 			mavenLocal()
 			mavenCentral()
 		}
-		«IF dependencies(architecture, resource.allContents.toIterable.filter(typeof(Feature))).size > 0»
+		«IF architecture.modelDependencies.size > 0»
 		
 		dependencies {
-		    «FOR dependency: dependencies(architecture, resource.allContents.toIterable.filter(typeof(Feature)))»
+		    «FOR dependency: architecture.modelDependencies»
 		    compile '«dependency.applicationId+":"+dependency.moduleName+"-model:android_"+dependency.version»'
 		    «ENDFOR»
 		}
@@ -99,8 +98,11 @@ class GradleBuildGenerator {
 		dependencies {
 		    compile 'com.mguidi.soa:commons-service:1.0.0'
 		    compile '«architecture.applicationId»:«architecture.moduleName»-model:android_«architecture.version»'
-		    «FOR dependency: dependencies(architecture, resource.allContents.toIterable.filter(typeof(Feature)))»
+		    «FOR dependency: architecture.serviceModelDependencies»
 		    compile '«dependency.applicationId+":"+dependency.moduleName+"-model:android_"+dependency.version»'
+		    «ENDFOR»
+		    «FOR dependency: architecture.serviceExceptionDependencies»
+		    compile '«dependency.applicationId+":"+dependency.moduleName+"-service:android_"+dependency.version»'
 		    «ENDFOR»
 		}
 		

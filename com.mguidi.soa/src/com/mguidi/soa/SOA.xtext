@@ -12,6 +12,7 @@ Module:
 	'@version' ':' version=Version
 	imports+=Import*
 	model=Model?
+	exceptions=Exceptions?
 	services+=Service*
 	event=Event?
 ;
@@ -73,16 +74,20 @@ enum PrimitiveType:
 	Double='@Double' | Boolean='@Boolean' | Byte='@Byte' | Date='@Date' |Datetime='@Datetime' | 
 	Timestamp='@Timestamp' | Decimal='@Decimal';
 	
-
 /************************ Service definition *************************/
-Service:
-	'@service' name=ID '{' exceptions+=Exception* operations+=Operation* '}'
+Exceptions:
+	'@exceptions' '{' exceptions+=Exception+ '}'
 ;
-
+	
 Exception:
 	'@exception' name=ID '{'
 		'@msg' ':' msg=STRING
 	'}'
+;
+
+/************************ Service definition *************************/
+Service:
+	'@service' name=ID '{' operations+=Operation+ '}'
 ;
 
 Operation:
@@ -93,7 +98,7 @@ Operation:
 		('@output' ':' '{'
 			featuresOutput+=Feature+
 		'}')?
-		('@exception' ':' exceptionts+=[Exception|QualifiedName]+ (','  exceptionts+=[Exception|QualifiedName]+)?)?
+		('@exception' ':' exceptionts+=[Exception|QualifiedName] (','  exceptionts+=[Exception|QualifiedName])* )?
 	'}'
 ;
 

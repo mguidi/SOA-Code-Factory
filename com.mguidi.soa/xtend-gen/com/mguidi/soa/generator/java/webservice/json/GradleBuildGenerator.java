@@ -1,17 +1,12 @@
 package com.mguidi.soa.generator.java.webservice.json;
 
-import com.google.common.collect.Iterables;
 import com.google.inject.Inject;
 import com.mguidi.soa.generator.java.Utils;
 import com.mguidi.soa.soa.Architecture;
-import com.mguidi.soa.soa.Feature;
 import java.util.HashSet;
-import org.eclipse.emf.common.util.TreeIterator;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.Extension;
-import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 
 @SuppressWarnings("all")
 public class GradleBuildGenerator {
@@ -68,11 +63,8 @@ public class GradleBuildGenerator {
     _builder.append("\'");
     _builder.newLineIfNotEmpty();
     {
-      TreeIterator<EObject> _allContents = resource.getAllContents();
-      Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
-      Iterable<Feature> _filter = Iterables.<Feature>filter(_iterable, Feature.class);
-      HashSet<Utils.Dependency> _dependencies = this.utils.dependencies(architecture, _filter);
-      for(final Utils.Dependency dependency : _dependencies) {
+      HashSet<Utils.Dependency> _serviceModelDependencies = this.utils.serviceModelDependencies(architecture);
+      for(final Utils.Dependency dependency : _serviceModelDependencies) {
         _builder.append("    ");
         _builder.append("compile \'");
         _builder.append(((((dependency.applicationId + ":") + dependency.moduleName) + "-model-json:") + dependency.version), "    ");
@@ -177,25 +169,13 @@ public class GradleBuildGenerator {
     _builder.append("    ");
     _builder.append("compile \'");
     String _applicationId = this.utils.applicationId(architecture);
-    String _plus = (_applicationId + ":");
-    String _moduleName = this.utils.moduleName(architecture);
-    String _plus_1 = (_plus + _moduleName);
-    String _plus_2 = (_plus_1 + "-service:");
-    String _version = this.utils.version(architecture);
-    String _plus_3 = (_plus_2 + _version);
-    _builder.append(_plus_3, "    ");
-    _builder.append("\'");
-    _builder.newLineIfNotEmpty();
-    _builder.append("    ");
-    _builder.append("compile \'");
-    String _applicationId_1 = this.utils.applicationId(architecture);
-    _builder.append(_applicationId_1, "    ");
+    _builder.append(_applicationId, "    ");
     _builder.append(":");
-    String _moduleName_1 = this.utils.moduleName(architecture);
-    _builder.append(_moduleName_1, "    ");
+    String _moduleName = this.utils.moduleName(architecture);
+    _builder.append(_moduleName, "    ");
     _builder.append("-service-json:");
-    String _version_1 = this.utils.version(architecture);
-    _builder.append(_version_1, "    ");
+    String _version = this.utils.version(architecture);
+    _builder.append(_version, "    ");
     _builder.append("\'");
     _builder.newLineIfNotEmpty();
     _builder.append("}");
@@ -219,20 +199,20 @@ public class GradleBuildGenerator {
     _builder.newLine();
     _builder.append("            ");
     _builder.append("pom.groupId = \'");
-    String _applicationId_2 = this.utils.applicationId(architecture);
-    _builder.append(_applicationId_2, "            ");
+    String _applicationId_1 = this.utils.applicationId(architecture);
+    _builder.append(_applicationId_1, "            ");
     _builder.append("\'");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t");
     _builder.append("pom.artifactId = \'");
-    String _moduleName_2 = this.utils.moduleName(architecture);
-    _builder.append(_moduleName_2, "\t\t\t");
+    String _moduleName_1 = this.utils.moduleName(architecture);
+    _builder.append(_moduleName_1, "\t\t\t");
     _builder.append("-servlet-json\'");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t");
     _builder.append("pom.version = \'");
-    String _version_2 = this.utils.version(architecture);
-    _builder.append(_version_2, "\t\t\t");
+    String _version_1 = this.utils.version(architecture);
+    _builder.append(_version_1, "\t\t\t");
     _builder.append("\'");
     _builder.newLineIfNotEmpty();
     _builder.append("        ");

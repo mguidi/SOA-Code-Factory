@@ -1,17 +1,12 @@
 package com.mguidi.soa.generator.java.jsonhelper;
 
-import com.google.common.collect.Iterables;
 import com.google.inject.Inject;
 import com.mguidi.soa.generator.java.Utils;
 import com.mguidi.soa.soa.Architecture;
-import com.mguidi.soa.soa.Feature;
 import java.util.HashSet;
-import org.eclipse.emf.common.util.TreeIterator;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.Extension;
-import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 
 @SuppressWarnings("all")
 public class GradleBuildGenerator {
@@ -56,11 +51,8 @@ public class GradleBuildGenerator {
     _builder.append("\'");
     _builder.newLineIfNotEmpty();
     {
-      TreeIterator<EObject> _allContents = resource.getAllContents();
-      Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
-      Iterable<Feature> _filter = Iterables.<Feature>filter(_iterable, Feature.class);
-      HashSet<Utils.Dependency> _dependencies = this.utils.dependencies(architecture, _filter);
-      for(final Utils.Dependency dependency : _dependencies) {
+      HashSet<Utils.Dependency> _modelDependencies = this.utils.modelDependencies(architecture);
+      for(final Utils.Dependency dependency : _modelDependencies) {
         _builder.append("    ");
         _builder.append("compile \'");
         _builder.append(((((dependency.applicationId + ":") + dependency.moduleName) + "-model-json:") + dependency.version), "    ");
