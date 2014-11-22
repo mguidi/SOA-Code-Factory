@@ -44,7 +44,7 @@ class ClientJsonGenerator {
 			
 			«FOR Operation operation: service.operations»
 				@Override
-				public «IF operation.featuresOutput.size>0»«operation.qualifiedClassNameOutput»«ELSE»void«ENDIF» «operation.signature»(«IF operation.featuresInput.size>0»«operation.classNameInput» input«ENDIF») throws IOException«operation.throwsException» {
+				public «IF operation.featuresOutput.size>0»«operation.qualifiedClassNameOutput»«ELSE»void«ENDIF» «operation.signature»(«IF operation.featuresInput.size>0»«operation.qualifiedClassNameInput» input«ENDIF») throws IOException«operation.throwsException» {
 					URL url = new URL(mServiceAddress+"/«operation.name»");
 
 					HttpURLConnection conn = (HttpURLConnection) url.openConnection();

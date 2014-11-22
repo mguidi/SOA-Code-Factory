@@ -137,8 +137,8 @@ public class ClientJsonGenerator {
           int _size_1 = _featuresInput.size();
           boolean _greaterThan_1 = (_size_1 > 0);
           if (_greaterThan_1) {
-            String _classNameInput = this.utils.classNameInput(operation);
-            _builder.append(_classNameInput, "\t");
+            String _qualifiedClassNameInput = this.utils.qualifiedClassNameInput(operation);
+            _builder.append(_qualifiedClassNameInput, "\t");
             _builder.append(" input");
           }
         }

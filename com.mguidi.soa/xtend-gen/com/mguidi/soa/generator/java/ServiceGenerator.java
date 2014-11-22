@@ -68,8 +68,8 @@ public class ServiceGenerator {
           int _size_1 = _featuresInput.size();
           boolean _greaterThan_1 = (_size_1 > 0);
           if (_greaterThan_1) {
-            String _classNameInput = this.utils.classNameInput(operation);
-            _builder.append(_classNameInput, "\t");
+            String _qualifiedClassNameInput = this.utils.qualifiedClassNameInput(operation);
+            _builder.append(_qualifiedClassNameInput, "\t");
             _builder.append(" input");
           }
         }
@@ -100,8 +100,8 @@ public class ServiceGenerator {
           int _size_3 = _featuresInput_1.size();
           boolean _greaterThan_3 = (_size_3 > 0);
           if (_greaterThan_3) {
-            String _classNameInput_1 = this.utils.classNameInput(operation);
-            _builder.append(_classNameInput_1, "\t");
+            String _qualifiedClassNameInput_1 = this.utils.qualifiedClassNameInput(operation);
+            _builder.append(_qualifiedClassNameInput_1, "\t");
             _builder.append(" input, ");
           }
         }

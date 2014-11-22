@@ -61,12 +61,12 @@ class ClientJsonGenerator {
 			
 			«FOR Operation operation: service.operations»
 				@Override
-				public «IF operation.featuresOutput.size>0»«operation.qualifiedClassNameOutput»«ELSE»void«ENDIF» «operation.signature»(«IF operation.featuresInput.size>0»«operation.classNameInput» input«ENDIF») throws IOException«operation.throwsException» {
+				public «IF operation.featuresOutput.size>0»«operation.qualifiedClassNameOutput»«ELSE»void«ENDIF» «operation.signature»(«IF operation.featuresInput.size>0»«operation.qualifiedClassNameInput» input«ENDIF») throws IOException«operation.throwsException» {
 					«IF operation.featuresOutput.size>0»return «ENDIF»«operation.signature»(«IF operation.featuresInput.size>0»input, «ENDIF»1);
 				}
 				
 				@Override
-				public «IF operation.featuresOutput.size>0»«operation.qualifiedClassNameOutput»«ELSE»void«ENDIF» «operation.signature»(«IF operation.featuresInput.size>0»«operation.classNameInput» input, «ENDIF»int maxRetries) throws IOException«operation.throwsException» {
+				public «IF operation.featuresOutput.size>0»«operation.qualifiedClassNameOutput»«ELSE»void«ENDIF» «operation.signature»(«IF operation.featuresInput.size>0»«operation.qualifiedClassNameInput» input, «ENDIF»int maxRetries) throws IOException«operation.throwsException» {
 					
 					«IF operation.setTokenRequired»
 					// set auth token on the input of the request 
