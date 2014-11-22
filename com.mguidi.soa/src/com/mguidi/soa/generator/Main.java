@@ -125,6 +125,7 @@ public class Main {
 				result.addAll(getSourceFiles(relativePath));
 			}
 		}
+		
 		return result;
 	}
 

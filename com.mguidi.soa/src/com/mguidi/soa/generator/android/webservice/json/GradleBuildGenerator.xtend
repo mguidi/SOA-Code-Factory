@@ -4,6 +4,7 @@ import com.mguidi.soa.soa.Architecture
 import com.mguidi.soa.generator.java.Utils
 import com.google.inject.Inject
 import org.eclipse.emf.ecore.resource.Resource
+import com.mguidi.soa.soa.Entity
 
 class GradleBuildGenerator {
 	
@@ -24,6 +25,10 @@ class GradleBuildGenerator {
 		android {
 		    compileSdkVersion 21
 		    buildToolsVersion "21.0.0"
+		    
+		    defaultConfig {
+		        minSdkVersion 5
+		    }
 		}
 		
 		task androidSourcesJar(type: Jar) {
@@ -42,9 +47,10 @@ class GradleBuildGenerator {
 		
 		dependencies {
 		    compile 'com.google.code.gson:gson:2.3'
-		    compile 'com.mguidi.soa:utils-webservice-json:1.0.0'
 		    compile '«architecture.applicationId+":"+architecture.moduleName+"-service:android_"+architecture.version»'
+		    «IF architecture.module.model != null && architecture.module.model.entities.filter(typeof(Entity)).size > 0»
 		    compile '«architecture.applicationId+":"+architecture.moduleName+"-model-json:android_"+architecture.version»'
+		    «ENDIF»
 		    «FOR dependency: architecture.serviceModelDependencies»
 		    compile '«dependency.applicationId+":"+dependency.moduleName+"-model-json:android_"+dependency.version»'
 		    «ENDFOR»

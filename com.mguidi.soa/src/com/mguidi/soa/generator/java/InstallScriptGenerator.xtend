@@ -19,7 +19,7 @@ class InstallScriptGenerator {
 	
 	def generateInstallScriptService(List<Architecture> architectures) '''
 		«FOR e: architectures»
-		«IF e.module.services.size > 0»
+		«IF e.module.services.size > 0 || e.module.exceptions != null»
 		gradle -b «e.applicationId»/«e.moduleName»/«e.version»/service/build.gradle build uploadArchives
 		«ENDIF»
 		«ENDFOR»

@@ -361,7 +361,7 @@ class Utils {
 	
 	def serviceModelDependencies(Architecture architecture) {
 		var dependencies = new HashSet<Dependency>()
-
+		
 		for (Service service: architecture.module.services) {
 			for (Operation operation: service.operations) {
 				for (Feature f: operation.featuresInput) {
@@ -408,7 +408,7 @@ class Utils {
 					}
 				}
 			}
-		}	
+		}
 		
 		return dependencies
 	}

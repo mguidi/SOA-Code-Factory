@@ -1,8 +1,11 @@
 package com.mguidi.soa.generator.android;
 
+import com.google.common.base.Objects;
 import com.google.inject.Inject;
 import com.mguidi.soa.generator.java.Utils;
 import com.mguidi.soa.soa.Architecture;
+import com.mguidi.soa.soa.Model;
+import com.mguidi.soa.soa.Module;
 import java.util.HashSet;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
@@ -225,18 +228,25 @@ public class GradleBuildGenerator {
     _builder.append("    ");
     _builder.append("compile \'com.mguidi.soa:commons-service:1.0.0\'");
     _builder.newLine();
-    _builder.append("    ");
-    _builder.append("compile \'");
-    String _applicationId = this.utils.applicationId(architecture);
-    _builder.append(_applicationId, "    ");
-    _builder.append(":");
-    String _moduleName = this.utils.moduleName(architecture);
-    _builder.append(_moduleName, "    ");
-    _builder.append("-model:android_");
-    String _version = this.utils.version(architecture);
-    _builder.append(_version, "    ");
-    _builder.append("\'");
-    _builder.newLineIfNotEmpty();
+    {
+      Module _module = architecture.getModule();
+      Model _model = _module.getModel();
+      boolean _notEquals = (!Objects.equal(_model, null));
+      if (_notEquals) {
+        _builder.append("    ");
+        _builder.append("compile \'");
+        String _applicationId = this.utils.applicationId(architecture);
+        _builder.append(_applicationId, "    ");
+        _builder.append(":");
+        String _moduleName = this.utils.moduleName(architecture);
+        _builder.append(_moduleName, "    ");
+        _builder.append("-model:android_");
+        String _version = this.utils.version(architecture);
+        _builder.append(_version, "    ");
+        _builder.append("\'");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     {
       HashSet<Utils.Dependency> _serviceModelDependencies = this.utils.serviceModelDependencies(architecture);
       for(final Utils.Dependency dependency : _serviceModelDependencies) {

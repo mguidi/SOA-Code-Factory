@@ -53,7 +53,9 @@ class GradleBuildGenerator {
 		
 		dependencies {
 		    compile 'com.mguidi.soa:commons-service:1.0.0'
+		    «IF architecture.module.model != null»
 		    compile '«architecture.applicationId»:«architecture.moduleName»-model:«architecture.version»'
+		    «ENDIF»
 		    «FOR dependency: architecture.serviceModelDependencies»
 		    compile '«dependency.applicationId+":"+dependency.moduleName+"-model:"+dependency.version»'
 		    «ENDFOR»

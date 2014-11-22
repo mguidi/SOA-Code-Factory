@@ -1,12 +1,20 @@
 package com.mguidi.soa.generator.android.webservice.json;
 
+import com.google.common.base.Objects;
+import com.google.common.collect.Iterables;
 import com.google.inject.Inject;
 import com.mguidi.soa.generator.java.Utils;
 import com.mguidi.soa.soa.Architecture;
+import com.mguidi.soa.soa.Entities;
+import com.mguidi.soa.soa.Entity;
+import com.mguidi.soa.soa.Model;
+import com.mguidi.soa.soa.Module;
 import java.util.HashSet;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.Extension;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
 
 @SuppressWarnings("all")
 public class GradleBuildGenerator {
@@ -50,6 +58,17 @@ public class GradleBuildGenerator {
     _builder.append("    ");
     _builder.append("buildToolsVersion \"21.0.0\"");
     _builder.newLine();
+    _builder.append("    ");
+    _builder.newLine();
+    _builder.append("    ");
+    _builder.append("defaultConfig {");
+    _builder.newLine();
+    _builder.append("        ");
+    _builder.append("minSdkVersion 5");
+    _builder.newLine();
+    _builder.append("    ");
+    _builder.append("}");
+    _builder.newLine();
     _builder.append("}");
     _builder.newLine();
     _builder.newLine();
@@ -89,9 +108,6 @@ public class GradleBuildGenerator {
     _builder.append("compile \'com.google.code.gson:gson:2.3\'");
     _builder.newLine();
     _builder.append("    ");
-    _builder.append("compile \'com.mguidi.soa:utils-webservice-json:1.0.0\'");
-    _builder.newLine();
-    _builder.append("    ");
     _builder.append("compile \'");
     String _applicationId = this.utils.applicationId(architecture);
     String _plus = (_applicationId + ":");
@@ -103,18 +119,37 @@ public class GradleBuildGenerator {
     _builder.append(_plus_3, "    ");
     _builder.append("\'");
     _builder.newLineIfNotEmpty();
-    _builder.append("    ");
-    _builder.append("compile \'");
-    String _applicationId_1 = this.utils.applicationId(architecture);
-    String _plus_4 = (_applicationId_1 + ":");
-    String _moduleName_1 = this.utils.moduleName(architecture);
-    String _plus_5 = (_plus_4 + _moduleName_1);
-    String _plus_6 = (_plus_5 + "-model-json:android_");
-    String _version_1 = this.utils.version(architecture);
-    String _plus_7 = (_plus_6 + _version_1);
-    _builder.append(_plus_7, "    ");
-    _builder.append("\'");
-    _builder.newLineIfNotEmpty();
+    {
+      boolean _and = false;
+      Module _module = architecture.getModule();
+      Model _model = _module.getModel();
+      boolean _notEquals = (!Objects.equal(_model, null));
+      if (!_notEquals) {
+        _and = false;
+      } else {
+        Module _module_1 = architecture.getModule();
+        Model _model_1 = _module_1.getModel();
+        EList<Entities> _entities = _model_1.getEntities();
+        Iterable<Entity> _filter = Iterables.<Entity>filter(_entities, Entity.class);
+        int _size = IterableExtensions.size(_filter);
+        boolean _greaterThan = (_size > 0);
+        _and = _greaterThan;
+      }
+      if (_and) {
+        _builder.append("    ");
+        _builder.append("compile \'");
+        String _applicationId_1 = this.utils.applicationId(architecture);
+        String _plus_4 = (_applicationId_1 + ":");
+        String _moduleName_1 = this.utils.moduleName(architecture);
+        String _plus_5 = (_plus_4 + _moduleName_1);
+        String _plus_6 = (_plus_5 + "-model-json:android_");
+        String _version_1 = this.utils.version(architecture);
+        String _plus_7 = (_plus_6 + _version_1);
+        _builder.append(_plus_7, "    ");
+        _builder.append("\'");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     {
       HashSet<Utils.Dependency> _serviceModelDependencies = this.utils.serviceModelDependencies(architecture);
       for(final Utils.Dependency dependency : _serviceModelDependencies) {

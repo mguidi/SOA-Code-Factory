@@ -30,9 +30,9 @@ class ClientJsonGenerator {
 		
 		import com.google.gson.stream.JsonReader;
 		import com.google.gson.stream.JsonWriter;
+		import com.mguidi.soa.commons.service.BaseClient;
 		import com.mguidi.soa.commons.service.ServiceException;
 		import com.mguidi.soa.commons.service.ServiceExceptionHelper;
-		import com.mguidi.soa.utils.webservice.json.BaseClient;
 		
 		/**
 		*
@@ -74,16 +74,16 @@ class ClientJsonGenerator {
 						AccountManager accountManager = (AccountManager) mContext.getSystemService(Context.ACCOUNT_SERVICE);
 						
 						try {
-							input.setToken(accountManager.blockingGetAuthToken(account, "auth_token", true));
+							input.setToken(accountManager.blockingGetAuthToken(mAccount, "auth_token", true));
 						
 						} catch (OperationCanceledException e) {
-						    return new IOException("can't set auth token");
+						    throw new IOException("can't set auth token");
 						
 						} catch (IOException e) {
-						    return new IOException("can't set auth token");
+						    throw new IOException("can't set auth token");
 						
 						} catch (AuthenticatorException e) {
-						    return new IOException("can't set auth token");
+						    throw new IOException("can't set auth token");
 						}
 					}
 					«ENDIF»
@@ -134,7 +134,7 @@ class ClientJsonGenerator {
 										«IF operation.saveTokenRequired»
 										if (mAccount != null && output.getToken() != null) {
 											AccountManager accountManager = (AccountManager) mContext.getSystemService(Context.ACCOUNT_SERVICE);
-											accountManager.setAuthToken(mAccount, "auth_token", token);
+											accountManager.setAuthToken(mAccount, "auth_token", output.getToken());
 										}
 										
 										«ENDIF»
@@ -157,7 +157,7 @@ class ClientJsonGenerator {
 										«IF exception == operation.exceptionts.get(0)»
 										if (exception.getException().equals("«exception.fullyQualifiedName»")) {
 										«ELSE»
-										else if (exception.getCode().equals("«exception.fullyQualifiedName»")) {
+										else if (exception.getException().equals("«exception.fullyQualifiedName»")) {
 										«ENDIF»
 											throw new «exception.qualifiedClassName»();
 										}
@@ -176,10 +176,6 @@ class ClientJsonGenerator {
 							}
 							
 						} catch (IOException e) {
-							if (Log.isLoggable(LOG_TAG, Log.ERROR)) {
-								Log.e(LOG_TAG, "IOException", e);
-							}
-							
 							if (isTimeoutException(startTime, isConnected, conn.getReadTimeout(), conn.getConnectTimeout()) && numTries < (maxRetries - 1)) {
 								// Fall through loop, retry
 								// On last attempt, throw the exception regardless

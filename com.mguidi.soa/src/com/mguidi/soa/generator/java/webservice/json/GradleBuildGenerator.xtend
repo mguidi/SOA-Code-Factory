@@ -4,6 +4,7 @@ import com.mguidi.soa.soa.Architecture
 import com.google.inject.Inject
 import org.eclipse.emf.ecore.resource.Resource
 import com.mguidi.soa.generator.java.Utils
+import com.mguidi.soa.soa.Entity
 
 class GradleBuildGenerator {
 	
@@ -22,7 +23,9 @@ class GradleBuildGenerator {
 		dependencies {
 		    compile 'com.google.code.gson:gson:2.3'
 		    compile '«architecture.applicationId+":"+architecture.moduleName+"-service:"+architecture.version»'
+		    «IF architecture.module.model != null && architecture.module.model.entities.filter(typeof(Entity)).size > 0»
 		    compile '«architecture.applicationId+":"+architecture.moduleName+"-model-json:"+architecture.version»'
+		    «ENDIF»
 		    «FOR dependency: architecture.serviceModelDependencies»
 		    compile '«dependency.applicationId+":"+dependency.moduleName+"-model-json:"+dependency.version»'
 		    «ENDFOR»
