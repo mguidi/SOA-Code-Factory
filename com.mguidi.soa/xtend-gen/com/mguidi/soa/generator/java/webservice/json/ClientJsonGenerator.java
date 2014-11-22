@@ -350,19 +350,19 @@ public class ClientJsonGenerator {
                     _builder.append("\t");
                     _builder.append("\t\t\t");
                     _builder.append("\t\t");
-                    _builder.append("if (exception.getException().equals(");
+                    _builder.append("if (exception.getException().equals(\"");
                     QualifiedName _fullyQualifiedName = this.provider.getFullyQualifiedName(exception);
                     _builder.append(_fullyQualifiedName, "\t\t\t\t\t\t");
-                    _builder.append(")) {");
+                    _builder.append("\")) {");
                     _builder.newLineIfNotEmpty();
                   } else {
                     _builder.append("\t");
                     _builder.append("\t\t\t");
                     _builder.append("\t\t");
-                    _builder.append("else if (exception.getCode().equals(");
+                    _builder.append("else if (exception.getCode().equals(\"");
                     QualifiedName _fullyQualifiedName_1 = this.provider.getFullyQualifiedName(exception);
                     _builder.append(_fullyQualifiedName_1, "\t\t\t\t\t\t");
-                    _builder.append(")) {");
+                    _builder.append("\")) {");
                     _builder.newLineIfNotEmpty();
                   }
                 }

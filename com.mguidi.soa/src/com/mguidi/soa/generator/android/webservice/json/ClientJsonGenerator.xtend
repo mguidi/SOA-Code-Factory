@@ -155,9 +155,9 @@ class ClientJsonGenerator {
 										ServiceException exception = ServiceExceptionHelper.fromJson(reader);
 										«FOR exception: operation.exceptionts»
 										«IF exception == operation.exceptionts.get(0)»
-										if (exception.getException().equals(«exception.fullyQualifiedName»)) {
+										if (exception.getException().equals("«exception.fullyQualifiedName»")) {
 										«ELSE»
-										else if (exception.getCode().equals(«exception.fullyQualifiedName»)) {
+										else if (exception.getCode().equals("«exception.fullyQualifiedName»")) {
 										«ENDIF»
 											throw new «exception.qualifiedClassName»();
 										}

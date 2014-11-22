@@ -26,7 +26,7 @@ class ExceptionGenerator {
 			
 			@Override
 			public String getException() {
-				return «exception.fullyQualifiedName»;
+				return "«exception.fullyQualifiedName»";
 			}
 			
 			@Override

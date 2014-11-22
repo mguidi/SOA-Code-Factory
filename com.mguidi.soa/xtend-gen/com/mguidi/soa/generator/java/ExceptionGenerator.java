@@ -73,10 +73,10 @@ public class ExceptionGenerator {
     _builder.append("public String getException() {");
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append("return ");
+    _builder.append("return \"");
     QualifiedName _fullyQualifiedName = this.provider.getFullyQualifiedName(exception);
     _builder.append(_fullyQualifiedName, "\t\t");
-    _builder.append(";");
+    _builder.append("\";");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("}");
