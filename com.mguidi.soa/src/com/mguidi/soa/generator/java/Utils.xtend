@@ -346,7 +346,7 @@ class Utils {
 		if (architecture.module.model != null) {
 			for (Entity entity : architecture.module.model.entities.filter(typeof(Entity))) {
 				for (Feature f: entity.features) {
-					if (f.type instanceof EntitiesFeature && (f.type as EntitiesFeature).type instanceof Entity) {
+					if (f.type instanceof EntitiesFeature) {
 						if (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName)) {
 							var dependency = new Dependency()
 							dependency.applicationId = f.type.applicationId
@@ -355,7 +355,7 @@ class Utils {
 							
 							dependencies.add(dependency)
 						}
-					} else if (f.type instanceof GenericListFeature && (f.type as GenericListFeature).baseType instanceof EntitiesFeature && ((f.type as GenericListFeature).baseType as EntitiesFeature).type instanceof Entity) {
+					} else if (f.type instanceof GenericListFeature && (f.type as GenericListFeature).baseType instanceof EntitiesFeature) {
 						if (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName)) {
 							var dependency = new Dependency()
 							dependency.applicationId = f.type.applicationId
@@ -378,7 +378,7 @@ class Utils {
 		for (Service service: architecture.module.services) {
 			for (Operation operation: service.operations) {
 				for (Feature f: operation.featuresInput) {
-					if (f.type instanceof EntitiesFeature && (f.type as EntitiesFeature).type instanceof Entity) {
+					if (f.type instanceof EntitiesFeature) {
 						if (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName)) {
 							var dependency = new Dependency()
 							dependency.applicationId = f.type.applicationId
@@ -387,7 +387,7 @@ class Utils {
 							
 							dependencies.add(dependency)
 						}
-					} else if (f.type instanceof GenericListFeature && (f.type as GenericListFeature).baseType instanceof EntitiesFeature && ((f.type as GenericListFeature).baseType as EntitiesFeature).type instanceof Entity) {
+					} else if (f.type instanceof GenericListFeature && (f.type as GenericListFeature).baseType instanceof EntitiesFeature) {
 						if (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName)) {
 							var dependency = new Dependency()
 							dependency.applicationId = f.type.applicationId
@@ -400,7 +400,7 @@ class Utils {
 				}
 				
 				for (Feature f: operation.featuresOutput) {
-					if (f.type instanceof EntitiesFeature && (f.type as EntitiesFeature).type instanceof Entity) {
+					if (f.type instanceof EntitiesFeature) {
 						if (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName)) {
 							var dependency = new Dependency()
 							dependency.applicationId = f.type.applicationId
@@ -409,7 +409,7 @@ class Utils {
 							
 							dependencies.add(dependency)
 						}
-					} else if (f.type instanceof GenericListFeature && (f.type as GenericListFeature).baseType instanceof EntitiesFeature && ((f.type as GenericListFeature).baseType as EntitiesFeature).type instanceof Entity) {
+					} else if (f.type instanceof GenericListFeature && (f.type as GenericListFeature).baseType instanceof EntitiesFeature) {
 						if (!f.type.applicationId.equals(architecture.applicationId) || !f.type.moduleName.equals(architecture.moduleName)) {
 							var dependency = new Dependency()
 							dependency.applicationId = f.type.applicationId

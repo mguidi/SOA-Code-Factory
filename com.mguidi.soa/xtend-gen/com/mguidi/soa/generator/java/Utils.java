@@ -663,27 +663,19 @@ public class Utils {
       for (final Entity entity : _filter) {
         EList<Feature> _features = entity.getFeatures();
         for (final Feature f : _features) {
-          boolean _and = false;
           FeatureType _type = f.getType();
-          if (!(_type instanceof EntitiesFeature)) {
-            _and = false;
-          } else {
-            FeatureType _type_1 = f.getType();
-            Entities _type_2 = ((EntitiesFeature) _type_1).getType();
-            _and = (_type_2 instanceof Entity);
-          }
-          if (_and) {
+          if ((_type instanceof EntitiesFeature)) {
             boolean _or = false;
-            FeatureType _type_3 = f.getType();
-            String _applicationId = this.applicationId(_type_3);
+            FeatureType _type_1 = f.getType();
+            String _applicationId = this.applicationId(_type_1);
             String _applicationId_1 = this.applicationId(architecture);
             boolean _equals = _applicationId.equals(_applicationId_1);
             boolean _not = (!_equals);
             if (_not) {
               _or = true;
             } else {
-              FeatureType _type_4 = f.getType();
-              String _moduleName = this.moduleName(_type_4);
+              FeatureType _type_2 = f.getType();
+              String _moduleName = this.moduleName(_type_2);
               String _moduleName_1 = this.moduleName(architecture);
               boolean _equals_1 = _moduleName.equals(_moduleName_1);
               boolean _not_1 = (!_equals_1);
@@ -691,39 +683,39 @@ public class Utils {
             }
             if (_or) {
               Utils.Dependency dependency = new Utils.Dependency();
-              FeatureType _type_5 = f.getType();
-              String _applicationId_2 = this.applicationId(_type_5);
+              FeatureType _type_3 = f.getType();
+              String _applicationId_2 = this.applicationId(_type_3);
               dependency.applicationId = _applicationId_2;
-              FeatureType _type_6 = f.getType();
-              String _moduleName_2 = this.moduleName(_type_6);
+              FeatureType _type_4 = f.getType();
+              String _moduleName_2 = this.moduleName(_type_4);
               dependency.moduleName = _moduleName_2;
-              FeatureType _type_7 = f.getType();
-              String _version = this.version(_type_7);
+              FeatureType _type_5 = f.getType();
+              String _version = this.version(_type_5);
               dependency.version = _version;
               dependencies.add(dependency);
             }
           } else {
-            boolean _and_1 = false;
-            if (!((f.getType() instanceof GenericListFeature) && (this.baseType(((GenericListFeature) f.getType())) instanceof EntitiesFeature))) {
-              _and_1 = false;
+            boolean _and = false;
+            FeatureType _type_6 = f.getType();
+            if (!(_type_6 instanceof GenericListFeature)) {
+              _and = false;
             } else {
-              FeatureType _type_8 = f.getType();
-              FeatureType _baseType = this.baseType(((GenericListFeature) _type_8));
-              Entities _type_9 = ((EntitiesFeature) _baseType).getType();
-              _and_1 = (_type_9 instanceof Entity);
+              FeatureType _type_7 = f.getType();
+              FeatureType _baseType = this.baseType(((GenericListFeature) _type_7));
+              _and = (_baseType instanceof EntitiesFeature);
             }
-            if (_and_1) {
+            if (_and) {
               boolean _or_1 = false;
-              FeatureType _type_10 = f.getType();
-              String _applicationId_3 = this.applicationId(_type_10);
+              FeatureType _type_8 = f.getType();
+              String _applicationId_3 = this.applicationId(_type_8);
               String _applicationId_4 = this.applicationId(architecture);
               boolean _equals_2 = _applicationId_3.equals(_applicationId_4);
               boolean _not_2 = (!_equals_2);
               if (_not_2) {
                 _or_1 = true;
               } else {
-                FeatureType _type_11 = f.getType();
-                String _moduleName_3 = this.moduleName(_type_11);
+                FeatureType _type_9 = f.getType();
+                String _moduleName_3 = this.moduleName(_type_9);
                 String _moduleName_4 = this.moduleName(architecture);
                 boolean _equals_3 = _moduleName_3.equals(_moduleName_4);
                 boolean _not_3 = (!_equals_3);
@@ -731,14 +723,14 @@ public class Utils {
               }
               if (_or_1) {
                 Utils.Dependency dependency_1 = new Utils.Dependency();
-                FeatureType _type_12 = f.getType();
-                String _applicationId_5 = this.applicationId(_type_12);
+                FeatureType _type_10 = f.getType();
+                String _applicationId_5 = this.applicationId(_type_10);
                 dependency_1.applicationId = _applicationId_5;
-                FeatureType _type_13 = f.getType();
-                String _moduleName_5 = this.moduleName(_type_13);
+                FeatureType _type_11 = f.getType();
+                String _moduleName_5 = this.moduleName(_type_11);
                 dependency_1.moduleName = _moduleName_5;
-                FeatureType _type_14 = f.getType();
-                String _version_1 = this.version(_type_14);
+                FeatureType _type_12 = f.getType();
+                String _version_1 = this.version(_type_12);
                 dependency_1.version = _version_1;
                 dependencies.add(dependency_1);
               }
@@ -760,27 +752,19 @@ public class Utils {
         {
           EList<Feature> _featuresInput = operation.getFeaturesInput();
           for (final Feature f : _featuresInput) {
-            boolean _and = false;
             FeatureType _type = f.getType();
-            if (!(_type instanceof EntitiesFeature)) {
-              _and = false;
-            } else {
-              FeatureType _type_1 = f.getType();
-              Entities _type_2 = ((EntitiesFeature) _type_1).getType();
-              _and = (_type_2 instanceof Entity);
-            }
-            if (_and) {
+            if ((_type instanceof EntitiesFeature)) {
               boolean _or = false;
-              FeatureType _type_3 = f.getType();
-              String _applicationId = this.applicationId(_type_3);
+              FeatureType _type_1 = f.getType();
+              String _applicationId = this.applicationId(_type_1);
               String _applicationId_1 = this.applicationId(architecture);
               boolean _equals = _applicationId.equals(_applicationId_1);
               boolean _not = (!_equals);
               if (_not) {
                 _or = true;
               } else {
-                FeatureType _type_4 = f.getType();
-                String _moduleName = this.moduleName(_type_4);
+                FeatureType _type_2 = f.getType();
+                String _moduleName = this.moduleName(_type_2);
                 String _moduleName_1 = this.moduleName(architecture);
                 boolean _equals_1 = _moduleName.equals(_moduleName_1);
                 boolean _not_1 = (!_equals_1);
@@ -788,39 +772,39 @@ public class Utils {
               }
               if (_or) {
                 Utils.Dependency dependency = new Utils.Dependency();
-                FeatureType _type_5 = f.getType();
-                String _applicationId_2 = this.applicationId(_type_5);
+                FeatureType _type_3 = f.getType();
+                String _applicationId_2 = this.applicationId(_type_3);
                 dependency.applicationId = _applicationId_2;
-                FeatureType _type_6 = f.getType();
-                String _moduleName_2 = this.moduleName(_type_6);
+                FeatureType _type_4 = f.getType();
+                String _moduleName_2 = this.moduleName(_type_4);
                 dependency.moduleName = _moduleName_2;
-                FeatureType _type_7 = f.getType();
-                String _version = this.version(_type_7);
+                FeatureType _type_5 = f.getType();
+                String _version = this.version(_type_5);
                 dependency.version = _version;
                 dependencies.add(dependency);
               }
             } else {
-              boolean _and_1 = false;
-              if (!((f.getType() instanceof GenericListFeature) && (this.baseType(((GenericListFeature) f.getType())) instanceof EntitiesFeature))) {
-                _and_1 = false;
+              boolean _and = false;
+              FeatureType _type_6 = f.getType();
+              if (!(_type_6 instanceof GenericListFeature)) {
+                _and = false;
               } else {
-                FeatureType _type_8 = f.getType();
-                FeatureType _baseType = this.baseType(((GenericListFeature) _type_8));
-                Entities _type_9 = ((EntitiesFeature) _baseType).getType();
-                _and_1 = (_type_9 instanceof Entity);
+                FeatureType _type_7 = f.getType();
+                FeatureType _baseType = this.baseType(((GenericListFeature) _type_7));
+                _and = (_baseType instanceof EntitiesFeature);
               }
-              if (_and_1) {
+              if (_and) {
                 boolean _or_1 = false;
-                FeatureType _type_10 = f.getType();
-                String _applicationId_3 = this.applicationId(_type_10);
+                FeatureType _type_8 = f.getType();
+                String _applicationId_3 = this.applicationId(_type_8);
                 String _applicationId_4 = this.applicationId(architecture);
                 boolean _equals_2 = _applicationId_3.equals(_applicationId_4);
                 boolean _not_2 = (!_equals_2);
                 if (_not_2) {
                   _or_1 = true;
                 } else {
-                  FeatureType _type_11 = f.getType();
-                  String _moduleName_3 = this.moduleName(_type_11);
+                  FeatureType _type_9 = f.getType();
+                  String _moduleName_3 = this.moduleName(_type_9);
                   String _moduleName_4 = this.moduleName(architecture);
                   boolean _equals_3 = _moduleName_3.equals(_moduleName_4);
                   boolean _not_3 = (!_equals_3);
@@ -828,14 +812,14 @@ public class Utils {
                 }
                 if (_or_1) {
                   Utils.Dependency dependency_1 = new Utils.Dependency();
-                  FeatureType _type_12 = f.getType();
-                  String _applicationId_5 = this.applicationId(_type_12);
+                  FeatureType _type_10 = f.getType();
+                  String _applicationId_5 = this.applicationId(_type_10);
                   dependency_1.applicationId = _applicationId_5;
-                  FeatureType _type_13 = f.getType();
-                  String _moduleName_5 = this.moduleName(_type_13);
+                  FeatureType _type_11 = f.getType();
+                  String _moduleName_5 = this.moduleName(_type_11);
                   dependency_1.moduleName = _moduleName_5;
-                  FeatureType _type_14 = f.getType();
-                  String _version_1 = this.version(_type_14);
+                  FeatureType _type_12 = f.getType();
+                  String _version_1 = this.version(_type_12);
                   dependency_1.version = _version_1;
                   dependencies.add(dependency_1);
                 }
@@ -844,27 +828,19 @@ public class Utils {
           }
           EList<Feature> _featuresOutput = operation.getFeaturesOutput();
           for (final Feature f_1 : _featuresOutput) {
-            boolean _and_2 = false;
-            FeatureType _type_15 = f_1.getType();
-            if (!(_type_15 instanceof EntitiesFeature)) {
-              _and_2 = false;
-            } else {
-              FeatureType _type_16 = f_1.getType();
-              Entities _type_17 = ((EntitiesFeature) _type_16).getType();
-              _and_2 = (_type_17 instanceof Entity);
-            }
-            if (_and_2) {
+            FeatureType _type_13 = f_1.getType();
+            if ((_type_13 instanceof EntitiesFeature)) {
               boolean _or_2 = false;
-              FeatureType _type_18 = f_1.getType();
-              String _applicationId_6 = this.applicationId(_type_18);
+              FeatureType _type_14 = f_1.getType();
+              String _applicationId_6 = this.applicationId(_type_14);
               String _applicationId_7 = this.applicationId(architecture);
               boolean _equals_4 = _applicationId_6.equals(_applicationId_7);
               boolean _not_4 = (!_equals_4);
               if (_not_4) {
                 _or_2 = true;
               } else {
-                FeatureType _type_19 = f_1.getType();
-                String _moduleName_6 = this.moduleName(_type_19);
+                FeatureType _type_15 = f_1.getType();
+                String _moduleName_6 = this.moduleName(_type_15);
                 String _moduleName_7 = this.moduleName(architecture);
                 boolean _equals_5 = _moduleName_6.equals(_moduleName_7);
                 boolean _not_5 = (!_equals_5);
@@ -872,39 +848,39 @@ public class Utils {
               }
               if (_or_2) {
                 Utils.Dependency dependency_2 = new Utils.Dependency();
-                FeatureType _type_20 = f_1.getType();
-                String _applicationId_8 = this.applicationId(_type_20);
+                FeatureType _type_16 = f_1.getType();
+                String _applicationId_8 = this.applicationId(_type_16);
                 dependency_2.applicationId = _applicationId_8;
-                FeatureType _type_21 = f_1.getType();
-                String _moduleName_8 = this.moduleName(_type_21);
+                FeatureType _type_17 = f_1.getType();
+                String _moduleName_8 = this.moduleName(_type_17);
                 dependency_2.moduleName = _moduleName_8;
-                FeatureType _type_22 = f_1.getType();
-                String _version_2 = this.version(_type_22);
+                FeatureType _type_18 = f_1.getType();
+                String _version_2 = this.version(_type_18);
                 dependency_2.version = _version_2;
                 dependencies.add(dependency_2);
               }
             } else {
-              boolean _and_3 = false;
-              if (!((f_1.getType() instanceof GenericListFeature) && (this.baseType(((GenericListFeature) f_1.getType())) instanceof EntitiesFeature))) {
-                _and_3 = false;
+              boolean _and_1 = false;
+              FeatureType _type_19 = f_1.getType();
+              if (!(_type_19 instanceof GenericListFeature)) {
+                _and_1 = false;
               } else {
-                FeatureType _type_23 = f_1.getType();
-                FeatureType _baseType_1 = this.baseType(((GenericListFeature) _type_23));
-                Entities _type_24 = ((EntitiesFeature) _baseType_1).getType();
-                _and_3 = (_type_24 instanceof Entity);
+                FeatureType _type_20 = f_1.getType();
+                FeatureType _baseType_1 = this.baseType(((GenericListFeature) _type_20));
+                _and_1 = (_baseType_1 instanceof EntitiesFeature);
               }
-              if (_and_3) {
+              if (_and_1) {
                 boolean _or_3 = false;
-                FeatureType _type_25 = f_1.getType();
-                String _applicationId_9 = this.applicationId(_type_25);
+                FeatureType _type_21 = f_1.getType();
+                String _applicationId_9 = this.applicationId(_type_21);
                 String _applicationId_10 = this.applicationId(architecture);
                 boolean _equals_6 = _applicationId_9.equals(_applicationId_10);
                 boolean _not_6 = (!_equals_6);
                 if (_not_6) {
                   _or_3 = true;
                 } else {
-                  FeatureType _type_26 = f_1.getType();
-                  String _moduleName_9 = this.moduleName(_type_26);
+                  FeatureType _type_22 = f_1.getType();
+                  String _moduleName_9 = this.moduleName(_type_22);
                   String _moduleName_10 = this.moduleName(architecture);
                   boolean _equals_7 = _moduleName_9.equals(_moduleName_10);
                   boolean _not_7 = (!_equals_7);
@@ -912,14 +888,14 @@ public class Utils {
                 }
                 if (_or_3) {
                   Utils.Dependency dependency_3 = new Utils.Dependency();
-                  FeatureType _type_27 = f_1.getType();
-                  String _applicationId_11 = this.applicationId(_type_27);
+                  FeatureType _type_23 = f_1.getType();
+                  String _applicationId_11 = this.applicationId(_type_23);
                   dependency_3.applicationId = _applicationId_11;
-                  FeatureType _type_28 = f_1.getType();
-                  String _moduleName_11 = this.moduleName(_type_28);
+                  FeatureType _type_24 = f_1.getType();
+                  String _moduleName_11 = this.moduleName(_type_24);
                   dependency_3.moduleName = _moduleName_11;
-                  FeatureType _type_29 = f_1.getType();
-                  String _version_3 = this.version(_type_29);
+                  FeatureType _type_25 = f_1.getType();
+                  String _version_3 = this.version(_type_25);
                   dependency_3.version = _version_3;
                   dependencies.add(dependency_3);
                 }
