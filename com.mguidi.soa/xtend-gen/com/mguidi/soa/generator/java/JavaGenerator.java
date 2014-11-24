@@ -193,6 +193,22 @@ public class JavaGenerator {
         CharSequence _generateService = this.serviceGenerator.generateService(e_3);
         CharSequence _format_2 = this.beautifier.format(_generateService);
         fsa.generateFile(_plus_23, _format_2);
+        String _applicationId_3 = this.utils.applicationId(e_3);
+        String _plus_24 = ("java/" + _applicationId_3);
+        String _plus_25 = (_plus_24 + "/");
+        String _moduleName_3 = this.utils.moduleName(e_3);
+        String _plus_26 = (_plus_25 + _moduleName_3);
+        String _plus_27 = (_plus_26 + "/");
+        String _version_3 = this.utils.version(e_3);
+        String _plus_28 = (_plus_27 + _version_3);
+        String _plus_29 = (_plus_28 + "/service/src/main/java/");
+        String _qualifiedClassNameInterface = this.utils.qualifiedClassNameInterface(e_3);
+        String _replace_3 = _qualifiedClassNameInterface.replace(".", "/");
+        String _plus_30 = (_plus_29 + _replace_3);
+        String _plus_31 = (_plus_30 + ".java");
+        CharSequence _generateServiceInterface = this.serviceGenerator.generateServiceInterface(e_3);
+        CharSequence _format_3 = this.beautifier.format(_generateServiceInterface);
+        fsa.generateFile(_plus_31, _format_3);
       }
     }
     TreeIterator<EObject> _allContents_5 = resource.getAllContents();
@@ -204,27 +220,6 @@ public class JavaGenerator {
         int _size_1 = _featuresOutput.size();
         boolean _greaterThan_1 = (_size_1 > 0);
         if (_greaterThan_1) {
-          String _applicationId_3 = this.utils.applicationId(e_4);
-          String _plus_24 = ("java/" + _applicationId_3);
-          String _plus_25 = (_plus_24 + "/");
-          String _moduleName_3 = this.utils.moduleName(e_4);
-          String _plus_26 = (_plus_25 + _moduleName_3);
-          String _plus_27 = (_plus_26 + "/");
-          String _version_3 = this.utils.version(e_4);
-          String _plus_28 = (_plus_27 + _version_3);
-          String _plus_29 = (_plus_28 + "/service/src/main/java/");
-          String _qualifiedClassNameOutput = this.utils.qualifiedClassNameOutput(e_4);
-          String _replace_3 = _qualifiedClassNameOutput.replace(".", "/");
-          String _plus_30 = (_plus_29 + _replace_3);
-          String _plus_31 = (_plus_30 + ".java");
-          CharSequence _generateOperationOutput = this.operationOutputGenerator.generateOperationOutput(e_4);
-          CharSequence _format_3 = this.beautifier.format(_generateOperationOutput);
-          fsa.generateFile(_plus_31, _format_3);
-        }
-        EList<Feature> _featuresInput = e_4.getFeaturesInput();
-        int _size_2 = _featuresInput.size();
-        boolean _greaterThan_2 = (_size_2 > 0);
-        if (_greaterThan_2) {
           String _applicationId_4 = this.utils.applicationId(e_4);
           String _plus_32 = ("java/" + _applicationId_4);
           String _plus_33 = (_plus_32 + "/");
@@ -234,33 +229,54 @@ public class JavaGenerator {
           String _version_4 = this.utils.version(e_4);
           String _plus_36 = (_plus_35 + _version_4);
           String _plus_37 = (_plus_36 + "/service/src/main/java/");
-          String _qualifiedClassNameInput = this.utils.qualifiedClassNameInput(e_4);
-          String _replace_4 = _qualifiedClassNameInput.replace(".", "/");
+          String _qualifiedClassNameOutput = this.utils.qualifiedClassNameOutput(e_4);
+          String _replace_4 = _qualifiedClassNameOutput.replace(".", "/");
           String _plus_38 = (_plus_37 + _replace_4);
           String _plus_39 = (_plus_38 + ".java");
-          CharSequence _generateOperationInput = this.operationInputGenerator.generateOperationInput(e_4);
-          CharSequence _format_4 = this.beautifier.format(_generateOperationInput);
+          CharSequence _generateOperationOutput = this.operationOutputGenerator.generateOperationOutput(e_4);
+          CharSequence _format_4 = this.beautifier.format(_generateOperationOutput);
           fsa.generateFile(_plus_39, _format_4);
+        }
+        EList<Feature> _featuresInput = e_4.getFeaturesInput();
+        int _size_2 = _featuresInput.size();
+        boolean _greaterThan_2 = (_size_2 > 0);
+        if (_greaterThan_2) {
+          String _applicationId_5 = this.utils.applicationId(e_4);
+          String _plus_40 = ("java/" + _applicationId_5);
+          String _plus_41 = (_plus_40 + "/");
+          String _moduleName_5 = this.utils.moduleName(e_4);
+          String _plus_42 = (_plus_41 + _moduleName_5);
+          String _plus_43 = (_plus_42 + "/");
+          String _version_5 = this.utils.version(e_4);
+          String _plus_44 = (_plus_43 + _version_5);
+          String _plus_45 = (_plus_44 + "/service/src/main/java/");
+          String _qualifiedClassNameInput = this.utils.qualifiedClassNameInput(e_4);
+          String _replace_5 = _qualifiedClassNameInput.replace(".", "/");
+          String _plus_46 = (_plus_45 + _replace_5);
+          String _plus_47 = (_plus_46 + ".java");
+          CharSequence _generateOperationInput = this.operationInputGenerator.generateOperationInput(e_4);
+          CharSequence _format_5 = this.beautifier.format(_generateOperationInput);
+          fsa.generateFile(_plus_47, _format_5);
         }
       }
     }
     for (final com.mguidi.soa.soa.Exception e_5 : exceptions) {
-      String _applicationId_3 = this.utils.applicationId(e_5);
-      String _plus_24 = ("java/" + _applicationId_3);
-      String _plus_25 = (_plus_24 + "/");
-      String _moduleName_3 = this.utils.moduleName(e_5);
-      String _plus_26 = (_plus_25 + _moduleName_3);
-      String _plus_27 = (_plus_26 + "/");
-      String _version_3 = this.utils.version(e_5);
-      String _plus_28 = (_plus_27 + _version_3);
-      String _plus_29 = (_plus_28 + "/service/src/main/java/");
+      String _applicationId_4 = this.utils.applicationId(e_5);
+      String _plus_32 = ("java/" + _applicationId_4);
+      String _plus_33 = (_plus_32 + "/");
+      String _moduleName_4 = this.utils.moduleName(e_5);
+      String _plus_34 = (_plus_33 + _moduleName_4);
+      String _plus_35 = (_plus_34 + "/");
+      String _version_4 = this.utils.version(e_5);
+      String _plus_36 = (_plus_35 + _version_4);
+      String _plus_37 = (_plus_36 + "/service/src/main/java/");
       String _qualifiedClassName_3 = this.utils.qualifiedClassName(e_5);
-      String _replace_3 = _qualifiedClassName_3.replace(".", "/");
-      String _plus_30 = (_plus_29 + _replace_3);
-      String _plus_31 = (_plus_30 + ".java");
+      String _replace_4 = _qualifiedClassName_3.replace(".", "/");
+      String _plus_38 = (_plus_37 + _replace_4);
+      String _plus_39 = (_plus_38 + ".java");
       CharSequence _generateException = this.exceptionGenerator.generateException(e_5);
-      CharSequence _format_3 = this.beautifier.format(_generateException);
-      fsa.generateFile(_plus_31, _format_3);
+      CharSequence _format_4 = this.beautifier.format(_generateException);
+      fsa.generateFile(_plus_39, _format_4);
     }
   }
   

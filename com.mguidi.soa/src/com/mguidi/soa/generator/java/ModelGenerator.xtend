@@ -42,6 +42,11 @@ class ModelGenerator {
 				}
 			}
 			
+			@Override
+		    public String toString() {
+		        return mValue;
+		    }
+			
 			public static «entity.className» valueOf(String value) {
 				«FOR feature: entity.features»
 				«IF feature == entity.features.get(0)»

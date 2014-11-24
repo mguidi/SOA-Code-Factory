@@ -15,11 +15,7 @@ class ClientJsonGenerator {
 		package «service.packageNameClient»;
 		
 		«IF service.accountRequired»
-		import android.accounts.Account;
-		import android.accounts.AccountManager;
-		import android.accounts.AuthenticatorException;
-		import android.accounts.OperationCanceledException;
-		import android.content.Context;
+		import com.mguidi.soa.commons.service.AuthTokenManager;
 		
 		«ENDIF»
 		import java.io.IOException;
@@ -39,23 +35,21 @@ class ClientJsonGenerator {
 		* «service.classNameClient»
 		*
 		*/
-		public class «service.classNameClient» extends BaseClient implements «service.qualifiedClassName» {
+		public class «service.classNameClient» extends BaseClient implements «service.qualifiedClassNameInterface» {
 			
 			public static final String NAME = "/«service.moduleName»/«service.version»/«service.serviceName»";
 
 			private static final String ENCODING = "UTF-8";
 
-			private Context mContext;			
 			private String mServiceAddress;
 			«IF service.accountRequired»
-			private Account mAccount;
+			private AuthTokenManager mAuthTokenManager;
 			«ENDIF»
 			
-			public «service.classNameClient»(Context context, String baseAddress«IF service.accountRequired», Account account«ENDIF») {
-				mContext = context.getApplicationContext();
+			public «service.classNameClient»(String baseAddress«IF service.accountRequired», AuthTokenManager authTokenMager«ENDIF») {
 				mServiceAddress = baseAddress + NAME;
 				«IF service.accountRequired»
-				mAccount = account;
+				mAuthTokenManager = authTokenMager;
 				«ENDIF»
 			}
 			
@@ -70,21 +64,8 @@ class ClientJsonGenerator {
 					
 					«IF operation.setTokenRequired»
 					// set auth token on the input of the request 
-					if (mAccount != null) {
-						AccountManager accountManager = (AccountManager) mContext.getSystemService(Context.ACCOUNT_SERVICE);
-						
-						try {
-							input.setToken(accountManager.blockingGetAuthToken(mAccount, "auth_token", true));
-						
-						} catch (OperationCanceledException e) {
-						    throw new IOException("can't set auth token");
-						
-						} catch (IOException e) {
-						    throw new IOException("can't set auth token");
-						
-						} catch (AuthenticatorException e) {
-						    throw new IOException("can't set auth token");
-						}
+					if (mAuthTokenManager != null) {
+						input.setAuthToken(mAuthTokenManager.getAuthToken());
 					}
 					«ENDIF»
 					
@@ -132,9 +113,8 @@ class ClientJsonGenerator {
 										«operation.qualifiedClassNameOutput» output = «operation.qualifiedClassNameOutputHelper».fromJson(reader);
 										
 										«IF operation.saveTokenRequired»
-										if (mAccount != null && output.getToken() != null) {
-											AccountManager accountManager = (AccountManager) mContext.getSystemService(Context.ACCOUNT_SERVICE);
-											accountManager.setAuthToken(mAccount, "auth_token", output.getToken());
+										if (mAuthTokenManager != null && output.getAuthToken() != null) {
+											mAuthTokenManager.saveAuthToken(output.getAuthToken());
 										}
 										
 										«ENDIF»
@@ -200,7 +180,7 @@ class ClientJsonGenerator {
 	
 	def setTokenRequired(Operation operation) {
 		for (feature: operation.featuresInput) {
-			if (feature.name.equals("token")) {
+			if (feature.name.equals("authToken")) {
 				return true
 			}	
 		}
@@ -209,7 +189,7 @@ class ClientJsonGenerator {
 	
 	def saveTokenRequired(Operation operation) {
 		for (feature: operation.featuresOutput) {
-			if (feature.name.equals("token")) {
+			if (feature.name.equals("authToken")) {
 				return true
 			}	
 		}
@@ -219,12 +199,12 @@ class ClientJsonGenerator {
 	def accountRequired(Service service) {
 		for (operation: service.operations) {
 			for (feature: operation.featuresInput) {
-				if (feature.name.equals("token")) {
+				if (feature.name.equals("authToken")) {
 					return true
 				}	
 			}
 			for (feature: operation.featuresOutput) {
-				if (feature.name.equals("token")) {
+				if (feature.name.equals("authToken")) {
 					return true
 				}	
 			}

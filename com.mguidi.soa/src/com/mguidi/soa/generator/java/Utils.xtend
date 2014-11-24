@@ -73,6 +73,19 @@ class Utils {
 		service.packageName + "." + service.className
 	}
 	
+	def packageNameInterface(Service service) {
+		(service.eContainer.eContainer as Architecture).name + "." +
+		(service.eContainer as Module).name + ".service"
+	}
+
+	def classNameInterface(Service service) {
+		"I"+service.name.toFirstUpper
+	}
+	
+	def qualifiedClassNameInterface(Service service) {
+		service.packageNameInterface + "." + service.classNameInterface
+	}
+	
 	def applicationId(Service service) {
 		(service.eContainer.eContainer as Architecture).applicationId
 	}

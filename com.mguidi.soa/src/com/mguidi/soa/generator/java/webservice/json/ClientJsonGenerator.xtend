@@ -14,6 +14,10 @@ class ClientJsonGenerator {
 	def generateClient(Service service) '''
 		package «service.packageNameClient»;
 		
+		«IF service.accountRequired»
+		import com.mguidi.soa.commons.service.AuthTokenManager;
+		
+		«ENDIF»
 		import java.io.IOException;
 		import java.io.InputStreamReader;
 		import java.io.OutputStreamWriter;
@@ -31,16 +35,22 @@ class ClientJsonGenerator {
 		* «service.classNameClient»
 		*
 		*/
-		public class «service.classNameClient» extends BaseClient implements «service.qualifiedClassName» {
+		public class «service.classNameClient» extends BaseClient implements «service.qualifiedClassNameInterface» {
 			
 			public static final String NAME = "/«service.moduleName»/«service.version»/«service.serviceName»";
 
 			private static final String ENCODING = "UTF-8";
 
 			private String mServiceAddress;
+			«IF service.accountRequired»
+			private AuthTokenManager mAuthTokenManager;
+			«ENDIF»
 			
-			public «service.classNameClient»(String baseAddress) {
+			public «service.classNameClient»(String baseAddress«IF service.accountRequired», AuthTokenManager authTokenMager«ENDIF») {
 				mServiceAddress = baseAddress + NAME;
+				«IF service.accountRequired»
+				mAuthTokenManager = authTokenMager;
+				«ENDIF»
 			}
 			
 			«FOR Operation operation: service.operations»
@@ -51,6 +61,14 @@ class ClientJsonGenerator {
 				
 				@Override
 				public «IF operation.featuresOutput.size>0»«operation.qualifiedClassNameOutput»«ELSE»void«ENDIF» «operation.signature»(«IF operation.featuresInput.size>0»«operation.qualifiedClassNameInput» input, «ENDIF»int maxRetries) throws IOException«operation.throwsException» {
+					
+					«IF operation.setTokenRequired»
+					// set auth token on the input of the request 
+					if (mAuthTokenManager != null) {
+						input.setAuthToken(mAuthTokenManager.getAuthToken());
+					}
+					«ENDIF»
+					
 					URL url = new URL(mServiceAddress+"/«operation.name»");
 
 					int numTries = 0;
@@ -94,6 +112,12 @@ class ClientJsonGenerator {
 									try {
 										«operation.qualifiedClassNameOutput» output = «operation.qualifiedClassNameOutputHelper».fromJson(reader);
 										
+										«IF operation.saveTokenRequired»
+										if (mAuthTokenManager != null && output.getAuthToken() != null) {
+											mAuthTokenManager.saveAuthToken(output.getAuthToken());
+										}
+										
+										«ENDIF»
 										return output;
 										
 									} finally {
@@ -153,5 +177,39 @@ class ClientJsonGenerator {
 			«ENDFOR»
 		}
 	'''
+	
+	def setTokenRequired(Operation operation) {
+		for (feature: operation.featuresInput) {
+			if (feature.name.equals("authToken")) {
+				return true
+			}	
+		}
+		return false
+	}
+	
+	def saveTokenRequired(Operation operation) {
+		for (feature: operation.featuresOutput) {
+			if (feature.name.equals("authToken")) {
+				return true
+			}	
+		}
+		return false
+	}
+	
+	def accountRequired(Service service) {
+		for (operation: service.operations) {
+			for (feature: operation.featuresInput) {
+				if (feature.name.equals("authToken")) {
+					return true
+				}	
+			}
+			for (feature: operation.featuresOutput) {
+				if (feature.name.equals("authToken")) {
+					return true
+				}	
+			}
+		}
+		return false
+	}
 	
 }

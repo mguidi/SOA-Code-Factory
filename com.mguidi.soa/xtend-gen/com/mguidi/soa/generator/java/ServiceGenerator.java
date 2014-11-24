@@ -78,36 +78,77 @@ public class ServiceGenerator {
         _builder.append(_throwsException, "\t");
         _builder.append(";");
         _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.append("}");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  public CharSequence generateServiceInterface(final Service service) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("package ");
+    String _packageNameInterface = this.utils.packageNameInterface(service);
+    _builder.append(_packageNameInterface, "");
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.newLine();
+    _builder.append("import java.io.IOException;");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("/**");
+    _builder.newLine();
+    _builder.append("*");
+    _builder.newLine();
+    _builder.append("* ");
+    String _classNameInterface = this.utils.classNameInterface(service);
+    _builder.append(_classNameInterface, "");
+    _builder.newLineIfNotEmpty();
+    _builder.append("*");
+    _builder.newLine();
+    _builder.append("*/");
+    _builder.newLine();
+    _builder.append("public interface ");
+    String _classNameInterface_1 = this.utils.classNameInterface(service);
+    _builder.append(_classNameInterface_1, "");
+    _builder.append(" extends ");
+    String _qualifiedClassName = this.utils.qualifiedClassName(service);
+    _builder.append(_qualifiedClassName, "");
+    _builder.append(" {");
+    _builder.newLineIfNotEmpty();
+    {
+      EList<Operation> _operations = service.getOperations();
+      for(final Operation operation : _operations) {
         _builder.append("\t");
         _builder.append("public ");
         {
-          EList<Feature> _featuresOutput_1 = operation.getFeaturesOutput();
-          int _size_2 = _featuresOutput_1.size();
-          boolean _greaterThan_2 = (_size_2 > 0);
-          if (_greaterThan_2) {
-            String _qualifiedClassNameOutput_1 = this.utils.qualifiedClassNameOutput(operation);
-            _builder.append(_qualifiedClassNameOutput_1, "\t");
+          EList<Feature> _featuresOutput = operation.getFeaturesOutput();
+          int _size = _featuresOutput.size();
+          boolean _greaterThan = (_size > 0);
+          if (_greaterThan) {
+            String _qualifiedClassNameOutput = this.utils.qualifiedClassNameOutput(operation);
+            _builder.append(_qualifiedClassNameOutput, "\t");
           } else {
             _builder.append("void");
           }
         }
         _builder.append(" ");
-        String _signature_1 = this.utils.signature(operation);
-        _builder.append(_signature_1, "\t");
+        String _signature = this.utils.signature(operation);
+        _builder.append(_signature, "\t");
         _builder.append("(");
         {
-          EList<Feature> _featuresInput_1 = operation.getFeaturesInput();
-          int _size_3 = _featuresInput_1.size();
-          boolean _greaterThan_3 = (_size_3 > 0);
-          if (_greaterThan_3) {
-            String _qualifiedClassNameInput_1 = this.utils.qualifiedClassNameInput(operation);
-            _builder.append(_qualifiedClassNameInput_1, "\t");
+          EList<Feature> _featuresInput = operation.getFeaturesInput();
+          int _size_1 = _featuresInput.size();
+          boolean _greaterThan_1 = (_size_1 > 0);
+          if (_greaterThan_1) {
+            String _qualifiedClassNameInput = this.utils.qualifiedClassNameInput(operation);
+            _builder.append(_qualifiedClassNameInput, "\t");
             _builder.append(" input, ");
           }
         }
         _builder.append("int maxRetries) throws IOException");
-        String _throwsException_1 = this.utils.throwsException(operation);
-        _builder.append(_throwsException_1, "\t");
+        String _throwsException = this.utils.throwsException(operation);
+        _builder.append(_throwsException, "\t");
         _builder.append(";");
         _builder.newLineIfNotEmpty();
       }

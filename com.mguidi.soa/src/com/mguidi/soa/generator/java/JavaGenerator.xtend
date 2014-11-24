@@ -57,6 +57,7 @@ class JavaGenerator {
 		for (e: services) {
 			if (e.operations.size > 0) {
 				fsa.generateFile("java/"+e.applicationId+"/"+e.moduleName+"/"+e.version+"/service/src/main/java/" + e.qualifiedClassName.replace(".", "/") + ".java", beautifier.format(serviceGenerator.generateService(e)))
+				fsa.generateFile("java/"+e.applicationId+"/"+e.moduleName+"/"+e.version+"/service/src/main/java/" + e.qualifiedClassNameInterface.replace(".", "/") + ".java", beautifier.format(serviceGenerator.generateServiceInterface(e)))
 			}
 		}
 		

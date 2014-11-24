@@ -148,6 +148,30 @@ public class Utils {
     return (_plus + _className);
   }
   
+  public String packageNameInterface(final Service service) {
+    EObject _eContainer = service.eContainer();
+    EObject _eContainer_1 = _eContainer.eContainer();
+    String _name = ((Architecture) _eContainer_1).getName();
+    String _plus = (_name + ".");
+    EObject _eContainer_2 = service.eContainer();
+    String _name_1 = ((Module) _eContainer_2).getName();
+    String _plus_1 = (_plus + _name_1);
+    return (_plus_1 + ".service");
+  }
+  
+  public String classNameInterface(final Service service) {
+    String _name = service.getName();
+    String _firstUpper = StringExtensions.toFirstUpper(_name);
+    return ("I" + _firstUpper);
+  }
+  
+  public String qualifiedClassNameInterface(final Service service) {
+    String _packageNameInterface = this.packageNameInterface(service);
+    String _plus = (_packageNameInterface + ".");
+    String _classNameInterface = this.classNameInterface(service);
+    return (_plus + _classNameInterface);
+  }
+  
   public String applicationId(final Service service) {
     EObject _eContainer = service.eContainer();
     EObject _eContainer_1 = _eContainer.eContainer();

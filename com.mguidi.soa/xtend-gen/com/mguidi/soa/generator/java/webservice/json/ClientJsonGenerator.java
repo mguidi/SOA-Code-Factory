@@ -30,6 +30,14 @@ public class ClientJsonGenerator {
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
+    {
+      boolean _accountRequired = this.accountRequired(service);
+      if (_accountRequired) {
+        _builder.append("import com.mguidi.soa.commons.service.AuthTokenManager;");
+        _builder.newLine();
+        _builder.newLine();
+      }
+    }
     _builder.append("import java.io.IOException;");
     _builder.newLine();
     _builder.append("import java.io.InputStreamReader;");
@@ -68,8 +76,8 @@ public class ClientJsonGenerator {
     String _classNameClient_1 = this.utils.classNameClient(service);
     _builder.append(_classNameClient_1, "");
     _builder.append(" extends BaseClient implements ");
-    String _qualifiedClassName = this.utils.qualifiedClassName(service);
-    _builder.append(_qualifiedClassName, "");
+    String _qualifiedClassNameInterface = this.utils.qualifiedClassNameInterface(service);
+    _builder.append(_qualifiedClassNameInterface, "");
     _builder.append(" {");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
@@ -94,17 +102,40 @@ public class ClientJsonGenerator {
     _builder.append("\t");
     _builder.append("private String mServiceAddress;");
     _builder.newLine();
+    {
+      boolean _accountRequired_1 = this.accountRequired(service);
+      if (_accountRequired_1) {
+        _builder.append("\t");
+        _builder.append("private AuthTokenManager mAuthTokenManager;");
+        _builder.newLine();
+      }
+    }
     _builder.append("\t");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public ");
     String _classNameClient_2 = this.utils.classNameClient(service);
     _builder.append(_classNameClient_2, "\t");
-    _builder.append("(String baseAddress) {");
+    _builder.append("(String baseAddress");
+    {
+      boolean _accountRequired_2 = this.accountRequired(service);
+      if (_accountRequired_2) {
+        _builder.append(", AuthTokenManager authTokenMager");
+      }
+    }
+    _builder.append(") {");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");
     _builder.append("mServiceAddress = baseAddress + NAME;");
     _builder.newLine();
+    {
+      boolean _accountRequired_3 = this.accountRequired(service);
+      if (_accountRequired_3) {
+        _builder.append("\t\t");
+        _builder.append("mAuthTokenManager = authTokenMager;");
+        _builder.newLine();
+      }
+    }
     _builder.append("\t");
     _builder.append("}");
     _builder.newLine();
@@ -211,6 +242,34 @@ public class ClientJsonGenerator {
         _builder.append(_throwsException_1, "\t");
         _builder.append(" {");
         _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("\t");
+        _builder.newLine();
+        {
+          boolean _setTokenRequired = this.setTokenRequired(operation);
+          if (_setTokenRequired) {
+            _builder.append("\t");
+            _builder.append("\t");
+            _builder.append("// set auth token on the input of the request ");
+            _builder.newLine();
+            _builder.append("\t");
+            _builder.append("\t");
+            _builder.append("if (mAuthTokenManager != null) {");
+            _builder.newLine();
+            _builder.append("\t");
+            _builder.append("\t");
+            _builder.append("\t");
+            _builder.append("input.setAuthToken(mAuthTokenManager.getAuthToken());");
+            _builder.newLine();
+            _builder.append("\t");
+            _builder.append("\t");
+            _builder.append("}");
+            _builder.newLine();
+          }
+        }
+        _builder.append("\t");
+        _builder.append("\t");
+        _builder.newLine();
         _builder.append("\t");
         _builder.append("\t");
         _builder.append("URL url = new URL(mServiceAddress+\"/");
@@ -386,6 +445,31 @@ public class ClientJsonGenerator {
             _builder.append("\t\t\t\t\t");
             _builder.append("\t");
             _builder.newLine();
+            {
+              boolean _saveTokenRequired = this.saveTokenRequired(operation);
+              if (_saveTokenRequired) {
+                _builder.append("\t");
+                _builder.append("\t\t\t\t\t");
+                _builder.append("\t");
+                _builder.append("if (mAuthTokenManager != null && output.getAuthToken() != null) {");
+                _builder.newLine();
+                _builder.append("\t");
+                _builder.append("\t\t\t\t\t");
+                _builder.append("\t");
+                _builder.append("\t");
+                _builder.append("mAuthTokenManager.saveAuthToken(output.getAuthToken());");
+                _builder.newLine();
+                _builder.append("\t");
+                _builder.append("\t\t\t\t\t");
+                _builder.append("\t");
+                _builder.append("}");
+                _builder.newLine();
+                _builder.append("\t");
+                _builder.append("\t\t\t\t\t");
+                _builder.append("\t");
+                _builder.newLine();
+              }
+            }
             _builder.append("\t");
             _builder.append("\t\t\t\t\t");
             _builder.append("\t");
@@ -480,8 +564,8 @@ public class ClientJsonGenerator {
                 _builder.append("\t\t");
                 _builder.append("\t");
                 _builder.append("throw new ");
-                String _qualifiedClassName_1 = this.utils.qualifiedClassName(exception);
-                _builder.append(_qualifiedClassName_1, "\t\t\t\t\t\t\t\t");
+                String _qualifiedClassName = this.utils.qualifiedClassName(exception);
+                _builder.append(_qualifiedClassName, "\t\t\t\t\t\t\t\t");
                 _builder.append("();");
                 _builder.newLineIfNotEmpty();
                 _builder.append("\t");
@@ -623,5 +707,54 @@ public class ClientJsonGenerator {
     _builder.append("}");
     _builder.newLine();
     return _builder;
+  }
+  
+  public boolean setTokenRequired(final Operation operation) {
+    EList<Feature> _featuresInput = operation.getFeaturesInput();
+    for (final Feature feature : _featuresInput) {
+      String _name = feature.getName();
+      boolean _equals = _name.equals("authToken");
+      if (_equals) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  public boolean saveTokenRequired(final Operation operation) {
+    EList<Feature> _featuresOutput = operation.getFeaturesOutput();
+    for (final Feature feature : _featuresOutput) {
+      String _name = feature.getName();
+      boolean _equals = _name.equals("authToken");
+      if (_equals) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  public boolean accountRequired(final Service service) {
+    EList<Operation> _operations = service.getOperations();
+    for (final Operation operation : _operations) {
+      {
+        EList<Feature> _featuresInput = operation.getFeaturesInput();
+        for (final Feature feature : _featuresInput) {
+          String _name = feature.getName();
+          boolean _equals = _name.equals("authToken");
+          if (_equals) {
+            return true;
+          }
+        }
+        EList<Feature> _featuresOutput = operation.getFeaturesOutput();
+        for (final Feature feature_1 : _featuresOutput) {
+          String _name_1 = feature_1.getName();
+          boolean _equals_1 = _name_1.equals("authToken");
+          if (_equals_1) {
+            return true;
+          }
+        }
+      }
+    }
+    return false;
   }
 }
