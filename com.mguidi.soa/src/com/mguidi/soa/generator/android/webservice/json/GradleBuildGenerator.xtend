@@ -25,10 +25,6 @@ class GradleBuildGenerator {
 		android {
 		    compileSdkVersion 21
 		    buildToolsVersion "21.0.0"
-		    
-		    defaultConfig {
-		        minSdkVersion 5
-		    }
 		}
 		
 		task androidSourcesJar(type: Jar) {

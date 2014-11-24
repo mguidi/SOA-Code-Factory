@@ -58,17 +58,6 @@ public class GradleBuildGenerator {
     _builder.append("    ");
     _builder.append("buildToolsVersion \"21.0.0\"");
     _builder.newLine();
-    _builder.append("    ");
-    _builder.newLine();
-    _builder.append("    ");
-    _builder.append("defaultConfig {");
-    _builder.newLine();
-    _builder.append("        ");
-    _builder.append("minSdkVersion 5");
-    _builder.newLine();
-    _builder.append("    ");
-    _builder.append("}");
-    _builder.newLine();
     _builder.append("}");
     _builder.newLine();
     _builder.newLine();
