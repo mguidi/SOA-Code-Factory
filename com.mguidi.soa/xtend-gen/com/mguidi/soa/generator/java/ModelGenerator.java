@@ -156,6 +156,17 @@ public class ModelGenerator {
     _builder.append(_className_9, "\t");
     _builder.append(" valueOf(String value) {");
     _builder.newLineIfNotEmpty();
+    _builder.append("\t\t");
+    _builder.append("if (value == null) {");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("return null;");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.newLine();
     {
       EList<String> _features_1 = entity.getFeatures();
       for(final String feature_1 : _features_1) {

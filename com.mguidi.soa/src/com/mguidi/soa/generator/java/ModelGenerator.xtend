@@ -48,6 +48,10 @@ class ModelGenerator {
 		    }
 			
 			public static «entity.className» valueOf(String value) {
+				if (value == null) {
+					return null;
+				}
+				
 				«FOR feature: entity.features»
 				«IF feature == entity.features.get(0)»
 				if (value.equals("«feature»")) {
