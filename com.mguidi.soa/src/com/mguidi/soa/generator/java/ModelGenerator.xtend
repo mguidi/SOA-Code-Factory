@@ -10,11 +10,6 @@ class ModelGenerator {
 	def generateEnum(com.mguidi.soa.soa.Enum entity) '''
 		package «entity.packageName»;
 		
-		/**
-		*
-		* «entity.className»
-		*
-		*/
 		public class «entity.className» {
 			«FOR feature: entity.features»
 			public static «entity.className» _«feature» = new «entity.className»("«feature»");
@@ -70,11 +65,6 @@ class ModelGenerator {
 	def generateEntity(Entity entity) '''
 		package «entity.packageName»;
 		
-		/**
-		*
-		* «entity.className»
-		*
-		*/
 		public class «entity.className» {
 			
 			«FOR feature: entity.features»
@@ -82,17 +72,6 @@ class ModelGenerator {
 			«ENDFOR»
 			
 			«FOR feature: entity.features»
-«««				«IF feature.featureComment.size == 1»
-«««				
-«««				// «feature.featureComment.get(0).clean»
-«««				«ELSEIF feature.featureComment.size > 1»
-«««				
-«««				/*
-«««				«FOR comment: feature.featureComment»
-«««				* «comment.clean»
-«««				«ENDFOR»
-«««				*/
-«««				«ENDIF»
 				protected «feature.type.declaration» «feature.featureName»;
 			«ENDFOR»
 			

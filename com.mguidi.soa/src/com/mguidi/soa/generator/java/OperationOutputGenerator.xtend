@@ -10,11 +10,6 @@ class OperationOutputGenerator {
 	def generateOperationOutput(Operation operation) '''
 		package «operation.packageNameOutput»;
 		
-		/**
-		*
-		* «operation.classNameOutput»
-		*
-		*/
 		public class «operation.classNameOutput» {
 			
 			«FOR feature: operation.featuresOutput»

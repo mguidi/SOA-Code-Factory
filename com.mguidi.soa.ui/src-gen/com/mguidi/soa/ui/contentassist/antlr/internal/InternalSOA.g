@@ -1809,9 +1809,16 @@ rule__Model__Group__2__Impl
     }
 :
 (
+(
+{ before(grammarAccess.getModelAccess().getEntitiesAssignment_2()); }
+(rule__Model__EntitiesAssignment_2)
+{ after(grammarAccess.getModelAccess().getEntitiesAssignment_2()); }
+)
+(
 { before(grammarAccess.getModelAccess().getEntitiesAssignment_2()); }
 (rule__Model__EntitiesAssignment_2)*
 { after(grammarAccess.getModelAccess().getEntitiesAssignment_2()); }
+)
 )
 
 ;

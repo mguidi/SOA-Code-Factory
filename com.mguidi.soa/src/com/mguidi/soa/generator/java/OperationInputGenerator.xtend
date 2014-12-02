@@ -10,11 +10,6 @@ class OperationInputGenerator {
 	def generateOperationInput(Operation operation) '''
 		package «operation.packageNameInput»;
 		
-		/**
-		*
-		* «operation.classNameInput»
-		*
-		*/
 		public class «operation.classNameInput» {
 			
 			«FOR feature: operation.featuresInput»

@@ -27,11 +27,6 @@ class ServletJsonGenerator {
 		import com.mguidi.soa.commons.service.ServiceException;
 		import com.mguidi.soa.commons.service.ServiceExceptionHelper;
 		
-		/**
-		*
-		* «service.classNameServlet»
-		*
-		*/
 		public abstract class «service.classNameServlet»  extends HttpServlet implements «service.qualifiedClassName» {
 			
 			private static final long serialVersionUID = 1L;

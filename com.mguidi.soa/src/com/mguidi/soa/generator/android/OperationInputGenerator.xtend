@@ -20,11 +20,6 @@ class OperationInputGenerator {
 		import android.os.Parcel;
 		import android.os.Parcelable;
 		
-		/**
-		*
-		* «operation.classNameInput»
-		*
-		*/
 		public class «operation.classNameInput» implements Parcelable {
 			
 			«FOR feature: operation.featuresInput»

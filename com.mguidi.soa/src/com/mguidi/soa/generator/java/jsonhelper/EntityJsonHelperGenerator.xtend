@@ -24,11 +24,6 @@ class EntityJsonHelperGenerator {
 		
 		import «entity.qualifiedClassName»;
 		
-		/**
-		 *
-		 * «entity.classNameHelper»
-		 *
-		 */
 		public class «entity.classNameHelper» {
 			
 			public static «entity.qualifiedClassName» fromJson(JsonReader reader) throws IOException {

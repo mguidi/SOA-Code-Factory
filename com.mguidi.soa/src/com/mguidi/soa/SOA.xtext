@@ -30,7 +30,7 @@ Import:
 		
 /************************ Model definition *************************/
 Model:
-	'@model' '{' entities+=Entities* '}'
+	'@model' '{' entities+=Entities+ '}'
 ;
 
 Comment:

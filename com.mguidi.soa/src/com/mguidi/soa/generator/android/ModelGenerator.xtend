@@ -17,11 +17,6 @@ class ModelGenerator extends com.mguidi.soa.generator.java.ModelGenerator {
 		import android.os.Parcel;
 		import android.os.Parcelable;
 		
-		/**
-		*
-		* «entity.className»
-		*
-		*/
 		public class «entity.className» implements Parcelable {
 			
 			«FOR feature: entity.features»

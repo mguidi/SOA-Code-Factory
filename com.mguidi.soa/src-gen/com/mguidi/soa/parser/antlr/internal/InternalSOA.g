@@ -487,7 +487,7 @@ ruleModel returns [EObject current=null]
 	    }
 
 )
-)*	otherlv_3='}' 
+)+	otherlv_3='}' 
     {
     	newLeafNode(otherlv_3, grammarAccess.getModelAccess().getRightCurlyBracketKeyword_3());
     }

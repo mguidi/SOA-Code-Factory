@@ -20,11 +20,6 @@ class OperationOutputGenerator {
 		import android.os.Parcel;
 		import android.os.Parcelable;
 		
-		/**
-		*
-		* «operation.classNameOutput»
-		*
-		*/
 		public class «operation.classNameOutput» implements Parcelable {
 			
 			«FOR feature: operation.featuresOutput»

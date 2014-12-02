@@ -11,11 +11,6 @@ class ExceptionGenerator {
 	def generateException(com.mguidi.soa.soa.Exception exception) '''
 		package «exception.packageName»;
 		
-		/**
-		*
-		* «exception.className»
-		*
-		*/
 		public class «exception.className» extends Exception implements com.mguidi.soa.commons.service.ServiceException {
 			
 			private static final long serialVersionUID = 1L;

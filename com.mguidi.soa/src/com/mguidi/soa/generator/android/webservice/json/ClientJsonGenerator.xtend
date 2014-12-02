@@ -30,11 +30,6 @@ class ClientJsonGenerator {
 		import com.mguidi.soa.commons.service.ServiceException;
 		import com.mguidi.soa.commons.service.ServiceExceptionHelper;
 		
-		/**
-		*
-		* «service.classNameClient»
-		*
-		*/
 		public class «service.classNameClient» extends BaseClient implements «service.qualifiedClassNameInterface» {
 			
 			public static final String NAME = "/«service.moduleName»/«service.version»/«service.serviceName»";

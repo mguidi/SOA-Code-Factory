@@ -21,11 +21,6 @@ class OperationInputJsonHelperGenerator {
 		
 		import «operation.qualifiedClassNameInput»;
 		
-		/**
-		 *
-		 * «operation.classNameInputHelper»
-		 *
-		 */
 		public class «operation.classNameInputHelper» {
 			
 			public static «operation.qualifiedClassNameInput» fromJson(JsonReader reader) throws IOException {

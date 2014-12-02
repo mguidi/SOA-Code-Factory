@@ -60,21 +60,9 @@ public class ClientJsonGenerator {
     _builder.append("import com.mguidi.soa.commons.service.ServiceExceptionHelper;");
     _builder.newLine();
     _builder.newLine();
-    _builder.append("/**");
-    _builder.newLine();
-    _builder.append("*");
-    _builder.newLine();
-    _builder.append("* ");
+    _builder.append("public class ");
     String _classNameClient = this.utils.classNameClient(service);
     _builder.append(_classNameClient, "");
-    _builder.newLineIfNotEmpty();
-    _builder.append("*");
-    _builder.newLine();
-    _builder.append("*/");
-    _builder.newLine();
-    _builder.append("public class ");
-    String _classNameClient_1 = this.utils.classNameClient(service);
-    _builder.append(_classNameClient_1, "");
     _builder.append(" extends BaseClient implements ");
     String _qualifiedClassNameInterface = this.utils.qualifiedClassNameInterface(service);
     _builder.append(_qualifiedClassNameInterface, "");
@@ -114,8 +102,8 @@ public class ClientJsonGenerator {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public ");
-    String _classNameClient_2 = this.utils.classNameClient(service);
-    _builder.append(_classNameClient_2, "\t");
+    String _classNameClient_1 = this.utils.classNameClient(service);
+    _builder.append(_classNameClient_1, "\t");
     _builder.append("(String baseAddress");
     {
       boolean _accountRequired_2 = this.accountRequired(service);

@@ -1044,7 +1044,7 @@ public class InternalSOAParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModel"
-    // ../com.mguidi.soa/src-gen/com/mguidi/soa/parser/antlr/internal/InternalSOA.g:460:1: ruleModel returns [EObject current=null] : (otherlv_0= '@model' otherlv_1= '{' ( (lv_entities_2_0= ruleEntities ) )* otherlv_3= '}' ) ;
+    // ../com.mguidi.soa/src-gen/com/mguidi/soa/parser/antlr/internal/InternalSOA.g:460:1: ruleModel returns [EObject current=null] : (otherlv_0= '@model' otherlv_1= '{' ( (lv_entities_2_0= ruleEntities ) )+ otherlv_3= '}' ) ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
@@ -1057,11 +1057,11 @@ public class InternalSOAParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.mguidi.soa/src-gen/com/mguidi/soa/parser/antlr/internal/InternalSOA.g:463:28: ( (otherlv_0= '@model' otherlv_1= '{' ( (lv_entities_2_0= ruleEntities ) )* otherlv_3= '}' ) )
-            // ../com.mguidi.soa/src-gen/com/mguidi/soa/parser/antlr/internal/InternalSOA.g:464:1: (otherlv_0= '@model' otherlv_1= '{' ( (lv_entities_2_0= ruleEntities ) )* otherlv_3= '}' )
+            // ../com.mguidi.soa/src-gen/com/mguidi/soa/parser/antlr/internal/InternalSOA.g:463:28: ( (otherlv_0= '@model' otherlv_1= '{' ( (lv_entities_2_0= ruleEntities ) )+ otherlv_3= '}' ) )
+            // ../com.mguidi.soa/src-gen/com/mguidi/soa/parser/antlr/internal/InternalSOA.g:464:1: (otherlv_0= '@model' otherlv_1= '{' ( (lv_entities_2_0= ruleEntities ) )+ otherlv_3= '}' )
             {
-            // ../com.mguidi.soa/src-gen/com/mguidi/soa/parser/antlr/internal/InternalSOA.g:464:1: (otherlv_0= '@model' otherlv_1= '{' ( (lv_entities_2_0= ruleEntities ) )* otherlv_3= '}' )
-            // ../com.mguidi.soa/src-gen/com/mguidi/soa/parser/antlr/internal/InternalSOA.g:464:3: otherlv_0= '@model' otherlv_1= '{' ( (lv_entities_2_0= ruleEntities ) )* otherlv_3= '}'
+            // ../com.mguidi.soa/src-gen/com/mguidi/soa/parser/antlr/internal/InternalSOA.g:464:1: (otherlv_0= '@model' otherlv_1= '{' ( (lv_entities_2_0= ruleEntities ) )+ otherlv_3= '}' )
+            // ../com.mguidi.soa/src-gen/com/mguidi/soa/parser/antlr/internal/InternalSOA.g:464:3: otherlv_0= '@model' otherlv_1= '{' ( (lv_entities_2_0= ruleEntities ) )+ otherlv_3= '}'
             {
             otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleModel979); 
 
@@ -1071,7 +1071,8 @@ public class InternalSOAParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_1, grammarAccess.getModelAccess().getLeftCurlyBracketKeyword_1());
                 
-            // ../com.mguidi.soa/src-gen/com/mguidi/soa/parser/antlr/internal/InternalSOA.g:472:1: ( (lv_entities_2_0= ruleEntities ) )*
+            // ../com.mguidi.soa/src-gen/com/mguidi/soa/parser/antlr/internal/InternalSOA.g:472:1: ( (lv_entities_2_0= ruleEntities ) )+
+            int cnt8=0;
             loop8:
             do {
                 int alt8=2;
@@ -1116,8 +1117,12 @@ public class InternalSOAParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop8;
+            	    if ( cnt8 >= 1 ) break loop8;
+                        EarlyExitException eee =
+                            new EarlyExitException(8, input);
+                        throw eee;
                 }
+                cnt8++;
             } while (true);
 
             otherlv_3=(Token)match(input,21,FOLLOW_21_in_ruleModel1025); 
@@ -3676,7 +3681,7 @@ public class InternalSOAParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleModel_in_entryRuleModel932 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleModel942 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_19_in_ruleModel979 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleModel991 = new BitSet(new long[]{0x0000000000E00000L});
+    public static final BitSet FOLLOW_20_in_ruleModel991 = new BitSet(new long[]{0x0000000000C00000L});
     public static final BitSet FOLLOW_ruleEntities_in_ruleModel1012 = new BitSet(new long[]{0x0000000000E00000L});
     public static final BitSet FOLLOW_21_in_ruleModel1025 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleComment_in_entryRuleComment1061 = new BitSet(new long[]{0x0000000000000000L});

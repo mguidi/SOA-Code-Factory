@@ -250,10 +250,10 @@ public class SOAGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		/// ************************ Model definition ************************* / Model:
-		//	"@model" "{" entities+=Entities* "}";
+		//	"@model" "{" entities+=Entities+ "}";
 		public ParserRule getRule() { return rule; }
 
-		//"@model" "{" entities+=Entities* "}"
+		//"@model" "{" entities+=Entities+ "}"
 		public Group getGroup() { return cGroup; }
 
 		//"@model"
@@ -262,7 +262,7 @@ public class SOAGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
-		//entities+=Entities*
+		//entities+=Entities+
 		public Assignment getEntitiesAssignment_2() { return cEntitiesAssignment_2; }
 
 		//Entities
@@ -1044,7 +1044,7 @@ public class SOAGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	/// ************************ Model definition ************************* / Model:
-	//	"@model" "{" entities+=Entities* "}";
+	//	"@model" "{" entities+=Entities+ "}";
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
