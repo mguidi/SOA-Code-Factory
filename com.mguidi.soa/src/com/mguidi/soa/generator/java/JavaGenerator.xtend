@@ -41,7 +41,7 @@ class JavaGenerator {
 			}
 			
 			if (services.size > 0 || exceptions.size > 0) {
-			// gradle build generation
+				// gradle build generation
 				fsa.generateFile("java/"+e.applicationId+"/"+e.moduleName+"/"+e.version+"/service/build.gradle", gradleBuildGenerator.generateBuildService(e, resource))
 			}
 		}

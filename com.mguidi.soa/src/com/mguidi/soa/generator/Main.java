@@ -69,7 +69,7 @@ public class Main {
 		}
 		
 		// configure and start the generator
-		fileAccess.setOutputPath("output/");
+		fileAccess.setOutputPath("output_soa/");
 		
 		// load the resource
 		ResourceSet set = resourceSetProvider.get();

@@ -3,6 +3,7 @@ package com.mguidi.soa.generator.java
 import com.mguidi.soa.soa.Architecture
 import com.google.inject.Inject
 import org.eclipse.emf.ecore.resource.Resource
+import com.mguidi.soa.generator.Libraries
 
 class GradleBuildGenerator {
 	
@@ -52,7 +53,7 @@ class GradleBuildGenerator {
 		}
 		
 		dependencies {
-		    compile 'com.mguidi.soa:commons-service:1.0.0'
+		    compile '«Libraries.COMMON_SERVICE»'
 		    «IF architecture.module.model != null»
 		    compile '«architecture.applicationId»:«architecture.moduleName»-model:«architecture.version»'
 		    «ENDIF»

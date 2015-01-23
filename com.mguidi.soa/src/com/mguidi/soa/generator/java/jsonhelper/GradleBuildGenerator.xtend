@@ -4,6 +4,7 @@ import com.mguidi.soa.soa.Architecture
 import com.google.inject.Inject
 import org.eclipse.emf.ecore.resource.Resource
 import com.mguidi.soa.generator.java.Utils
+import com.mguidi.soa.generator.Libraries
 
 class GradleBuildGenerator {
 	
@@ -20,7 +21,7 @@ class GradleBuildGenerator {
 		}
 		
 		dependencies {
-		    compile 'com.google.code.gson:gson:2.3'
+		    compile '«Libraries.GSON»'
 		    compile '«architecture.applicationId+":"+architecture.moduleName+"-model:"+architecture.version»'
 		    «FOR dependency: architecture.modelDependencies»
 		    compile '«dependency.applicationId+":"+dependency.moduleName+"-model-json:"+dependency.version»'

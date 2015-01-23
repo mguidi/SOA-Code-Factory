@@ -4,6 +4,7 @@ import com.mguidi.soa.soa.Architecture
 import com.mguidi.soa.generator.java.Utils
 import com.google.inject.Inject
 import org.eclipse.emf.ecore.resource.Resource
+import com.mguidi.soa.generator.Libraries
 
 class GradleBuildGenerator {
 	
@@ -17,13 +18,13 @@ class GradleBuildGenerator {
 		        jcenter()
 		    }
 		    dependencies {
-		        classpath 'com.android.tools.build:gradle:0.13.2'
+		        classpath '«Libraries.GRADLE»'
 		    }
 		}
 		
 		android {
-		    compileSdkVersion 21
-		    buildToolsVersion "21.0.0"
+		    compileSdkVersion «Libraries.COMPILE_SDK_VERSION»
+		    buildToolsVersion "«Libraries.BUILD_TOOLS_VERSIONE»"
 		}
 		
 		task androidSourcesJar(type: Jar) {
@@ -37,13 +38,13 @@ class GradleBuildGenerator {
 		
 		repositories {
 			mavenLocal()
-			mavenCentral()
+			jcenter()
 		}
 		«IF architecture.modelDependencies.size > 0»
 		
 		dependencies {
 		    «FOR dependency: architecture.modelDependencies»
-		    compile '«dependency.applicationId+":"+dependency.moduleName+"-model:android_"+dependency.version»'
+		    compile '«dependency.applicationId+":"+dependency.moduleName+"-model:"+dependency.version»'
 		    «ENDFOR»
 		}
 		«ENDIF»
@@ -57,7 +58,7 @@ class GradleBuildGenerator {
 		            
 		            pom.groupId = '«architecture.applicationId»'
 					pom.artifactId = '«architecture.moduleName»-model'
-					pom.version = 'android_«architecture.version»'
+					pom.version = '«architecture.version»'
 		        }
 		    }
 		}
@@ -72,13 +73,13 @@ class GradleBuildGenerator {
 		        jcenter()
 		    }
 		    dependencies {
-		        classpath 'com.android.tools.build:gradle:0.13.2'
+		        classpath '«Libraries.GRADLE»'
 		    }
 		}
 		
 		android {
-		    compileSdkVersion 21
-		    buildToolsVersion "21.0.0"
+		    compileSdkVersion «Libraries.COMPILE_SDK_VERSION»
+		    buildToolsVersion "«Libraries.BUILD_TOOLS_VERSIONE»"
 		}
 		
 		task androidSourcesJar(type: Jar) {
@@ -92,19 +93,19 @@ class GradleBuildGenerator {
 		
 		repositories {
 			mavenLocal()
-			mavenCentral()
+			jcenter()
 		}
 		
 		dependencies {
-		    compile 'com.mguidi.soa:commons-service:1.0.0'
+		    compile '«Libraries.COMMON_SERVICE»'
 		    «IF architecture.module.model != null»
-		    compile '«architecture.applicationId»:«architecture.moduleName»-model:android_«architecture.version»'
+		    compile '«architecture.applicationId»:«architecture.moduleName»-model:«architecture.version»'
 		    «ENDIF»
 		    «FOR dependency: architecture.serviceModelDependencies»
-		    compile '«dependency.applicationId+":"+dependency.moduleName+"-model:android_"+dependency.version»'
+		    compile '«dependency.applicationId+":"+dependency.moduleName+"-model:"+dependency.version»'
 		    «ENDFOR»
 		    «FOR dependency: architecture.serviceExceptionDependencies»
-		    compile '«dependency.applicationId+":"+dependency.moduleName+"-service:android_"+dependency.version»'
+		    compile '«dependency.applicationId+":"+dependency.moduleName+"-service:"+dependency.version»'
 		    «ENDFOR»
 		}
 		
@@ -117,7 +118,7 @@ class GradleBuildGenerator {
 		            
 		            pom.groupId = '«architecture.applicationId»'
 					pom.artifactId = '«architecture.moduleName»-service'
-					pom.version = 'android_«architecture.version»'
+					pom.version = '«architecture.version»'
 		        }
 		    }
 		}

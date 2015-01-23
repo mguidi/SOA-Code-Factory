@@ -1,6 +1,7 @@
 package com.mguidi.soa.generator.java.jsonhelper;
 
 import com.google.inject.Inject;
+import com.mguidi.soa.generator.Libraries;
 import com.mguidi.soa.generator.java.Utils;
 import com.mguidi.soa.soa.Architecture;
 import java.util.HashSet;
@@ -36,8 +37,10 @@ public class GradleBuildGenerator {
     _builder.append("dependencies {");
     _builder.newLine();
     _builder.append("    ");
-    _builder.append("compile \'com.google.code.gson:gson:2.3\'");
-    _builder.newLine();
+    _builder.append("compile \'");
+    _builder.append(Libraries.GSON, "    ");
+    _builder.append("\'");
+    _builder.newLineIfNotEmpty();
     _builder.append("    ");
     _builder.append("compile \'");
     String _applicationId = this.utils.applicationId(architecture);

@@ -3,6 +3,7 @@ package com.mguidi.soa.generator.android.webservice.json;
 import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
 import com.google.inject.Inject;
+import com.mguidi.soa.generator.Libraries;
 import com.mguidi.soa.generator.java.Utils;
 import com.mguidi.soa.soa.Architecture;
 import com.mguidi.soa.soa.Entities;
@@ -42,8 +43,10 @@ public class GradleBuildGenerator {
     _builder.append("dependencies {");
     _builder.newLine();
     _builder.append("        ");
-    _builder.append("classpath \'com.android.tools.build:gradle:0.13.2\'");
-    _builder.newLine();
+    _builder.append("classpath \'");
+    _builder.append(Libraries.GRADLE, "        ");
+    _builder.append("\'");
+    _builder.newLineIfNotEmpty();
     _builder.append("    ");
     _builder.append("}");
     _builder.newLine();
@@ -53,11 +56,14 @@ public class GradleBuildGenerator {
     _builder.append("android {");
     _builder.newLine();
     _builder.append("    ");
-    _builder.append("compileSdkVersion 21");
-    _builder.newLine();
+    _builder.append("compileSdkVersion ");
+    _builder.append(Libraries.COMPILE_SDK_VERSION, "    ");
+    _builder.newLineIfNotEmpty();
     _builder.append("    ");
-    _builder.append("buildToolsVersion \"21.0.0\"");
-    _builder.newLine();
+    _builder.append("buildToolsVersion \"");
+    _builder.append(Libraries.BUILD_TOOLS_VERSIONE, "    ");
+    _builder.append("\"");
+    _builder.newLineIfNotEmpty();
     _builder.append("}");
     _builder.newLine();
     _builder.newLine();
@@ -86,7 +92,7 @@ public class GradleBuildGenerator {
     _builder.append("mavenLocal()");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("mavenCentral()");
+    _builder.append("jcenter()");
     _builder.newLine();
     _builder.append("}");
     _builder.newLine();
@@ -94,15 +100,17 @@ public class GradleBuildGenerator {
     _builder.append("dependencies {");
     _builder.newLine();
     _builder.append("    ");
-    _builder.append("compile \'com.google.code.gson:gson:2.3\'");
-    _builder.newLine();
+    _builder.append("compile \'");
+    _builder.append(Libraries.GSON, "    ");
+    _builder.append("\'");
+    _builder.newLineIfNotEmpty();
     _builder.append("    ");
     _builder.append("compile \'");
     String _applicationId = this.utils.applicationId(architecture);
     String _plus = (_applicationId + ":");
     String _moduleName = this.utils.moduleName(architecture);
     String _plus_1 = (_plus + _moduleName);
-    String _plus_2 = (_plus_1 + "-service:android_");
+    String _plus_2 = (_plus_1 + "-service:");
     String _version = this.utils.version(architecture);
     String _plus_3 = (_plus_2 + _version);
     _builder.append(_plus_3, "    ");
@@ -131,7 +139,7 @@ public class GradleBuildGenerator {
         String _plus_4 = (_applicationId_1 + ":");
         String _moduleName_1 = this.utils.moduleName(architecture);
         String _plus_5 = (_plus_4 + _moduleName_1);
-        String _plus_6 = (_plus_5 + "-model-json:android_");
+        String _plus_6 = (_plus_5 + "-model-json:");
         String _version_1 = this.utils.version(architecture);
         String _plus_7 = (_plus_6 + _version_1);
         _builder.append(_plus_7, "    ");
@@ -144,7 +152,7 @@ public class GradleBuildGenerator {
       for(final Utils.Dependency dependency : _serviceModelDependencies) {
         _builder.append("    ");
         _builder.append("compile \'");
-        _builder.append(((((dependency.applicationId + ":") + dependency.moduleName) + "-model-json:android_") + dependency.version), "    ");
+        _builder.append(((((dependency.applicationId + ":") + dependency.moduleName) + "-model-json:") + dependency.version), "    ");
         _builder.append("\'");
         _builder.newLineIfNotEmpty();
       }
@@ -181,7 +189,7 @@ public class GradleBuildGenerator {
     _builder.append("-service-json\'");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t");
-    _builder.append("pom.version = \'android_");
+    _builder.append("pom.version = \'");
     String _version_2 = this.utils.version(architecture);
     _builder.append(_version_2, "\t\t\t");
     _builder.append("\'");

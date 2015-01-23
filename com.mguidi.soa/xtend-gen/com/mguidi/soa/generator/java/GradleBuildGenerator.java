@@ -2,6 +2,7 @@ package com.mguidi.soa.generator.java;
 
 import com.google.common.base.Objects;
 import com.google.inject.Inject;
+import com.mguidi.soa.generator.Libraries;
 import com.mguidi.soa.generator.java.Utils;
 import com.mguidi.soa.soa.Architecture;
 import com.mguidi.soa.soa.Model;
@@ -125,8 +126,10 @@ public class GradleBuildGenerator {
     _builder.append("dependencies {");
     _builder.newLine();
     _builder.append("    ");
-    _builder.append("compile \'com.mguidi.soa:commons-service:1.0.0\'");
-    _builder.newLine();
+    _builder.append("compile \'");
+    _builder.append(Libraries.COMMON_SERVICE, "    ");
+    _builder.append("\'");
+    _builder.newLineIfNotEmpty();
     {
       Module _module = architecture.getModule();
       Model _model = _module.getModel();

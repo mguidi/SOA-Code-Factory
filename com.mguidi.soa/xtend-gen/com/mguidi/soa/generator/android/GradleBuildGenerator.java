@@ -2,6 +2,7 @@ package com.mguidi.soa.generator.android;
 
 import com.google.common.base.Objects;
 import com.google.inject.Inject;
+import com.mguidi.soa.generator.Libraries;
 import com.mguidi.soa.generator.java.Utils;
 import com.mguidi.soa.soa.Architecture;
 import com.mguidi.soa.soa.Model;
@@ -37,8 +38,10 @@ public class GradleBuildGenerator {
     _builder.append("dependencies {");
     _builder.newLine();
     _builder.append("        ");
-    _builder.append("classpath \'com.android.tools.build:gradle:0.13.2\'");
-    _builder.newLine();
+    _builder.append("classpath \'");
+    _builder.append(Libraries.GRADLE, "        ");
+    _builder.append("\'");
+    _builder.newLineIfNotEmpty();
     _builder.append("    ");
     _builder.append("}");
     _builder.newLine();
@@ -48,11 +51,14 @@ public class GradleBuildGenerator {
     _builder.append("android {");
     _builder.newLine();
     _builder.append("    ");
-    _builder.append("compileSdkVersion 21");
-    _builder.newLine();
+    _builder.append("compileSdkVersion ");
+    _builder.append(Libraries.COMPILE_SDK_VERSION, "    ");
+    _builder.newLineIfNotEmpty();
     _builder.append("    ");
-    _builder.append("buildToolsVersion \"21.0.0\"");
-    _builder.newLine();
+    _builder.append("buildToolsVersion \"");
+    _builder.append(Libraries.BUILD_TOOLS_VERSIONE, "    ");
+    _builder.append("\"");
+    _builder.newLineIfNotEmpty();
     _builder.append("}");
     _builder.newLine();
     _builder.newLine();
@@ -81,7 +87,7 @@ public class GradleBuildGenerator {
     _builder.append("mavenLocal()");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("mavenCentral()");
+    _builder.append("jcenter()");
     _builder.newLine();
     _builder.append("}");
     _builder.newLine();
@@ -98,7 +104,7 @@ public class GradleBuildGenerator {
           for(final Utils.Dependency dependency : _modelDependencies_1) {
             _builder.append("    ");
             _builder.append("compile \'");
-            _builder.append(((((dependency.applicationId + ":") + dependency.moduleName) + "-model:android_") + dependency.version), "    ");
+            _builder.append(((((dependency.applicationId + ":") + dependency.moduleName) + "-model:") + dependency.version), "    ");
             _builder.append("\'");
             _builder.newLineIfNotEmpty();
           }
@@ -137,7 +143,7 @@ public class GradleBuildGenerator {
     _builder.append("-model\'");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t");
-    _builder.append("pom.version = \'android_");
+    _builder.append("pom.version = \'");
     String _version = this.utils.version(architecture);
     _builder.append(_version, "\t\t\t");
     _builder.append("\'");
@@ -174,8 +180,10 @@ public class GradleBuildGenerator {
     _builder.append("dependencies {");
     _builder.newLine();
     _builder.append("        ");
-    _builder.append("classpath \'com.android.tools.build:gradle:0.13.2\'");
-    _builder.newLine();
+    _builder.append("classpath \'");
+    _builder.append(Libraries.GRADLE, "        ");
+    _builder.append("\'");
+    _builder.newLineIfNotEmpty();
     _builder.append("    ");
     _builder.append("}");
     _builder.newLine();
@@ -185,11 +193,14 @@ public class GradleBuildGenerator {
     _builder.append("android {");
     _builder.newLine();
     _builder.append("    ");
-    _builder.append("compileSdkVersion 21");
-    _builder.newLine();
+    _builder.append("compileSdkVersion ");
+    _builder.append(Libraries.COMPILE_SDK_VERSION, "    ");
+    _builder.newLineIfNotEmpty();
     _builder.append("    ");
-    _builder.append("buildToolsVersion \"21.0.0\"");
-    _builder.newLine();
+    _builder.append("buildToolsVersion \"");
+    _builder.append(Libraries.BUILD_TOOLS_VERSIONE, "    ");
+    _builder.append("\"");
+    _builder.newLineIfNotEmpty();
     _builder.append("}");
     _builder.newLine();
     _builder.newLine();
@@ -218,7 +229,7 @@ public class GradleBuildGenerator {
     _builder.append("mavenLocal()");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("mavenCentral()");
+    _builder.append("jcenter()");
     _builder.newLine();
     _builder.append("}");
     _builder.newLine();
@@ -226,8 +237,10 @@ public class GradleBuildGenerator {
     _builder.append("dependencies {");
     _builder.newLine();
     _builder.append("    ");
-    _builder.append("compile \'com.mguidi.soa:commons-service:1.0.0\'");
-    _builder.newLine();
+    _builder.append("compile \'");
+    _builder.append(Libraries.COMMON_SERVICE, "    ");
+    _builder.append("\'");
+    _builder.newLineIfNotEmpty();
     {
       Module _module = architecture.getModule();
       Model _model = _module.getModel();
@@ -240,7 +253,7 @@ public class GradleBuildGenerator {
         _builder.append(":");
         String _moduleName = this.utils.moduleName(architecture);
         _builder.append(_moduleName, "    ");
-        _builder.append("-model:android_");
+        _builder.append("-model:");
         String _version = this.utils.version(architecture);
         _builder.append(_version, "    ");
         _builder.append("\'");
@@ -252,7 +265,7 @@ public class GradleBuildGenerator {
       for(final Utils.Dependency dependency : _serviceModelDependencies) {
         _builder.append("    ");
         _builder.append("compile \'");
-        _builder.append(((((dependency.applicationId + ":") + dependency.moduleName) + "-model:android_") + dependency.version), "    ");
+        _builder.append(((((dependency.applicationId + ":") + dependency.moduleName) + "-model:") + dependency.version), "    ");
         _builder.append("\'");
         _builder.newLineIfNotEmpty();
       }
@@ -262,7 +275,7 @@ public class GradleBuildGenerator {
       for(final Utils.Dependency dependency_1 : _serviceExceptionDependencies) {
         _builder.append("    ");
         _builder.append("compile \'");
-        _builder.append(((((dependency_1.applicationId + ":") + dependency_1.moduleName) + "-service:android_") + dependency_1.version), "    ");
+        _builder.append(((((dependency_1.applicationId + ":") + dependency_1.moduleName) + "-service:") + dependency_1.version), "    ");
         _builder.append("\'");
         _builder.newLineIfNotEmpty();
       }
@@ -299,7 +312,7 @@ public class GradleBuildGenerator {
     _builder.append("-service\'");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t");
-    _builder.append("pom.version = \'android_");
+    _builder.append("pom.version = \'");
     String _version_1 = this.utils.version(architecture);
     _builder.append(_version_1, "\t\t\t");
     _builder.append("\'");
