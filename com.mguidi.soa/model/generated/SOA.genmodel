@@ -32,7 +32,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SOA.ecore#//Module/model"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SOA.ecore#//Module/exceptions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SOA.ecore#//Module/services"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SOA.ecore#//Module/event"/>
     </genClasses>
     <genClasses ecoreClass="SOA.ecore#//Import">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SOA.ecore#//Import/importedNamespace"/>
@@ -80,6 +79,7 @@
     </genClasses>
     <genClasses ecoreClass="SOA.ecore#//Operation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SOA.ecore#//Operation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SOA.ecore#//Operation/authenticated"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SOA.ecore#//Operation/featuresInput"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SOA.ecore#//Operation/featuresOutput"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SOA.ecore#//Operation/exceptionts"/>

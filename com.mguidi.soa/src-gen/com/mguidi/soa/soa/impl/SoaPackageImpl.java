@@ -331,16 +331,6 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getModule_Event()
-  {
-    return (EAttribute)moduleEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getImport()
   {
     return importEClass;
@@ -671,9 +661,9 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getOperation_FeaturesInput()
+  public EAttribute getOperation_Authenticated()
   {
-    return (EReference)operationEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)operationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -681,7 +671,7 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getOperation_FeaturesOutput()
+  public EReference getOperation_FeaturesInput()
   {
     return (EReference)operationEClass.getEStructuralFeatures().get(2);
   }
@@ -691,9 +681,19 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getOperation_Exceptionts()
+  public EReference getOperation_FeaturesOutput()
   {
     return (EReference)operationEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOperation_Exceptionts()
+  {
+    return (EReference)operationEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -747,7 +747,6 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
     createEReference(moduleEClass, MODULE__MODEL);
     createEReference(moduleEClass, MODULE__EXCEPTIONS);
     createEReference(moduleEClass, MODULE__SERVICES);
-    createEAttribute(moduleEClass, MODULE__EVENT);
 
     importEClass = createEClass(IMPORT);
     createEAttribute(importEClass, IMPORT__IMPORTED_NAMESPACE);
@@ -796,6 +795,7 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
 
     operationEClass = createEClass(OPERATION);
     createEAttribute(operationEClass, OPERATION__NAME);
+    createEAttribute(operationEClass, OPERATION__AUTHENTICATED);
     createEReference(operationEClass, OPERATION__FEATURES_INPUT);
     createEReference(operationEClass, OPERATION__FEATURES_OUTPUT);
     createEReference(operationEClass, OPERATION__EXCEPTIONTS);
@@ -851,7 +851,6 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
     initEReference(getModule_Model(), this.getModel(), null, "model", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModule_Exceptions(), this.getExceptions(), null, "exceptions", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModule_Services(), this.getService(), null, "services", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getModule_Event(), ecorePackage.getEString(), "event", null, 0, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getImport_ImportedNamespace(), ecorePackage.getEString(), "importedNamespace", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -900,6 +899,7 @@ public class SoaPackageImpl extends EPackageImpl implements SoaPackage
 
     initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getOperation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getOperation_Authenticated(), ecorePackage.getEBoolean(), "authenticated", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperation_FeaturesInput(), this.getFeature(), null, "featuresInput", null, 0, -1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperation_FeaturesOutput(), this.getFeature(), null, "featuresOutput", null, 0, -1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperation_Exceptionts(), this.getException(), null, "exceptionts", null, 0, -1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

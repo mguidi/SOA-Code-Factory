@@ -18,9 +18,9 @@
 '@String'=12
 '@Timestamp'=22
 '@applicationId'=24
+'@authenticated'=47
 '@entity'=35
 '@enum'=34
-'@event'=47
 '@exception'=40
 '@exceptions'=39
 '@import'=30

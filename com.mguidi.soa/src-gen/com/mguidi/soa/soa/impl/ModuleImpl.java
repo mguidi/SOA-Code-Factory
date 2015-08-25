@@ -38,7 +38,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.mguidi.soa.soa.impl.ModuleImpl#getModel <em>Model</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.impl.ModuleImpl#getExceptions <em>Exceptions</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.impl.ModuleImpl#getServices <em>Services</em>}</li>
- *   <li>{@link com.mguidi.soa.soa.impl.ModuleImpl#getEvent <em>Event</em>}</li>
  * </ul>
  * </p>
  *
@@ -125,26 +124,6 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module
    * @ordered
    */
   protected EList<Service> services;
-
-  /**
-   * The default value of the '{@link #getEvent() <em>Event</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEvent()
-   * @generated
-   * @ordered
-   */
-  protected static final String EVENT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getEvent() <em>Event</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEvent()
-   * @generated
-   * @ordered
-   */
-  protected String event = EVENT_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -342,29 +321,6 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getEvent()
-  {
-    return event;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setEvent(String newEvent)
-  {
-    String oldEvent = event;
-    event = newEvent;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SoaPackage.MODULE__EVENT, oldEvent, event));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -404,8 +360,6 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module
         return getExceptions();
       case SoaPackage.MODULE__SERVICES:
         return getServices();
-      case SoaPackage.MODULE__EVENT:
-        return getEvent();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -441,9 +395,6 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module
         getServices().clear();
         getServices().addAll((Collection<? extends Service>)newValue);
         return;
-      case SoaPackage.MODULE__EVENT:
-        setEvent((String)newValue);
-        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -476,9 +427,6 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module
       case SoaPackage.MODULE__SERVICES:
         getServices().clear();
         return;
-      case SoaPackage.MODULE__EVENT:
-        setEvent(EVENT_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -505,8 +453,6 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module
         return exceptions != null;
       case SoaPackage.MODULE__SERVICES:
         return services != null && !services.isEmpty();
-      case SoaPackage.MODULE__EVENT:
-        return EVENT_EDEFAULT == null ? event != null : !EVENT_EDEFAULT.equals(event);
     }
     return super.eIsSet(featureID);
   }
@@ -526,8 +472,6 @@ public class ModuleImpl extends MinimalEObjectImpl.Container implements Module
     result.append(name);
     result.append(", version: ");
     result.append(version);
-    result.append(", event: ");
-    result.append(event);
     result.append(')');
     return result.toString();
   }

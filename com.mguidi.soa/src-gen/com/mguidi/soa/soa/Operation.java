@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link com.mguidi.soa.soa.Operation#getName <em>Name</em>}</li>
+ *   <li>{@link com.mguidi.soa.soa.Operation#isAuthenticated <em>Authenticated</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.Operation#getFeaturesInput <em>Features Input</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.Operation#getFeaturesOutput <em>Features Output</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.Operation#getExceptionts <em>Exceptionts</em>}</li>
@@ -52,6 +53,32 @@ public interface Operation extends EObject
    * @generated
    */
   void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Authenticated</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Authenticated</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Authenticated</em>' attribute.
+   * @see #setAuthenticated(boolean)
+   * @see com.mguidi.soa.soa.SoaPackage#getOperation_Authenticated()
+   * @model
+   * @generated
+   */
+  boolean isAuthenticated();
+
+  /**
+   * Sets the value of the '{@link com.mguidi.soa.soa.Operation#isAuthenticated <em>Authenticated</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Authenticated</em>' attribute.
+   * @see #isAuthenticated()
+   * @generated
+   */
+  void setAuthenticated(boolean value);
 
   /**
    * Returns the value of the '<em><b>Features Input</b></em>' containment reference list.

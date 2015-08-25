@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link com.mguidi.soa.soa.impl.OperationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.mguidi.soa.soa.impl.OperationImpl#isAuthenticated <em>Authenticated</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.impl.OperationImpl#getFeaturesInput <em>Features Input</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.impl.OperationImpl#getFeaturesOutput <em>Features Output</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.impl.OperationImpl#getExceptionts <em>Exceptionts</em>}</li>
@@ -60,6 +61,26 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isAuthenticated() <em>Authenticated</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isAuthenticated()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean AUTHENTICATED_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isAuthenticated() <em>Authenticated</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isAuthenticated()
+   * @generated
+   * @ordered
+   */
+  protected boolean authenticated = AUTHENTICATED_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getFeaturesInput() <em>Features Input</em>}' containment reference list.
@@ -140,6 +161,29 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isAuthenticated()
+  {
+    return authenticated;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAuthenticated(boolean newAuthenticated)
+  {
+    boolean oldAuthenticated = authenticated;
+    authenticated = newAuthenticated;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, SoaPackage.OPERATION__AUTHENTICATED, oldAuthenticated, authenticated));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<Feature> getFeaturesInput()
   {
     if (featuresInput == null)
@@ -207,6 +251,8 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
     {
       case SoaPackage.OPERATION__NAME:
         return getName();
+      case SoaPackage.OPERATION__AUTHENTICATED:
+        return isAuthenticated();
       case SoaPackage.OPERATION__FEATURES_INPUT:
         return getFeaturesInput();
       case SoaPackage.OPERATION__FEATURES_OUTPUT:
@@ -230,6 +276,9 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
     {
       case SoaPackage.OPERATION__NAME:
         setName((String)newValue);
+        return;
+      case SoaPackage.OPERATION__AUTHENTICATED:
+        setAuthenticated((Boolean)newValue);
         return;
       case SoaPackage.OPERATION__FEATURES_INPUT:
         getFeaturesInput().clear();
@@ -260,6 +309,9 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
       case SoaPackage.OPERATION__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case SoaPackage.OPERATION__AUTHENTICATED:
+        setAuthenticated(AUTHENTICATED_EDEFAULT);
+        return;
       case SoaPackage.OPERATION__FEATURES_INPUT:
         getFeaturesInput().clear();
         return;
@@ -285,6 +337,8 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
     {
       case SoaPackage.OPERATION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case SoaPackage.OPERATION__AUTHENTICATED:
+        return authenticated != AUTHENTICATED_EDEFAULT;
       case SoaPackage.OPERATION__FEATURES_INPUT:
         return featuresInput != null && !featuresInput.isEmpty();
       case SoaPackage.OPERATION__FEATURES_OUTPUT:
@@ -308,6 +362,8 @@ public class OperationImpl extends MinimalEObjectImpl.Container implements Opera
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", authenticated: ");
+    result.append(authenticated);
     result.append(')');
     return result.toString();
   }

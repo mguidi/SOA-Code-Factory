@@ -14,7 +14,6 @@ Module:
 	model=Model?
 	exceptions=Exceptions?
 	services+=Service*
-	event=Event?
 ;
 
 QualifiedName:
@@ -92,6 +91,7 @@ Service:
 
 Operation:
 	'@operation' name=ID '{'
+		(authenticated?='@authenticated')? 
 		('@input' ':' '{'
 			featuresInput+=Feature+
 		'}')?
@@ -101,11 +101,5 @@ Operation:
 		('@exception' ':' exceptionts+=[Exception|QualifiedName] (','  exceptionts+=[Exception|QualifiedName])* )?
 	'}'
 ;
-
-/************************ Service definition *************************/
-Event:
-	'@event' '{' '}'
-;
-
 
 terminal COMMENTS  		: '#' '^'?('a'..'z'|'A'..'Z'|'_'|' ') ('a'..'z'|'A'..'Z'|'_'|'0'..'9'|' ')*;

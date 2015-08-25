@@ -1,4 +1,4 @@
-','=34
+','=35
 '-'=17
 '.'=16
 ':'=13
@@ -18,18 +18,18 @@
 '@String'=36
 '@Timestamp'=46
 '@applicationId'=12
+'@authenticated'=32
 '@entity'=23
 '@enum'=22
-'@event'=35
 '@exception'=28
 '@exceptions'=27
 '@import'=18
-'@input'=32
+'@input'=33
 '@model'=19
 '@moduleName'=14
 '@msg'=29
 '@operation'=31
-'@output'=33
+'@output'=34
 '@service'=30
 '@version'=15
 '{'=20

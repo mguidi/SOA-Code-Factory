@@ -56,11 +56,10 @@ public class SOAParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExceptionAccess().getGroup(), "rule__Exception__Group__0");
 					put(grammarAccess.getServiceAccess().getGroup(), "rule__Service__Group__0");
 					put(grammarAccess.getOperationAccess().getGroup(), "rule__Operation__Group__0");
-					put(grammarAccess.getOperationAccess().getGroup_3(), "rule__Operation__Group_3__0");
 					put(grammarAccess.getOperationAccess().getGroup_4(), "rule__Operation__Group_4__0");
 					put(grammarAccess.getOperationAccess().getGroup_5(), "rule__Operation__Group_5__0");
-					put(grammarAccess.getOperationAccess().getGroup_5_3(), "rule__Operation__Group_5_3__0");
-					put(grammarAccess.getEventAccess().getGroup(), "rule__Event__Group__0");
+					put(grammarAccess.getOperationAccess().getGroup_6(), "rule__Operation__Group_6__0");
+					put(grammarAccess.getOperationAccess().getGroup_6_3(), "rule__Operation__Group_6_3__0");
 					put(grammarAccess.getArchitectureAccess().getNameAssignment_2(), "rule__Architecture__NameAssignment_2");
 					put(grammarAccess.getArchitectureAccess().getModuleAssignment_3(), "rule__Architecture__ModuleAssignment_3");
 					put(grammarAccess.getModuleAccess().getNameAssignment_2(), "rule__Module__NameAssignment_2");
@@ -69,7 +68,6 @@ public class SOAParser extends AbstractContentAssistParser {
 					put(grammarAccess.getModuleAccess().getModelAssignment_7(), "rule__Module__ModelAssignment_7");
 					put(grammarAccess.getModuleAccess().getExceptionsAssignment_8(), "rule__Module__ExceptionsAssignment_8");
 					put(grammarAccess.getModuleAccess().getServicesAssignment_9(), "rule__Module__ServicesAssignment_9");
-					put(grammarAccess.getModuleAccess().getEventAssignment_10(), "rule__Module__EventAssignment_10");
 					put(grammarAccess.getImportAccess().getImportedNamespaceAssignment_2(), "rule__Import__ImportedNamespaceAssignment_2");
 					put(grammarAccess.getModelAccess().getEntitiesAssignment_2(), "rule__Model__EntitiesAssignment_2");
 					put(grammarAccess.getCommentAccess().getValueAssignment(), "rule__Comment__ValueAssignment");
@@ -89,10 +87,11 @@ public class SOAParser extends AbstractContentAssistParser {
 					put(grammarAccess.getServiceAccess().getNameAssignment_1(), "rule__Service__NameAssignment_1");
 					put(grammarAccess.getServiceAccess().getOperationsAssignment_3(), "rule__Service__OperationsAssignment_3");
 					put(grammarAccess.getOperationAccess().getNameAssignment_1(), "rule__Operation__NameAssignment_1");
-					put(grammarAccess.getOperationAccess().getFeaturesInputAssignment_3_3(), "rule__Operation__FeaturesInputAssignment_3_3");
-					put(grammarAccess.getOperationAccess().getFeaturesOutputAssignment_4_3(), "rule__Operation__FeaturesOutputAssignment_4_3");
-					put(grammarAccess.getOperationAccess().getExceptiontsAssignment_5_2(), "rule__Operation__ExceptiontsAssignment_5_2");
-					put(grammarAccess.getOperationAccess().getExceptiontsAssignment_5_3_1(), "rule__Operation__ExceptiontsAssignment_5_3_1");
+					put(grammarAccess.getOperationAccess().getAuthenticatedAssignment_3(), "rule__Operation__AuthenticatedAssignment_3");
+					put(grammarAccess.getOperationAccess().getFeaturesInputAssignment_4_3(), "rule__Operation__FeaturesInputAssignment_4_3");
+					put(grammarAccess.getOperationAccess().getFeaturesOutputAssignment_5_3(), "rule__Operation__FeaturesOutputAssignment_5_3");
+					put(grammarAccess.getOperationAccess().getExceptiontsAssignment_6_2(), "rule__Operation__ExceptiontsAssignment_6_2");
+					put(grammarAccess.getOperationAccess().getExceptiontsAssignment_6_3_1(), "rule__Operation__ExceptiontsAssignment_6_3_1");
 				}
 			};
 		}

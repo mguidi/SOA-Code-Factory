@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.mguidi.soa.soa.Module#getModel <em>Model</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.Module#getExceptions <em>Exceptions</em>}</li>
  *   <li>{@link com.mguidi.soa.soa.Module#getServices <em>Services</em>}</li>
- *   <li>{@link com.mguidi.soa.soa.Module#getEvent <em>Event</em>}</li>
  * </ul>
  * </p>
  *
@@ -165,31 +164,5 @@ public interface Module extends EObject
    * @generated
    */
   EList<Service> getServices();
-
-  /**
-   * Returns the value of the '<em><b>Event</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Event</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Event</em>' attribute.
-   * @see #setEvent(String)
-   * @see com.mguidi.soa.soa.SoaPackage#getModule_Event()
-   * @model
-   * @generated
-   */
-  String getEvent();
-
-  /**
-   * Sets the value of the '{@link com.mguidi.soa.soa.Module#getEvent <em>Event</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Event</em>' attribute.
-   * @see #getEvent()
-   * @generated
-   */
-  void setEvent(String value);
 
 } // Module

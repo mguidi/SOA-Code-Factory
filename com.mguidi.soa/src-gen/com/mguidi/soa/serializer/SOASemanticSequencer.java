@@ -291,8 +291,7 @@ public class SOASemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         imports+=Import* 
 	 *         model=Model? 
 	 *         exceptions=Exceptions? 
-	 *         services+=Service* 
-	 *         event=Event?
+	 *         services+=Service*
 	 *     )
 	 */
 	protected void sequence_Module(EObject context, Module semanticObject) {
@@ -302,7 +301,13 @@ public class SOASemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID featuresInput+=Feature* featuresOutput+=Feature* (exceptionts+=[Exception|QualifiedName] exceptionts+=[Exception|QualifiedName]*)?)
+	 *     (
+	 *         name=ID 
+	 *         authenticated?='@authenticated'? 
+	 *         featuresInput+=Feature* 
+	 *         featuresOutput+=Feature* 
+	 *         (exceptionts+=[Exception|QualifiedName] exceptionts+=[Exception|QualifiedName]*)?
+	 *     )
 	 */
 	protected void sequence_Operation(EObject context, Operation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

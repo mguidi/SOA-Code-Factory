@@ -159,22 +159,13 @@ public interface SoaPackage extends EPackage
   int MODULE__SERVICES = 5;
 
   /**
-   * The feature id for the '<em><b>Event</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MODULE__EVENT = 6;
-
-  /**
    * The number of structural features of the '<em>Module</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODULE_FEATURE_COUNT = 7;
+  int MODULE_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link com.mguidi.soa.soa.impl.ImportImpl <em>Import</em>}' class.
@@ -633,13 +624,22 @@ public interface SoaPackage extends EPackage
   int OPERATION__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Authenticated</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPERATION__AUTHENTICATED = 1;
+
+  /**
    * The feature id for the '<em><b>Features Input</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OPERATION__FEATURES_INPUT = 1;
+  int OPERATION__FEATURES_INPUT = 2;
 
   /**
    * The feature id for the '<em><b>Features Output</b></em>' containment reference list.
@@ -648,7 +648,7 @@ public interface SoaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OPERATION__FEATURES_OUTPUT = 2;
+  int OPERATION__FEATURES_OUTPUT = 3;
 
   /**
    * The feature id for the '<em><b>Exceptionts</b></em>' reference list.
@@ -657,7 +657,7 @@ public interface SoaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OPERATION__EXCEPTIONTS = 3;
+  int OPERATION__EXCEPTIONTS = 4;
 
   /**
    * The number of structural features of the '<em>Operation</em>' class.
@@ -666,7 +666,7 @@ public interface SoaPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OPERATION_FEATURE_COUNT = 4;
+  int OPERATION_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link com.mguidi.soa.soa.PrimitiveType <em>Primitive Type</em>}' enum.
@@ -786,17 +786,6 @@ public interface SoaPackage extends EPackage
    * @generated
    */
   EReference getModule_Services();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.mguidi.soa.soa.Module#getEvent <em>Event</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Event</em>'.
-   * @see com.mguidi.soa.soa.Module#getEvent()
-   * @see #getModule()
-   * @generated
-   */
-  EAttribute getModule_Event();
 
   /**
    * Returns the meta object for class '{@link com.mguidi.soa.soa.Import <em>Import</em>}'.
@@ -1147,6 +1136,17 @@ public interface SoaPackage extends EPackage
   EAttribute getOperation_Name();
 
   /**
+   * Returns the meta object for the attribute '{@link com.mguidi.soa.soa.Operation#isAuthenticated <em>Authenticated</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Authenticated</em>'.
+   * @see com.mguidi.soa.soa.Operation#isAuthenticated()
+   * @see #getOperation()
+   * @generated
+   */
+  EAttribute getOperation_Authenticated();
+
+  /**
    * Returns the meta object for the containment reference list '{@link com.mguidi.soa.soa.Operation#getFeaturesInput <em>Features Input</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1295,14 +1295,6 @@ public interface SoaPackage extends EPackage
      * @generated
      */
     EReference MODULE__SERVICES = eINSTANCE.getModule_Services();
-
-    /**
-     * The meta object literal for the '<em><b>Event</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MODULE__EVENT = eINSTANCE.getModule_Event();
 
     /**
      * The meta object literal for the '{@link com.mguidi.soa.soa.impl.ImportImpl <em>Import</em>}' class.
@@ -1597,6 +1589,14 @@ public interface SoaPackage extends EPackage
      * @generated
      */
     EAttribute OPERATION__NAME = eINSTANCE.getOperation_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Authenticated</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OPERATION__AUTHENTICATED = eINSTANCE.getOperation_Authenticated();
 
     /**
      * The meta object literal for the '<em><b>Features Input</b></em>' containment reference list feature.
