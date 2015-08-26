@@ -21,6 +21,16 @@ import java.util.Collection
 
 class Utils {
 	
+	def makeString(Iterable<String> list, String head, String delimiter, String tail) {
+		val res = new StringBuilder()
+		res.append(head)
+		for (String item: list) {
+			res.append(item)
+			if (list.last != item) res.append(delimiter)
+		}
+		res.append(tail)
+	}
+	
 	def applicationId(Architecture architecture) {
 		architecture.name
 	}
@@ -209,8 +219,8 @@ class Utils {
 			case PrimitiveType::DATE : "java.util"
 			case PrimitiveType::DATETIME : "java.util"
 			case PrimitiveType::TIMESTAMP : "java.util"
-			case PrimitiveType::DECIMAL : "java.math"
-			default : "java.lang"
+			case PrimitiveType::DECIMAL : ""
+			default : ""
 		}
 	}
 
@@ -223,7 +233,7 @@ class Utils {
 			case PrimitiveType::DECIMAL : "BigDecimal"
 			case PrimitiveType::DOUBLE : "Double"
 			case PrimitiveType::FLOAT : "Float"
-			case PrimitiveType::INTEGER : "Integer"
+			case PrimitiveType::INTEGER : "Int"
 			case PrimitiveType::LONG : "Long"
 			case PrimitiveType::SHORT : "Short"
 			case PrimitiveType::STRING : "String"
@@ -232,7 +242,8 @@ class Utils {
 	}
 	
 	def qualifiedClassName(PrimitiveType type) {
-		type.packageName + "." + type.className
+		if (type.packageName.empty) type.className
+		else type.packageName + "." + type.className
 	}
 
 	/******************************** Feature ********************************/
@@ -245,7 +256,7 @@ class Utils {
 	}
 	
 	def String featureName(Feature feature) {
-		"m"+feature.name.toFirstUpper
+		feature.name
 	}
 	
 	def String featureSetterName(Feature feature) {

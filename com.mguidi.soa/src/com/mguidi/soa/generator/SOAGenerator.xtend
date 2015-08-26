@@ -12,6 +12,7 @@ import com.mguidi.soa.generator.java.webservice.json.JavaWebServiceJsonGenerator
 import com.mguidi.soa.generator.android.webservice.json.AndroidWebServiceJsonGenerator
 import com.mguidi.soa.generator.android.jsonhelper.AndroidJsonHelperGenerator
 import com.mguidi.soa.generator.android.AndroidGenerator
+import com.mguidi.soa.generator.scala.ScalaGenerator
 
 class SOAGenerator implements IGenerator {
 	
@@ -29,6 +30,9 @@ class SOAGenerator implements IGenerator {
 	@Inject extension SwiftGenerator swiftGenerator
 	@Inject extension SwiftJsonHelperGenerator swiftJsonHelperGenerator
 	
+	// swift
+	@Inject extension ScalaGenerator scalaGenerator
+	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
 		// java
 		javaGenerator.doGenerate(resource, fsa)
@@ -43,6 +47,9 @@ class SOAGenerator implements IGenerator {
 		// swift
 		swiftGenerator.doGenerate(resource, fsa)
 		swiftJsonHelperGenerator.doGenerate(resource, fsa)
+		
+		// scala
+		scalaGenerator.doGenerate(resource, fsa)
 		
 	}
 }

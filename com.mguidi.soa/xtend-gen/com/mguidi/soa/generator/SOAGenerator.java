@@ -7,6 +7,7 @@ import com.mguidi.soa.generator.android.webservice.json.AndroidWebServiceJsonGen
 import com.mguidi.soa.generator.java.JavaGenerator;
 import com.mguidi.soa.generator.java.jsonhelper.JavaJsonHelperGenerator;
 import com.mguidi.soa.generator.java.webservice.json.JavaWebServiceJsonGenerator;
+import com.mguidi.soa.generator.scala.ScalaGenerator;
 import com.mguidi.soa.generator.swift.SwiftGenerator;
 import com.mguidi.soa.generator.swift.jsonhelper.SwiftJsonHelperGenerator;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -48,6 +49,10 @@ public class SOAGenerator implements IGenerator {
   @Extension
   private SwiftJsonHelperGenerator swiftJsonHelperGenerator;
   
+  @Inject
+  @Extension
+  private ScalaGenerator scalaGenerator;
+  
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
     this.javaGenerator.doGenerate(resource, fsa);
     this.javaJsonHelperGenerator.doGenerate(resource, fsa);
@@ -57,5 +62,6 @@ public class SOAGenerator implements IGenerator {
     this.androidWebServiceJsonGenerator.doGenerate(resource, fsa);
     this.swiftGenerator.doGenerate(resource, fsa);
     this.swiftJsonHelperGenerator.doGenerate(resource, fsa);
+    this.scalaGenerator.doGenerate(resource, fsa);
   }
 }

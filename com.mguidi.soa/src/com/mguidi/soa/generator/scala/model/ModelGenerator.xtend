@@ -10,88 +10,24 @@ class ModelGenerator {
 	@Inject extension Utils utils
 	
 	def generateEnum(com.mguidi.soa.soa.Enum entity) '''
-		package «entity.packageName»;
+		package «entity.packageName»
 		
-		public class «entity.className» {
+		sealed trait «entity.className»
+		
+		object «entity.className» {
 			«FOR feature: entity.features»
-			public static «entity.className» _«feature» = new «entity.className»("«feature»");
+				case object «feature.toUpperCase» extends «entity.className»
 			«ENDFOR»
-			public static «entity.className» _UNDEFINED_ = new «entity.className»("_UNDEFINED_");
-			
-			private final String mValue;
-
-			private «entity.className»(String value) {
-				mValue = value;
-			}
-			
-			@Override
-			public int hashCode() {
-				return mValue.hashCode();
-			}
-			
-			@Override
-			public boolean equals(Object o) {
-				if (o instanceof  «entity.className») {
-					return mValue.equals(((«entity.className») o).mValue);
-					
-				} else {
-					return false;
-				}
-			}
-			
-			@Override
-		    public String toString() {
-		        return mValue;
-		    }
-			
-			public static «entity.className» valueOf(String value) {
-				if (value == null) {
-					return null;
-				}
-				
-				«FOR feature: entity.features»
-				«IF feature == entity.features.get(0)»
-				if (value.equals("«feature»")) {
-				«ELSE»
-				} else if (value.equals("«feature»")) {
-				«ENDIF»
-					return _«feature»;
-				«ENDFOR»
-				} else {
-					return _UNDEFINED_;
-				}
-			}
 		}
 	'''
 	
 	def generateEntity(Entity entity) '''
-		package «entity.packageName»;
+		package «entity.packageName»
 		
-		case class «entity.className»(«entity.features.map[Feature f | f.featureName + ":" + f.type.declaration]»)
+		case class «entity.className»(
+			«entity.features.map[Feature f | f.featureName + ": " + f.type.declaration].makeString("", ",\n", "")»
+		)
 		
-		public class «entity.className» {
-			
-			«FOR feature: entity.features»
-				public static final String «feature.key» = "«feature.keyValue»";
-			«ENDFOR»
-			
-			«FOR feature: entity.features»
-				protected «feature.type.declaration» «feature.featureName»;
-			«ENDFOR»
-			
-			«FOR feature: entity.features»
-				public «feature.type.declaration» «feature.featureGetterName»() {
-					return «feature.featureName»;
-				}
-				
-				public «entity.className» «feature.featureSetterName»(«feature.type.declaration» value) {
-					«feature.featureName» = value;
-					return this;
-				}
-				
-			«ENDFOR»
-			
-		}
 	'''
 	
 }
