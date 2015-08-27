@@ -28,6 +28,11 @@ class ModelGenerator {
 			«entity.features.map[Feature f | f.featureName + ": " + f.type.declaration].makeString("", ",\n", "")»
 		)
 		
+		object «entity.className» {
+			«FOR feature: entity.features»
+				val «feature.key» = "«feature.keyValue»";
+			«ENDFOR»
+		}
 	'''
 	
 }

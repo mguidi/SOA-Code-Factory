@@ -6,8 +6,10 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import com.mguidi.soa.soa.Entity
 import com.mguidi.soa.soa.Service
-import com.mguidi.soa.soa.Architecture
 import com.mguidi.soa.soa.Operation
+import com.mguidi.soa.generator.scala.service.OperationOutputGenerator
+import com.mguidi.soa.generator.scala.service.OperationInputGenerator
+import com.mguidi.soa.generator.scala.service.ControllerGenerator
 
 //import org.eclipse.emf.ecore.resource.Resource
 //import org.eclipse.xtext.generator.IFileSystemAccess
@@ -30,7 +32,7 @@ class ScalaGenerator {
 	@Inject extension Utils utils
 //	@Inject extension GradleBuildGenerator gradleBuildGenerator
 	@Inject extension ModelGenerator modelGenerator
-//	@Inject extension ServiceGenerator serviceGenerator
+	@Inject extension ControllerGenerator controllerGenerator
 	@Inject extension OperationOutputGenerator operationOutputGenerator
 	@Inject extension OperationInputGenerator operationInputGenerator
 //	@Inject extension ExceptionGenerator exceptionGenerator
@@ -56,29 +58,25 @@ class ScalaGenerator {
 //		}
 		
 		for (e: entities) {
-//			fsa.generateFile("scala/"+e.applicationId+"/"+e.moduleName+"/"+e.version+"/model/" + e.qualifiedClassName.replace(".", "/") + ".scala", modelGenerator.generateEntity(e))
 			fsa.generateFile("scala/model/" + e.qualifiedClassName.replace(".", "/") + ".scala", modelGenerator.generateEntity(e))
 		}
 		
 		for (e: enumerations) {
-//			fsa.generateFile("scala/"+e.applicationId+"/"+e.moduleName+"/"+e.version+"/model/" + e.qualifiedClassName.replace(".", "/") + ".scala", modelGenerator.generateEnum(e))
 			fsa.generateFile("scala/model/" + e.qualifiedClassName.replace(".", "/") + ".scala", modelGenerator.generateEnum(e))
 		}
 		
-//		for (e: services) {
-//			if (e.operations.size > 0) {
-//				fsa.generateFile("java/"+e.applicationId+"/"+e.moduleName+"/"+e.version+"/service/src/main/java/" + e.qualifiedClassName.replace(".", "/") + ".java", beautifier.format(serviceGenerator.generateService(e)))
-//				fsa.generateFile("java/"+e.applicationId+"/"+e.moduleName+"/"+e.version+"/service/src/main/java/" + e.qualifiedClassNameInterface.replace(".", "/") + ".java", beautifier.format(serviceGenerator.generateServiceInterface(e)))
-//			}
-//		}
+		for (e: services) {
+			if (e.operations.size > 0) {
+				fsa.generateFile("scala/service/" + e.qualifiedClassNameController.replace(".", "/") + ".scala", controllerGenerator.generateController(e))
+			}
+		}
 //		
 		for (e: resource.allContents.toIterable.filter(typeof(Operation))) {
 			if (e.featuresOutput.size > 0) {
-				fsa.generateFile("scala/"+e.applicationId+"/"+e.moduleName+"/"+e.version+"/service/" + e.qualifiedClassNameOutput.replace(".", "/") + ".java", operationOutputGenerator.generateOperationOutput(e))
 				fsa.generateFile("scala/service/" + e.qualifiedClassNameOutput.replace(".", "/") + ".scala", operationOutputGenerator.generateOperationOutput(e))
 			}
 			if (e.featuresInput.size > 0) {
-				fsa.generateFile("java/"+e.applicationId+"/"+e.moduleName+"/"+e.version+"/service/src/main/java/" + e.qualifiedClassNameInput.replace(".", "/") + ".java", beautifier.format(operationInputGenerator.generateOperationInput(e)))
+				fsa.generateFile("scala/service/" + e.qualifiedClassNameInput.replace(".", "/") + ".scala", operationInputGenerator.generateOperationInput(e))
 			}
 		}
 //		

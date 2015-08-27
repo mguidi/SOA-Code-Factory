@@ -83,18 +83,18 @@ class Utils {
 		service.packageName + "." + service.className
 	}
 	
-	def packageNameInterface(Service service) {
-		(service.eContainer.eContainer as Architecture).name + "." +
-		(service.eContainer as Module).name + ".service"
-	}
-
-	def classNameInterface(Service service) {
-		"I"+service.name.toFirstUpper
-	}
-	
-	def qualifiedClassNameInterface(Service service) {
-		service.packageNameInterface + "." + service.classNameInterface
-	}
+//	def packageNameInterface(Service service) {
+//		(service.eContainer.eContainer as Architecture).name + "." +
+//		(service.eContainer as Module).name + ".service"
+//	}
+//
+//	def classNameInterface(Service service) {
+//		"I"+service.name.toFirstUpper
+//	}
+//	
+//	def qualifiedClassNameInterface(Service service) {
+//		service.packageNameInterface + "." + service.classNameInterface
+//	}
 	
 	def applicationId(Service service) {
 		(service.eContainer.eContainer as Architecture).applicationId
@@ -108,39 +108,43 @@ class Utils {
 		(service.eContainer.eContainer as Architecture).version
 	}
 	
-	def packageNameServlet(Service service) {
+	def packageNameController(Service service) {
 		(service.eContainer.eContainer as Architecture).name + "." +
-		(service.eContainer as Module).name + ".servlet"
+		(service.eContainer as Module).name + ".controllers"
 	}
 
-	def classNameServlet(Service service) {
-		service.name+"Servlet"
+	def classNameController(Service service) {
+		service.name+"Controller"
 	}
 	
-	def qualifiedClassNameServlet(Service service) {
-		service.packageNameServlet + "." + service.classNameServlet
+	def qualifiedClassNameController(Service service) {
+		service.packageNameController + "." + service.classNameController
 	}
 	
-	def packageNameClient(Service service) {
-		(service.eContainer.eContainer as Architecture).name + "." +
-		(service.eContainer as Module).name + ".client"
-	}
-
-	def classNameClient(Service service) {
-		service.name+"Client"
-	}
+//	def packageNameClient(Service service) {
+//		(service.eContainer.eContainer as Architecture).name + "." +
+//		(service.eContainer as Module).name + ".client"
+//	}
+//
+//	def classNameClient(Service service) {
+//		service.name+"Client"
+//	}
+//	
+//	def qualifiedClassNameClient(Service service) {
+//		service.packageNameClient + "." + service.classNameClient
+//	}
 	
-	def qualifiedClassNameClient(Service service) {
-		service.packageNameClient + "." + service.classNameClient
-	}
-	
-	def serviceName(Service service) {
-		service.name
-	}
+//	def serviceName(Service service) {
+//		service.name
+//	}
 	
 	/******************************** Operation  ********************************/
 	def signature(Operation operation) {
 		operation.name.toFirstLower
+	}
+	
+	def handler(Operation operation) {
+		operation.name.toFirstLower + "Handler"
 	}
 	
 	def throwsException(Operation operation) {
